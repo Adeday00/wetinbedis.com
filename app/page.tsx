@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const categories = ["Naija Life", "Music", "Diaspora", "Slang", "Street Life"];
 
 export default function Home() {
@@ -14,7 +12,7 @@ export default function Home() {
         </p>
         <div className="hero-actions">
           <a className="button button-primary" href="#how-to-play">See how e dey work</a>
-          <Link className="button button-secondary" href="/support">Get support</Link>
+          <a className="button button-secondary" href="/support">Get support</a>
         </div>
 
         <div className="card-fan" aria-label="Game categories">

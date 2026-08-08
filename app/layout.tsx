@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { headers } from "next/headers";
 import "./globals.css";
 
@@ -25,21 +24,21 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <header className="site-header">
-          <Link className="brand" href="/" aria-label="Wetin Be Dis home">
+          <a className="brand" href="/" aria-label="Wetin Be Dis home">
             <span className="brand-mark">?</span>
             <span>WETIN<br />BE DIS</span>
-          </Link>
+          </a>
           <nav aria-label="Main navigation">
-            <Link href="/#how-to-play">How to play</Link>
-            <Link href="/support">Support</Link>
-            <Link href="/privacy">Privacy</Link>
+            <a href="/#how-to-play">How to play</a>
+            <a href="/support">Support</a>
+            <a href="/privacy">Privacy</a>
           </nav>
         </header>
         {children}
         <footer>
-          <Link className="brand small" href="/"><span className="brand-mark">?</span><span>WETIN BE DIS</span></Link>
+          <a className="brand small" href="/"><span className="brand-mark">?</span><span>WETIN BE DIS</span></a>
           <p>© 2026 David Adekanbi. All rights reserved.</p>
-          <div><Link href="/support">Support</Link><Link href="/privacy">Privacy</Link></div>
+          <div><a href="/support">Support</a><a href="/privacy">Privacy</a></div>
         </footer>
       </body>
     </html>
