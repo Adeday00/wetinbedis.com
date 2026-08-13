@@ -67,6 +67,6 @@ export default function Home() {
 
     <section className="faq-section"><div><span className="section-kicker">ASK BEFORE YOU SHOUT</span><h2>Questions?<br /><em>We get gist.</em></h2><p>Everything your room needs before the first card drops.</p><Link href="/support/" className="text-cta">VISIT SUPPORT <span>↗</span></Link></div><FAQ /></section>
 
-    <section className="download-section" id="download"><div className="download-glow" /><img src="/brand/app-icon.png" alt="Wetin Be Dis app icon" /><span className="section-kicker">THE ROOM IS WAITING</span><h2>Bring your people.<br /><em>We’ll bring the gist.</em></h2><p>Launching on iPhone. Be ready when the first card drops.</p><a className="app-store-badge" href="mailto:adekanbidavid8@gmail.com?subject=Tell%20me%20when%20Wetin%20Be%20Dis%20launches"><span>●</span><small>GET NOTIFIED FOR</small><strong>App Store launch</strong></a><div className="download-domain">WETINBEDIS.COM</div></section>
+    <section className="download-section" id="download"><div className="download-glow" /><img src="/brand/app-icon.png" alt="Wetin Be Dis app icon" /><span className="section-kicker">THE ROOM IS WAITING</span><h2>Bring your people.<br /><em>We’ll bring the gist.</em></h2><p>Launching on iPhone. Be ready when the first card drops.</p><a className="app-store-badge" href="mailto:support@wetinbedis.com?subject=Tell%20me%20when%20Wetin%20Be%20Dis%20launches"><span>●</span><small>GET NOTIFIED FOR</small><strong>App Store launch</strong></a><div className="download-domain">WETINBEDIS.COM</div></section>
   </main>;
 }

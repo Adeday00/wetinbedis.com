@@ -16,6 +16,6 @@ export default function Privacy() {
     <h2>Data retention and your choices</h2><p>Locally stored preferences and reaction clips remain until you remove them or uninstall the app. You can manage camera, microphone, tracking, and notification permissions in iPhone Settings.</p>
     <h2>Children</h2><p>Wetin Be Dis is not intended to knowingly collect personal information from children below the minimum age required in their country without appropriate consent.</p>
     <h2>Changes</h2><p>We may update this policy as the app changes. The effective date above will be revised when material updates are published.</p>
-    <div className="contact-box"><span>PRIVACY QUESTIONS?</span><h2>Your question is welcome.</h2><a href="mailto:adekanbidavid8@gmail.com?subject=Wetin%20Be%20Dis%20Privacy">EMAIL US ↗</a></div>
+    <div className="contact-box"><span>PRIVACY QUESTIONS?</span><h2>Your question is welcome.</h2><a href="mailto:support@wetinbedis.com?subject=Wetin%20Be%20Dis%20Privacy">EMAIL US ↗</a></div>
   </article></main>;
 }

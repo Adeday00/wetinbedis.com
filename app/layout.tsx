@@ -49,7 +49,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer>
           <div className="footer-brand"><Brand /><p>The Nigerian party game made for your people.</p></div>
           <div className="footer-links"><strong>Explore</strong><Link href="/#play">Try the game</Link><Link href="/#modes">Ways to play</Link><Link href="/#full-gist">Full Gist</Link></div>
-          <div className="footer-links"><strong>Company</strong><Link href="/support/">Support</Link><Link href="/privacy/">Privacy</Link><a href="mailto:adekanbidavid8@gmail.com">Contact</a></div>
+          <div className="footer-links"><strong>Company</strong><Link href="/support/">Support</Link><Link href="/privacy/">Privacy</Link><a href="mailto:support@wetinbedis.com">Contact</a></div>
           <div className="footer-bottom"><span>© 2026 David Adekanbi</span><span>Made with gist, from Naija to everywhere.</span></div>
         </footer>
       </body>
