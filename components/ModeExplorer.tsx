@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState, type KeyboardEvent } from "react";
+import { CheckCircle } from "@phosphor-icons/react";
 
 const modes = [
   { id: "room", number: "01", label: "IN PERSON", title: "One phone. Whole room. Maximum noise.", body: "Pass the phone, split into crews, and race the timer together. Perfect for game nights, family visits, weddings, and anywhere your people gather.", bullets: ["2+ players", "Pass one phone", "Reaction videos"], screen: "/app-screens/play.png" },
@@ -10,15 +11,29 @@ const modes = [
 
 export default function ModeExplorer() {
   const [active, setActive] = useState(0);
+  const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const mode = modes[active];
+
+  function moveModeFocus(event: KeyboardEvent<HTMLButtonElement>, index: number) {
+    let next = index;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") next = (index + 1) % modes.length;
+    else if (event.key === "ArrowLeft" || event.key === "ArrowUp") next = (index - 1 + modes.length) % modes.length;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = modes.length - 1;
+    else return;
+    event.preventDefault();
+    setActive(next);
+    tabRefs.current[next]?.focus();
+  }
+
   return (
     <div className="mode-explorer">
       <div className="mode-tabs" role="tablist" aria-label="Ways to play">
-        {modes.map((item, index) => <button key={item.id} role="tab" aria-selected={active === index} onClick={() => setActive(index)} className={active === index ? "active" : ""}><span>{item.number}</span>{item.label}</button>)}
+        {modes.map((item, index) => <button key={item.id} id={`mode-tab-${item.id}`} ref={(node) => { tabRefs.current[index] = node; }} role="tab" aria-selected={active === index} aria-controls="mode-panel" tabIndex={active === index ? 0 : -1} onClick={() => setActive(index)} onKeyDown={(event) => moveModeFocus(event, index)} className={active === index ? "active" : ""}><span>{item.number}</span>{item.label}</button>)}
       </div>
-      <div className="mode-panel">
-        <div className="mode-copy"><span className="mini-label">{mode.label}</span><h3>{mode.title}</h3><p>{mode.body}</p><ul>{mode.bullets.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul></div>
-        <div className="mode-phone"><div className="phone-island" /><img src={mode.screen} alt={`${mode.label} screen in Wetin Be Dis`} /></div>
+      <div className="mode-panel" id="mode-panel" role="tabpanel" aria-labelledby={`mode-tab-${mode.id}`}>
+        <div className="mode-copy"><span className="mini-label">{mode.label}</span><h3>{mode.title}</h3><p>{mode.body}</p><ul>{mode.bullets.map((item) => <li key={item}><CheckCircle size={18} weight="fill" />{item}</li>)}</ul></div>
+        <div className="mode-visual"><img src={mode.screen} alt={`${mode.label} screen in Wetin Be Dis`} /></div>
       </div>
     </div>
   );

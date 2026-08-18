@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import SiteHeader, { Brand } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wetinbedis.com"),
@@ -23,33 +24,16 @@ export const metadata: Metadata = {
   icons: { icon: "/brand/app-icon.png", apple: "/brand/app-icon.png" },
 };
 
-function Brand() {
-  return (
-    <Link className="brand" href="/" aria-label="Wetin Be Dis home">
-      <img src="/brand/app-icon.png" alt="" />
-      <span>WETIN<br />BE DIS?</span>
-    </Link>
-  );
-}
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
-        <header className="site-nav">
-          <Brand />
-          <nav aria-label="Main navigation">
-            <Link href="/#play">Try the game</Link>
-            <Link href="/#modes">Ways to play</Link>
-            <Link href="/#full-gist">Full Gist</Link>
-          </nav>
-          <Link className="nav-cta" href="/#download">Get the app <span>↗</span></Link>
-        </header>
+        <SiteHeader />
         {children}
         <footer>
-          <div className="footer-brand"><Brand /><p>The Nigerian party game made for your people.</p></div>
-          <div className="footer-links"><strong>Explore</strong><Link href="/#play">Try the game</Link><Link href="/#modes">Ways to play</Link><Link href="/#full-gist">Full Gist</Link></div>
-          <div className="footer-links"><strong>Company</strong><Link href="/support/">Support</Link><Link href="/privacy/">Privacy</Link><a href="mailto:support@wetinbedis.com">Contact</a></div>
+          <div className="footer-brand"><Brand /><p>Your people already know the gist.</p></div>
+          <div className="footer-links"><strong>Play</strong><Link href="/#play">Try a round</Link><Link href="/#modes">Ways to play</Link><Link href="/#full-gist">Full Gist</Link></div>
+          <div className="footer-links"><strong>Help</strong><Link href="/support/">Support</Link><Link href="/privacy/">Privacy</Link><a href="mailto:support@wetinbedis.com">Contact</a></div>
           <div className="footer-bottom"><span>© 2026 David Adekanbi</span><span>Made with gist, from Naija to everywhere.</span></div>
         </footer>
       </body>

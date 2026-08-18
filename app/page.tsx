@@ -1,72 +1,104 @@
 import Link from "next/link";
+import {
+  ArrowBendRightDown,
+  ArrowRight,
+  CheckCircle,
+  GlobeHemisphereWest,
+  Play,
+  Smiley,
+  UsersThree,
+} from "@phosphor-icons/react/dist/ssr";
 import GameDemo from "@/components/GameDemo";
 import ModeExplorer from "@/components/ModeExplorer";
 import FAQ from "@/components/FAQ";
+import LaunchSignup from "@/components/LaunchSignup";
 
-const categories = [
-  ["ϟ", "Naija Life", "gold"], ["♫", "Music", "teal"], ["✈", "Diaspora", "blue"],
-  ["❞", "Slang", "green"], ["♨", "Food", "orange"], ["★", "Celebrities", "purple"],
+const proofPoints = [
+  { Icon: UsersThree, title: "One phone.", detail: "Whole room." },
+  { Icon: GlobeHemisphereWest, title: "Across three", detail: "countries." },
+  { Icon: Smiley, title: "Everybody", detail: "inside the gist." },
 ];
 
 export default function Home() {
-  return <main>
-    <section className="hero">
-      <div className="hero-weave weave-purple" /><div className="hero-weave weave-green" />
-      <div className="hero-copy">
-        <div className="eyebrow"><i /> THE GIST STARTS HERE <i /></div>
-        <h1>You sabi<br /><em>the gist?</em></h1>
-        <p>The Nigerian party guessing game that turns your culture, your people, and your inside jokes into pure chaos.</p>
-        <div className="hero-actions"><a className="primary-cta" href="#play">TRY A CARD <span>▶</span></a><a className="text-cta" href="#how-it-works">SEE HOW E DEY WORK <span>↓</span></a></div>
-        <div className="trust-line"><span>●</span> BUILT FOR REAL ROOMS <b>•</b> FACETIME <b>•</b> HOUSE PARTIES</div>
-      </div>
-      <div className="hero-visual" aria-label="Wetin Be Dis game cards">
-        <div className="hero-glow" />
-        {categories.slice(0, 5).map(([icon, name, color], index) => <div className={`hero-card hero-card-${index + 1} ${color}`} key={name}><span className="card-lock">⌑</span><strong>{icon}</strong><b>{name}</b><i>✦</i></div>)}
-        <img className="hero-hand" src="/brand/full-gist-hero.png" alt="A hand holding a fan of Wetin Be Dis category cards" />
-      </div>
-      <div className="scroll-stamp"><span>SCROLL</span><i>↓</i></div>
-    </section>
+  return (
+    <main>
+      <section className="hero">
+        <picture>
+          <source media="(max-width: 760px)" srcSet="/brand/generated/game-night-forehead-hero-v1.png" />
+          <img
+            className="hero-photo"
+            src="/brand/generated/game-night-forehead-hero-v1.png"
+            alt="A player holds the Wetin Be Dis game to her forehead while friends laugh and shout clues"
+          />
+        </picture>
+        <div className="hero-copy">
+          <h1><span>WETIN</span><span>BE DIS?</span></h1>
+          <h2>Your people already<br />know the gist.</h2>
+          <p>The Nigerian party guessing game for real rooms, FaceTime, and house parties.</p>
+          <div className="hero-actions">
+            <Link className="primary-cta" href="#play">Try a round <Play size={18} weight="fill" /></Link>
+            <Link className="secondary-cta" href="#download">Join the launch list <ArrowRight size={18} weight="bold" /></Link>
+          </div>
+        </div>
+      </section>
 
-    <section className="marquee" aria-label="Game categories"><div>{[...categories, ...categories].map(([icon, name], i) => <span key={`${name}-${i}`}>{icon} {name}<b>✦</b></span>)}</div></section>
+      <section className="proof-strip" id="how-it-works" aria-label="Ways Wetin Be Dis brings people together">
+        {proofPoints.map(({ Icon, title, detail }) => (
+          <div className="proof-point" key={title}>
+            <Icon size={44} weight="regular" aria-hidden="true" />
+            <p><strong>{title}</strong><span>{detail}</span></p>
+          </div>
+        ))}
+      </section>
 
-    <section className="how-section" id="how-it-works">
-      <div className="section-kicker">NO LONG TING</div><h2>Three steps.<br /><em>Plenty shouting.</em></h2>
-      <div className="steps-grid">
-        <article><span className="step-number">01</span><div className="step-art card-stack"><i /><i /><i>?</i></div><h3>Pick your gist</h3><p>Choose a category your room thinks they know. Slang? Music? Naija Life? Be brave.</p></article>
-        <article><span className="step-number">02</span><div className="step-art clue-art"><strong>JAPA</strong><span>NO MENTION</span><b>VISA</b><b>AIRPORT</b></div><h3>Give the clues</h3><p>Make your person guess the big word—without touching any forbidden words.</p></article>
-        <article><span className="step-number">03</span><div className="step-art score-art"><span>00:08</span><strong>7</strong><i>↑</i></div><h3>Settle the score</h3><p>Beat the timer, collect your points, and let the winning crew talk their talk.</p></article>
-      </div>
-    </section>
+      <section className="play-section" id="play">
+        <div className="play-layout">
+          <div className="play-intro">
+            <span className="section-kicker">NO LONG TALK</span>
+            <h2>Try the game.</h2>
+            <p>Pick a category, see the word, and give the gist without touching the no-mention words. Your people shout. You keep score.</p>
+            <Link className="outline-cta" href="#live-demo">Try a round <Play size={17} weight="fill" /></Link>
+            <div className="demo-note"><ArrowBendRightDown size={34} weight="light" /> <span>Free. No sign-up.<br />Just vibes.</span></div>
+          </div>
+          <div id="live-demo"><GameDemo /></div>
+        </div>
+      </section>
 
-    <section className="play-section" id="play">
-      <div className="section-heading light"><div><span className="section-kicker">NO DOWNLOAD NEEDED</span><h2>Try the gist<br /><em>right now.</em></h2></div><p>This is one quick taste. The real game brings 350 cards, reaction videos, teams, House Party, and FaceTime.</p></div>
-      <GameDemo />
-    </section>
+      <section className="modes-section" id="modes">
+        <div className="section-heading">
+          <div><span className="section-kicker">YOUR PEOPLE. YOUR WAY.</span><h2>Any room can<br />be the room.</h2></div>
+          <p>From one sofa to three countries, everyone stays inside the gist.</p>
+        </div>
+        <ModeExplorer />
+      </section>
 
-    <section className="modes-section" id="modes">
-      <div className="section-heading"><div><span className="section-kicker">YOUR PEOPLE. YOUR WAY.</span><h2>Any room can<br /><em>be the room.</em></h2></div><p>From one sofa to three countries, Wetin Be Dis keeps everybody inside the gist.</p></div>
-      <ModeExplorer />
-    </section>
+      <section className="full-gist-section" id="full-gist">
+        <div className="full-gist-art"><img src="/brand/full-gist-hero.png" alt="A hand holding Wetin Be Dis category cards" /></div>
+        <div className="full-gist-copy">
+          <span className="section-kicker">ONE PURCHASE. EVERY CORNER.</span>
+          <h2>Full Gist.</h2>
+          <p>Every category. Every card. Every fresh drop. No subscription and no ads after you unlock.</p>
+          <ul>
+            <li><CheckCircle size={22} weight="fill" />All 10 categories</li>
+            <li><CheckCircle size={22} weight="fill" />350 cards and growing</li>
+            <li><CheckCircle size={22} weight="fill" />One-time $9.99 purchase</li>
+          </ul>
+          <Link className="dark-cta" href="#download">Get launch access <ArrowRight size={18} weight="bold" /></Link>
+        </div>
+      </section>
 
-    <section className="culture-section">
-      <div className="culture-grid">
-        <div className="culture-image"><img src="/brand/owambe-bg.png" alt="Woven Nigerian textile artwork framing the Wetin Be Dis game" /><span className="culture-sticker">MADE FOR<br /><b>YOUR PEOPLE</b></span></div>
-        <div className="culture-copy"><span className="section-kicker">MORE THAN TRIVIA</span><h2>The culture is<br /><em>the gameplay.</em></h2><p>Wetin Be Dis isn’t Nigerian paint on a generic game. The way we gist, argue, act, sing, drag, celebrate, and remember—that is the mechanic.</p><div className="culture-stats"><div><strong>350</strong><span>CARDS AT LAUNCH</span></div><div><strong>10</strong><span>CATEGORIES</span></div><div><strong>∞</strong><span>INSIDE JOKES</span></div></div></div>
-      </div>
-    </section>
+      <section className="faq-section">
+        <div className="faq-intro"><span className="section-kicker">ASK BEFORE YOU SHOUT</span><h2>Questions?<br />We get gist.</h2><p>Everything your room needs before the first card drops.</p><Link href="/support/" className="text-link">Visit support <ArrowRight size={17} weight="bold" /></Link></div>
+        <FAQ />
+      </section>
 
-    <section className="full-gist-section" id="full-gist">
-      <div className="full-gist-art"><img src="/brand/full-gist-hero.png" alt="Full Gist premium category cards" /><div className="premium-seal">FULL<br />GIST</div></div>
-      <div className="full-gist-copy"><span className="section-kicker">ONE PURCHASE. EVERY CORNER.</span><h2>Unlock the<br /><em>whole gist.</em></h2><p>Every category. Every card. Every fresh drop. No ads, no subscription, no “premium monthly pro max.”</p><ul><li><span>✓</span>All 10 categories</li><li><span>✓</span>350 cards and growing</li><li><span>✓</span>No rewarded or post-game ads</li><li><span>✓</span>One-time $9.99 purchase</li></ul><a className="primary-cta" href="#download">SEE FULL GIST <span>↗</span></a><p className="trial-note">Not ready? Free players can watch 3 ads for the Daily Gist.</p></div>
-    </section>
-
-    <section className="screens-section">
-      <span className="section-kicker">SEE AM FOR YOURSELF</span><h2>Looks like the party.<br /><em>Plays like the party.</em></h2>
-      <div className="screen-rail">{[["home.png","WELCOME TO THE GIST"],["setup.png","PICK YOUR CATEGORY"],["play.png","SHOUT THE ANSWER"],["house-party.png","BRING THE WHOLE ROOM"],["full-gist.png","UNLOCK EVERY CORNER"]].map(([file,label],i) => <figure key={file} className={i === 2 ? "featured" : ""}><div className="screenshot-phone"><img src={`/app-screens/${file}`} alt={label.toLowerCase()} /></div><figcaption>{label}</figcaption></figure>)}</div>
-    </section>
-
-    <section className="faq-section"><div><span className="section-kicker">ASK BEFORE YOU SHOUT</span><h2>Questions?<br /><em>We get gist.</em></h2><p>Everything your room needs before the first card drops.</p><Link href="/support/" className="text-cta">VISIT SUPPORT <span>↗</span></Link></div><FAQ /></section>
-
-    <section className="download-section" id="download"><div className="download-glow" /><img src="/brand/app-icon.png" alt="Wetin Be Dis app icon" /><span className="section-kicker">THE ROOM IS WAITING</span><h2>Bring your people.<br /><em>We’ll bring the gist.</em></h2><p>Launching on iPhone. Be ready when the first card drops.</p><a className="app-store-badge" href="mailto:support@wetinbedis.com?subject=Tell%20me%20when%20Wetin%20Be%20Dis%20launches"><span>●</span><small>GET NOTIFIED FOR</small><strong>App Store launch</strong></a><div className="download-domain">WETINBEDIS.COM</div></section>
-  </main>;
+      <section className="download-section" id="download">
+        <img src="/brand/app-icon.png" alt="Wetin Be Dis app icon" />
+        <span className="section-kicker">THE ROOM IS WAITING</span>
+        <h2>Bring your people.<br />We’ll bring the gist.</h2>
+        <p>Launching on iPhone. Join the list and we’ll tell you when the first card drops.</p>
+        <LaunchSignup />
+      </section>
+    </main>
+  );
 }
