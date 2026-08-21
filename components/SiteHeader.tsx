@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { List, X } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
+import { APP_STORE_URL } from "@/lib/app-store";
 
 export function Brand() {
   return (
@@ -33,7 +34,7 @@ export default function SiteHeader() {
         <Link href="/#modes" onClick={() => setOpen(false)}>Ways to play</Link>
         <Link href="/#full-gist" onClick={() => setOpen(false)}>Full Gist</Link>
       </nav>
-      <Link className="nav-cta" href="/#download">Join the launch list</Link>
+      <a className="nav-cta" href={APP_STORE_URL}>Download the app</a>
       <button
         className="menu-toggle"
         type="button"

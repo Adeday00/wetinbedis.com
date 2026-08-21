@@ -12,6 +12,7 @@ import GameDemo from "@/components/GameDemo";
 import ModeExplorer from "@/components/ModeExplorer";
 import FAQ from "@/components/FAQ";
 import LaunchSignup from "@/components/LaunchSignup";
+import { APP_STORE_URL } from "@/lib/app-store";
 
 const proofPoints = [
   { Icon: UsersThree, title: "One phone.", detail: "Whole room." },
@@ -37,7 +38,7 @@ export default function Home() {
           <p>The Nigerian party guessing game for real rooms, FaceTime, and house parties.</p>
           <div className="hero-actions">
             <Link className="primary-cta" href="#play">Try a round <Play size={18} weight="fill" /></Link>
-            <Link className="secondary-cta" href="#download">Join the launch list <ArrowRight size={18} weight="bold" /></Link>
+            <a className="secondary-cta" href={APP_STORE_URL}>Download on the App Store <ArrowRight size={18} weight="bold" /></a>
           </div>
         </div>
       </section>
@@ -83,7 +84,7 @@ export default function Home() {
             <li><CheckCircle size={22} weight="fill" />350 cards and growing</li>
             <li><CheckCircle size={22} weight="fill" />One-time $9.99 purchase</li>
           </ul>
-          <Link className="dark-cta" href="#download">Get launch access <ArrowRight size={18} weight="bold" /></Link>
+          <a className="dark-cta" href={APP_STORE_URL}>Get Full Gist <ArrowRight size={18} weight="bold" /></a>
         </div>
       </section>
 
@@ -94,9 +95,9 @@ export default function Home() {
 
       <section className="download-section" id="download">
         <img src="/brand/app-icon.png" alt="Wetin Be Dis app icon" />
-        <span className="section-kicker">THE ROOM IS WAITING</span>
+        <span className="section-kicker">AVAILABLE NOW ON IPHONE</span>
         <h2>Bring your people.<br />We’ll bring the gist.</h2>
-        <p>Launching on iPhone. Join the list and we’ll tell you when the first card drops.</p>
+        <p>Download Wetin Be Dis from the App Store and get your first game started.</p>
         <LaunchSignup />
       </section>
     </main>

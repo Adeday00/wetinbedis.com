@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import SiteHeader, { Brand } from "@/components/SiteHeader";
+import { APP_STORE_URL } from "@/lib/app-store";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wetinbedis.com"),
@@ -32,7 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         <footer>
           <div className="footer-brand"><Brand /><p>Your people already know the gist.</p></div>
-          <div className="footer-links"><strong>Play</strong><Link href="/#play">Try a round</Link><Link href="/#modes">Ways to play</Link><Link href="/#full-gist">Full Gist</Link></div>
+          <div className="footer-links"><strong>Play</strong><a href={APP_STORE_URL}>Download on the App Store</a><Link href="/#play">Try a round</Link><Link href="/#modes">Ways to play</Link><Link href="/#full-gist">Full Gist</Link></div>
           <div className="footer-links"><strong>Help</strong><Link href="/support/">Support</Link><Link href="/privacy/">Privacy</Link><a href="mailto:support@wetinbedis.com">Contact</a></div>
           <div className="footer-bottom"><span>© 2026 David Adekanbi</span><span>Made with gist, from Naija to everywhere.</span></div>
         </footer>

@@ -175,19 +175,8 @@ section[id] { scroll-margin-top: 84px; }
 .download-section .section-kicker { color: #dff5e8; }
 .download-section h2 { margin-bottom: 23px; max-width: 900px; }
 .download-section > p { max-width: 560px; color: #e3f4e9; font-size: 18px; line-height: 1.6; }
-.launch-form { width: min(100%, 720px); margin-top: 25px; }
-.launch-form > label { display: block; margin-bottom: 9px; color: white; text-align: left; font-size: 12px; font-weight: 900; letter-spacing: .8px; text-transform: uppercase; }
-.launch-form-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
-.email-field { min-height: 56px; display: flex; align-items: center; gap: 10px; padding: 0 17px; border: 2px solid rgba(255,255,255,.5); border-radius: 6px; background: white; color: #59605a; }
-.email-field:focus-within { outline: 3px solid #6ccfff; outline-offset: 3px; }
-.email-field input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); font: 700 16px "DM Sans", sans-serif; }
-.email-field input::placeholder { color: #777e79; font-weight: 500; }
 .launch-cta { min-height: 56px; margin: 0; border: 0; background: var(--cream); color: var(--ink); cursor: pointer; }
-.signup-note { margin: 10px 0 0 !important; color: #e5f6eb !important; text-align: left; font-size: 12px !important; }
-.signup-success { width: min(100%, 620px); min-height: 80px; margin-top: 25px; padding: 18px 22px; display: flex; align-items: center; gap: 14px; border: 2px solid rgba(255,255,255,.5); border-radius: 8px; background: white; color: var(--ink); text-align: left; }
-.signup-success > svg { color: var(--green); flex: none; }
-.signup-success strong, .signup-success span { display: block; }
-.signup-success span { margin-top: 3px; color: #555d57; font-size: 14px; }
+.app-store-cta { min-width: 280px; margin-top: 25px; }
 
 footer { padding: 66px clamp(24px, 6vw, 92px) 28px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; border-top: 1px solid var(--dark-line); background: #050706; color: #999e99; }
 .footer-brand .brand { color: var(--cream); }
@@ -282,8 +271,7 @@ footer { padding: 66px clamp(24px, 6vw, 92px) 28px; display: grid; grid-template
   .full-gist-copy { padding: 72px 23px 82px; }
   .faq-section { grid-template-columns: 1fr; }
   .download-section { padding: 84px 22px 94px; }
-  .launch-form-row { grid-template-columns: 1fr; }
-  .launch-cta { width: 100%; }
+  .launch-cta { width: min(100%, 340px); }
   footer { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column; gap: 8px; }
