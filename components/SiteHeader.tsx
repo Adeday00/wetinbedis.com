@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { List, X } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
-import { APP_STORE_URL } from "@/lib/app-store";
+import TrackedAppStoreLink from "@/components/TrackedAppStoreLink";
 
 export function Brand() {
   return (
@@ -34,7 +34,7 @@ export default function SiteHeader() {
         <Link href="/#modes" onClick={() => setOpen(false)}>Ways to play</Link>
         <Link href="/#full-gist" onClick={() => setOpen(false)}>Full Gist</Link>
       </nav>
-      <a className="nav-cta" href={APP_STORE_URL}>Download the app</a>
+      <TrackedAppStoreLink className="nav-cta">Download the app</TrackedAppStoreLink>
       <button
         className="menu-toggle"
         type="button"

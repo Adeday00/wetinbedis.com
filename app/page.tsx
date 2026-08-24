@@ -12,7 +12,7 @@ import GameDemo from "@/components/GameDemo";
 import ModeExplorer from "@/components/ModeExplorer";
 import FAQ from "@/components/FAQ";
 import LaunchSignup from "@/components/LaunchSignup";
-import { APP_STORE_URL } from "@/lib/app-store";
+import TrackedAppStoreLink from "@/components/TrackedAppStoreLink";
 
 const proofPoints = [
   { Icon: UsersThree, title: "One phone.", detail: "Whole room." },
@@ -38,7 +38,7 @@ export default function Home() {
           <p>The Nigerian party guessing game for real rooms, FaceTime, and house parties.</p>
           <div className="hero-actions">
             <Link className="primary-cta" href="#play">Try a round <Play size={18} weight="fill" /></Link>
-            <a className="secondary-cta" href={APP_STORE_URL}>Download on the App Store <ArrowRight size={18} weight="bold" /></a>
+            <TrackedAppStoreLink className="secondary-cta">Download on the App Store <ArrowRight size={18} weight="bold" /></TrackedAppStoreLink>
           </div>
         </div>
       </section>
@@ -84,7 +84,7 @@ export default function Home() {
             <li><CheckCircle size={22} weight="fill" />350 cards and growing</li>
             <li><CheckCircle size={22} weight="fill" />One-time $9.99 purchase</li>
           </ul>
-          <a className="dark-cta" href={APP_STORE_URL}>Get Full Gist <ArrowRight size={18} weight="bold" /></a>
+          <TrackedAppStoreLink className="dark-cta">Get Full Gist <ArrowRight size={18} weight="bold" /></TrackedAppStoreLink>
         </div>
       </section>
 

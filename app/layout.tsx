@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import SiteHeader, { Brand } from "@/components/SiteHeader";
-import { APP_STORE_URL } from "@/lib/app-store";
+import TrackedAppStoreLink from "@/components/TrackedAppStoreLink";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wetinbedis.com"),
@@ -28,12 +28,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
+      <head>
+        <script
+          id="openai-ads-pixel"
+          dangerouslySetInnerHTML={{
+            __html: `!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"EJFNzSNDeZCedTKMdvMvfX",debug:true});`,
+          }}
+        />
+      </head>
       <body>
         <SiteHeader />
         {children}
         <footer>
           <div className="footer-brand"><Brand /><p>Your people already know the gist.</p></div>
-          <div className="footer-links"><strong>Play</strong><a href={APP_STORE_URL}>Download on the App Store</a><Link href="/#play">Try a round</Link><Link href="/#modes">Ways to play</Link><Link href="/#full-gist">Full Gist</Link></div>
+          <div className="footer-links"><strong>Play</strong><TrackedAppStoreLink>Download on the App Store</TrackedAppStoreLink><Link href="/#play">Try a round</Link><Link href="/#modes">Ways to play</Link><Link href="/#full-gist">Full Gist</Link></div>
           <div className="footer-links"><strong>Help</strong><Link href="/support/">Support</Link><Link href="/privacy/">Privacy</Link><a href="mailto:support@wetinbedis.com">Contact</a></div>
           <div className="footer-bottom"><span>© 2026 David Adekanbi</span><span>Made with gist, from Naija to everywhere.</span></div>
         </footer>
