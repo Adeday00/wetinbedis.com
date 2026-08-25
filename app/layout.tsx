@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
+import Link from "next/link";
 import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -24,21 +25,21 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <header className="site-header">
-          <a className="brand" href="/" aria-label="Wetin Be Dis home">
+          <Link className="brand" href="/" aria-label="Wetin Be Dis home">
             <span className="brand-mark">?</span>
             <span>WETIN<br />BE DIS</span>
-          </a>
+          </Link>
           <nav aria-label="Main navigation">
-            <a href="/#how-to-play">How to play</a>
-            <a href="/support">Support</a>
-            <a href="/privacy">Privacy</a>
+            <Link href="/#how-to-play">How to play</Link>
+            <Link href="/support">Support</Link>
+            <Link href="/privacy">Privacy</Link>
           </nav>
         </header>
         {children}
         <footer>
-          <a className="brand small" href="/"><span className="brand-mark">?</span><span>WETIN BE DIS</span></a>
+          <Link className="brand small" href="/"><span className="brand-mark">?</span><span>WETIN BE DIS</span></Link>
           <p>© 2026 David Adekanbi. All rights reserved.</p>
-          <div><a href="/support">Support</a><a href="/privacy">Privacy</a></div>
+          <div><Link href="/support">Support</Link><Link href="/privacy">Privacy</Link></div>
         </footer>
       </body>
     </html>

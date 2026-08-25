@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "source": "WetinBeDis/Competition/CompetitionDemoContent.swift",
+  "pack_version": "public-content-practice-only-v1",
+  "cards": [
+    { "id": "GL-037", "correct_answer": "Okra Soup", "clues": ["This soup may leave a stretchy trail between bowl and swallow.", "Small green pieces create its familiar slippery texture.", "Chopped okra pods are the defining ingredient."] },
+    { "id": "GL-038", "correct_answer": "Moi Moi", "clues": ["It can sit beside rice or serve as a light meal by itself.", "Peeled beans are blended with pepper and seasonings before cooking.", "The smooth bean mixture is steamed in leaves, foil, or small containers."] },
+    { "id": "GL-039", "correct_answer": "Akara", "clues": ["Morning queues often form where this is coming out hot.", "A seasoned bean batter is dropped into oil in small portions.", "It is the crisp-edged fried bean cake often eaten with pap or bread."] },
+    { "id": "GL-055", "correct_answer": "Dami Duro", "clues": ["This early career hit announced a young star with fearless confidence.", "Its repeated challenge is essentially asking who can stop him.", "It is Davido's 2011 breakthrough single with a Yoruba title."] },
+    { "id": "GL-031", "correct_answer": "Shakara", "clues": ["The person wants everybody to notice the entrance.", "Posing, pride, and deliberate showing-off are part of it.", "This word describes acting stylishly aloof or putting on airs."] },
+    { "id": "GL-054", "correct_answer": "Ojuelegba", "clues": ["This reflective record looks back at struggle before success.", "Its title is the name of a neighbourhood in Surulere, Lagos.", "It is the Wizkid song from the album Ayo named after that neighbourhood."] },
+    { "id": "GL-056", "correct_answer": "Yahooze", "clues": ["This 2000s party record is built around sudden celebration and a memorable hand move.", "Its title became the name of the dance associated with the song.", "It is Olu Maintain's signature 2007 hit."] },
+    { "id": "GL-057", "correct_answer": "Peru", "clues": ["Its one-word title is also the name of a South American country.", "Fireboy DML released the original version in 2021.", "Ed Sheeran joined the widely heard remix of this song."] },
+    { "id": "GL-058", "correct_answer": "Oruka", "clues": ["This enduring love song is regularly heard when couples celebrate commitment.", "Its Yoruba title refers to a ring.", "It is the Sunny Neji wedding classic with that one-word title."] },
+    { "id": "GL-061", "correct_answer": "Rema", "clues": ["This singer began his rise from Benin City and developed a self-described Afrorave sound.", "Rave & Roses is his debut studio album.", "He recorded Calm Down, later remixed with Selena Gomez."] },
+    { "id": "GL-062", "correct_answer": "Funke Akindele", "clues": ["This actor and filmmaker built a major comedy franchise around one unforgettable character.", "That character moved from a film into the series Jenifa's Diary.", "She created and plays Jenifa."] },
+    { "id": "GL-063", "correct_answer": "Genevieve Nnaji", "clues": ["This screen star became one of the most internationally recognised faces of Nollywood.", "She made her feature directing debut with Lionheart.", "She both directed and starred in the film about a family transport company."] }
+  ]
+}

@@ -1,0 +1,1392 @@
+{
+  "schema_version": 1,
+  "source": "WetinBeDis_Solo_Gist_Curation.xlsx / Curated Cards",
+  "cards": [
+    {
+      "id": "SG-001",
+      "source_deck_id": "S-001",
+      "content_version": "1.0",
+      "answer": "Japa",
+      "category": "Slang",
+      "answer_family": "Relocation slang",
+      "difficulty": "Hard",
+      "clues": [
+        "This verb usually starts as a plan to leave.",
+        "Travel documents and airport goodbyes may follow.",
+        "It means relocating abroad for better opportunities."
+      ],
+      "distractors": [
+        "Sapa",
+        "Soft Life",
+        "E Don Cast",
+        "Dey Play",
+        "Jeje",
+        "God When"
+      ],
+      "weekly_theme": "Abroad & Back",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Category-safe, but the deck lacks enough relocation-slang peers.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-002",
+      "source_deck_id": "S-002",
+      "content_version": "1.0",
+      "answer": "Sapa",
+      "category": "Slang",
+      "answer_family": "Money-pressure slang",
+      "difficulty": "Easy",
+      "clues": [
+        "It often arrives before payday.",
+        "Your account balance starts acting shy.",
+        "It means being painfully broke."
+      ],
+      "distractors": [
+        "Shege",
+        "Wahala",
+        "Soft Life",
+        "God Abeg",
+        "E Pain Me",
+        "Shege Pro Max"
+      ],
+      "weekly_theme": "Everyday Naija",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-003",
+      "source_deck_id": "S-003",
+      "content_version": "1.0",
+      "answer": "Wahala",
+      "category": "Slang",
+      "answer_family": "Trouble/reaction slang",
+      "difficulty": "Hard",
+      "clues": [
+        "This can turn a calm day upside down.",
+        "Police or family meetings can bring plenty of it.",
+        "It means trouble or serious commotion."
+      ],
+      "distractors": [
+        "Shege",
+        "Gbas Gbos",
+        "Vawulence",
+        "Gobe",
+        "E Don Burst",
+        "Tufiakwa!"
+      ],
+      "weekly_theme": "Everyday Naija",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-004",
+      "source_deck_id": "S-011",
+      "content_version": "1.0",
+      "answer": "Steeze",
+      "category": "Slang",
+      "answer_family": "Style slang",
+      "difficulty": "Medium",
+      "clues": [
+        "No rush, no panic.",
+        "The outfit and composure are landing.",
+        "It means effortless style and swag."
+      ],
+      "distractors": [
+        "Shakara",
+        "Aura Farming",
+        "Soft Life",
+        "Idan",
+        "Opor",
+        "Cruise"
+      ],
+      "weekly_theme": "Weekend Energy",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-005",
+      "source_deck_id": "S-019",
+      "content_version": "1.0",
+      "answer": "Soft Life",
+      "category": "Slang",
+      "answer_family": "Lifestyle slang",
+      "difficulty": "Hard",
+      "clues": [
+        "Stress was not invited.",
+        "Comfort and enjoyment only.",
+        "It is the opposite of suffering and unnecessary struggle."
+      ],
+      "distractors": [
+        "Steeze",
+        "Oblee",
+        "Jeje",
+        "Cruise",
+        "God When",
+        "Suffering And Smiling"
+      ],
+      "weekly_theme": "Weekend Energy",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-006",
+      "source_deck_id": "F-026",
+      "content_version": "1.0",
+      "answer": "Suya",
+      "category": "Food",
+      "answer_family": "Street food / protein snack",
+      "difficulty": "Easy",
+      "clues": [
+        "It usually comes wrapped with onions.",
+        "Pepper clings to grilled meat on a stick.",
+        "It is a spicy Nigerian street kebab."
+      ],
+      "distractors": [
+        "Kilishi",
+        "Nkwobi",
+        "Shawarma",
+        "Gala",
+        "Meat Pie",
+        "Boli"
+      ],
+      "weekly_theme": "Chop Life",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-007",
+      "source_deck_id": "F-027",
+      "content_version": "1.0",
+      "answer": "Jollof Rice",
+      "category": "Food",
+      "answer_family": "Rice / main dish",
+      "difficulty": "Medium",
+      "clues": [
+        "No party menu wants to admit it forgot this.",
+        "Tomato and pepper give the grains their colour.",
+        "It is the famous West African one-pot rice."
+      ],
+      "distractors": [
+        "Fried Rice",
+        "Ofada Rice",
+        "Tuwo",
+        "Amala",
+        "Ewa Agoyin",
+        "Indomie"
+      ],
+      "weekly_theme": "Chop Life",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-008",
+      "source_deck_id": "F-028",
+      "content_version": "1.0",
+      "answer": "Puff Puff",
+      "category": "Food",
+      "answer_family": "Fried snack / small chop",
+      "difficulty": "Easy",
+      "clues": [
+        "It disappears fast from the small-chops tray.",
+        "The dough is fried into soft, round bites.",
+        "It is a sweet Nigerian fried snack."
+      ],
+      "distractors": [
+        "Chin Chin",
+        "Akara",
+        "Meat Pie",
+        "Gala",
+        "Dodo",
+        "Boli"
+      ],
+      "weekly_theme": "Chop Life",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-009",
+      "source_deck_id": "F-031",
+      "content_version": "1.0",
+      "answer": "Egusi",
+      "category": "Food",
+      "answer_family": "Soup",
+      "difficulty": "Medium",
+      "clues": [
+        "It is often paired with a swallow.",
+        "This soup is thick and deeply savoury.",
+        "Ground melon seeds are its defining ingredient."
+      ],
+      "distractors": [
+        "Ogbono Soup",
+        "Okra Soup",
+        "Efo Riro",
+        "Afang Soup",
+        "Banga Soup",
+        "Pepper Soup"
+      ],
+      "weekly_theme": "Chop Life",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-010",
+      "source_deck_id": "F-2002",
+      "content_version": "1.0",
+      "answer": "Dodo",
+      "category": "Food",
+      "answer_family": "Plantain side / snack",
+      "difficulty": "Easy",
+      "clues": [
+        "It tastes sweet when the fruit is ripe.",
+        "The key ingredient is plantain.",
+        "It is sliced and fried until golden."
+      ],
+      "distractors": [
+        "Boli",
+        "Akara",
+        "Puff Puff",
+        "Chin Chin",
+        "Gala",
+        "Suya"
+      ],
+      "weekly_theme": "Chop Life",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-011",
+      "source_deck_id": "DL-041",
+      "content_version": "1.0",
+      "answer": "NEPA",
+      "category": "Naija Life",
+      "answer_family": "Public power",
+      "difficulty": "Easy",
+      "clues": [
+        "This is about public power supply.",
+        "People blame them when the light disappears.",
+        "It is the old electricity acronym Nigerians still shout."
+      ],
+      "distractors": [
+        "Generator",
+        "Half Current",
+        "Inverter",
+        "Rechargeable Fan",
+        "Boiling Ring",
+        "Fuel Scarcity"
+      ],
+      "weekly_theme": "Light & Fuel",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-012",
+      "source_deck_id": "DL-042",
+      "content_version": "1.0",
+      "answer": "Danfo",
+      "category": "Naija Life",
+      "answer_family": "Commercial transport",
+      "difficulty": "Easy",
+      "clues": [
+        "A conductor may call destinations from it.",
+        "It is often yellow and battles Lagos traffic.",
+        "It is the familiar Lagos commercial minibus."
+      ],
+      "distractors": [
+        "BRT",
+        "Keke",
+        "Okada",
+        "Uber Driver",
+        "Dispatch Rider",
+        "One Chance"
+      ],
+      "weekly_theme": "Lagos Motion",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-013",
+      "source_deck_id": "DL-043",
+      "content_version": "1.0",
+      "answer": "Okada",
+      "category": "Naija Life",
+      "answer_family": "Commercial transport",
+      "difficulty": "Easy",
+      "clues": [
+        "It can weave through a traffic jam faster than cars.",
+        "You sit behind a rider and should wear a helmet.",
+        "It is a commercial motorcycle."
+      ],
+      "distractors": [
+        "Keke",
+        "Danfo",
+        "BRT",
+        "Uber Driver",
+        "Dispatch Rider",
+        "Traffic Warden"
+      ],
+      "weekly_theme": "Lagos Motion",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-014",
+      "source_deck_id": "DL-044",
+      "content_version": "1.0",
+      "answer": "Keke",
+      "category": "Naija Life",
+      "answer_family": "Commercial transport",
+      "difficulty": "Easy",
+      "clues": [
+        "It has three wheels and carries a few passengers.",
+        "It fills the gap between a bike and a small bus.",
+        "It is a commercial tricycle."
+      ],
+      "distractors": [
+        "Okada",
+        "Danfo",
+        "BRT",
+        "Uber Driver",
+        "Dispatch Rider",
+        "Motor Park"
+      ],
+      "weekly_theme": "Lagos Motion",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-015",
+      "source_deck_id": "DL-046",
+      "content_version": "1.0",
+      "answer": "Generator",
+      "category": "Naija Life",
+      "answer_family": "Backup power",
+      "difficulty": "Easy",
+      "clues": [
+        "It takes fuel.",
+        "It comes alive when public power leaves.",
+        "It is the noisy backup-power machine."
+      ],
+      "distractors": [
+        "NEPA",
+        "Half Current",
+        "Inverter",
+        "Rechargeable Fan",
+        "Boiling Ring",
+        "Fuel Scarcity"
+      ],
+      "weekly_theme": "Light & Fuel",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-016",
+      "source_deck_id": "C-051",
+      "content_version": "1.0",
+      "answer": "Wizkid",
+      "category": "Celebrities",
+      "answer_family": "Afrobeats artist",
+      "difficulty": "Easy",
+      "clues": [
+        "His fanbase calls him Big Wiz.",
+        "Ojuelegba and Essence are signature records.",
+        "He is the Nigerian singer behind Starboy."
+      ],
+      "distractors": [
+        "Davido",
+        "Burna Boy",
+        "Olamide",
+        "Rema",
+        "Asake",
+        "Kizz Daniel"
+      ],
+      "weekly_theme": "Afrobeats Faces",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-017",
+      "source_deck_id": "C-053",
+      "content_version": "1.0",
+      "answer": "Davido",
+      "category": "Celebrities",
+      "answer_family": "Afrobeats artist",
+      "difficulty": "Hard",
+      "clues": [
+        "His crew name is 30BG.",
+        "Dami Duro and Unavailable are in his catalogue.",
+        "He is the Afrobeats star nicknamed OBO."
+      ],
+      "distractors": [
+        "Wizkid",
+        "Burna Boy",
+        "Olamide",
+        "Rema",
+        "Asake",
+        "Kizz Daniel"
+      ],
+      "weekly_theme": "Afrobeats Faces",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-018",
+      "source_deck_id": "C-060",
+      "content_version": "1.0",
+      "answer": "Tems",
+      "category": "Celebrities",
+      "answer_family": "Singer / songwriter",
+      "difficulty": "Hard",
+      "clues": [
+        "A deep, smoky voice made this artist instantly recognisable.",
+        "Free Mind is one of the signature records.",
+        "She featured on Essence and became a Grammy-winning Nigerian singer."
+      ],
+      "distractors": [
+        "Tiwa Savage",
+        "Ayra Starr",
+        "Qing Madi",
+        "FOLA",
+        "Rema",
+        "Omah Lay"
+      ],
+      "weekly_theme": "Afrobeats Faces",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-019",
+      "source_deck_id": "C-067",
+      "content_version": "1.0",
+      "answer": "Sabinus",
+      "category": "Celebrities",
+      "answer_family": "Comedian / skit personality",
+      "difficulty": "Hard",
+      "clues": [
+        "His skits often turn confidence into instant regret.",
+        "The blue shirt and investor character are clues.",
+        "He is the Nigerian comedian also known as Mr Funny."
+      ],
+      "distractors": [
+        "Mr Macaroni",
+        "Bovi",
+        "Taaooma",
+        "Aki & Pawpaw",
+        "Falz",
+        "Don Jazzy"
+      ],
+      "weekly_theme": "Comedy Timeline",
+      "editorial_status": "Needs Cultural Review",
+      "family_review": "Hold",
+      "editorial_note": "Comedian pool is plausible; Nigerian comedy editor should approve tone and likeness use.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-020",
+      "source_deck_id": "M-078",
+      "content_version": "1.0",
+      "answer": "Buga",
+      "category": "Music",
+      "answer_family": "Song",
+      "difficulty": "Hard",
+      "clues": [
+        "A shoulder-lifting pose became part of this song.",
+        "Kizz Daniel and Tekno made it a global dance moment.",
+        "Its title means to show off proudly."
+      ],
+      "distractors": [
+        "Twe Twe",
+        "Shoki",
+        "Kukere",
+        "Pana",
+        "Jogodo",
+        "Woto Woto"
+      ],
+      "weekly_theme": "Afrobeats Soundtrack",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-021",
+      "source_deck_id": "M-080",
+      "content_version": "1.0",
+      "answer": "Last Last",
+      "category": "Music",
+      "answer_family": "Song",
+      "difficulty": "Easy",
+      "clues": [
+        "This breakup anthem turned heartbreak into a chant.",
+        "Burna Boy sang that everybody would chop breakfast.",
+        "Its two-word title repeats the same word."
+      ],
+      "distractors": [
+        "City Boys",
+        "Ye",
+        "Essence",
+        "Fall",
+        "Peru",
+        "Mad Over You"
+      ],
+      "weekly_theme": "Afrobeats Soundtrack",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-022",
+      "source_deck_id": "M-081",
+      "content_version": "1.0",
+      "answer": "Calm Down",
+      "category": "Music",
+      "answer_family": "Song",
+      "difficulty": "Hard",
+      "clues": [
+        "This record became a viral global hit.",
+        "Rema released it.",
+        "A Selena Gomez remix pushed it even further."
+      ],
+      "distractors": [
+        "Rush",
+        "Buga",
+        "Essence",
+        "Unavailable",
+        "Peru",
+        "Fall"
+      ],
+      "weekly_theme": "Afrobeats Soundtrack",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-023",
+      "source_deck_id": "M-090",
+      "content_version": "1.0",
+      "answer": "Essence",
+      "category": "Music",
+      "answer_family": "Song",
+      "difficulty": "Medium",
+      "clues": [
+        "It lives on the Made in Lagos album.",
+        "Wizkid leads the record.",
+        "Tems supplies the unforgettable guest vocal."
+      ],
+      "distractors": [
+        "Ojuelegba",
+        "Don't Dull",
+        "Holla at Your Boy",
+        "Calm Down",
+        "Peru",
+        "Loaded"
+      ],
+      "weekly_theme": "Afrobeats Soundtrack",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-024",
+      "source_deck_id": "C-121",
+      "content_version": "1.0",
+      "answer": "Aso Ebi",
+      "category": "Culture",
+      "answer_family": "Celebration attire",
+      "difficulty": "Easy",
+      "clues": [
+        "A whole group may arrive wearing the same fabric.",
+        "Families and friends coordinate it for big parties.",
+        "It is the matching-outfit tradition at Nigerian celebrations."
+      ],
+      "distractors": [
+        "Ankara",
+        "Adire",
+        "Isi Agu",
+        "Agbada",
+        "Double Wrapper",
+        "Gele"
+      ],
+      "weekly_theme": "Owambe Energy",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-025",
+      "source_deck_id": "C-122",
+      "content_version": "1.0",
+      "answer": "Gele",
+      "category": "Culture",
+      "answer_family": "Celebration accessory",
+      "difficulty": "Hard",
+      "clues": [
+        "It can be the tallest part of a party look.",
+        "It is tied and sculpted from fabric around the head.",
+        "It is a traditional Nigerian head wrap."
+      ],
+      "distractors": [
+        "Aso Ebi",
+        "Ankara",
+        "Adire",
+        "Coral Beads",
+        "Double Wrapper",
+        "Agbada"
+      ],
+      "weekly_theme": "Owambe Energy",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-026",
+      "source_deck_id": "C-123",
+      "content_version": "1.0",
+      "answer": "Owambe",
+      "category": "Culture",
+      "answer_family": "Celebration / event",
+      "difficulty": "Medium",
+      "clues": [
+        "Nobody expects this event to be quiet.",
+        "Aso ebi, small chops and money spraying may appear.",
+        "It is a large, lively Nigerian party."
+      ],
+      "distractors": [
+        "Traditional Wedding",
+        "Naming Ceremony",
+        "Village Meeting",
+        "Durbar",
+        "New Yam Festival",
+        "Family Compound"
+      ],
+      "weekly_theme": "Owambe Energy",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-027",
+      "source_deck_id": "C-125",
+      "content_version": "1.0",
+      "answer": "Talking Drum",
+      "category": "Culture",
+      "answer_family": "Traditional instrument",
+      "difficulty": "Hard",
+      "clues": [
+        "Its pitch can change while it is played.",
+        "The player squeezes cords under the arm.",
+        "It is the hourglass-shaped Yoruba drum that imitates speech."
+      ],
+      "distractors": [
+        "Bata Dance",
+        "Atilogwu",
+        "Oriki",
+        "Calabash",
+        "Town Crier",
+        "Masquerade"
+      ],
+      "weekly_theme": "Culture Live",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Deck lacks instrument-only peers such as shekere, ogene, udu, ekwe or gangan.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-028",
+      "source_deck_id": "S-151",
+      "content_version": "1.0",
+      "answer": "WAEC",
+      "category": "School",
+      "answer_family": "Secondary-school examination",
+      "difficulty": "Easy",
+      "clues": [
+        "Secondary-school students prepare for it for months.",
+        "Several subject papers are written over weeks.",
+        "It is the West African senior-school certificate examination."
+      ],
+      "distractors": [
+        "JAMB",
+        "Common Entrance",
+        "Expo",
+        "Report Card",
+        "School Fees",
+        "Principal"
+      ],
+      "weekly_theme": "Campus & Service",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Add NECO and GCE before release; current options are school-category safe but not exam-family safe.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-029",
+      "source_deck_id": "S-152",
+      "content_version": "1.0",
+      "answer": "JAMB",
+      "category": "School",
+      "answer_family": "Tertiary admission examination",
+      "difficulty": "Easy",
+      "clues": [
+        "A high score can open the university gate.",
+        "Candidates sit a computer-based admission test.",
+        "It is Nigeria's tertiary entrance examination."
+      ],
+      "distractors": [
+        "WAEC",
+        "Common Entrance",
+        "School Fees",
+        "Report Card",
+        "Expo",
+        "NYSC"
+      ],
+      "weekly_theme": "Campus & Service",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Add Post-UTME, NECO and GCE; current pool mixes exams with other school experiences.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-030",
+      "source_deck_id": "S-157",
+      "content_version": "1.0",
+      "answer": "Hostel",
+      "category": "School",
+      "answer_family": "Student accommodation",
+      "difficulty": "Easy",
+      "clues": [
+        "Your roommate may become family or your greatest test.",
+        "Bunks, curfews and shared bathrooms are common.",
+        "It is student accommodation on or near campus."
+      ],
+      "distractors": [
+        "Visiting Day",
+        "Provisions",
+        "School Fees",
+        "Assembly Ground",
+        "Principal",
+        "Noise Makers List"
+      ],
+      "weekly_theme": "Campus & Service",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Deck needs accommodation/location peers; current options are too obviously different.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-031",
+      "source_deck_id": "S-163",
+      "content_version": "1.0",
+      "answer": "NYSC",
+      "category": "School",
+      "answer_family": "National service programme",
+      "difficulty": "Easy",
+      "clues": [
+        "Graduates receive a state posting.",
+        "Camp, khaki and community service define the year.",
+        "It is Nigeria's national youth service programme."
+      ],
+      "distractors": [
+        "JAMB",
+        "WAEC",
+        "Hostel",
+        "School Fees",
+        "Visiting Day",
+        "Common Entrance"
+      ],
+      "weekly_theme": "Campus & Service",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Consider moving this to Naija Life and building a service/civic answer family.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-032",
+      "source_deck_id": "W-174",
+      "content_version": "1.0",
+      "answer": "Mechanic",
+      "category": "Street & Hustle",
+      "answer_family": "Vehicle repair trade",
+      "difficulty": "Easy",
+      "clues": [
+        "You visit when the dashboard light refuses to disappear.",
+        "Engines, tools and oily overalls fill the workshop.",
+        "This worker repairs vehicles."
+      ],
+      "distractors": [
+        "Barber Shop",
+        "House Agent",
+        "Work-from-Home",
+        "Car Don Spoil",
+        "Salary Day",
+        "Okada Ban"
+      ],
+      "weekly_theme": "Street Shift",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Reclassify trade peers such as Vulcanizer into this answer family before release.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-033",
+      "source_deck_id": "W-176",
+      "content_version": "1.0",
+      "answer": "Barber Shop",
+      "category": "Street & Hustle",
+      "answer_family": "Personal-service workplace",
+      "difficulty": "Easy",
+      "clues": [
+        "The chair may turn while clippers buzz.",
+        "People go there for fades, line-ups and shaves.",
+        "It is the place where barbers cut hair."
+      ],
+      "distractors": [
+        "Mechanic",
+        "House Agent",
+        "Work-from-Home",
+        "Salary Day",
+        "Bus Stop",
+        "Korope"
+      ],
+      "weekly_theme": "Street Shift",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Deck needs other service-workplace peers; current pool mixes people, places and events.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-034",
+      "source_deck_id": "W-179",
+      "content_version": "1.0",
+      "answer": "House Agent",
+      "category": "Street & Hustle",
+      "answer_family": "Housing intermediary",
+      "difficulty": "Medium",
+      "clues": [
+        "They may charge before you even see the property.",
+        "Inspection and commission come before moving in.",
+        "This person connects renters with available homes."
+      ],
+      "distractors": [
+        "Work-from-Home",
+        "Salary Day",
+        "Mechanic",
+        "Barber Shop",
+        "Bus Stop",
+        "Car Don Spoil"
+      ],
+      "weekly_theme": "Street Shift",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Deck lacks person-role peers within Street & Hustle.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-035",
+      "source_deck_id": "W-183",
+      "content_version": "1.0",
+      "answer": "Salary Day",
+      "category": "Street & Hustle",
+      "answer_family": "Pay / work event",
+      "difficulty": "Medium",
+      "clues": [
+        "Your mood can improve with one bank alert.",
+        "It usually comes once a month after work is done.",
+        "It is the day wages enter your account."
+      ],
+      "distractors": [
+        "Work-from-Home",
+        "House Agent",
+        "Mechanic",
+        "Barber Shop",
+        "Car Don Spoil",
+        "Okada Ban"
+      ],
+      "weekly_theme": "Street Shift",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Deck needs money/work-event peers; current pool is only category safe.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-036",
+      "source_deck_id": "R-242",
+      "content_version": "1.0",
+      "answer": "Offering Time",
+      "category": "Religion",
+      "answer_family": "Church-service giving moment",
+      "difficulty": "Hard",
+      "clues": [
+        "Ushers may move through the rows during it.",
+        "Cash, envelopes or transfers are collected.",
+        "It is the part of a service when worshippers give money."
+      ],
+      "distractors": [
+        "Tithe",
+        "Sow A Seed",
+        "Testimony",
+        "Church Usher",
+        "Praise And Worship",
+        "Anointing Oil"
+      ],
+      "weekly_theme": "Church Culture",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Overlaps heavily with Tithe and Sow A Seed; requires a clean service-moment family.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-037",
+      "source_deck_id": "R-246",
+      "content_version": "1.0",
+      "answer": "Night Vigil",
+      "category": "Religion",
+      "answer_family": "Overnight church service",
+      "difficulty": "Easy",
+      "clues": [
+        "It begins when most people are preparing for bed.",
+        "Prayer and worship continue until very late or morning.",
+        "It is an overnight church service."
+      ],
+      "distractors": [
+        "Fasting & Prayer",
+        "Praise And Worship",
+        "Deliverance",
+        "White Garment Church",
+        "Prayer Warrior",
+        "Testimony"
+      ],
+      "weekly_theme": "Church Culture",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Current options are practices, denominations and people rather than service types.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-038",
+      "source_deck_id": "R-303",
+      "content_version": "1.0",
+      "answer": "Prayer Warrior",
+      "category": "Religion",
+      "answer_family": "Church persona",
+      "difficulty": "Easy",
+      "clues": [
+        "This person rarely gives a quiet amen.",
+        "Fasting and intense intercession are familiar territory.",
+        "It describes someone known for powerful, persistent prayer."
+      ],
+      "distractors": [
+        "Church Choir",
+        "Church Usher",
+        "Prophecy",
+        "Testimony",
+        "Fasting & Prayer",
+        "Deliverance"
+      ],
+      "weekly_theme": "Church Culture",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Needs person-role peers such as pastor, evangelist or chorister.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-039",
+      "source_deck_id": "D-292",
+      "content_version": "1.0",
+      "answer": "Detty December",
+      "category": "Diaspora",
+      "answer_family": "Diaspora homecoming season",
+      "difficulty": "Medium",
+      "clues": [
+        "Flights into Lagos get crowded when it approaches.",
+        "Concerts, weddings and parties fill the Christmas calendar.",
+        "It is the festive season of nonstop December events."
+      ],
+      "distractors": [
+        "I Just Got Back",
+        "Airport Goodbye",
+        "Nigerian Association",
+        "African Store",
+        "Homesick",
+        "Care Package From Home"
+      ],
+      "weekly_theme": "Abroad & Back",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Deck lacks enough diaspora event/homecoming peers.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-040",
+      "source_deck_id": "D-294",
+      "content_version": "1.0",
+      "answer": "Visa Appointment",
+      "category": "Diaspora",
+      "answer_family": "Immigration appointment",
+      "difficulty": "Medium",
+      "clues": [
+        "You may carry a folder thicker than your laptop.",
+        "An embassy interview and passport are involved.",
+        "It is the scheduled meeting for a travel-document application."
+      ],
+      "distractors": [
+        "Visa Lottery",
+        "Work Permit",
+        "Green Card",
+        "Customs",
+        "Citizenship Ceremony",
+        "Connecting Flight"
+      ],
+      "weekly_theme": "Abroad & Back",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-041",
+      "source_deck_id": "D-297",
+      "content_version": "1.0",
+      "answer": "Black Tax",
+      "category": "Diaspora",
+      "answer_family": "Diaspora financial obligation",
+      "difficulty": "Medium",
+      "clues": [
+        "The payment is not collected by the government.",
+        "Relatives may expect support from the family member doing well.",
+        "It means the financial responsibility of supporting extended family."
+      ],
+      "distractors": [
+        "Care Package From Home",
+        "Shipping Barrel",
+        "Exchange Rate",
+        "Nigerian Association",
+        "African Store",
+        "Homesick"
+      ],
+      "weekly_theme": "Abroad & Back",
+      "editorial_status": "Needs More Pool",
+      "family_review": "Hold",
+      "editorial_note": "Deck needs diaspora finance-obligation peers; current pool mixes objects, places and feelings.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "EDITORIAL HOLD"
+    },
+    {
+      "id": "SG-042",
+      "source_deck_id": "D-299",
+      "content_version": "1.0",
+      "answer": "Green Card",
+      "category": "Diaspora",
+      "answer_family": "Immigration document / status",
+      "difficulty": "Medium",
+      "clues": [
+        "The name is a colour, but it is really a status document.",
+        "It grants permanent residence in the United States.",
+        "It is the U.S. permanent resident card."
+      ],
+      "distractors": [
+        "Visa Lottery",
+        "Work Permit",
+        "Visa Appointment",
+        "Citizenship Ceremony",
+        "Customs",
+        "Masters Abroad"
+      ],
+      "weekly_theme": "Abroad & Back",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "Approved fixed pool; randomize display order only.",
+      "mechanical_qc": {
+        "identity_category": "PASS",
+        "completeness": "PASS",
+        "duplicate": "PASS",
+        "substring": "PASS"
+      },
+      "final_qc": "READY"
+    }
+  ]
+}

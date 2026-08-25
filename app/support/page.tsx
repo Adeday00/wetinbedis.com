@@ -17,7 +17,7 @@ export default function Support() {
       <div className="faq"><h3>Why can’t my friend join my House Party?</h3><p>Confirm that the host created the room, the guest selected Join, and the room code matches exactly. Both devices should have an active connection and the latest app version.</p></div>
       <div className="faq"><h3>Where are reaction videos stored?</h3><p>Reaction clips are kept on the device and shown after the game. Wetin Be Dis does not publicly post them. Camera and microphone access can be changed in iPhone Settings.</p></div>
       <div className="faq"><h3>How do I report an inappropriate ad?</h3><p>Take a screenshot if possible and email us with the approximate time, your country, and a description of the ad. Do not include sensitive personal information.</p></div>
-      <div className="contact-box"><strong>Still need help?</strong><p>Email <a href="mailto:adekanbidavid8@gmail.com?subject=Wetin%20Be%20Dis%20Support">adekanbidavid8@gmail.com</a>. Include your device model, iOS version, app version, and a short description of what happened. We aim to reply within two business days.</p></div>
+      <div className="contact-box"><strong>Still need help?</strong><p>Email <a href="mailto:support@wetinbedis.com?subject=Wetin%20Be%20Dis%20Support">support@wetinbedis.com</a>. Include your device model, iOS version, app version, and a short description of what happened. We aim to reply within two business days.</p></div>
     </div>
   </section></main>;
 }

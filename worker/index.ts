@@ -1,10 +1,14 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { handleApiRequest } from "./api/router";
 
 interface Env {
   ASSETS: Fetcher;
   DB: D1Database;
+  WBD_CONTENT_ADMIN_TOKEN?: string;
+  WBD_CONTENT_ADMIN_USER_IDS?: string;
+  WBD_CONTENT_ADMIN_EMAILS?: string;
   IMAGES: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {
@@ -39,6 +43,9 @@ const worker = {
         },
       }, allowedWidths);
     }
+
+    const apiResponse = await handleApiRequest(request, env);
+    if (apiResponse) return apiResponse;
 
     return handler.fetch(request, env, ctx);
   },

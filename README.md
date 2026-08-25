@@ -1,5 +1,9 @@
 # vinext-starter
 
+The mobile competition foundation is documented in
+[`docs/competition-api-v1.md`](docs/competition-api-v1.md). It adds a D1-backed
+`/api/v1` surface while leaving the public marketing pages intact.
+
 A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
 Drizzle support.
