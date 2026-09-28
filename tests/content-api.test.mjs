@@ -1,8 +1,14 @@
 import assert from "node:assert/strict";
+import { execFile as execFileCallback } from "node:child_process";
 import { createHash } from "node:crypto";
-import { readFile } from "node:fs/promises";
+import { mkdtemp, readFile, rm } from "node:fs/promises";
+import { promisify } from "node:util";
+import { join } from "node:path";
+import { tmpdir } from "node:os";
 import { DatabaseSync } from "node:sqlite";
 import test from "node:test";
+
+const execFile = promisify(execFileCallback);
 
 class TestD1Statement {
   constructor(database, query, values = []) {
@@ -133,12 +139,32 @@ function makeRelease({
     ["Slang", 54],
     ["Street & Hustle", 10],
   ].flatMap(([category, count]) => Array.from({ length: count }, () => category));
-  const questions = Array.from({ length: 30 }, (_, questionIndex) => {
+  const partyCards = partyCategories.map((category, index) => ({
+    card_number: index + 1,
+    id: `PARTY-${index + 1}`,
+    difficulty: ["Easy", "Medium", "Hard"][index % 3],
+    category,
+    main_word: `Main Gist ${index + 1}`,
+    forbidden_words: [
+      `Forbidden A ${index + 1}`,
+      `Forbidden B ${index + 1}`,
+      `Forbidden C ${index + 1}`,
+    ],
+  }));
+  const partyWordsByCategory = new Map();
+  for (const card of partyCards) {
+    const words = partyWordsByCategory.get(card.category) ?? [];
+    words.push(card.main_word);
+    partyWordsByCategory.set(card.category, words);
+  }
+  const questions = Array.from({ length: 35 }, (_, questionIndex) => {
     const number = questionIndex + 1;
     const id = `SG-REMOTE-${number}`;
+    const category = categories[questionIndex % categories.length];
+    const choices = partyWordsByCategory.get(category);
     return {
       id,
-      category: categories[questionIndex % categories.length],
+      category,
       answer_family: `remote-family-${number}`,
       clues: [
         `Staged opening clue ${number}`,
@@ -147,12 +173,12 @@ function makeRelease({
       ],
       options: Array.from({ length: 7 }, (_, optionIndex) => ({
         id: `${id}-option-${optionIndex + 1}`,
-        label: `Choice ${number}-${optionIndex + 1}`,
-        category: categories[questionIndex % categories.length],
+        label: choices[(questionIndex * 7 + optionIndex) % choices.length],
+        category,
         answer_family: `remote-family-${number}`,
       })),
       correct_option_id: `${id}-option-1`,
-      explanation: `Choice ${number}-1 is correct because this is a reviewed test fixture.`,
+      explanation: `${choices[(questionIndex * 7) % choices.length]} is correct because this is a reviewed test fixture.`,
     };
   });
   const quickPlayIDs = questions.map((question) => question.id);
@@ -166,7 +192,7 @@ function makeRelease({
       date_wat: dateWat,
       question_ids: Array.from(
         { length: 5 },
-        (_, offset) => quickPlayIDs[(dayIndex + offset) % quickPlayIDs.length],
+        (_, offset) => quickPlayIDs[dayIndex * 5 + offset],
       ),
     };
   });
@@ -183,18 +209,7 @@ function makeRelease({
     party_deck: {
       schema_version: 1,
       content_version: `party-r${revision}`,
-      cards: partyCategories.map((category, index) => ({
-        card_number: index + 1,
-        id: `PARTY-${index + 1}`,
-        difficulty: ["Easy", "Medium", "Hard"][index % 3],
-        category,
-        main_word: `Main Gist ${index + 1}`,
-        forbidden_words: [
-          `Forbidden A ${index + 1}`,
-          `Forbidden B ${index + 1}`,
-          `Forbidden C ${index + 1}`,
-        ],
-      })),
+      cards: partyCards,
     },
     solo_gist: {
       schema_version: 1,
@@ -333,7 +348,7 @@ test("owner validation and publishing produce hashed immutable public assets", a
   assert.equal(validation.valid, true);
   assert.match(validation.release.assets.party_deck.sha256, /^[a-f0-9]{64}$/);
   assert.equal(validation.release.assets.party_deck.item_count, 350);
-  assert.equal(validation.release.assets.solo_gist.item_count, 30);
+  assert.equal(validation.release.assets.solo_gist.item_count, 35);
 
   const publishResponse = await request(
     worker,
@@ -384,6 +399,27 @@ test("owner validation and publishing produce hashed immutable public assets", a
   assert.equal(createHash("sha256").update(soloText).digest("hex"), manifest.assets.solo_gist.sha256);
   assert.match(soloText, /correct_option_id/);
   assert.doesNotMatch(soloText, /editorial|source_urls|competition|league_answer/i);
+});
+
+test("the owner catalog build fails closed until every option has independent family evidence", async (t) => {
+  const root = await mkdtemp(join(tmpdir(), "wbd-content-release-test-"));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const output = join(root, "next-week.json");
+
+  await assert.rejects(
+    execFile(
+      process.execPath,
+      [
+        "scripts/build-content-release.mjs",
+        "--week", "next",
+        "--revision", "98765",
+        "--output", output,
+      ],
+      { cwd: process.cwd() },
+    ),
+    /family evidence failed: option_family_reviews: seven explicit editorial reviews required/,
+  );
+  await assert.rejects(readFile(output, "utf8"), { code: "ENOENT" });
 });
 
 test("publishing is fail-closed and rejects content that fails Solo QC", async (t) => {
@@ -443,6 +479,29 @@ test("publishing is fail-closed and rejects content that fails Solo QC", async (
   assert.equal(manifest.status, 404);
 });
 
+test("a Solo option cannot be relabelled into another Party category", async (t) => {
+  const database = new TestD1Database();
+  t.after(() => database.close());
+  await migrate(database);
+  const worker = await builtWorker();
+  const release = makeRelease();
+
+  // Question four is Culture. Keep its option metadata as Culture, but swap
+  // in an actual Food label to simulate a tempting hand-edited bad distractor.
+  release.solo_gist.questions[3].options[4].label = release.party_deck.cards
+    .find((card) => card.category === "Food").main_word;
+
+  const response = await request(
+    worker,
+    database,
+    "/api/v1/admin/content/releases/validate",
+    { method: "POST", headers: ownerHeaders, body: JSON.stringify(release) },
+  );
+  assert.equal(response.status, 422);
+  const payload = await response.json();
+  assert.ok(payload.issues.some((issue) => issue.includes("label:party_category_mismatch")));
+});
+
 test("a higher revision supersedes the week without breaking old immutable URLs", async (t) => {
   const database = new TestD1Database();
   t.after(() => database.close());
@@ -473,6 +532,45 @@ test("a higher revision supersedes the week without breaking old immutable URLs"
   );
   assert.equal(oldAsset.status, 200);
   assert.equal(JSON.parse(await oldAsset.text()).cards[0].main_word, "Main Gist 1");
+});
+
+test("the next week cannot recycle Today’s 5 from the prior published release", async (t) => {
+  const database = new TestD1Database();
+  t.after(() => database.close());
+  await migrate(database);
+  const worker = await builtWorker();
+  const first = makeRelease();
+  const nextWeek = moveReleaseOneWeekLater(
+    makeRelease({ revision: 2, releaseId: "release-next-week-r2" }),
+  );
+
+  const firstPublish = await request(
+    worker,
+    database,
+    "/api/v1/admin/content/releases/publish",
+    { method: "POST", headers: ownerHeaders, body: JSON.stringify(first) },
+  );
+  assert.equal(firstPublish.status, 201);
+
+  const validate = await request(
+    worker,
+    database,
+    "/api/v1/admin/content/releases/validate",
+    { method: "POST", headers: ownerHeaders, body: JSON.stringify(nextWeek) },
+  );
+  assert.equal(validate.status, 409);
+  const validationPayload = await validate.json();
+  assert.equal(validationPayload.error.code, "daily_question_reuse");
+  assert.equal(validationPayload.error.details.reused_question_count, 35);
+
+  const publish = await request(
+    worker,
+    database,
+    "/api/v1/admin/content/releases/publish",
+    { method: "POST", headers: ownerHeaders, body: JSON.stringify(nextWeek) },
+  );
+  assert.equal(publish.status, 409);
+  assert.equal((await publish.json()).error.code, "daily_question_reuse");
 });
 
 test("future published assets stay embargoed until their WAT effective time", async (t) => {
@@ -519,7 +617,7 @@ test("future published assets stay embargoed until their WAT effective time", as
   assert.equal(activeAsset.status, 200);
 });
 
-test("checked-in owner catalog preserves 42 candidates while release seeds activate only 26 READY cards", async (t) => {
+test("growing owner catalog blocks legacy short releases from being republished", async (t) => {
   const database = new TestD1Database();
   t.after(() => database.close());
   await migrate(database);
@@ -534,12 +632,17 @@ test("checked-in owner catalog preserves 42 candidates while release seeds activ
     await readFile(new URL("../content/templates/2026-W36-r2.json", import.meta.url), "utf8"),
   );
 
-  assert.equal(catalog.cards.length, 42);
-  assert.equal(catalog.cards.filter((card) => card.final_qc === "READY").length, 26);
-  assert.equal(
-    catalog.cards.filter((card) => card.final_qc === "EDITORIAL HOLD").length,
-    16,
+  const readyCards = catalog.cards.filter(
+    (card) => card.final_qc === "READY" && card.family_review === "Pass",
   );
+  const heldCards = catalog.cards.filter((card) => !readyCards.includes(card));
+  // The weekly builder requires 35 distinct reviewed cards; this catalog is
+  // allowed to grow without turning a content-test assertion into a release
+  // blocker. Older, 26-card assets remain immutable historical artifacts, but
+  // cannot be republished as a new daily release because they repeat cards.
+  assert.ok(catalog.cards.length >= 35);
+  assert.ok(readyCards.length >= 35);
+  assert.ok(heldCards.length >= 1);
 
   for (const seed of [currentSeed, nextTemplate]) {
     const validateResponse = await request(
@@ -548,9 +651,12 @@ test("checked-in owner catalog preserves 42 candidates while release seeds activ
       "/api/v1/admin/content/releases/validate",
       { method: "POST", headers: ownerHeaders, body: JSON.stringify(seed) },
     );
-    assert.equal(validateResponse.status, 200);
+    assert.equal(validateResponse.status, 422);
     const validation = await validateResponse.json();
-    assert.equal(validation.valid, true);
+    assert.equal(validation.valid, false);
+    assert.ok(
+      validation.issues.some((issue) => issue.includes("solo_gist.questions:count:26/35-1000")),
+    );
     assert.equal(seed.party_deck.cards.length, 350);
     assert.equal(seed.solo_gist.questions.length, 26);
     assert.equal(seed.solo_gist.quick_play_question_ids.length, 26);

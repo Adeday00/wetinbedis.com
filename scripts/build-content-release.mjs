@@ -2,6 +2,10 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
+import {
+  normalizedOptionLabel,
+  requireReviewedOptionFamilies,
+} from "./solo-family-validation.mjs";
 
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
 const siteDirectory = path.resolve(scriptDirectory, "..");
@@ -13,6 +17,10 @@ const partyDeckPath = path.join(
 );
 const DAY_MS = 86_400_000;
 const WAT_OFFSET_MS = 3_600_000;
+// Today’s 5 is the retention promise. A release needs a complete unique
+// seven-day set; publishing a partial catalog and silently repeating a card is
+// not an acceptable live fallback.
+const MINIMUM_READY_SOLO_CARDS = 35;
 
 function argumentsFrom(argv) {
   const values = new Map();
@@ -89,6 +97,7 @@ function interleaveByCategory(cards) {
 
 function makeQuestions(catalogCards) {
   return catalogCards.map((card) => {
+    const reviewedFamilies = requireReviewedOptionFamilies(card);
     const numericID = Number(card.id.replace(/\D/g, ""));
     const correctIndex = (numericID - 1) % 7;
     const labels = [...card.distractors];
@@ -102,9 +111,9 @@ function makeQuestions(catalogCards) {
         id: `${card.id}-option-${index + 1}`,
         label,
         category: card.category,
-        // READY + Family Review Pass is the workbook's explicit declaration
-        // that this fixed option set belongs to the reviewed answer family.
-        answer_family: card.answer_family,
+        // This value comes from the label's explicit editorial evidence. It
+        // is not inferred by copying the question family onto every option.
+        answer_family: reviewedFamilies.get(normalizedOptionLabel(label)).answer_family,
       })),
       correct_option_id: `${card.id}-option-${correctIndex + 1}`,
       explanation: `${card.answer}: ${card.clues[2]}`,
@@ -113,8 +122,13 @@ function makeQuestions(catalogCards) {
 }
 
 function validateCatalog(catalog, partyRows) {
-  if (catalog.schema_version !== 1 || catalog.cards?.length !== 42) {
-    throw new Error("The owner catalog must contain exactly 42 schema-v1 cards");
+  if (catalog.schema_version !== 1 || !Array.isArray(catalog.cards)) {
+    throw new Error("The owner catalog must be a schema-v1 card array");
+  }
+  if (catalog.cards.length < MINIMUM_READY_SOLO_CARDS) {
+    throw new Error(
+      `The owner catalog needs at least ${MINIMUM_READY_SOLO_CARDS} reviewed Solo cards`,
+    );
   }
   if (new Set(catalog.cards.map((card) => card.id)).size !== catalog.cards.length) {
     throw new Error("The owner catalog contains duplicate Solo IDs");
@@ -131,6 +145,9 @@ function validateCatalog(catalog, partyRows) {
       if (category !== card.category) {
         throw new Error(`${card.id} option ${label} is not catalogued as ${card.category}`);
       }
+    }
+    if (card.final_qc === "READY" || card.family_review === "Pass") {
+      requireReviewedOptionFamilies(card);
     }
   }
 }
@@ -155,13 +172,33 @@ function makePartyDocument(partyRows, contentVersion) {
 }
 
 function makeDailyPacks(readyCards, effectiveFromMs) {
-  const rotation = interleaveByCategory(readyCards);
+  const groups = new Map();
+  for (const card of interleaveByCategory(readyCards)) {
+    const group = groups.get(card.category) ?? [];
+    group.push(card);
+    groups.set(card.category, group);
+  }
+  const categories = [...groups.keys()].sort();
+
+  // Plan all seven days before assigning a card. A greedy card-by-card
+  // rotation can burn every small category early, leaving a one-category
+  // Sunday even when a valid diverse week exists. Extra READY cards remain in
+  // Quick Play; they do not make the weekly planner fail after card 35.
+  const weekPlan = planDiverseWeek(categories, groups);
+  if (!weekPlan) {
+    throw new Error("READY catalog cannot form seven 5-card packs with three categories each");
+  }
+
   return Array.from({ length: 7 }, (_, dayIndex) => {
-    const selected = Array.from(
-      { length: 5 },
-      (_, offset) => rotation[(dayIndex * 5 + offset) % rotation.length],
-    );
-    if (new Set(selected.map((card) => card.category)).size < 3) {
+    const plan = weekPlan[dayIndex];
+    const selected = plan.map((category) => {
+      const card = groups.get(category)?.shift();
+      if (!card) throw new Error(`Daily pack ${dayIndex + 1} ran out of ${category} cards`);
+      return card;
+    });
+    const selectedCategories = new Set(selected.map((card) => card.category));
+
+    if (selectedCategories.size < 3) {
       throw new Error(`Daily pack ${dayIndex + 1} has fewer than three categories`);
     }
     return {
@@ -171,6 +208,58 @@ function makeDailyPacks(readyCards, effectiveFromMs) {
       question_ids: selected.map((card) => card.id),
     };
   });
+}
+
+function planDiverseWeek(categories, groups) {
+  const initialCounts = categories.map((category) => groups.get(category)?.length ?? 0);
+  const cache = new Map();
+
+  function plansForDay(remaining) {
+    const plans = [];
+    function visit(index, slots, usedCategories, counts) {
+      if (index === categories.length) {
+        if (slots === 5 && usedCategories >= 3) plans.push(counts);
+        return;
+      }
+      const maximum = Math.min(2, remaining[index], 5 - slots);
+      for (let count = 0; count <= maximum; count += 1) {
+        visit(index + 1, slots + count, usedCategories + (count > 0 ? 1 : 0), [...counts, count]);
+      }
+    }
+    visit(0, 0, 0, []);
+    return plans.sort((left, right) => {
+      const leftDistinct = left.filter(Boolean).length;
+      const rightDistinct = right.filter(Boolean).length;
+      if (leftDistinct !== rightDistinct) return rightDistinct - leftDistinct;
+      const leftLargestUse = Math.max(...left);
+      const rightLargestUse = Math.max(...right);
+      return leftLargestUse - rightLargestUse;
+    });
+  }
+
+  function solve(dayIndex, remaining) {
+    // A seven-day release consumes exactly 35 cards. When the approved catalog
+    // grows beyond that, leave the unused cards available to Quick Play and
+    // future weeks instead of requiring the planner to consume every card.
+    if (dayIndex === 7) return [];
+    const key = `${dayIndex}:${remaining.join(",")}`;
+    if (cache.has(key)) return cache.get(key);
+
+    for (const counts of plansForDay(remaining)) {
+      const next = remaining.map((count, index) => count - counts[index]);
+      const future = solve(dayIndex + 1, next);
+      if (future) {
+        const plan = counts.flatMap((count, index) => Array(count).fill(categories[index]));
+        const result = [plan, ...future];
+        cache.set(key, result);
+        return result;
+      }
+    }
+    cache.set(key, null);
+    return null;
+  }
+
+  return solve(0, initialCounts);
 }
 
 const args = argumentsFrom(process.argv.slice(2));
@@ -220,9 +309,9 @@ const readyCards = catalog.cards.filter(
   (card) => card.final_qc === "READY" && card.family_review === "Pass",
 );
 const heldCards = catalog.cards.filter((card) => !readyCards.includes(card));
-if (readyCards.length !== 26 || heldCards.length !== 16) {
+if (readyCards.length < MINIMUM_READY_SOLO_CARDS) {
   throw new Error(
-    `Expected 26 READY + 16 held catalog cards; found ${readyCards.length} + ${heldCards.length}`,
+    `Need at least ${MINIMUM_READY_SOLO_CARDS} READY cards with Family Review Pass; found ${readyCards.length}`,
   );
 }
 const categoryCounts = new Map();
@@ -274,5 +363,7 @@ console.log(
     party_cards: release.party_deck.cards.length,
     solo_ready: release.solo_gist.questions.length,
     held_in_owner_catalog_only: heldCards.length,
+    weekly_daily_slots: 35,
+    unique_daily_slots: 35,
   }),
 );
