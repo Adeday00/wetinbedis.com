@@ -20,7 +20,7 @@ export default async function ContentAdminPage() {
           become the app’s next atomic content drop.
         </p>
         <a className="admin-signout" href={chatGPTSignOutPath("/")}>Sign out</a>
-        <a className="admin-review-link" href="/card-review">Open the card review editor</a>
+        <a className="admin-review-link" href="/card-review.html">Open the card review editor</a>
       </section>
       <ContentAdminConsole />
     </main>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080709">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Review Party Cards — Wetin Be Dis</title>
+  <style>
+    :root{--ink:#080709;--panel:#171319;--paper:#fff4d8;--gold:#ffb100;--green:#18a640;--muted:#bdb4bc;--line:rgba(255,177,0,.28)}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 0 0,rgba(67,18,123,.75),transparent 35%),radial-gradient(circle at 100% 20%,rgba(24,166,64,.24),transparent 32%),var(--ink);color:var(--paper);font:16px/1.45 Arial,Helvetica,sans-serif}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#fff .55px,transparent .7px);background-size:5px 5px}a{color:var(--gold);font-weight:800}.wrap{width:min(1180px,100%);margin:auto;padding:28px clamp(16px,4vw,58px) 80px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:42px}.brand{color:var(--paper);text-decoration:none;display:flex;align-items:center;gap:10px;font-weight:950;line-height:.9}.brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#43127b;border:3px solid var(--green);font:30px Georgia,serif}.eyebrow{color:var(--gold);font-size:12px;font-weight:950;letter-spacing:4px}.title{max-width:780px}.title h1{font:700 clamp(42px,7vw,78px)/.94 Georgia,serif;letter-spacing:-3px;margin:12px 0 18px}.title p{color:#d4ccd5;max-width:720px;margin:0}.panel{background:rgba(23,19,25,.96);border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:24px}.toolbar{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:12px;align-items:end}.field{display:grid;gap:6px;color:#d9d2da;font-size:13px;font-weight:850}.field input,.field select,.card input,.card select{width:100%;min-height:44px;border:1px solid rgba(255,255,255,.2);border-radius:10px;background:#0c0b0d;color:var(--paper);padding:0 12px;font:inherit}.field input:focus,.field select:focus,.card input:focus,.card select:focus{outline:2px solid var(--gold);outline-offset:1px}.stats{display:flex;gap:20px;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:14px}.stats strong{color:var(--gold);font-size:22px;margin-right:4px}.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}.button{min-height:46px;border-radius:10px;padding:0 16px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);color:var(--paper);font:850 14px Arial;cursor:pointer}.button.primary{color:#080709;background:linear-gradient(110deg,var(--gold),#ffd05b);border:0}.button:disabled{opacity:.45;cursor:not-allowed}.status{min-height:24px;color:var(--muted);font-size:14px}.status.good{color:#8ee8a7}.status.bad{color:#ff9d91}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}.card{background:rgba(23,19,25,.97);border:1px solid rgba(255,177,0,.25);border-radius:16px;padding:16px;display:grid;gap:12px}.card-head{display:flex;align-items:center;gap:9px}.number{color:#080709;background:var(--gold);border-radius:8px;padding:4px 8px;font-weight:950}.id{color:var(--muted);font:12px ui-monospace,SFMono-Regular,Menlo,monospace}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.forbidden{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:10px;display:grid;gap:10px}.forbidden legend{padding:0 6px;color:var(--gold);font-size:12px;font-weight:950;letter-spacing:1px;text-transform:uppercase}.forbidden label{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:center;font-size:13px;color:var(--muted)}.empty{padding:40px 10px;text-align:center;color:var(--muted);border:1px dashed rgba(255,255,255,.2);border-radius:14px;margin-top:20px}.pages{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:24px}.pages span{color:var(--muted);font-size:14px}@media(max-width:700px){.wrap{padding-top:18px}.topbar{margin-bottom:30px}.toolbar{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.button{flex:1;min-width:145px}.topbar a:last-child{font-size:14px}.title h1{letter-spacing:-2px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar"><a class="brand" href="/"><span class="brand-mark">?</span><span>WETIN<br>BE DIS</span></a><a href="/">Back to home</a></div>
+    <section class="title"><div class="eyebrow">CARD REVIEW</div><h1>Review the gist.</h1><p>Search and edit the answer, category, difficulty, and all three forbidden words. Save on this device, then download a backup or sync to the Site when owner access is available.</p></section>
+    <section class="panel">
+      <div class="toolbar">
+        <label class="field">Search cards<input id="search" placeholder="Answer, ID, or forbidden word" autocomplete="off"></label>
+        <label class="field">Category<select id="category"></select></label>
+        <label class="field">Difficulty<select id="difficulty"><option>All</option><option>Easy</option><option>Medium</option><option>Hard</option></select></label>
+      </div>
+      <div class="stats"><span><strong id="total">0</strong> total cards</span><span><strong id="showing">0</strong> showing</span><span id="source">Loading…</span></div>
+      <div class="actions"><button class="button primary" id="save" disabled>Save changes</button><button class="button" id="reload">Reload Site version</button><button class="button" id="download">Download backup</button><span class="status" id="status" role="status"></span></div>
+    </section>
+    <section id="cards" class="cards" aria-live="polite"></section>
+    <div id="empty" class="empty" hidden>No cards match those filters.</div>
+    <div class="pages"><button class="button" id="previous">Previous</button><span id="page">Page 1</span><button class="button" id="next">Next</button></div>
+  </main>
+  <script>
+    (() => {
+      const localKey = "wetin-be-dis-card-editor-v1";
+      const pageSize = 40;
+      const categories = ["All","Celebrities","Culture","Diaspora","Food","Music","Naija Life","Religion","School","Slang","Street & Hustle"];
+      const $ = (id) => document.getElementById(id);
+      const state = { cards: [], page: 1, dirty: false, updatedAt: null, source: "" };
+      const categorySelect = $("category");
+      categories.forEach((item) => { const option = document.createElement("option"); option.textContent = item; categorySelect.append(option); });
+      function setStatus(message, tone = "") { const node = $("status"); node.textContent = message; node.className = `status ${tone}`; }
+      function clone(cards) { return cards.map((card) => ({ ...card })); }
+      function loadLocal() { try { const value = JSON.parse(localStorage.getItem(localKey) || "null"); return Array.isArray(value?.cards) ? value : null; } catch { return null; } }
+      function saveLocal() { localStorage.setItem(localKey, JSON.stringify({ cards: state.cards, savedAt: new Date().toISOString() })); }
+      async function fetchCards() {
+        try {
+          const response = await fetch("/api/v1/admin/party-deck", { credentials: "same-origin" });
+          if (response.ok) { const payload = await response.json(); if (Array.isArray(payload.cards)) return { cards: payload.cards, updatedAt: payload.updated_at || null, source: "Site draft" }; }
+        } catch {}
+        const response = await fetch("/party-deck-catalog.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("The card list could not be loaded.");
+        return { cards: await response.json(), updatedAt: null, source: "bundled deck" };
+      }
+      function filtered() {
+        const needle = $("search").value.trim().toLocaleLowerCase(); const selectedCategory = categorySelect.value; const selectedDifficulty = $("difficulty").value;
+        return state.cards.filter((card) => {
+          if (selectedCategory !== "All" && card.Category !== selectedCategory) return false;
+          if (selectedDifficulty !== "All" && card.Difficulty !== selectedDifficulty) return false;
+          if (!needle) return true;
+          return [card.ID,card.Category,card["Main Word"],card["Forbidden Word 1"],card["Forbidden Word 2"],card["Forbidden Word 3"]].join(" ").toLocaleLowerCase().includes(needle);
+        });
+      }
+      function update(card, field, value) { card[field] = value; state.dirty = true; $("save").disabled = false; setStatus("Unsaved changes"); }
+      function makeField(labelText, value, onInput, selectOptions) {
+        const label = document.createElement("label"); label.className = "field"; label.textContent = labelText;
+        const input = selectOptions ? document.createElement("select") : document.createElement("input");
+        if (selectOptions) selectOptions.forEach((optionText) => { const option = document.createElement("option"); option.textContent = optionText; option.selected = optionText === value; input.append(option); }); else { input.value = value; }
+        input.addEventListener("input", () => onInput(input.value)); label.append(input); return label;
+      }
+      function render() {
+        const list = filtered(); const maxPage = Math.max(1, Math.ceil(list.length / pageSize)); state.page = Math.min(state.page, maxPage); const shown = list.slice((state.page - 1) * pageSize, state.page * pageSize); const container = $("cards"); container.replaceChildren();
+        $("total").textContent = state.cards.length; $("showing").textContent = list.length; $("page").textContent = `Page ${state.page} of ${maxPage}`; $("previous").disabled = state.page === 1; $("next").disabled = state.page === maxPage; $("empty").hidden = list.length !== 0;
+        shown.forEach((card) => {
+          const article = document.createElement("article"); article.className = "card";
+          const head = document.createElement("div"); head.className = "card-head"; const number = document.createElement("span"); number.className = "number"; number.textContent = `#${card["Card Number"]}`; const id = document.createElement("span"); id.className = "id"; id.textContent = card.ID; head.append(number,id); article.append(head);
+          article.append(makeField("Answer", card["Main Word"], (value) => update(card, "Main Word", value)));
+          const two = document.createElement("div"); two.className = "two"; two.append(makeField("Category", card.Category, (value) => update(card, "Category", value), categories.slice(1)), makeField("Difficulty", card.Difficulty, (value) => update(card, "Difficulty", value), ["Easy","Medium","Hard"])); article.append(two);
+          const fieldset = document.createElement("fieldset"); fieldset.className = "forbidden"; const legend = document.createElement("legend"); legend.textContent = "Forbidden words"; fieldset.append(legend);
+          [1,2,3].forEach((number) => { const label = document.createElement("label"); label.textContent = `#${number}`; const input = document.createElement("input"); const field = `Forbidden Word ${number}`; input.value = card[field]; input.addEventListener("input", () => update(card, field, input.value)); label.append(input); fieldset.append(label); }); article.append(fieldset); container.append(article);
+        });
+      }
+      async function load() { setStatus("Loading cards…"); $("save").disabled = true; try { const result = await fetchCards(); state.cards = clone(result.cards); state.updatedAt = result.updatedAt; state.source = result.source; state.dirty = false; $("source").textContent = result.source; setStatus(`${state.cards.length} cards loaded`, "good"); render(); } catch (error) { const local = loadLocal(); if (local) { state.cards = clone(local.cards); state.source = "this device"; state.dirty = true; $("source").textContent = "this device"; setStatus("Using the saved copy on this device", "good"); render(); } else { setStatus(error.message || "Cards did not load", "bad"); } } }
+      async function save() { saveLocal(); const body = { cards: state.cards, expected_updated_at: state.updatedAt }; setStatus("Saving…"); try { const response = await fetch("/api/v1/admin/party-deck", { method: "PUT", credentials: "same-origin", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }); if (!response.ok) throw new Error("Site owner access was not available"); const payload = await response.json(); state.updatedAt = payload.updated_at || null; state.dirty = false; $("save").disabled = true; setStatus("Saved to the Site and this device", "good"); } catch { state.dirty = false; $("save").disabled = true; setStatus("Saved on this device. Download a backup when you finish.", "good"); } }
+      function download() { const blob = new Blob([JSON.stringify(state.cards, null, 2)], { type: "application/json" }); const url = URL.createObjectURL(blob); const link = document.createElement("a"); link.href = url; link.download = "wetin-be-dis-party-deck-edits.json"; link.click(); URL.revokeObjectURL(url); setStatus("Backup downloaded", "good"); }
+      $("search").addEventListener("input", () => { state.page = 1; render(); }); categorySelect.addEventListener("change", () => { state.page = 1; render(); }); $("difficulty").addEventListener("change", () => { state.page = 1; render(); }); $("previous").addEventListener("click", () => { state.page -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); }); $("next").addEventListener("click", () => { state.page += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); }); $("save").addEventListener("click", save); $("reload").addEventListener("click", load); $("download").addEventListener("click", download); load();
+    })();
+  </script>
+</body>
+</html>

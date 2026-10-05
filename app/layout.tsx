@@ -31,7 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Link>
           <nav aria-label="Main navigation">
             <Link href="/#how-to-play">How to play</Link>
-            <Link href="/card-review">Review cards</Link>
+            <a href="/card-review.html">Review cards</a>
             <Link href="/support">Support</Link>
             <Link href="/privacy">Privacy</Link>
           </nav>
