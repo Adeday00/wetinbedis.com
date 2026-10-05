@@ -4,6 +4,11 @@ The mobile competition foundation is documented in
 [`docs/competition-api-v1.md`](docs/competition-api-v1.md). It adds a D1-backed
 `/api/v1` surface while leaving the public marketing pages intact.
 
+The native iOS/Android social-room foundation is documented in
+[`docs/play-on-a-call-v1.md`](docs/play-on-a-call-v1.md). It uses a Cloudflare
+Durable Object per short-lived room while Discord, WhatsApp, and FaceTime remain
+external calling apps.
+
 A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
 Drizzle support.

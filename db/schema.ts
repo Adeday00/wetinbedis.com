@@ -63,6 +63,52 @@ export const playerSessions = sqliteTable(
   ],
 );
 
+/**
+ * A device-level delivery registration, not a marketing profile. The raw APNs
+ * or FCM token is encrypted before it reaches D1; its hash supports idempotent
+ * upserts and deletion without returning the token to a client.
+ */
+export const notificationDevices = sqliteTable(
+  "notification_devices",
+  {
+    id: text("id").primaryKey(),
+    playerId: text("player_id")
+      .notNull()
+      .references(() => players.id, { onDelete: "cascade" }),
+    platform: text("platform").notNull(),
+    tokenHash: text("token_hash").notNull(),
+    tokenCiphertext: text("token_ciphertext").notNull(),
+    leagueUpdatesEnabled: integer("league_updates_enabled")
+      .notNull()
+      .default(0),
+    friendInvitesEnabled: integer("friend_invites_enabled")
+      .notNull()
+      .default(0),
+    offersEnabled: integer("offers_enabled").notNull().default(0),
+    consentedAt: integer("consented_at").notNull(),
+    lastRegisteredAt: integer("last_registered_at").notNull(),
+    createdAt: integer("created_at").notNull(),
+    updatedAt: integer("updated_at").notNull(),
+  },
+  (table) => [
+    uniqueIndex("notification_devices_platform_token_unique").on(
+      table.platform,
+      table.tokenHash,
+    ),
+    index("notification_devices_player_idx").on(table.playerId, table.updatedAt),
+    check(
+      "notification_devices_platform_check",
+      sql`${table.platform} in ('ios', 'android')`,
+    ),
+    check(
+      "notification_devices_preference_check",
+      sql`${table.leagueUpdatesEnabled} in (0, 1)
+        and ${table.friendInvitesEnabled} in (0, 1)
+        and ${table.offersEnabled} in (0, 1)`,
+    ),
+  ],
+);
+
 export const competitions = sqliteTable(
   "competitions",
   {
@@ -218,6 +264,12 @@ export const attempts = sqliteTable(
     packVersion: text("pack_version").notNull(),
     packHash: text("pack_hash"),
     scoringVersion: text("scoring_version").notNull(),
+    // Practice may receive the full preview pack. A future cash attempt must
+    // be explicitly created with the sequential protocol below; it may never
+    // inherit the practice batch behaviour by accident.
+    deliveryProtocol: text("delivery_protocol")
+      .notNull()
+      .default("practice_batch_v1"),
     startedAt: integer("started_at").notNull(),
     playDeadlineAt: integer("play_deadline_at").notNull(),
     submitDeadlineAt: integer("submit_deadline_at").notNull(),
@@ -259,6 +311,40 @@ export const attempts = sqliteTable(
     check(
       "attempts_score_status_check",
       sql`${table.scoreStatus} in ('unscored', 'provisional', 'confirmed', 'voided')`,
+    ),
+    check(
+      "attempts_delivery_protocol_check",
+      sql`${table.deliveryProtocol} in ('practice_batch_v1', 'cash_sequential_v1')`,
+    ),
+  ],
+);
+
+/**
+ * Immutable audit trail for a future cash attempt's one-at-a-time card
+ * delivery. The service writes these times; the player never submits them.
+ * This table intentionally holds no card text or answer key.
+ */
+export const attemptCardIssues = sqliteTable(
+  "attempt_card_issues",
+  {
+    attemptId: text("attempt_id")
+      .notNull()
+      .references(() => attempts.id, { onDelete: "cascade" }),
+    ordinal: integer("ordinal").notNull(),
+    cardId: text("card_id")
+      .notNull()
+      .references(() => competitionCards.id, { onDelete: "restrict" }),
+    issuedAt: integer("issued_at").notNull(),
+    answeredAt: integer("answered_at"),
+  },
+  (table) => [
+    primaryKey({ columns: [table.attemptId, table.ordinal] }),
+    uniqueIndex("attempt_card_issues_card_unique").on(table.attemptId, table.cardId),
+    index("attempt_card_issues_attempt_idx").on(table.attemptId, table.issuedAt),
+    check("attempt_card_issues_ordinal_check", sql`${table.ordinal} > 0`),
+    check(
+      "attempt_card_issues_answer_time_check",
+      sql`${table.answeredAt} is null or ${table.answeredAt} >= ${table.issuedAt}`,
     ),
   ],
 );
@@ -334,6 +420,99 @@ export const scoreChallenges = sqliteTable(
   ],
 );
 
+export const competitionReviews = sqliteTable(
+  "competition_reviews",
+  {
+    id: text("id").primaryKey(),
+    attemptId: text("attempt_id")
+      .notNull()
+      .references(() => attempts.id, { onDelete: "restrict" }),
+    competitionId: text("competition_id")
+      .notNull()
+      .references(() => competitions.id, { onDelete: "restrict" }),
+    playerId: text("player_id")
+      .notNull()
+      .references(() => players.id, { onDelete: "restrict" }),
+    status: text("status").notNull().default("queued"),
+    riskScore: integer("risk_score").notNull().default(0),
+    flagsJson: text("flags_json").notNull().default("[]"),
+    note: text("note"),
+    reviewer: text("reviewer"),
+    reviewedAt: integer("reviewed_at"),
+    createdAt: integer("created_at").notNull(),
+    updatedAt: integer("updated_at").notNull(),
+  },
+  (table) => [
+    uniqueIndex("competition_reviews_attempt_unique").on(table.attemptId),
+    index("competition_reviews_queue_idx").on(table.competitionId, table.status, table.createdAt),
+    check("competition_reviews_status_check", sql`${table.status} in ('queued', 'in_review', 'cleared', 'voided')`),
+    check("competition_reviews_risk_score_check", sql`${table.riskScore} between 0 and 100`),
+  ],
+);
+
+export const partyDeckEditorState = sqliteTable(
+  "party_deck_editor_state",
+  {
+    id: text("id").primaryKey(),
+    cardsJson: text("cards_json").notNull(),
+    updatedBy: text("updated_by").notNull(),
+    updatedAt: integer("updated_at").notNull(),
+  },
+);
+
+export const competitionPayouts = sqliteTable(
+  "competition_payouts",
+  {
+    id: text("id").primaryKey(),
+    competitionId: text("competition_id")
+      .notNull()
+      .references(() => competitions.id, { onDelete: "restrict" }),
+    attemptId: text("attempt_id")
+      .notNull()
+      .references(() => attempts.id, { onDelete: "restrict" }),
+    playerId: text("player_id")
+      .notNull()
+      .references(() => players.id, { onDelete: "restrict" }),
+    place: integer("place").notNull(),
+    amountMinor: integer("amount_minor").notNull(),
+    currency: text("currency").notNull().default("NGN"),
+    status: text("status").notNull().default("pending"),
+    transferReference: text("transfer_reference"),
+    failureReason: text("failure_reason"),
+    createdBy: text("created_by").notNull(),
+    approvedBy: text("approved_by"),
+    approvedAt: integer("approved_at"),
+    sentBy: text("sent_by"),
+    sentAt: integer("sent_at"),
+    createdAt: integer("created_at").notNull(),
+    updatedAt: integer("updated_at").notNull(),
+  },
+  (table) => [
+    uniqueIndex("competition_payouts_attempt_unique").on(table.attemptId),
+    uniqueIndex("competition_payouts_place_unique").on(table.competitionId, table.place),
+    index("competition_payouts_status_idx").on(table.competitionId, table.status, table.createdAt),
+    check("competition_payouts_place_check", sql`${table.place} > 0`),
+    check("competition_payouts_amount_check", sql`${table.amountMinor} > 0`),
+    check("competition_payouts_status_check", sql`${table.status} in ('pending', 'approved', 'sent', 'failed', 'cancelled')`),
+  ],
+);
+
+export const competitionPayoutAudit = sqliteTable(
+  "competition_payout_audit",
+  {
+    id: text("id").primaryKey(),
+    payoutId: text("payout_id")
+      .notNull()
+      .references(() => competitionPayouts.id, { onDelete: "restrict" }),
+    action: text("action").notNull(),
+    actor: text("actor").notNull(),
+    note: text("note").notNull(),
+    detailsJson: text("details_json").notNull().default("{}"),
+    changedAt: integer("changed_at").notNull(),
+  },
+  (table) => [index("competition_payout_audit_idx").on(table.payoutId, table.changedAt)],
+);
+
 export const contentReleases = sqliteTable(
   "content_releases",
   {
@@ -407,4 +586,51 @@ export const contentAssets = sqliteTable(
     check("content_assets_bytes_check", sql`${table.byteCount} > 0`),
     check("content_assets_items_check", sql`${table.itemCount} > 0`),
   ],
+);
+
+export const contentReleaseAudit = sqliteTable(
+  "content_release_audit",
+  {
+    id: text("id").primaryKey(),
+    releaseId: text("release_id").notNull().references(() => contentReleases.id, { onDelete: "restrict" }),
+    action: text("action").notNull(),
+    actor: text("actor").notNull(),
+    reason: text("reason").notNull(),
+    changedAt: integer("changed_at").notNull(),
+    detailsJson: text("details_json").notNull().default("{}"),
+  },
+  (table) => [index("content_release_audit_release_idx").on(table.releaseId, table.changedAt)],
+);
+
+export const appConfigRevisions = sqliteTable(
+  "app_config_revisions",
+  {
+    id: text("id").primaryKey(),
+    revision: integer("revision").notNull(),
+    status: text("status").notNull().default("draft"),
+    configJson: text("config_json").notNull(),
+    createdBy: text("created_by").notNull(),
+    reason: text("reason").notNull(),
+    createdAt: integer("created_at").notNull(),
+    publishedAt: integer("published_at"),
+  },
+  (table) => [
+    uniqueIndex("app_config_revisions_revision_unique").on(table.revision),
+    index("app_config_revisions_public_idx").on(table.status, table.revision),
+    check("app_config_revisions_status_check", sql`${table.status} in ('draft', 'review', 'published', 'rolled_back', 'revoked', 'disabled')`),
+  ],
+);
+
+export const appConfigAudit = sqliteTable(
+  "app_config_audit",
+  {
+    id: text("id").primaryKey(),
+    revisionId: text("revision_id").notNull().references(() => appConfigRevisions.id, { onDelete: "restrict" }),
+    action: text("action").notNull(),
+    actor: text("actor").notNull(),
+    reason: text("reason").notNull(),
+    changedAt: integer("changed_at").notNull(),
+    detailsJson: text("details_json").notNull().default("{}"),
+  },
+  (table) => [index("app_config_audit_revision_idx").on(table.revisionId, table.changedAt)],
 );

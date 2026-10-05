@@ -15,6 +15,23 @@ site remains independent; mobile endpoints live under `/api/v1`.
   a production SMS provider, secrets, rate limits, and abuse controls are added.
   There is no HTTP-exposed development OTP.
 
+## Remote notification registration
+
+- `PUT /api/v1/me/notification-devices` accepts an authenticated player’s APNs
+  or FCM token plus three explicit booleans: `league_updates_enabled`,
+  `friend_invites_enabled`, and `offers_enabled`.
+- The API permits only `ios` and `android` platforms, validates token shape,
+  stores a one-way token hash plus ciphertext, and never returns the token.
+- Sending all three booleans as `false` deletes that player’s registration for
+  the supplied token. It is an opt-out, not a dormant marketing profile.
+- The endpoint returns `delivery: "registration_only"`. No remote campaign or
+  transactional sender is live until APNs/FCM credentials, a least-privilege
+  delivery job, invalid-token handling, and the deployment checklist in
+  `docs/RemoteNotificationLaunchPlan.md` are complete.
+- If `WBD_PUSH_TOKEN_ENCRYPTION_SECRET` is unavailable, registration fails
+  closed with `503 push_registration_unavailable`; the app retains only the
+  player’s device-local preference.
+
 ## Weekly competition flow
 
 1. `GET /api/v1/competitions/current`

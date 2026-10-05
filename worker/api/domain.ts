@@ -33,6 +33,24 @@ export type SubmittedAnswer = {
   responseMs: number;
 };
 
+/**
+ * An answer measured by the competition service, not supplied by the client.
+ *
+ * This is deliberately a separate shape from `SubmittedAnswer`: a cash
+ * attempt must never accept `responseMs` from a device. The issue and answer
+ * timestamps are written by the service when it releases one card and when it
+ * receives that card's selection (or records its deadline as a timeout).
+ */
+export type ServerTimedAnswer = {
+  cardId: string;
+  position: number;
+  /// `null` means an intentional skip or a server-recorded timeout. Both are
+  /// wrong and receive the same full-card scoring penalty.
+  selectedOptionId: string | null;
+  issuedAtMs: number;
+  answeredAtMs: number;
+};
+
 export type ScoredAnswer = SubmittedAnswer & {
   isCorrect: boolean;
   answerVersion: string;
@@ -351,6 +369,109 @@ export function scoreSubmission(input: {
     adjustedTotalMs,
     hardCardMs,
     integrityFlags: [...integrityFlags].sort(),
+    answers: scoredAnswers,
+  };
+}
+
+/**
+ * Scores a sequential, server-timed attempt.
+ *
+ * This is the cash-League scoring primitive. It accepts only server-recorded
+ * issue/answer timestamps and requires the issue order to exactly match the
+ * private pack. The existing `scoreSubmission` remains for the non-cash
+ * practice preview, where timing is explicitly marked untrusted.
+ */
+export function scoreServerTimedSubmission(input: {
+  cards: CompetitionCard[];
+  answers: ServerTimedAnswer[];
+  perCardLimitMs: number;
+}): AttemptScore {
+  const { cards, answers, perCardLimitMs } = input;
+  if (answers.length !== cards.length) {
+    throw new CompetitionDomainError(
+      "answer_count_mismatch",
+      "Every competition card must have exactly one server-recorded result.",
+      { expected: cards.length, received: answers.length },
+    );
+  }
+
+  const orderedCards = [...cards].sort((left, right) => left.position - right.position);
+  const scoredAnswers: ScoredAnswer[] = [];
+  let correctCount = 0;
+  let clientActiveMs = 0;
+  let adjustedTotalMs = 0;
+  let hardCardMs = 0;
+  let previousAnsweredAtMs = -1;
+
+  for (let index = 0; index < orderedCards.length; index += 1) {
+    const card = orderedCards[index];
+    const answer = answers[index];
+    if (answer.cardId !== card.id || answer.position !== card.position) {
+      throw new CompetitionDomainError(
+        "server_timed_answer_order",
+        "A cash attempt must answer each server-issued card in order.",
+        {
+          expectedCardId: card.id,
+          expectedPosition: card.position,
+          receivedCardId: answer.cardId,
+          receivedPosition: answer.position,
+        },
+      );
+    }
+    if (
+      !Number.isInteger(answer.issuedAtMs) ||
+      !Number.isInteger(answer.answeredAtMs) ||
+      answer.issuedAtMs < 0 ||
+      answer.answeredAtMs < answer.issuedAtMs ||
+      answer.issuedAtMs < previousAnsweredAtMs
+    ) {
+      throw new CompetitionDomainError(
+        "invalid_server_timing",
+        "Server-issued answer times must be monotonic millisecond timestamps.",
+        { cardId: card.id },
+      );
+    }
+
+    const measuredResponseMs = answer.answeredAtMs - answer.issuedAtMs;
+    if (measuredResponseMs > perCardLimitMs) {
+      throw new CompetitionDomainError(
+        "server_timed_answer_expired",
+        "A selected answer arrived after this card's server deadline.",
+        { cardId: card.id, measuredResponseMs, perCardLimitMs },
+      );
+    }
+    const optionIds = new Set(card.options.map((option) => option.id));
+    if (answer.selectedOptionId !== null && !optionIds.has(answer.selectedOptionId)) {
+      throw new CompetitionDomainError(
+        "unknown_option",
+        "The selected option is not part of this card.",
+        { cardId: card.id, optionId: answer.selectedOptionId },
+      );
+    }
+
+    const isCorrect = answer.selectedOptionId === card.correctOptionId;
+    if (isCorrect) correctCount += 1;
+    clientActiveMs += measuredResponseMs;
+    const adjustedResponseMs = isCorrect ? measuredResponseMs : perCardLimitMs;
+    adjustedTotalMs += adjustedResponseMs;
+    if (card.difficulty === "hard") hardCardMs += adjustedResponseMs;
+    scoredAnswers.push({
+      cardId: answer.cardId,
+      position: answer.position,
+      selectedOptionId: answer.selectedOptionId,
+      responseMs: measuredResponseMs,
+      isCorrect,
+      answerVersion: card.contentVersion,
+    });
+    previousAnsweredAtMs = answer.answeredAtMs;
+  }
+
+  return {
+    correctCount,
+    clientActiveMs,
+    adjustedTotalMs,
+    hardCardMs,
+    integrityFlags: [],
     answers: scoredAnswers,
   };
 }

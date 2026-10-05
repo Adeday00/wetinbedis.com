@@ -1387,6 +1387,216 @@
         "substring": "PASS"
       },
       "final_qc": "READY"
+    },
+    {
+      "id": "SG-043",
+      "source_deck_id": "M-1001",
+      "content_version": "1.0",
+      "answer": "African Queen",
+      "category": "Music",
+      "answer_family": "Nigerian pop hit song",
+      "difficulty": "Easy",
+      "clues": [
+        "This love song became a defining Nigerian pop classic of the 2000s.",
+        "Its singer is now known as 2Baba.",
+        "Its title praises a woman with a continental royal image."
+      ],
+      "distractors": ["Olufunmi", "Yori Yori", "Oruka", "Gongo Aso", "Ada Ada", "Johnny"],
+      "weekly_theme": "Naija Classics",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "All options are Nigerian pop songs; fixed music-only answer family.",
+      "mechanical_qc": {"identity_category": "PASS", "completeness": "PASS", "duplicate": "PASS", "substring": "PASS"},
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-044",
+      "source_deck_id": "M-1004",
+      "content_version": "1.0",
+      "answer": "Oliver Twist",
+      "category": "Music",
+      "answer_family": "Nigerian pop hit song",
+      "difficulty": "Medium",
+      "clues": [
+        "This high-energy hit helped take its performer from Lagos party circles to a wider audience.",
+        "The performer is D'banj.",
+        "Its title borrows the name of a famous Dickens character."
+      ],
+      "distractors": ["Buga", "Kukere", "Shoki", "Yahooze", "City Boys", "Woto Woto"],
+      "weekly_theme": "Naija Classics",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "All options are Nigerian pop songs; fixed music-only answer family.",
+      "mechanical_qc": {"identity_category": "PASS", "completeness": "PASS", "duplicate": "PASS", "substring": "PASS"},
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-045",
+      "source_deck_id": "M-1009",
+      "content_version": "1.0",
+      "answer": "Ojuelegba",
+      "category": "Music",
+      "answer_family": "Nigerian pop hit song",
+      "difficulty": "Medium",
+      "clues": [
+        "This reflective song looks back at struggle before success.",
+        "It is a major Wizkid record from the album Ayo.",
+        "Its title is the name of a Surulere neighbourhood in Lagos."
+      ],
+      "distractors": ["Essence", "Last Last", "Calm Down", "Peru", "Bandana", "Feel"],
+      "weekly_theme": "Naija Classics",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "All options are Nigerian pop songs; fixed music-only answer family.",
+      "mechanical_qc": {"identity_category": "PASS", "completeness": "PASS", "duplicate": "PASS", "substring": "PASS"},
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-046",
+      "source_deck_id": "M-1010",
+      "content_version": "1.0",
+      "answer": "Dami Duro",
+      "category": "Music",
+      "answer_family": "Nigerian pop hit song",
+      "difficulty": "Easy",
+      "clues": [
+        "This early hit announced a young Nigerian pop star with fearless confidence.",
+        "The performer is Davido.",
+        "Its Yoruba title is a defiant instruction meaning nobody should stop him."
+      ],
+      "distractors": ["Buga", "Unavailable", "Fall", "Kukere", "Shoki", "City Boys"],
+      "weekly_theme": "Naija Classics",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "All options are Nigerian pop songs; fixed music-only answer family.",
+      "mechanical_qc": {"identity_category": "PASS", "completeness": "PASS", "duplicate": "PASS", "substring": "PASS"},
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-047",
+      "source_deck_id": "M-1011",
+      "content_version": "1.0",
+      "answer": "Yahooze",
+      "category": "Music",
+      "answer_family": "Nigerian pop hit song",
+      "difficulty": "Medium",
+      "clues": [
+        "This 2000s party record is tied to a memorable celebratory hand move.",
+        "The performer is Olu Maintain.",
+        "Its title became the name of the dance associated with the song."
+      ],
+      "distractors": ["Oliver Twist", "Buga", "Kukere", "Shoki", "Gongo Aso", "Woto Woto"],
+      "weekly_theme": "Naija Classics",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "All options are Nigerian pop songs; fixed music-only answer family.",
+      "mechanical_qc": {"identity_category": "PASS", "completeness": "PASS", "duplicate": "PASS", "substring": "PASS"},
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-048",
+      "source_deck_id": "M-1015",
+      "content_version": "1.0",
+      "answer": "Shoki",
+      "category": "Music",
+      "answer_family": "Nigerian pop hit song",
+      "difficulty": "Medium",
+      "clues": [
+        "This street-pop hit sent a particular shoulder-and-leg dance across parties.",
+        "The performer is Lil Kesh.",
+        "Its one-word title is also the name of that dance."
+      ],
+      "distractors": ["Kukere", "Yahooze", "Buga", "Woto Woto", "Ojapiano", "Jogodo"],
+      "weekly_theme": "Dance Floor",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "All options are Nigerian pop songs; fixed music-only answer family.",
+      "mechanical_qc": {"identity_category": "PASS", "completeness": "PASS", "duplicate": "PASS", "substring": "PASS"},
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-049",
+      "source_deck_id": "M-2009",
+      "content_version": "1.0",
+      "answer": "Kukere",
+      "category": "Music",
+      "answer_family": "Nigerian pop hit song",
+      "difficulty": "Easy",
+      "clues": [
+        "This upbeat song became a massive dance-floor hit in the early 2010s.",
+        "The performer is Iyanya.",
+        "Its title is a word associated with a dance from Cross River."
+      ],
+      "distractors": ["Shoki", "Yahooze", "Buga", "Ojapiano", "Jogodo", "Woto Woto"],
+      "weekly_theme": "Dance Floor",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "All options are Nigerian pop songs; fixed music-only answer family.",
+      "mechanical_qc": {"identity_category": "PASS", "completeness": "PASS", "duplicate": "PASS", "substring": "PASS"},
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-050",
+      "source_deck_id": "M-2010",
+      "content_version": "1.0",
+      "answer": "Ada Ada",
+      "category": "Music",
+      "answer_family": "Nigerian pop hit song",
+      "difficulty": "Medium",
+      "clues": [
+        "This celebratory love song is a regular wedding favourite.",
+        "The performer is Flavour.",
+        "Its repeated Igbo title is a traditional name for a first daughter."
+      ],
+      "distractors": ["African Queen", "Olufunmi", "Oruka", "Yori Yori", "Johnny", "Gongo Aso"],
+      "weekly_theme": "Love & Owambe",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "All options are Nigerian pop songs; fixed music-only answer family.",
+      "mechanical_qc": {"identity_category": "PASS", "completeness": "PASS", "duplicate": "PASS", "substring": "PASS"},
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-051",
+      "source_deck_id": "M-2011",
+      "content_version": "1.0",
+      "answer": "Johnny",
+      "category": "Music",
+      "answer_family": "Nigerian pop hit song",
+      "difficulty": "Easy",
+      "clues": [
+        "This Afropop story-song follows a woman looking for an unfaithful man.",
+        "The performer is Yemi Alade.",
+        "Its title is the common English name of the man she is searching for."
+      ],
+      "distractors": ["Ada Ada", "African Queen", "Olufunmi", "Oruka", "Yori Yori", "Gongo Aso"],
+      "weekly_theme": "Love & Owambe",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "All options are Nigerian pop songs; fixed music-only answer family.",
+      "mechanical_qc": {"identity_category": "PASS", "completeness": "PASS", "duplicate": "PASS", "substring": "PASS"},
+      "final_qc": "READY"
+    },
+    {
+      "id": "SG-052",
+      "source_deck_id": "M-2015",
+      "content_version": "1.0",
+      "answer": "Fall",
+      "category": "Music",
+      "answer_family": "Nigerian pop hit song",
+      "difficulty": "Easy",
+      "clues": [
+        "This 2017 Afrobeats single travelled far beyond Naija playlists.",
+        "The performer is Davido.",
+        "Its one-word title means to drop downward."
+      ],
+      "distractors": ["Dami Duro", "Oliver Twist", "Ojuelegba", "African Queen", "Mad Over You", "Pana"],
+      "weekly_theme": "Afrobeats Classics",
+      "editorial_status": "Ready for Playtest",
+      "family_review": "Pass",
+      "editorial_note": "All options are Nigerian pop songs; fixed music-only answer family. Source deck and performer fact checked before adding.",
+      "mechanical_qc": {"identity_category": "PASS", "completeness": "PASS", "duplicate": "PASS", "substring": "PASS"},
+      "final_qc": "READY"
     }
   ]
 }

@@ -8,7 +8,9 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 const WAT_OFFSET_MS = 60 * 60 * 1000;
 const MIN_PARTY_CARDS = 350;
 const MAX_PARTY_CARDS = 2_000;
-const MIN_SOLO_QUESTIONS = 25;
+// Today’s 5 is a seven-day shared challenge. Publishing fewer than 35 reviewed
+// questions (or reusing one inside the week) quietly breaks that promise.
+const MIN_SOLO_QUESTIONS = 35;
 const MAX_SOLO_QUESTIONS = 1_000;
 const SOLO_CLUE_COUNT = 3;
 const SOLO_OPTION_COUNT = 7;
@@ -576,6 +578,7 @@ function parseSoloGist(
       issues.push(`solo_gist.daily_packs:count:${input.daily_packs.length}/7`);
     }
     const dates = new Set<string>();
+    const weeklyQuestionIDs = new Set<string>();
     input.daily_packs.forEach((candidate, index) => {
       const path = `solo_gist.daily_packs[${index}]`;
       const pack = asRecord(candidate, path, issues);
@@ -601,6 +604,11 @@ function parseSoloGist(
 
       const categories = new Set<string>();
       for (const questionID of questionIDsForDay) {
+        const normalizedQuestionID = normalized(questionID);
+        if (weeklyQuestionIDs.has(normalizedQuestionID)) {
+          issues.push(`${path}.question_ids:reused_within_week:${questionID}`);
+        }
+        weeklyQuestionIDs.add(normalizedQuestionID);
         if (!quickPlaySet.has(questionID)) {
           issues.push(`${path}.question_ids:not_in_quick_play:${questionID}`);
         }
@@ -610,6 +618,11 @@ function parseSoloGist(
       if (categories.size < 3) issues.push(`${path}.question_ids:category_mix_below_3`);
       dailyPacks.push({ date_wat: dateWat, question_ids: questionIDsForDay });
     });
+    if (weeklyQuestionIDs.size !== 7 * SOLO_DAILY_COUNT) {
+      issues.push(
+        `solo_gist.daily_packs:unique_weekly_questions:${weeklyQuestionIDs.size}/${7 * SOLO_DAILY_COUNT}`,
+      );
+    }
   }
 
   return {
@@ -644,6 +657,43 @@ function parseSponsor(
     return null;
   }
   return { kind, sponsorName, message };
+}
+
+/// Every Solo option must resolve to a concrete Party card in the same release
+/// and category. This is stronger than trusting a manually supplied category
+/// string: it blocks a hand-edited Food label from being dressed up as Slang
+/// (or vice versa) before it reaches players.
+function validateSoloOptionCatalogAlignment(
+  partyDeck: { cards: JsonRecord[] },
+  soloGist: { questions: JsonRecord[] },
+  issues: string[],
+): void {
+  const categoryByMainWord = new Map<string, string>();
+  for (const card of partyDeck.cards) {
+    const mainWord = card.main_word;
+    const category = card.category;
+    if (typeof mainWord === "string" && typeof category === "string") {
+      categoryByMainWord.set(normalized(mainWord), category);
+    }
+  }
+
+  soloGist.questions.forEach((question, questionIndex) => {
+    const category = question.category;
+    const options = question.options;
+    if (typeof category !== "string" || !Array.isArray(options)) return;
+    options.forEach((candidate, optionIndex) => {
+      const option = candidate as JsonRecord;
+      const label = option.label;
+      const path = `solo_gist.questions[${questionIndex}].options[${optionIndex}]`;
+      if (typeof label !== "string") return;
+      const catalogCategory = categoryByMainWord.get(normalized(label));
+      if (!catalogCategory) {
+        issues.push(`${path}.label:not_in_party_deck`);
+      } else if (catalogCategory !== category) {
+        issues.push(`${path}.label:party_category_mismatch`);
+      }
+    });
+  });
 }
 
 export async function validateAndPrepareContentRelease(
@@ -698,6 +748,11 @@ export async function validateAndPrepareContentRelease(
   );
 
   if (issues.length > 0 || !partyDeck || !soloGist) {
+    return { issues: [...new Set(issues)].sort() };
+  }
+
+  validateSoloOptionCatalogAlignment(partyDeck, soloGist, issues);
+  if (issues.length > 0) {
     return { issues: [...new Set(issues)].sort() };
   }
 

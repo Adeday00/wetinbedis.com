@@ -24,3 +24,38 @@ interface D1Database {
 interface Fetcher {
   fetch(input: RequestInfo | URL, init?: RequestInit): Promise<Response>;
 }
+
+interface DurableObjectId {
+  readonly name?: string;
+}
+
+interface DurableObjectStub {
+  fetch(input: RequestInfo | URL, init?: RequestInit): Promise<Response>;
+}
+
+interface DurableObjectNamespace {
+  idFromName(name: string): DurableObjectId;
+  get(id: DurableObjectId): DurableObjectStub;
+}
+
+interface DurableObjectStorage {
+  get<T>(key: string): Promise<T | undefined>;
+  put<T>(key: string, value: T): Promise<void>;
+  delete(key: string): Promise<boolean>;
+  setAlarm(scheduledTime: number | Date): Promise<void>;
+}
+
+interface DurableObjectState {
+  storage: DurableObjectStorage;
+  acceptWebSocket(webSocket: WebSocket, tags?: string[]): void;
+  getWebSockets(tag?: string): WebSocket[];
+}
+
+interface HibernatableWebSocket extends WebSocket {
+  serializeAttachment(value: unknown): void;
+  deserializeAttachment(): unknown;
+}
+
+declare const WebSocketPair: {
+  new (): { 0: WebSocket; 1: WebSocket };
+};

@@ -4,7 +4,7 @@ import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
-  "00000000-0000-4000-8000-000000000000";
+  "a1aec8d8-2a48-4995-9b99-8c9b09073d8a";
 
 const { d1, r2 } = hostingConfig;
 
@@ -12,13 +12,18 @@ const { d1, r2 } = hostingConfig;
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 
 const localBindingConfig = {
+  name: "wetin-be-dis-api",
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
+  durable_objects: {
+    bindings: [{ name: "PLAY_ON_CALL_ROOMS", class_name: "PlayOnCallRoom" }],
+  },
+  migrations: [{ tag: "v1", new_sqlite_classes: ["PlayOnCallRoom"] }],
   d1_databases: d1
     ? [
         {
           binding: d1,
-          database_name: "site-creator-d1",
+          database_name: "wetin-be-dis-production",
           database_id: SITE_CREATOR_PLACEHOLDER_DATABASE_ID,
         },
       ]

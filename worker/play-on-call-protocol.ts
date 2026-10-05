@@ -12,7 +12,11 @@ export const PLAY_ON_CALL_PROTOCOL_VERSION = 1;
 export const PLAY_ON_CALL_ROOM_TTL_MS = 4 * 60 * 60 * 1000;
 export const PLAY_ON_CALL_TICKET_TTL_MS = 2 * 60 * 1000;
 export const PLAY_ON_CALL_MAX_PARTICIPANTS = 12;
-export const PLAY_ON_CALL_ROOM_CODE_LENGTH = 8;
+// New rooms use six characters: easier to say over a call and still 1B+ codes
+// from the deliberately unambiguous alphabet. Keep accepting the original
+// eight-character format so an update never strands an existing room.
+export const PLAY_ON_CALL_ROOM_CODE_LENGTH = 6;
+export const PLAY_ON_CALL_LEGACY_ROOM_CODE_LENGTH = 8;
 
 const ROOM_CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 const DISPLAY_NAME_MAX_LENGTH = 24;
@@ -72,7 +76,9 @@ export function normalizePlayOnCallRoomCode(value: string): string | null {
     .toUpperCase()
     .replace(/^WBD-/, "")
     .replace(/\s+/g, "");
-  const expression = new RegExp(`^[${ROOM_CODE_ALPHABET}]{${PLAY_ON_CALL_ROOM_CODE_LENGTH}}$`);
+  const expression = new RegExp(
+    `^(?:[${ROOM_CODE_ALPHABET}]{${PLAY_ON_CALL_ROOM_CODE_LENGTH}}|[${ROOM_CODE_ALPHABET}]{${PLAY_ON_CALL_LEGACY_ROOM_CODE_LENGTH}})$`,
+  );
   return expression.test(normalized) ? normalized : null;
 }
 
@@ -119,7 +125,12 @@ export function newPlayOnCallRoom(
 }
 
 export function isRoomJoinable(room: PlayOnCallRoomSnapshot, now = Date.now()): boolean {
-  return room.phase !== "ended"
+  // A new player joining mid-round would not have the round configuration
+  // that existing devices already used to select their local reviewed deck.
+  // Reconnects are handled separately by the Durable Object for a participant
+  // already in the roster, so closing new admission at play start never
+  // strands someone who briefly lost signal.
+  return room.phase === "lobby"
     && room.expiresAt > now
     && room.participants.length < PLAY_ON_CALL_MAX_PARTICIPANTS;
 }

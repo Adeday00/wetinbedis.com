@@ -71,6 +71,42 @@ class TestD1Database {
   }
 }
 
+class TestPlayOnCallRooms {
+  constructor() {
+    this.rooms = new Map();
+  }
+
+  idFromName(name) {
+    return name;
+  }
+
+  get(id) {
+    return {
+      fetch: async (input, init) => {
+        const request = input instanceof Request ? input : new Request(input, init);
+        const body = request.method === "GET" ? null : await request.json();
+        const existing = this.rooms.get(id);
+        if (new URL(request.url).pathname === "/create") {
+          if (existing) return Response.json({ error: { code: "room_code_collision" } }, { status: 409 });
+          const room = {
+            roomCode: body.room_code,
+            mode: body.mode,
+            expiresAt: Date.now() + 60_000,
+          };
+          this.rooms.set(id, room);
+          return Response.json({ room }, { status: 201 });
+        }
+        if (new URL(request.url).pathname === "/join") {
+          return existing
+            ? Response.json({ room: existing })
+            : Response.json({ error: { code: "room_unavailable" } }, { status: 410 });
+        }
+        return Response.json({ error: { code: "unhandled_test_room_route" } }, { status: 404 });
+      },
+    };
+  }
+}
+
 async function builtWorker() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${Math.random()}`);
@@ -84,6 +120,8 @@ async function migrate(database) {
     "0001_silly_northstar.sql",
     "0002_nice_shiva.sql",
     "0003_mysterious_smasher.sql",
+    "0004_loving_aqueduct.sql",
+    "0005_chunky_cardiac.sql",
   ]) {
     const migration = await readFile(new URL(`../drizzle/${name}`, import.meta.url), "utf8");
     database.sqlite.exec(migration.replaceAll("--> statement-breakpoint", ""));
@@ -172,16 +210,265 @@ function seedPrizes(database) {
   insert.run(3, 4_000_000);
 }
 
-async function request(worker, database, path, init = {}) {
+async function request(worker, database, path, init = {}, envOverrides = {}) {
   return worker.fetch(
     new Request(`http://localhost${path}`, init),
     {
       DB: database,
       ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) },
+      ...envOverrides,
     },
     { waitUntil() {}, passThroughOnException() {} },
   );
 }
+
+test("Play on a Call room API is capability-gated and preserves the host's selected mode", async (t) => {
+  const database = new TestD1Database();
+  t.after(() => database.close());
+  await migrate(database);
+  const worker = await builtWorker();
+  const firstGuestResponse = await request(worker, database, "/api/v1/players/guest", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ platform: "ios" }),
+  });
+  const firstGuest = await firstGuestResponse.json();
+  const headers = {
+    authorization: `Bearer ${firstGuest.session.token}`,
+    "content-type": "application/json",
+  };
+
+  const unavailable = await request(worker, database, "/api/v1/call-rooms", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ mode: "team_battle" }),
+  });
+  assert.equal(unavailable.status, 503);
+
+  const rooms = new TestPlayOnCallRooms();
+  const environment = {
+    PLAY_ON_CALL_ROOMS: rooms,
+    WBD_PLAY_ON_CALL_SIGNING_SECRET: "play-on-call-api-test-secret-that-is-at-least-thirty-two-characters",
+  };
+  const createdResponse = await request(worker, database, "/api/v1/call-rooms", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ display_name: "  Host   Person ", mode: "team_battle" }),
+  }, environment);
+  assert.equal(createdResponse.status, 201);
+  const created = await createdResponse.json();
+  assert.match(created.room_code, /^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{6}$/);
+  assert.equal(created.room.mode, "team_battle");
+  assert.match(created.connection.socket_url, new RegExp(`/api/v1/call-rooms/${created.room_code}/socket\\?ticket=`));
+
+  const secondGuestResponse = await request(worker, database, "/api/v1/players/guest", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ platform: "android" }),
+  });
+  const secondGuest = await secondGuestResponse.json();
+  const joinedResponse = await request(worker, database, `/api/v1/call-rooms/${created.room_code}/join`, {
+    method: "POST",
+    headers: {
+      authorization: `Bearer ${secondGuest.session.token}`,
+      "content-type": "application/json",
+    },
+    // Join should not let a guest reconfigure a room started by the host.
+    body: JSON.stringify({ mode: "hot_seat" }),
+  }, environment);
+  assert.equal(joinedResponse.status, 200);
+  const joined = await joinedResponse.json();
+  assert.equal(joined.room.mode, "team_battle");
+});
+
+test("notification registration encrypts device tokens and deletes them on all-off opt-out", async (t) => {
+  const database = new TestD1Database();
+  t.after(() => database.close());
+  await migrate(database);
+  const worker = await builtWorker();
+  const encryptionSecret = "notification-test-secret-that-is-at-least-thirty-two-characters";
+
+  const guestResponse = await request(worker, database, "/api/v1/players/guest", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ platform: "ios" }),
+  });
+  const guest = await guestResponse.json();
+  const authHeaders = {
+    authorization: `Bearer ${guest.session.token}`,
+    "content-type": "application/json",
+  };
+  const token = "a".repeat(64);
+  const unavailableResponse = await request(
+    worker,
+    database,
+    "/api/v1/me/notification-devices",
+    {
+      method: "PUT",
+      headers: authHeaders,
+      body: JSON.stringify({
+        platform: "ios",
+        token,
+        preferences: {
+          league_updates_enabled: true,
+          friend_invites_enabled: false,
+          offers_enabled: false,
+        },
+      }),
+    },
+  );
+  assert.equal(unavailableResponse.status, 503);
+  assert.equal((await unavailableResponse.json()).error.code, "push_registration_unavailable");
+  assert.equal(
+    database.sqlite.prepare("SELECT COUNT(*) AS count FROM notification_devices").get().count,
+    0,
+  );
+
+  const enabledResponse = await request(
+    worker,
+    database,
+    "/api/v1/me/notification-devices",
+    {
+      method: "PUT",
+      headers: authHeaders,
+      body: JSON.stringify({
+        platform: "ios",
+        token,
+        preferences: {
+          league_updates_enabled: true,
+          friend_invites_enabled: false,
+          offers_enabled: true,
+        },
+      }),
+    },
+    { WBD_PUSH_TOKEN_ENCRYPTION_SECRET: encryptionSecret },
+  );
+  assert.equal(enabledResponse.status, 200);
+  assert.equal((await enabledResponse.json()).registration.delivery, "registration_only");
+  const stored = database.sqlite
+    .prepare("SELECT token_hash, token_ciphertext, league_updates_enabled, offers_enabled FROM notification_devices")
+    .get();
+  assert.notEqual(stored.token_hash, token);
+  assert.doesNotMatch(stored.token_ciphertext, new RegExp(token));
+  assert.equal(stored.league_updates_enabled, 1);
+  assert.equal(stored.offers_enabled, 1);
+
+  const optOutResponse = await request(
+    worker,
+    database,
+    "/api/v1/me/notification-devices",
+    {
+      method: "PUT",
+      headers: authHeaders,
+      body: JSON.stringify({
+        platform: "ios",
+        token,
+        preferences: {
+          league_updates_enabled: false,
+          friend_invites_enabled: false,
+          offers_enabled: false,
+        },
+      }),
+    },
+    { WBD_PUSH_TOKEN_ENCRYPTION_SECRET: encryptionSecret },
+  );
+  assert.equal(optOutResponse.status, 200);
+  assert.equal((await optOutResponse.json()).registration.status, "removed");
+  assert.equal(
+    database.sqlite.prepare("SELECT COUNT(*) AS count FROM notification_devices").get().count,
+    0,
+  );
+});
+
+test("a new guest session prunes expired anonymous credentials but preserves review records", async (t) => {
+  const database = new TestD1Database();
+  t.after(() => database.close());
+  await migrate(database);
+  const worker = await builtWorker();
+
+  const abandonedResponse = await request(worker, database, "/api/v1/players/guest", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ platform: "ios" }),
+  });
+  const abandoned = await abandonedResponse.json();
+  database.sqlite
+    .prepare("UPDATE player_sessions SET expires_at = ? WHERE player_id = ?")
+    .run(Date.now() - 1, abandoned.player.id);
+
+  const retainedPlayerId = "guest-with-review-record";
+  const retainedSessionId = "expired-review-session";
+  database.sqlite
+    .prepare(
+      `INSERT INTO players (
+        id, public_handle, account_state, eligibility_status, created_at, updated_at
+      ) VALUES (?, 'GIST-RETAINED', 'guest', 'guest', ?, ?)`,
+    )
+    .run(retainedPlayerId, Date.now(), Date.now());
+  database.sqlite
+    .prepare(
+      `INSERT INTO player_sessions (
+        id, player_id, token_hash, platform, expires_at, last_seen_at, created_at
+      ) VALUES (?, ?, 'retained-expired-token-hash', 'ios', ?, ?, ?)`,
+    )
+    .run(retainedSessionId, retainedPlayerId, Date.now() - 1, Date.now(), Date.now());
+  database.sqlite
+    .prepare(
+      `INSERT INTO competitions (
+        id, slug, title, status, content_status, rules_version, pack_version,
+        scoring_version, question_count, per_card_limit_ms, upload_grace_ms,
+        entry_mode, country_code, minimum_age, currency,
+        opens_at, closes_at, score_review_closes_at, created_at, updated_at
+      ) VALUES (
+        'retention-competition', 'retention-week', 'Retention test', 'locked', 'published',
+        'rules-v1', 'pack-v1', 'accuracy-time-v1', 12, 12000, 15000,
+        'guest', 'NG', 18, 'NGN', ?, ?, ?, ?, ?
+      )`,
+    )
+    .run(Date.now() - 2_000, Date.now() - 1_000, Date.now() + 86_400_000, Date.now(), Date.now());
+  database.sqlite
+    .prepare(
+      `INSERT INTO attempts (
+        id, competition_id, player_id, attempt_token_hash, rules_version,
+        pack_version, scoring_version, started_at, play_deadline_at,
+        submit_deadline_at, created_at, updated_at
+      ) VALUES (
+        'retention-attempt', 'retention-competition', ?, 'retention-attempt-token-hash',
+        'rules-v1', 'pack-v1', 'accuracy-time-v1', ?, ?, ?, ?, ?
+      )`,
+    )
+    .run(
+      retainedPlayerId,
+      Date.now() - 2_000,
+      Date.now() - 1_500,
+      Date.now() - 1_000,
+      Date.now(),
+      Date.now(),
+    );
+
+  const freshResponse = await request(worker, database, "/api/v1/players/guest", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ platform: "ios" }),
+  });
+  assert.equal(freshResponse.status, 201);
+  assert.equal(
+    database.sqlite.prepare("SELECT id FROM players WHERE id = ?").get(abandoned.player.id),
+    undefined,
+  );
+  assert.equal(
+    database.sqlite.prepare("SELECT id FROM player_sessions WHERE player_id = ?").get(retainedPlayerId),
+    undefined,
+  );
+  assert.equal(
+    database.sqlite.prepare("SELECT id FROM players WHERE id = ?").get(retainedPlayerId).id,
+    retainedPlayerId,
+  );
+  assert.equal(
+    database.sqlite.prepare("SELECT id FROM attempts WHERE id = 'retention-attempt'").get().id,
+    "retention-attempt",
+  );
+});
 
 test("runs the guarded practice competition flow against the generated schema", async (t) => {
   const database = new TestD1Database();
@@ -233,6 +520,12 @@ test("runs the guarded practice competition flow against the generated schema", 
   assert.equal(started.attempt.cards.length, 12);
   assert.doesNotMatch(JSON.stringify(started.attempt.cards), /correct_option|answer_family/i);
   assert.match(started.attempt.token, /^wbd_a_/);
+  assert.equal(
+    database.sqlite
+      .prepare("SELECT delivery_protocol FROM attempts WHERE id = ?")
+      .get(started.attempt.id).delivery_protocol,
+    "practice_batch_v1",
+  );
 
   const duplicateStart = await request(
     worker,
@@ -350,6 +643,29 @@ test("an accidental open guest prize row stays unavailable everywhere", async (t
   assert.equal(payload.error.details.device_attestation_required, true);
   assert.equal(payload.error.details.trusted_timing_required, true);
   assert.equal(database.sqlite.prepare("SELECT COUNT(*) AS count FROM attempts").get().count, 0);
+});
+
+test("the future cash-answer route is hard-off even when called directly", async (t) => {
+  const database = new TestD1Database();
+  t.after(() => database.close());
+  await migrate(database);
+  seedCompetition(database);
+  const worker = await builtWorker();
+
+  const response = await request(
+    worker,
+    database,
+    "/api/v1/attempts/not-a-real-attempt/cash-answer",
+    {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ selected_option_id: null }),
+    },
+  );
+  assert.equal(response.status, 503);
+  const payload = await response.json();
+  assert.equal(payload.error.code, "cash_competition_unavailable");
+  assert.equal(payload.error.details.prize_eligible, false);
 });
 
 test("readiness and attempt creation fail closed when a prize card overlaps public content", async (t) => {

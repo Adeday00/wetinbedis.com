@@ -1,0 +1,251 @@
+# 2026-10 editorial expansion: category|main_word|difficulty|forbidden_1|forbidden_2|forbidden_3
+Slang|I Am Chosen|Medium|Holy|Selected|Testimony
+Slang|Go Warm Eba|Easy|Heat|Food|Insult
+Slang|Oscroh|Medium|Money|Flow|Rich
+Slang|T-Pain|Hard|President|Hardship|Nickname
+Slang|Chop Breakfast|Medium|Breakup|Relationship|Heartbreak
+Slang|No Be Lie|Easy|Truth|Honest|Facts
+Slang|E Be Things|Easy|Problem|Situation|Matter
+Slang|Wetin Be This|Easy|What|Question|Confusion
+Slang|Who Dey Breez|Medium|Breathing|Calm|Air
+Slang|Person Wey Sabi|Medium|Expert|Know|Skilled
+Slang|Money Miss Road|Medium|Wealth|Lost|Direction
+Slang|Correct Guy|Easy|Good|Fellow|Approved
+Slang|Abeg Shift|Easy|Move|Please|Space
+Slang|E Clear|Easy|Understand|Obvious|Explain
+Slang|Make I Hear Word|Medium|Listen|Talk|Advice
+Slang|I Dey Available|Easy|Free|Ready|Busy
+Slang|You Don Do|Medium|Finished|Enough|Trouble
+Slang|Naija No Dey Carry Last|Hard|Nigeria|Competition|Behind
+Slang|E Get Why|Easy|Reason|Explain|Cause
+Slang|Otilo|Easy|Gone|Disappear|Travel
+Slang|Padi|Easy|Friend|Buddy|Mate
+Slang|You Too Much|Medium|Excessive|Amazing|Praise
+Slang|Make We No Dey|Medium|Stop|Continue|Delay
+Slang|E Sure For Me|Medium|Certain|Believe|Doubt
+Slang|Abeg No Vex|Easy|Sorry|Angry|Forgive
+Food|Ewa Riro|Medium|Beans|Stew|Yoruba
+Food|Oha Soup|Medium|Leaf|Igbo|Swallow
+Food|Nsala Soup|Medium|White|Fish|Pepper
+Food|Afia Efere|Hard|Calabar|White|Soup
+Food|Edikang Ikong|Hard|Vegetable|Efik|Soup
+Food|Banga Rice|Medium|Palm Fruit|Delta|Grains
+Food|Native Rice|Easy|Local|Party|Grains
+Food|Asun|Medium|Goat|Pepper|Grilled
+Food|Ponmo|Easy|Cow Skin|Chewy|Pepper
+Food|Isi Ewu|Hard|Goat Head|Onion|Spicy
+Food|Ukodo|Hard|Yam|Urhobo|Porridge
+Food|Ekpang Nkukwo|Hard|Cocoyam|Wrap|Calabar
+Food|Gbegiri|Hard|Beans|Soup|Brown
+Food|Ewedu|Easy|Leaf|Draw|Amala
+Food|Kuli Kuli|Medium|Peanut|Snack|Crunchy
+Food|Plantain Chips|Easy|Crisp|Yellow|Snack
+Food|Coconut Rice|Easy|Coconut|Grains|Party
+Food|Yam Porridge|Easy|Yam|Pottage|Soft
+Food|Beans And Plantain|Easy|Combo|Fried|Lunch
+Food|Boiled Corn|Easy|Cob|Butter|Roadside
+Food|Garden Egg Sauce|Medium|Eggplant|Fish|Dip
+Food|Nigerian Salad|Easy|Vegetables|Mayonnaise|Bowl
+Food|Ofe Owerri|Hard|Imo|Soup|Assorted
+Food|Fisherman Soup|Hard|Seafood|Calabar|Creamy
+Food|Abak Atama|Hard|Palm Fruit|Herb|Akwa Ibom
+Naija Life|Washing Line|Easy|Clothes|Dry|Rope
+Naija Life|Prepaid Meter|Medium|Electricity|Token|Card
+Naija Life|Meter Reading|Medium|Units|Electricity|Numbers
+Naija Life|Transfer Pending|Medium|Bank|Waiting|Money
+Naija Life|Airtime Borrow|Easy|Credit|Phone|Repay
+Naija Life|Call Me Back|Easy|Phone|Request|Missed Call
+Naija Life|Missed Call|Easy|Ring|Phone|Return
+Naija Life|Flash Me|Easy|Phone|Ring|Signal
+Naija Life|USSD Code|Medium|Star|Hash|Banking
+Naija Life|NIN Slip|Medium|Identity|Number|Enrollment
+Naija Life|BVN|Hard|Bank|Identity|Number
+Naija Life|SIM Registration|Medium|Phone|Network|Identity
+Naija Life|Bank App|Easy|Transfer|Mobile|Password
+Naija Life|Data Subscription|Easy|Internet|Bundle|Megabytes
+Naija Life|Water Tanker|Easy|Truck|Street|Supply
+Naija Life|Flooded Street|Medium|Rain|Water|Road
+Naija Life|Rain Beat Me|Easy|Wet|Umbrella|Weather
+Naija Life|Landlady|Easy|Rent|House|Woman
+Naija Life|Roommate|Easy|Flat|Share|House
+Naija Life|Housewarming|Medium|New House|Party|Gift
+Naija Life|Estate Gate|Easy|Security|Entrance|Visitor
+Naija Life|Compound Meeting|Medium|Neighbors|Chair|Discussion
+Naija Life|Light Bill|Medium|Electricity|Payment|Meter
+Naija Life|Generator Fuel|Easy|Petrol|Engine|Can
+Naija Life|Emergency Recharge|Easy|Airtime|Phone|Credit
+Street & Hustle|Wheelbarrow Pusher|Medium|Load|Market|Cart
+Street & Hustle|Buka|Easy|Food|Local|Canteen
+Street & Hustle|Market Woman|Easy|Trade|Wrapper|Seller
+Street & Hustle|Bus Driver|Easy|Steering|Road|Passenger
+Street & Hustle|Taxi Rank|Easy|Cab|Queue|Park
+Street & Hustle|Night Guard|Easy|Security|Darkness|Gate
+Street & Hustle|Bricklayer|Medium|Block|Cement|Wall
+Street & Hustle|Carpenter|Easy|Wood|Hammer|Furniture
+Street & Hustle|Plumber|Easy|Pipe|Water|Wrench
+Street & Hustle|Electrician|Medium|Wire|Current|Repair
+Street & Hustle|Welder|Medium|Metal|Sparks|Machine
+Street & Hustle|Painter|Easy|Brush|Color|Wall
+Street & Hustle|Apprentice|Medium|Learn|Oga|Trade
+Street & Hustle|Oga At The Top|Medium|Boss|Office|Meme
+Street & Hustle|Daily Pay|Easy|Wages|Work|Today
+Street & Hustle|Casual Labour|Medium|Worker|Day|Job
+Street & Hustle|Street Football|Easy|Ball|Road|Goal
+Street & Hustle|Viewing Centre|Easy|Football|Screen|Crowd
+Street & Hustle|Phone Repairer|Medium|Screen|Screwdriver|Technician
+Street & Hustle|Shoe Shiner|Easy|Polish|Leather|Brush
+Street & Hustle|Car Wash|Easy|Soap|Vehicle|Hose
+Street & Hustle|Laundry Man|Easy|Clothes|Wash|Iron
+Street & Hustle|Food Vendor|Easy|Sell|Plate|Roadside
+Street & Hustle|Truck Pusher|Medium|Load|Warehouse|Trolley
+Street & Hustle|Area Boy|Hard|Street|Gang|Lagos
+Music|Giza|Medium|Burna Boy|Seyi Vibez|Collaboration
+Music|Commas|Easy|Ayra Starr|Money|Song
+Music|Finesse|Medium|Pheelz|BNXN|Yahoo
+Music|Big Big Things|Easy|Young Jonn|Kizz Daniel|Seyi Vibez
+Music|Egwu|Medium|Chike|Mohbad|Dance
+Music|Attention|Medium|Omah Lay|Love|Song
+Music|Party No Dey Stop|Easy|Adekunle Gold|Zinoleesky|Celebration
+Music|High|Medium|Adekunle Gold|Zinoleesky|Money
+Music|Organise|Medium|Asake|Dance|Album
+Music|Overloading|Hard|Lojay|Sarz|Remix
+Music|Abracadabra|Medium|Rexxie|Naira Marley|Poco Lee
+Music|Fada Fada|Easy|Phyno|Olamide|Igbo
+Music|Koroba|Medium|Tiwa Savage|Dance|Song
+Music|Somebody's Son|Medium|Tiwa Savage|Brandy|Collaboration
+Music|Running|Medium|Lojay|Ayra Starr|Song
+Music|Monalisa|Medium|Sarz|Lojay|Beat
+Music|Jiggy Bop|Easy|Kizz Daniel|Dance|Vibe
+Music|Afropop|Easy|Pop|Africa|Genre
+Music|Alté|Hard|Alternative|Lagos|Scene
+Music|Afro-soul|Medium|Melody|Guitar|Genre
+Music|Juju|Medium|Yoruba|Guitar|Music
+Music|Apala|Hard|Yoruba|Drums|Genre
+Music|Sakara|Hard|Hausa|Bowed|Music
+Music|Palm-Wine Music|Medium|Guitar|Highlife|Roots
+Music|Gospel Amapiano|Medium|Church|Dance|Genre
+Celebrities|BNXN|Medium|Fka|Singer|Afrobeats
+Celebrities|Victony|Medium|Broken|Singer|Outfit
+Celebrities|Lojay|Medium|Sarz|Singer|Romantic
+Celebrities|Young Jonn|Easy|Producer|Chocolate City|Singer
+Celebrities|Crayon|Medium|Mavin|Singer|So Fine
+Celebrities|Bloody Civilian|Medium|Rapper|Wakanda|Singer
+Celebrities|Teni|Easy|Mummy|Singer|Dr Dolor
+Celebrities|Simi|Easy|Joromi|Singer|Aduke
+Celebrities|Adekunle Gold|Easy|Husband|Singer|Art
+Celebrities|Johnny Drille|Medium|Mavin|Guitar|Singer
+Celebrities|Chike|Easy|Boo Of The Booless|Singer|Actor
+Celebrities|Bimbo Ademoye|Medium|Actress|Anikulapo|Comedy
+Celebrities|Lateef Adedimeji|Medium|Actor|Yoruba|Film
+Celebrities|Broda Shaggi|Easy|Skits|Police|Comic
+Celebrities|Brain Jotter|Medium|Comedy|Plank|Skits
+Celebrities|Mark Angel|Easy|Comedy|Emmanuella|YouTube
+Celebrities|Emmanuella|Easy|Mark Angel|Comedy|Child
+Celebrities|Carter Efe|Medium|Machala|Skits|Comic
+Celebrities|Hilda Baci|Easy|Chef|Record|Cooking
+Celebrities|Enioluwa|Easy|Influencer|Cheerleader|Vibes
+Celebrities|Ademola Lookman|Medium|Football|Goal|Atalanta
+Celebrities|Victor Boniface|Medium|Striker|Leverkusen|Football
+Celebrities|Alex Iwobi|Medium|Football|Midfielder|Fulham
+Celebrities|Anthony Joshua|Easy|Boxer|Heavyweight|Britain
+Celebrities|DJ Cuppy|Easy|Piano|Oxford|Turntables
+Culture|Eyo Festival|Medium|Lagos|White|Ceremony
+Culture|Osun-Osogbo|Hard|River|Grove|Festival
+Culture|Ofala Festival|Hard|Igbo|King|Palace
+Culture|Calabar Carnival|Easy|Costume|December|Cross River
+Culture|Argungu Fishing Festival|Hard|Kebbi|River|Catch
+Culture|Sango Festival|Hard|Oyo|Thunder|August
+Culture|Ijele Masquerade|Hard|Igbo|Giant|Mask
+Culture|Egungun Festival|Medium|Ancestor|Masquerade|Yoruba
+Culture|Gelede|Hard|Yoruba|Mask|Women
+Culture|Ifa Divination|Hard|Oracle|Palm Nuts|Babalawo
+Culture|Kwagh-hir|Hard|Tiv|Puppets|Theatre
+Culture|Sharo Festival|Hard|Hausa|Whip|Young Men
+Culture|Aso Oke|Medium|Loom|Yoruba|Fabric
+Culture|Iro And Buba|Medium|Blouse|Wrapper|Women
+Culture|Senator Wear|Easy|Men|Native|Outfit
+Culture|Abula|Medium|Trousers|Agbada|Men
+Culture|Ogene|Hard|Bell|Igbo|Metal
+Culture|Udu Pot|Hard|Clay|Instrument|Igbo
+Culture|Shekere|Medium|Beads|Gourd|Instrument
+Culture|Ekpe Society|Hard|Leopard|Secret|Calabar
+Culture|Mmanwu|Medium|Igbo|Spirit|Masquerade
+Culture|Igba Nkwu|Hard|Igbo|Marriage|Wine
+Culture|Traditional Ruler|Easy|Palace|Crown|King
+Culture|Palace Chiefs|Medium|King|Council|Royal
+Culture|Community Sanitation|Easy|Saturday|Street|Cleaning
+Diaspora|Remittance|Medium|Money|Home|Transfer
+Diaspora|Consulate|Medium|Embassy|Passport|Office
+Diaspora|Nigerian Passport|Easy|Travel|Booklet|Green
+Diaspora|Foreign Accent|Easy|Speech|Voice|Abroad
+Diaspora|Homecoming|Easy|Return|Family|Visit
+Diaspora|Return Ticket|Easy|Flight|Home|Booking
+Diaspora|Jollof Debate|Easy|Ghana|Rice|Argument
+Diaspora|Zoom Naming Ceremony|Medium|Baby|Online|Family
+Diaspora|Baby Dedication Livestream|Medium|Church|Camera|Baby
+Diaspora|Winter Plug|Medium|Coat|Cold|Advice
+Diaspora|Student Visa|Easy|School|Embassy|Permit
+Diaspora|Post-Study Work|Medium|Graduate|Job|Permit
+Diaspora|Permanent Residency|Hard|Immigration|Status|Card
+Diaspora|Immigration Lawyer|Easy|Visa|Court|Attorney
+Diaspora|USCIS|Hard|America|Immigration|Forms
+Diaspora|ILR|Hard|Britain|Settlement|Status
+Diaspora|Schengen Visa|Medium|Europe|Travel|Embassy
+Diaspora|International Transfer|Medium|Bank|Money|Abroad
+Diaspora|Rent Deposit|Medium|Landlord|House|Payment
+Diaspora|Credit Score|Medium|Bank|Number|Loan
+Diaspora|Room Inspection|Easy|Landlord|Apartment|Check
+Diaspora|Flight Layover|Easy|Airport|Waiting|Connection
+Diaspora|Black Friday Flight|Medium|Ticket|Discount|November
+Diaspora|Nigerian Association|Easy|Community|Meeting|Dues
+Diaspora|Home Training|Medium|Parents|Chores|Discipline
+School|NECO|Medium|Exam|Secondary|Certificate
+School|Post-UTME|Medium|University|Screening|Admission
+School|Matriculation|Medium|Gown|University|Freshers
+School|Convocation|Easy|Graduation|Gown|Degree
+School|Graduation Gown|Easy|Cap|Degree|Ceremony
+School|Course Rep|Easy|Class|Leader|Lecturer
+School|CGPA|Hard|Grades|Average|Result
+School|Carry Over|Medium|Course|Fail|Extra
+School|Extra Year|Medium|Delay|Graduation|Course
+School|Lecturer|Easy|Class|Teacher|University
+School|HOD|Hard|Department|Chair|Lecturer
+School|Dean|Medium|Faculty|Office|University
+School|SIWES|Hard|Industrial|Training|Student
+School|Industrial Training|Medium|Company|Student|Experience
+School|TDB|Hard|Book|Study|Exam
+School|Mid-Semester Test|Medium|Quiz|Lecturer|Weeks
+School|Exam Malpractice|Hard|Question Paper|Cheating|Invigilator
+School|Result Checker|Easy|Portal|Grades|Login
+School|Clearance|Medium|Documents|Signature|Graduation
+School|School Clinic|Easy|Nurse|Campus|Sick
+School|Campus Shuttle|Easy|Bus|Students|Ride
+School|Lecture Theatre|Easy|Seats|Class|Projector
+School|Handout|Easy|Notes|Photocopy|Lecturer
+School|Course Registration|Medium|Portal|Semester|Classes
+School|Departmental Dues|Medium|Payment|Department|Students
+Religion|Sunday School|Easy|Children|Bible|Church
+Religion|Bible Study|Easy|Scripture|Group|Church
+Religion|Altar Call|Medium|Front|Prayer|Church
+Religion|Communion|Medium|Bread|Wine|Church
+Religion|Baptism|Easy|Water|Church|Immersion
+Religion|Church Anniversary|Easy|Birthday|Church|Celebration
+Religion|Harvest Thanksgiving|Medium|Food|Offering|Church
+Religion|Crossover Night|Easy|New Year|Midnight|Church
+Religion|Prayer Meeting|Easy|Church|Evening|Pray
+Religion|Jummah|Medium|Friday|Mosque|Prayer
+Religion|Eid Prayer|Easy|Ramadan|Mosque|Morning
+Religion|Iftar|Easy|Sunset|Food|Fast
+Religion|Suhoor|Medium|Dawn|Food|Fast
+Religion|Zakat|Hard|Charity|Islam|Money
+Religion|Hajj|Hard|Mecca|Pilgrimage|Kaaba
+Religion|Umrah|Hard|Mecca|Pilgrimage|Minor
+Religion|Ablution|Medium|Water|Wash|Prayer
+Religion|Minaret|Hard|Mosque|Tower|Call
+Religion|Madrasa|Hard|Islamic|School|Quran
+Religion|Adhan|Hard|Mosque|Call|Prayer
+Religion|Qibla|Hard|Direction|Mecca|Prayer
+Religion|Quran Recitation|Medium|Read|Mosque|Verses
+Religion|Wudu|Medium|Water|Wash|Prayer
+Religion|Jinn|Hard|Spirit|Invisible|Islam
+Religion|Tarawih|Hard|Ramadan|Night|Prayer

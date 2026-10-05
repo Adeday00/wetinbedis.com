@@ -16,7 +16,7 @@ The production app fetches an anonymous HTTPS manifest and two immutable, hashed
 
 3. Open `/content-admin` on the deployed site and sign in with the allowlisted Sign in with ChatGPT owner account. Upload or paste the JSON. The optional sponsor controls support only `commercial` or `prizeFunding`, a sponsor name, and optional copy. They never accept a link or action.
 
-4. Select **Validate release**. Check the WAT week, revision, 350 Party cards, and active Solo count. Validation is fail-closed for hashes, schedules, category spelling and floors, option families, daily packs, Bonus Gist inventory, and unknown fields. Every Solo answer choice must also resolve to a Party-card label in the same category, so a Food word cannot be relabelled as Slang in a hand-edited release.
+4. Select **Validate release**. Check the WAT week, revision, 600 Party cards, and active Solo count. Validation is fail-closed for hashes, schedules, category spelling and floors, option families, daily packs, Bonus Gist inventory, and unknown fields. Every Solo answer choice must also resolve to a Party-card label in the same category, so a Food word cannot be relabelled as Slang in a hand-edited release.
 
 5. Check the confirmation and select **Publish atomically**. The public manifest activates only from Monday 00:00 WAT through the following Monday. A replacement for the same week must use a higher revision; old asset URLs remain immutable for last-known-good recovery.
 

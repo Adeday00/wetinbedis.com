@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   createPlayOnCallRoomCode,
+  isRoomJoinable,
+  newPlayOnCallRoom,
   normalizePlayOnCallRoomCode,
   parsePlayOnCallClientFrame,
 } from "../worker/play-on-call-protocol.ts";
@@ -18,12 +20,25 @@ const ticket = {
   expiresAt: 2_000_000_000_000,
 };
 
-test("Play on a Call room codes are friendly, fixed length, and normalized", () => {
+test("Play on a Call room codes are short for new rooms and preserve legacy joins", () => {
   const code = createPlayOnCallRoomCode(() => 0);
-  assert.equal(code, "AAAAAAAA");
+  assert.equal(code, "AAAAAA");
+  assert.equal(normalizePlayOnCallRoomCode(" wbd-abcd 23 "), "ABCD23");
   assert.equal(normalizePlayOnCallRoomCode(" wbd-abcd 2345 "), "ABCD2345");
   assert.equal(normalizePlayOnCallRoomCode("ABCD-2345"), null);
   assert.equal(normalizePlayOnCallRoomCode("ABCD1234"), null);
+});
+
+test("Play on a Call closes new admission once a room starts but leaves reconnect policy to the room", () => {
+  const room = newPlayOnCallRoom(
+    "ABCD2345",
+    { playerID: ticket.playerID, displayName: "Seyi", joinedAt: 1, team: null },
+    "hot_seat",
+    1,
+  );
+  assert.equal(isRoomJoinable(room, 2), true);
+  room.phase = "playing";
+  assert.equal(isRoomJoinable(room, 2), false);
 });
 
 test("Play on a Call tickets are signed, room-bound and short-lived", async () => {

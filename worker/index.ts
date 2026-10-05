@@ -2,13 +2,17 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 import { handleApiRequest } from "./api/router";
+import { PlayOnCallRoom } from "./play-on-call-room";
 
 interface Env {
   ASSETS: Fetcher;
   DB: D1Database;
+  PLAY_ON_CALL_ROOMS?: DurableObjectNamespace;
   WBD_CONTENT_ADMIN_TOKEN?: string;
   WBD_CONTENT_ADMIN_USER_IDS?: string;
   WBD_CONTENT_ADMIN_EMAILS?: string;
+  WBD_PUSH_TOKEN_ENCRYPTION_SECRET?: string;
+  WBD_PLAY_ON_CALL_SIGNING_SECRET?: string;
   IMAGES: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {
@@ -52,3 +56,4 @@ const worker = {
 };
 
 export default worker;
+export { PlayOnCallRoom };

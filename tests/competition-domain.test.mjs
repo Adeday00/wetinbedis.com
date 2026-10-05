@@ -5,6 +5,7 @@ import {
   CompetitionDomainError,
   publicCompetitionCard,
   rankLeaderboard,
+  scoreServerTimedSubmission,
   scoreSubmission,
   validateCompetitionPack,
 } from "../worker/api/domain.ts";
@@ -115,6 +116,105 @@ test("server recomputes 12/12 and uses speed as the deciding field", () => {
   assert.equal(ranked[0].attemptId, "fast");
   assert.equal(ranked[0].rank, 1);
   assert.equal(ranked[1].rank, 2);
+});
+
+test("cash scoring uses sequential server timestamps, never a player-reported duration", () => {
+  const cards = [makeCard(1), makeCard(2, "hard")];
+  const score = scoreServerTimedSubmission({
+    cards,
+    answers: [
+      {
+        cardId: "card-1",
+        position: 1,
+        selectedOptionId: "card-1-option-1",
+        issuedAtMs: 10_000,
+        answeredAtMs: 10_850,
+      },
+      {
+        cardId: "card-2",
+        position: 2,
+        selectedOptionId: "card-2-option-1",
+        issuedAtMs: 10_850,
+        answeredAtMs: 12_100,
+      },
+    ],
+    perCardLimitMs: 12_000,
+  });
+
+  assert.equal(score.correctCount, 2);
+  assert.equal(score.clientActiveMs, 2_100);
+  assert.equal(score.adjustedTotalMs, 2_100);
+  assert.equal(score.hardCardMs, 1_250);
+  assert.deepEqual(score.integrityFlags, []);
+  assert.deepEqual(score.answers.map((answer) => answer.responseMs), [850, 1_250]);
+});
+
+test("cash scoring rejects a replayed, out-of-order, or late server issue record", () => {
+  const cards = [makeCard(1), makeCard(2)];
+  assert.throws(
+    () =>
+      scoreServerTimedSubmission({
+        cards,
+        answers: [
+          {
+            cardId: "card-2",
+            position: 2,
+            selectedOptionId: "card-2-option-1",
+            issuedAtMs: 10_000,
+            answeredAtMs: 10_800,
+          },
+          {
+            cardId: "card-1",
+            position: 1,
+            selectedOptionId: "card-1-option-1",
+            issuedAtMs: 10_800,
+            answeredAtMs: 11_000,
+          },
+        ],
+        perCardLimitMs: 12_000,
+      }),
+    (error) =>
+      error instanceof CompetitionDomainError && error.code === "server_timed_answer_order",
+  );
+  assert.throws(
+    () =>
+      scoreServerTimedSubmission({
+        cards: [cards[0]],
+        answers: [
+          {
+            cardId: "card-1",
+            position: 1,
+            selectedOptionId: "card-1-option-1",
+            issuedAtMs: 10_000,
+            answeredAtMs: 22_001,
+          },
+        ],
+        perCardLimitMs: 12_000,
+      }),
+    (error) =>
+      error instanceof CompetitionDomainError && error.code === "server_timed_answer_expired",
+  );
+});
+
+test("an early cash skip is recorded by the server but still receives the full penalty", () => {
+  const cards = [makeCard(1)];
+  const score = scoreServerTimedSubmission({
+    cards,
+    answers: [
+      {
+        cardId: "card-1",
+        position: 1,
+        selectedOptionId: null,
+        issuedAtMs: 20_000,
+        answeredAtMs: 20_400,
+      },
+    ],
+    perCardLimitMs: 12_000,
+  });
+
+  assert.equal(score.correctCount, 0);
+  assert.equal(score.clientActiveMs, 400);
+  assert.equal(score.adjustedTotalMs, 12_000);
 });
 
 test("exact score and timing ties share rank", () => {
