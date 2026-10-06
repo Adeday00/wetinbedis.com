@@ -815,9 +815,9 @@
     "Difficulty": "Medium",
     "Category": "Celebrities",
     "Main Word": "Seyi Vibez",
-    "Forbidden Word 1": "Street",
-    "Forbidden Word 2": "Singer",
-    "Forbidden Word 3": "Lagos"
+    "Forbidden Word 1": "Chance",
+    "Forbidden Word 2": "C Major",
+    "Forbidden Word 3": "Man of the Year"
   },
   {
     "Card Number": 83,
@@ -877,7 +877,7 @@
     "Main Word": "FOLA",
     "Forbidden Word 1": "Feeling",
     "Forbidden Word 2": "R&B",
-    "Forbidden Word 3": "Singer"
+    "Forbidden Word 3": "Unilag"
   },
   {
     "Card Number": 89,
@@ -945,7 +945,7 @@
     "Difficulty": "Easy",
     "Category": "Music",
     "Main Word": "Rush",
-    "Forbidden Word 1": "Ayra",
+    "Forbidden Word 1": "Ayra ",
     "Forbidden Word 2": "Sabi",
     "Forbidden Word 3": "Starr"
   },
@@ -4163,7 +4163,7 @@
     "Card Number": 417,
     "ID": "NEW-LIFE-017",
     "Difficulty": "Easy",
-    "Category": "Naija Life",
+    "Category": "Slang",
     "Main Word": "Rain Beat Me",
     "Forbidden Word 1": "Wet",
     "Forbidden Word 2": "Umbrella",
@@ -4394,10 +4394,10 @@
     "ID": "NEW-STREET-015",
     "Difficulty": "Easy",
     "Category": "Street & Hustle",
-    "Main Word": "Daily Pay",
-    "Forbidden Word 1": "Wages",
+    "Main Word": "Daily 2k",
+    "Forbidden Word 1": "Quick",
     "Forbidden Word 2": "Work",
-    "Forbidden Word 3": "Today"
+    "Forbidden Word 3": "Urgent "
   },
   {
     "Card Number": 441,
@@ -4414,10 +4414,10 @@
     "ID": "NEW-STREET-017",
     "Difficulty": "Easy",
     "Category": "Street & Hustle",
-    "Main Word": "Street Football",
-    "Forbidden Word 1": "Match",
-    "Forbidden Word 2": "Road",
-    "Forbidden Word 3": "Goal"
+    "Main Word": "Keke Driver",
+    "Forbidden Word 1": "Tricycle",
+    "Forbidden Word 2": "Passenger",
+    "Forbidden Word 3": "Road"
   },
   {
     "Card Number": 443,
@@ -5154,10 +5154,10 @@
     "ID": "NEW-CULT-026",
     "Difficulty": "Medium",
     "Category": "Culture",
-    "Main Word": "Abula",
-    "Forbidden Word 1": "Trousers",
-    "Forbidden Word 2": "Agbada",
-    "Forbidden Word 3": "Men"
+    "Main Word": "Bridal Train",
+    "Forbidden Word 1": "Bride",
+    "Forbidden Word 2": "Bridesmaids",
+    "Forbidden Word 3": "Wedding"
   },
   {
     "Card Number": 517,
@@ -5452,12 +5452,12 @@
   {
     "Card Number": 546,
     "ID": "NEW-DIAS-031",
-    "Difficulty": "Easy",
+    "Difficulty": "Medium",
     "Category": "Diaspora",
-    "Main Word": "Room Inspection",
-    "Forbidden Word 1": "Landlord",
-    "Forbidden Word 2": "Apartment",
-    "Forbidden Word 3": "Check"
+    "Main Word": "Apartment Hunting",
+    "Forbidden Word 1": "Rent",
+    "Forbidden Word 2": "Move",
+    "Forbidden Word 3": "Lease"
   },
   {
     "Card Number": 547,
@@ -5634,10 +5634,10 @@
     "ID": "NEW-SCHOOL-014",
     "Difficulty": "Medium",
     "Category": "School",
-    "Main Word": "Industrial Training",
-    "Forbidden Word 1": "Company",
-    "Forbidden Word 2": "Student",
-    "Forbidden Word 3": "Experience"
+    "Main Word": "Graduation Ceremony",
+    "Forbidden Word 1": "Diploma",
+    "Forbidden Word 2": "Cap",
+    "Forbidden Word 3": "Degree"
   },
   {
     "Card Number": 565,
@@ -5654,9 +5654,9 @@
     "ID": "NEW-SCHOOL-016",
     "Difficulty": "Medium",
     "Category": "School",
-    "Main Word": "Mid-Semester Test",
+    "Main Word": "Mid-Term Exams ",
     "Forbidden Word 1": "Quiz",
-    "Forbidden Word 2": "Lecturer",
+    "Forbidden Word 2": "Teacher ",
     "Forbidden Word 3": "Weeks"
   },
   {
