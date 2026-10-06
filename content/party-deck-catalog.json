@@ -3754,10 +3754,10 @@
     "ID": "NEW-FOOD-011",
     "Difficulty": "Medium",
     "Category": "Food",
-    "Main Word": "Ewa Riro",
-    "Forbidden Word 1": "Beans",
-    "Forbidden Word 2": "Stew",
-    "Forbidden Word 3": "Yoruba"
+    "Main Word": "Jollof Spaghetti",
+    "Forbidden Word 1": "Pasta",
+    "Forbidden Word 2": "Tomato",
+    "Forbidden Word 3": "Party"
   },
   {
     "Card Number": 377,
@@ -3802,12 +3802,12 @@
   {
     "Card Number": 381,
     "ID": "NEW-FOOD-016",
-    "Difficulty": "Medium",
+    "Difficulty": "Easy",
     "Category": "Food",
-    "Main Word": "Banga Rice",
-    "Forbidden Word 1": "Palm Fruit",
-    "Forbidden Word 2": "Delta",
-    "Forbidden Word 3": "Grains"
+    "Main Word": "Rice And Beans",
+    "Forbidden Word 1": "Staple",
+    "Forbidden Word 2": "Lunch",
+    "Forbidden Word 3": "Stew"
   },
   {
     "Card Number": 382,
@@ -3952,12 +3952,12 @@
   {
     "Card Number": 396,
     "ID": "NEW-FOOD-031",
-    "Difficulty": "Medium",
+    "Difficulty": "Easy",
     "Category": "Food",
-    "Main Word": "Garden Egg Sauce",
-    "Forbidden Word 1": "Eggplant",
-    "Forbidden Word 2": "Fish",
-    "Forbidden Word 3": "Dip"
+    "Main Word": "Yam And Egg",
+    "Forbidden Word 1": "Breakfast",
+    "Forbidden Word 2": "Fry",
+    "Forbidden Word 3": "Boil"
   },
   {
     "Card Number": 397,
@@ -4294,10 +4294,10 @@
     "ID": "NEW-STREET-005",
     "Difficulty": "Easy",
     "Category": "Street & Hustle",
-    "Main Word": "Taxi Rank",
-    "Forbidden Word 1": "Cab",
-    "Forbidden Word 2": "Queue",
-    "Forbidden Word 3": "Park"
+    "Main Word": "Uber Ride",
+    "Forbidden Word 1": "App",
+    "Forbidden Word 2": "Driver",
+    "Forbidden Word 3": "Pickup"
   },
   {
     "Card Number": 431,
@@ -4404,10 +4404,10 @@
     "ID": "NEW-STREET-016",
     "Difficulty": "Medium",
     "Category": "Street & Hustle",
-    "Main Word": "Casual Labour",
-    "Forbidden Word 1": "Worker",
-    "Forbidden Word 2": "Day",
-    "Forbidden Word 3": "Job"
+    "Main Word": "Delivery Rider",
+    "Forbidden Word 1": "Package",
+    "Forbidden Word 2": "Bike",
+    "Forbidden Word 3": "Order"
   },
   {
     "Card Number": 442,
@@ -4464,10 +4464,10 @@
     "ID": "NEW-STREET-022",
     "Difficulty": "Easy",
     "Category": "Street & Hustle",
-    "Main Word": "Laundry Man",
-    "Forbidden Word 1": "Clothes",
-    "Forbidden Word 2": "Wash",
-    "Forbidden Word 3": "Iron"
+    "Main Word": "Barber",
+    "Forbidden Word 1": "Clippers",
+    "Forbidden Word 2": "Hair",
+    "Forbidden Word 3": "Shop"
   },
   {
     "Card Number": 448,
@@ -4484,10 +4484,10 @@
     "ID": "NEW-STREET-024",
     "Difficulty": "Medium",
     "Category": "Street & Hustle",
-    "Main Word": "Truck Pusher",
-    "Forbidden Word 1": "Load",
-    "Forbidden Word 2": "Warehouse",
-    "Forbidden Word 3": "Trolley"
+    "Main Word": "Construction Worker",
+    "Forbidden Word 1": "Building",
+    "Forbidden Word 2": "Site",
+    "Forbidden Word 3": "Helmet"
   },
   {
     "Card Number": 450,
@@ -4732,22 +4732,22 @@
   {
     "Card Number": 474,
     "ID": "NEW-MUSIC-024",
-    "Difficulty": "Medium",
+    "Difficulty": "Easy",
     "Category": "Music",
-    "Main Word": "Palm-Wine Music",
-    "Forbidden Word 1": "Guitar",
-    "Forbidden Word 2": "Highlife",
-    "Forbidden Word 3": "Roots"
+    "Main Word": "Afrobeats",
+    "Forbidden Word 1": "Nigeria",
+    "Forbidden Word 2": "Burna Boy",
+    "Forbidden Word 3": "Genre"
   },
   {
     "Card Number": 475,
     "ID": "NEW-MUSIC-025",
     "Difficulty": "Medium",
     "Category": "Music",
-    "Main Word": "Gospel Amapiano",
-    "Forbidden Word 1": "Church",
-    "Forbidden Word 2": "Dance",
-    "Forbidden Word 3": "Genre"
+    "Main Word": "Love Nwantiti",
+    "Forbidden Word 1": "CKay",
+    "Forbidden Word 2": "TikTok",
+    "Forbidden Word 3": "Chorus"
   },
   {
     "Card Number": 476,
@@ -5144,10 +5144,10 @@
     "ID": "NEW-CULT-025",
     "Difficulty": "Easy",
     "Category": "Culture",
-    "Main Word": "Senator Wear",
-    "Forbidden Word 1": "Men",
-    "Forbidden Word 2": "Native",
-    "Forbidden Word 3": "Outfit"
+    "Main Word": "Wedding Reception",
+    "Forbidden Word 1": "Bride",
+    "Forbidden Word 2": "Food",
+    "Forbidden Word 3": "Dance"
   },
   {
     "Card Number": 516,
@@ -5342,12 +5342,12 @@
   {
     "Card Number": 535,
     "ID": "NEW-DIAS-020",
-    "Difficulty": "Medium",
+    "Difficulty": "Easy",
     "Category": "Diaspora",
-    "Main Word": "Winter Plug",
-    "Forbidden Word 1": "Coat",
-    "Forbidden Word 2": "Cold",
-    "Forbidden Word 3": "Advice"
+    "Main Word": "Snow Day",
+    "Forbidden Word 1": "School",
+    "Forbidden Word 2": "Weather",
+    "Forbidden Word 3": "Closed"
   },
   {
     "Card Number": 536,
@@ -5474,20 +5474,20 @@
     "ID": "NEW-DIAS-033",
     "Difficulty": "Medium",
     "Category": "Diaspora",
-    "Main Word": "Black Friday Flight",
-    "Forbidden Word 1": "Ticket",
-    "Forbidden Word 2": "Discount",
-    "Forbidden Word 3": "November"
+    "Main Word": "Thanksgiving Dinner",
+    "Forbidden Word 1": "Turkey",
+    "Forbidden Word 2": "November",
+    "Forbidden Word 3": "Family"
   },
   {
     "Card Number": 549,
     "ID": "NEW-DIAS-034",
     "Difficulty": "Easy",
     "Category": "Diaspora",
-    "Main Word": "Diaspora Potluck",
-    "Forbidden Word 1": "Community",
-    "Forbidden Word 2": "Meeting",
-    "Forbidden Word 3": "Dues"
+    "Main Word": "Black History Month",
+    "Forbidden Word 1": "February",
+    "Forbidden Word 2": "Heritage",
+    "Forbidden Word 3": "Celebration"
   },
   {
     "Card Number": 550,
