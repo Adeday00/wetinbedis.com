@@ -1,0 +1,5642 @@
+{
+  "meta": {
+    "generatedAt": "2026-10-06T18:00:00.000Z",
+    "scope": "Songs charting in Nigeria, including Nigerian artists, Nigerian-led collaborations, and major international tracks that materially charted in Nigeria.",
+    "methodology": {
+      "2020": "Official TurnTable year-end Top 50 plus 50-song cross-source research expansion.",
+      "2021": "Official TurnTable year-end Top 50 plus 50-song cross-source research expansion.",
+      "2022": "Official TurnTable year-end Top 100.",
+      "2023": "Official TurnTable year-end Top 100.",
+      "2024": "Official TurnTable year-end Top 100.",
+      "2025": "Official Nigeria Top 100 2025 playlist ordering from TurnTable Charts/Audiomack.",
+      "2026": "Provisional current weekly Top 100 snapshot from TurnTable Charts (week of 2026-10-01). It is not a completed year-end ranking."
+    },
+    "sources": [
+      "https://www.turntablecharts.com/news/480",
+      "https://en.wikipedia.org/wiki/TurnTable_End_of_the_Year_Top_50_of_2020",
+      "https://en.wikipedia.org/wiki/TurnTable_End_of_the_Year_Top_50_of_2021",
+      "https://www.turntablecharts.com/magazine/3rd/60",
+      "https://www.turntablecharts.com/news/1191",
+      "https://www.turntablecharts.com/magazine/6th/131",
+      "https://www.turntablecharts.com/news/2042",
+      "https://audiomack.com/turntable-charts/playlist/official-nigeria-top-100-692ea483d1ac9",
+      "https://www.turntablecharts.com/"
+    ]
+  },
+  "years": {
+    "2020": [
+      {
+        "year": 2020,
+        "rank": 1,
+        "title": "Nobody",
+        "artist": "DJ Neptune ft. Mr Eazi & Joeboy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 2,
+        "title": "FEM",
+        "artist": "Davido",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 3,
+        "title": "Abule",
+        "artist": "Patoranking",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 4,
+        "title": "Jerusalema (Remix)",
+        "artist": "Master KG ft. Burna Boy & Nomcebo Zikode",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 5,
+        "title": "Duduke",
+        "artist": "Simi",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 6,
+        "title": "Something Different",
+        "artist": "Adekunle Gold",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 7,
+        "title": "Again",
+        "artist": "Wande Coal",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 8,
+        "title": "Vibration",
+        "artist": "Fireboy DML",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 9,
+        "title": "Bad Influence",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 10,
+        "title": "Lo Lo",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 11,
+        "title": "Woman",
+        "artist": "Rema",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 12,
+        "title": "Pami",
+        "artist": "DJ Tunez ft. Wizkid, Adekunle Gold & Omah Lay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 13,
+        "title": "Beamer (Bad Boys)",
+        "artist": "Rema & Rvssian",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 14,
+        "title": "Betty Butter",
+        "artist": "Mayorkun ft. Davido",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 15,
+        "title": "Wonderful",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 16,
+        "title": "In My Maserati",
+        "artist": "Olakira",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 17,
+        "title": "Mad",
+        "artist": "Sarz & WurlD",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 18,
+        "title": "Ginger Me",
+        "artist": "Rema",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 19,
+        "title": "Zoom",
+        "artist": "Cheque",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 20,
+        "title": "Geng",
+        "artist": "Mayorkun",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 21,
+        "title": "MJ",
+        "artist": "Bad Boy Timz",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 22,
+        "title": "Risky",
+        "artist": "Davido",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 23,
+        "title": "Ojoro",
+        "artist": "Terri",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 24,
+        "title": "Away",
+        "artist": "Oxlade",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 25,
+        "title": "Call",
+        "artist": "Joeboy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 26,
+        "title": "Damn",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 27,
+        "title": "Infinity",
+        "artist": "Olamide ft. Omah Lay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 28,
+        "title": "Intentions",
+        "artist": "Justin Bieber",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 29,
+        "title": "You",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 30,
+        "title": "Damages",
+        "artist": "Tems",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 31,
+        "title": "Jaho",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 32,
+        "title": "Odogwu",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 33,
+        "title": "Blinding Lights",
+        "artist": "The Weeknd",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 34,
+        "title": "Billionaire",
+        "artist": "Teni",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 35,
+        "title": "Know You",
+        "artist": "Ladipoe ft. Simi",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 36,
+        "title": "Bop Daddy",
+        "artist": "Falz ft. Ms Banks",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 37,
+        "title": "AG Baby",
+        "artist": "Adekunle Gold",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 38,
+        "title": "Koroba",
+        "artist": "Tiwa Savage",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 39,
+        "title": "Way Too Big",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 40,
+        "title": "Say So",
+        "artist": "Doja Cat",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 41,
+        "title": "Rora",
+        "artist": "Reekado Banks",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 42,
+        "title": "Toosie Slide",
+        "artist": "Drake",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 43,
+        "title": "New York City Girl",
+        "artist": "Fireboy DML",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 44,
+        "title": "Shekere",
+        "artist": "Yemi Alade",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 45,
+        "title": "Ada",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 46,
+        "title": "Laugh Now Cry Later",
+        "artist": "Drake",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 47,
+        "title": "Monsters You Made",
+        "artist": "Burna Boy ft. Chris Martin",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 48,
+        "title": "Beginning",
+        "artist": "Joeboy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 49,
+        "title": "Yummy",
+        "artist": "Justin Bieber",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 50,
+        "title": "Of Lagos",
+        "artist": "Mayorkun",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2020,
+        "rank": 51,
+        "title": "Mapariwo",
+        "artist": "Zinoleesky",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 52,
+        "title": "Cash App",
+        "artist": "Bella Shmurda ft. Zlatan & Lincoln",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 53,
+        "title": "Loading",
+        "artist": "Olamide ft. Bad Boy Timz",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 54,
+        "title": "Green Light",
+        "artist": "Olamide",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 55,
+        "title": "Triumphant",
+        "artist": "Olamide ft. Bella Shmurda",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 56,
+        "title": "Barawo",
+        "artist": "Ajebo Hustlers",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 57,
+        "title": "If No Be You",
+        "artist": "Jamo Pyper ft. Mayorkun",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 58,
+        "title": "Champion",
+        "artist": "Fireboy DML ft. D Smoke",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 59,
+        "title": "Park Well",
+        "artist": "Tiwa Savage ft. Davido",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 60,
+        "title": "Okay",
+        "artist": "Adekunle Gold",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 61,
+        "title": "True Love",
+        "artist": "Wizkid ft. Projexx & Tay Iwar",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 62,
+        "title": "Reckless",
+        "artist": "Wizkid",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 63,
+        "title": "Real Life",
+        "artist": "Burna Boy ft. Stormzy",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 64,
+        "title": "Mighty Wine",
+        "artist": "Wizkid",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 65,
+        "title": "Soro Soke",
+        "artist": "Small Doctor",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 66,
+        "title": "Aii",
+        "artist": "Kizz Daniel",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 67,
+        "title": "Enjoy",
+        "artist": "Tekno",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 68,
+        "title": "Gra Gra",
+        "artist": "Timaya",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 69,
+        "title": "Can't Relate",
+        "artist": "Omah Lay",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 70,
+        "title": "Micasa Sucasa",
+        "artist": "Korede Bello",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 71,
+        "title": "Fine Girl",
+        "artist": "Naira Marley",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 72,
+        "title": "Eli",
+        "artist": "Fireboy DML",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 73,
+        "title": "Ginger",
+        "artist": "Wizkid ft. Burna Boy",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 74,
+        "title": "No Be Water",
+        "artist": "Burna Boy",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 75,
+        "title": "Wetin We Gain",
+        "artist": "Victor AD",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 76,
+        "title": "Dangerous Love",
+        "artist": "Tiwa Savage",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 77,
+        "title": "Dumebi",
+        "artist": "Rema",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 78,
+        "title": "Lady",
+        "artist": "Fireboy DML",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 79,
+        "title": "Egwu",
+        "artist": "Chike",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 80,
+        "title": "Godly",
+        "artist": "Omah Lay",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 81,
+        "title": "Lagos Boys",
+        "artist": "Mayorkun",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 82,
+        "title": "The Matter",
+        "artist": "Davido ft. Naira Marley",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 83,
+        "title": "Aje",
+        "artist": "Burna Boy",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 84,
+        "title": "Blow My Mind",
+        "artist": "Davido ft. Chris Brown",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 85,
+        "title": "Omo Ologo",
+        "artist": "Zinoleesky",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 86,
+        "title": "Opor",
+        "artist": "Olamide",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 87,
+        "title": "Buga",
+        "artist": "Teni",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 88,
+        "title": "Abena",
+        "artist": "Adekunle Gold",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 89,
+        "title": "Jowo",
+        "artist": "Davido",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 90,
+        "title": "Holy Ground",
+        "artist": "Davido ft. Nicki Minaj",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 91,
+        "title": "The Best",
+        "artist": "Davido ft. Mayorkun",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 92,
+        "title": "Sinner",
+        "artist": "Adekunle Gold",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 93,
+        "title": "Ase",
+        "artist": "Sarz ft. WurlD",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 94,
+        "title": "Ginger Bread",
+        "artist": "Rema",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 95,
+        "title": "Koleyewon",
+        "artist": "Naira Marley",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 96,
+        "title": "Coming",
+        "artist": "Naira Marley ft. Busiswa",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 97,
+        "title": "Won Le Ba",
+        "artist": "Simi",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 98,
+        "title": "Temptation",
+        "artist": "Tiwa Savage ft. Sam Smith",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 99,
+        "title": "Ole",
+        "artist": "Tiwa Savage ft. Naira Marley",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2020,
+        "rank": 100,
+        "title": "Lagos Anthem",
+        "artist": "Naira Marley",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      }
+    ],
+    "2021": [
+      {
+        "year": 2021,
+        "rank": 1,
+        "title": "Godly",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 2,
+        "title": "Feeling",
+        "artist": "Ladipoe ft. BNXN",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 3,
+        "title": "Essence",
+        "artist": "Wizkid ft. Tems",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 4,
+        "title": "Understand",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 5,
+        "title": "Rock",
+        "artist": "Olamide",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 6,
+        "title": "Lie",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 7,
+        "title": "High Way",
+        "artist": "DJ Kaywise ft. Phyno",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 8,
+        "title": "Peru",
+        "artist": "Fireboy DML",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 9,
+        "title": "Sip (Alcohol)",
+        "artist": "Joeboy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 10,
+        "title": "Bloody Samaritan",
+        "artist": "Ayra Starr",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 11,
+        "title": "High",
+        "artist": "Adekunle Gold",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 12,
+        "title": "For You",
+        "artist": "Teni ft. Davido",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 13,
+        "title": "Forever (Remix)",
+        "artist": "Gyakie ft. Omah Lay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 14,
+        "title": "The Best",
+        "artist": "Davido ft. Mayorkun",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 15,
+        "title": "Infinity",
+        "artist": "Olamide ft. Omah Lay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 16,
+        "title": "Running (To You)",
+        "artist": "Chike",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 17,
+        "title": "KPK (Ko Por Ke)",
+        "artist": "Rexxie ft. MohBad",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 18,
+        "title": "Cash App",
+        "artist": "Bella Shmurda ft. Zlatan & Lincoln",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 19,
+        "title": "Ginger",
+        "artist": "Wizkid ft. Burna Boy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 20,
+        "title": "Bounce",
+        "artist": "Ruger",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 21,
+        "title": "Focus",
+        "artist": "Joeboy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 22,
+        "title": "Kilometre",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 23,
+        "title": "Monalisa",
+        "artist": "Lojay & Sarz",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 24,
+        "title": "Pronto",
+        "artist": "Ajebo Hustlers",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 25,
+        "title": "Felony",
+        "artist": "CKay",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 26,
+        "title": "Sinner",
+        "artist": "Adekunle Gold",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 27,
+        "title": "Jowo",
+        "artist": "Davido",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 28,
+        "title": "History",
+        "artist": "Cheque ft. Fireboy DML",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 29,
+        "title": "Peaches",
+        "artist": "Justin Bieber",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 30,
+        "title": "Kilofeshe",
+        "artist": "Zinoleesky",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 31,
+        "title": "Hallelu",
+        "artist": "Masterkraft ft. Zlatan & Bella Shmurda",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 32,
+        "title": "Loading",
+        "artist": "Olamide ft. Bad Boy Timz",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 33,
+        "title": "Rush",
+        "artist": "Bella Shmurda",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 34,
+        "title": "Show Me",
+        "artist": "Joeboy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 35,
+        "title": "Outside",
+        "artist": "BNXN",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 36,
+        "title": "Feel Good",
+        "artist": "MohBad",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 37,
+        "title": "Big Thug Boys",
+        "artist": "AV",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 38,
+        "title": "Koleyewon",
+        "artist": "Naira Marley",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 39,
+        "title": "Somebody's Son",
+        "artist": "Tiwa Savage ft. Brandy",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 40,
+        "title": "Bling",
+        "artist": "Blaqbonez",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 41,
+        "title": "Coming",
+        "artist": "Naira Marley ft. Busiswa",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 42,
+        "title": "Away",
+        "artist": "Ayra Starr",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 43,
+        "title": "Celebrate Me",
+        "artist": "Patoranking",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 44,
+        "title": "Squander",
+        "artist": "Falz",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 45,
+        "title": "Dimension",
+        "artist": "Jae5 ft. Skepta & Rema",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 46,
+        "title": "World",
+        "artist": "Bella Shmurda",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 47,
+        "title": "It Is What It Is",
+        "artist": "Adekunle Gold",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 48,
+        "title": "KOLO",
+        "artist": "Ice Prince",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 49,
+        "title": "Soundgasm",
+        "artist": "Rema",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 50,
+        "title": "Triumphant",
+        "artist": "Olamide ft. Bella Shmurda",
+        "source": "TurnTable End of Year Top 50",
+        "status": "official_top_50"
+      },
+      {
+        "year": 2021,
+        "rank": 51,
+        "title": "Love Nwantiti (Ah Ah Ahh)",
+        "artist": "CKay",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 52,
+        "title": "Bad Dancer",
+        "artist": "Johnny Drille",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 53,
+        "title": "Mystery Girl",
+        "artist": "Johnny Drille",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 54,
+        "title": "Feelings",
+        "artist": "Fireboy DML",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 55,
+        "title": "Pate",
+        "artist": "Sarz ft. WurlD & Wale",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 56,
+        "title": "Mood",
+        "artist": "Wizkid ft. Buju",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 57,
+        "title": "Need You",
+        "artist": "Fireboy DML",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 58,
+        "title": "Omo Ope",
+        "artist": "Asake ft. Olamide",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 59,
+        "title": "Egwu",
+        "artist": "Chike ft. MohBad",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 60,
+        "title": "Baba God",
+        "artist": "Naira Marley",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 61,
+        "title": "Maserati",
+        "artist": "Olakira",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 62,
+        "title": "Question",
+        "artist": "Mercy Chinwo ft. Simi",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 63,
+        "title": "On Your Own",
+        "artist": "Simi",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 64,
+        "title": "Nobody",
+        "artist": "DJ Neptune ft. Mr Eazi & Joeboy",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 65,
+        "title": "Soro Soke",
+        "artist": "Small Doctor",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 66,
+        "title": "Jaiye Jaiye",
+        "artist": "Adekunle Gold",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 67,
+        "title": "Something Different",
+        "artist": "Adekunle Gold",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 68,
+        "title": "Duduke",
+        "artist": "Simi",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 69,
+        "title": "Mafo",
+        "artist": "Naira Marley",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 70,
+        "title": "Ameno Amapiano (Remix)",
+        "artist": "Goya Menor & Nektunez",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 71,
+        "title": "Feeling Good",
+        "artist": "MohBad",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 72,
+        "title": "Ego",
+        "artist": "Fireboy DML",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 73,
+        "title": "Champion",
+        "artist": "Fireboy DML ft. D Smoke",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 74,
+        "title": "Pay Me",
+        "artist": "Patoranking",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 75,
+        "title": "Do Me",
+        "artist": "Joeboy",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 76,
+        "title": "Runaway",
+        "artist": "Kizz Daniel",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 77,
+        "title": "Masterkraft",
+        "artist": "Jamo Pyper",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 78,
+        "title": "Bop Daddy",
+        "artist": "Falz ft. Ms Banks",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 79,
+        "title": "Ginger Me",
+        "artist": "Rema",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 80,
+        "title": "Woman",
+        "artist": "Rema",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 81,
+        "title": "Bad Influence",
+        "artist": "Omah Lay",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 82,
+        "title": "Damn",
+        "artist": "Omah Lay",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 83,
+        "title": "Odogwu",
+        "artist": "Burna Boy",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 84,
+        "title": "Way Too Big",
+        "artist": "Burna Boy",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 85,
+        "title": "For My Hand",
+        "artist": "Burna Boy ft. Ed Sheeran",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 86,
+        "title": "Somebody",
+        "artist": "Omah Lay",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 87,
+        "title": "Soweto",
+        "artist": "Victony",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 88,
+        "title": "Baby Riddim",
+        "artist": "Fave",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 89,
+        "title": "Nana",
+        "artist": "Ruger",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 90,
+        "title": "Girlfriend",
+        "artist": "Ruger",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 91,
+        "title": "Ozumba Mbadiwe",
+        "artist": "Reekado Banks",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 92,
+        "title": "Ade Ori Okin",
+        "artist": "K1 De Ultimate",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 93,
+        "title": "Cultural Praise Vol. 1",
+        "artist": "KCee",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 94,
+        "title": "Love Me Now",
+        "artist": "Wizkid",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 95,
+        "title": "Essence (Remix)",
+        "artist": "Wizkid ft. Tems & Justin Bieber",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 96,
+        "title": "Pere",
+        "artist": "Wizkid",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 97,
+        "title": "Yaba Buluku (Remix)",
+        "artist": "Master KG ft. Burna Boy & Nomcebo Zikode",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 98,
+        "title": "Ogo Forever",
+        "artist": "Fireboy DML",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 99,
+        "title": "Gangsta Lovin",
+        "artist": "Skiibii ft. Rexxie",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      },
+      {
+        "year": 2021,
+        "rank": 100,
+        "title": "No Wahala (Remix)",
+        "artist": "1da Banton ft. Kizz Daniel & Tiwa Savage",
+        "source": "Cross-source research expansion",
+        "status": "expanded_research_pool"
+      }
+    ],
+    "2022": [
+      {
+        "year": 2022,
+        "rank": 1,
+        "title": "Buga (Lo Lo Lo)",
+        "artist": "Kizz Daniel & Tekno ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 2,
+        "title": "Bandana",
+        "artist": "Fireboy DML & Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 3,
+        "title": "Overloading (OVERDOSE)",
+        "artist": "Mavins, Ayra Starr & Crayon ft. Magixx, LADIPOE & Boy Spyce ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 4,
+        "title": "Sungba (Remix)",
+        "artist": "Asake ft. Burna Boy ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 5,
+        "title": "Calm Down",
+        "artist": "Rema & Selena Gomez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 6,
+        "title": "Peace Be Unto You (PBUY)",
+        "artist": "Asake ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 7,
+        "title": "Last Last",
+        "artist": "Burna Boy ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 8,
+        "title": "Baddest Boy (Remix)",
+        "artist": "Skiibii ft. Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 9,
+        "title": "Peru",
+        "artist": "Fireboy DML & Ed Sheeran",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 10,
+        "title": "Omo Ope",
+        "artist": "Asake ft. Olamide",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 11,
+        "title": "Terminator",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 12,
+        "title": "PALAZZO",
+        "artist": "SPINALL & Asake ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 13,
+        "title": "Don't Call Me",
+        "artist": "Lil Kesh ft. Zinoleesky",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 14,
+        "title": "For My Hand",
+        "artist": "Burna Boy ft. Ed Sheeran ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 15,
+        "title": "Finesse",
+        "artist": "Pheelz & BNXN",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 16,
+        "title": "Sometimes (Remix)",
+        "artist": "T.I BLAZE ft. Olamide",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 17,
+        "title": "Playboy",
+        "artist": "Fireboy DML ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 18,
+        "title": "Electricity",
+        "artist": "Pheelz & Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 19,
+        "title": "It's Plenty",
+        "artist": "Burna Boy ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 20,
+        "title": "Sugarcane (Remix)",
+        "artist": "Camidoh ft. Mayorkun, Darkoo & King Promise ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 21,
+        "title": "Pour Me Water",
+        "artist": "Kizz Daniel ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 22,
+        "title": "Kwaku the Traveller",
+        "artist": "Black Sherif",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 23,
+        "title": "Girlfriend",
+        "artist": "Ruger ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 24,
+        "title": "Cough (Odo)",
+        "artist": "EMPIRE & Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 25,
+        "title": "Rush",
+        "artist": "Ayra Starr",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 26,
+        "title": "Holy Father",
+        "artist": "Mayorkun ft. Victony",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 27,
+        "title": "KU LO SA - A COLORS SHOW",
+        "artist": "Oxlade",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 28,
+        "title": "Dada (Remix)",
+        "artist": "Young Jonn ft. Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 29,
+        "title": "Joha",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 30,
+        "title": "Cold Outside",
+        "artist": "Timaya ft. BNXN",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 31,
+        "title": "Loving You",
+        "artist": "Zinoleesky ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 32,
+        "title": "Ozumba Mbadiwe",
+        "artist": "Reekado Banks",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 33,
+        "title": "Common Person",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 34,
+        "title": "Eh God (Barnabas)",
+        "artist": "Kizz Daniel ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 35,
+        "title": "Ijo (Laba Laba)",
+        "artist": "Crayon",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 36,
+        "title": "Organise",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 37,
+        "title": "Dior",
+        "artist": "Ruger",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 38,
+        "title": "Xtra Cool",
+        "artist": "Young Jonn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 39,
+        "title": "High",
+        "artist": "Adekunle Gold ft. Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 40,
+        "title": "Emiliana",
+        "artist": "Ckay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 41,
+        "title": "Monalisa",
+        "artist": "Lojay & Sarz ft. Chris Brown ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 42,
+        "title": "Stand Strong",
+        "artist": "Davido ft. Sunday Service Choir ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 43,
+        "title": "B. D'OR",
+        "artist": "Burna Boy ft. Wizkid",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 44,
+        "title": "Woman",
+        "artist": "Omah Lay ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 45,
+        "title": "Baby Riddim",
+        "artist": "Fave ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 46,
+        "title": "No Wahala (Remix)",
+        "artist": "1da Banton ft. Kizz Daniel & Tiwa Savage ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 47,
+        "title": "Italy",
+        "artist": "BNXN ft. Blaq Diamond ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 48,
+        "title": "Certified Loner (No Competition)",
+        "artist": "Mayorkun ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 49,
+        "title": "Champion Sound",
+        "artist": "Davido & Focalistic ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 50,
+        "title": "Kolomental",
+        "artist": "Victony ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 51,
+        "title": "Sip (Alcohol) ",
+        "artist": "Joeboy ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 52,
+        "title": "Kilometer (Remix)",
+        "artist": "BNXN ft. Zinoleesky ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 53,
+        "title": "Philo",
+        "artist": "Bella Shmurda & Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 54,
+        "title": "Love Don't Cost A Dime (Re-Up)",
+        "artist": "Magixx & Ayra Starr",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 55,
+        "title": "Oshe ",
+        "artist": "Kizz Daniel ft. The Cavemen ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 56,
+        "title": "Attention",
+        "artist": "Omah Lay & Justin Bieber",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 57,
+        "title": "Soweto",
+        "artist": "Victony & Tempoe",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 58,
+        "title": "Second Sermon (Remix)",
+        "artist": "Black Sherif ft. Burna Boy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 59,
+        "title": "Bad To Me",
+        "artist": "Wizkid ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 60,
+        "title": "WAIT FOR U",
+        "artist": "FUTURE ft. Drake & Tems ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 61,
+        "title": "Come My Way ",
+        "artist": "Wande Coal ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 62,
+        "title": "i'm a mess",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 63,
+        "title": "Machala",
+        "artist": "Carterefe & Berri-Tiga",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 64,
+        "title": "Kenkele",
+        "artist": "BNXN & Wande Coal",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 65,
+        "title": "Rocking ",
+        "artist": "Zinoleesky ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 66,
+        "title": "understand",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 67,
+        "title": "Call Me Every Day",
+        "artist": "Chris Brown ft. Wizkid ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 68,
+        "title": "Dull",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 69,
+        "title": "Lie",
+        "artist": "Kizz Daniel ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 70,
+        "title": "Blessings",
+        "artist": "Niphkeys & Zinoleesky",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 71,
+        "title": "Try",
+        "artist": "T.I BLAZE",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 72,
+        "title": "Come & Go (Black Sherif Remix)",
+        "artist": "Arrdee ft. Black Sherif ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 73,
+        "title": "Loyalty",
+        "artist": "Ajebo Hustlers",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 74,
+        "title": "Bloody Samaritan (Remix)",
+        "artist": "Ayra Starr & Kelly Rowland",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 75,
+        "title": "Nzaza",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 76,
+        "title": "Call of Duty",
+        "artist": "Zinoleesky ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 77,
+        "title": "Ameno Amapiano (Remix)",
+        "artist": "Goya Menor & Nektunez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 78,
+        "title": "My Friend",
+        "artist": "Bella Shmurda",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 79,
+        "title": "5 Star",
+        "artist": "Adekunle Gold",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 80,
+        "title": "soso",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 81,
+        "title": "WATAWI",
+        "artist": "Ckay ft. Davido, Focalistic & Abidoza ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 82,
+        "title": "WITH YOU",
+        "artist": "Khaid",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 83,
+        "title": "Mood",
+        "artist": "Wizkid ft. Buju ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 84,
+        "title": "Back In Uni",
+        "artist": "Blaqbonez & JAE5",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 85,
+        "title": "Jaiye Foreign",
+        "artist": "Tiwa Savage & Zinoleesky",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 86,
+        "title": "Essence",
+        "artist": "Wizkid ft. Tems ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 87,
+        "title": "Loaded",
+        "artist": "Tiwa Savage & Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 88,
+        "title": "Like",
+        "artist": "Iyanya, Davido & Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 89,
+        "title": "Trabaye",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 90,
+        "title": "Feel Good ",
+        "artist": "Mohbad ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 91,
+        "title": "Kilo",
+        "artist": "T.I BLAZE & Skiibii",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 92,
+        "title": "Move ",
+        "artist": "Bad Boy Timz ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 93,
+        "title": "Always",
+        "artist": "Darkoo ft. Black Sherif ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 94,
+        "title": "Mercy",
+        "artist": "Adekunle Gold ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 95,
+        "title": "Snapchat",
+        "artist": "Ruger",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 96,
+        "title": "New Born Fela",
+        "artist": "Bella Shmurda",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 97,
+        "title": "Love Nwantiti (Ah Ah Ah) [Remix]",
+        "artist": "Ckay ft. Joeboy & Kuami Eugene ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 98,
+        "title": "As It Was",
+        "artist": "Harry Styles",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 99,
+        "title": "IDG ",
+        "artist": "Asa ft. Wizkid ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2022,
+        "rank": 100,
+        "title": "Apollo",
+        "artist": "Victony ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      }
+    ],
+    "2023": [
+      {
+        "year": 2023,
+        "rank": 1,
+        "title": "Lonely At The Top",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 2,
+        "title": "soso",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 3,
+        "title": "GWAGWALADA",
+        "artist": "BNXN, Kizz Daniel & Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 4,
+        "title": "Asiwaju",
+        "artist": "Ruger",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 5,
+        "title": "FEEL",
+        "artist": "Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 6,
+        "title": "Who Is Your Guy? (Remix)",
+        "artist": "Spyro & Tiwa Savage",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 7,
+        "title": "Soweto",
+        "artist": "Victony, Tempoe & Rema ft. Don Toliver",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 8,
+        "title": "UNAVAILABLE",
+        "artist": "Davido ft. Musa Keys",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 9,
+        "title": "Party No Dey Stop",
+        "artist": "Adekunle Gold & Zinoleesky",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 10,
+        "title": "02:30",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 11,
+        "title": "Charm",
+        "artist": "Rema",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 12,
+        "title": "reason",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 13,
+        "title": "Amapiano",
+        "artist": "Asake & Olamide",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 14,
+        "title": "Xtra Cool",
+        "artist": "Young Jonn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 15,
+        "title": "RTID (Rich Till I Die)",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 16,
+        "title": "Holiday",
+        "artist": "Rema",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 17,
+        "title": "Ask About Me",
+        "artist": "MohBad",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 18,
+        "title": "Basquiat",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 19,
+        "title": "Personal",
+        "artist": "Zinoleesky ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 20,
+        "title": "Won Da Mo",
+        "artist": "Mavins, Boy Spyce & Rema ft. Crayon, Bayanni, Magixx, LADIPOE, Ayra Starr & Johnny Drille",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 21,
+        "title": "Stamina",
+        "artist": "Tiwa Savage, Ayra Starr & Young Jonn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 22,
+        "title": "Carry Me Go",
+        "artist": "Khaid & Boy Spyce",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 23,
+        "title": "Sability",
+        "artist": "Ayra Starr",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 24,
+        "title": "Abracadabra (Remix)",
+        "artist": "Rexxie, Naira Marley & Skiibii ft. Wizkid",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 25,
+        "title": "Cough (Odo)",
+        "artist": "EMPIRE & Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 26,
+        "title": "NO COMPETITION",
+        "artist": "Davido ft. Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 27,
+        "title": "Ojapiano",
+        "artist": "KCee",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 28,
+        "title": "Yoga",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 29,
+        "title": "Body & Soul",
+        "artist": "Joeboy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 30,
+        "title": "Ngozi",
+        "artist": "Crayon & Ayra Starr",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 31,
+        "title": "People",
+        "artist": "Libianca ft. Ayra Starr & Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 32,
+        "title": "Man of the Year",
+        "artist": "Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 33,
+        "title": "Aquafina",
+        "artist": "Young Jonn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 34,
+        "title": "Many Things",
+        "artist": "Zinoleesky",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 35,
+        "title": "City Boys",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 36,
+        "title": "Anabella",
+        "artist": "Khaid",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 37,
+        "title": "KANTE",
+        "artist": "Davido ft. Fave",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 38,
+        "title": "Bandana",
+        "artist": "Fireboy DML & Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 39,
+        "title": "Terminator",
+        "artist": "King Promise",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 40,
+        "title": "Jolie",
+        "artist": "Khaid",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 41,
+        "title": "PRAY",
+        "artist": "BNXN",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 42,
+        "title": "Obapluto",
+        "artist": "Shallipopi",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 43,
+        "title": "DECLAN RICE",
+        "artist": "ODUMODUBLVCK",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 44,
+        "title": "Calm Down",
+        "artist": "Rema & Selena Gomez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 45,
+        "title": "Believe Me",
+        "artist": "Johnny Drille",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 46,
+        "title": "Rush",
+        "artist": "Ayra Starr",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 47,
+        "title": "Shu-Peru",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 48,
+        "title": "Big 7",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 49,
+        "title": "HALLELUJAH",
+        "artist": "CKay & Blaqbonez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 50,
+        "title": "Sharpally",
+        "artist": "Young Jonn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 51,
+        "title": "Like Ice Spice",
+        "artist": "Blaqbonez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 52,
+        "title": "Loaded",
+        "artist": "Tiwa Savage & Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 53,
+        "title": "Chance (Na Ham)",
+        "artist": "Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 54,
+        "title": "Hat-Trick",
+        "artist": "Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 55,
+        "title": "Peace",
+        "artist": "MohBad",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 56,
+        "title": "Terminator",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 57,
+        "title": "Dog Eat Dog II",
+        "artist": "ODUMODUBLVCK ft. Cruel Santino & Bella Shmurda",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 58,
+        "title": "Ogaranya",
+        "artist": "Adekunle Gold",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 59,
+        "title": "Joha",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 60,
+        "title": "AWAY",
+        "artist": "Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 61,
+        "title": "Folake",
+        "artist": "Boy Spyce",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 62,
+        "title": "Sunshine",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 63,
+        "title": "My G",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 64,
+        "title": "OVER DEM",
+        "artist": "Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 65,
+        "title": "2 Sugar",
+        "artist": "Wizkid ft. Ayra Starr",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 66,
+        "title": "All My Life",
+        "artist": "Lil Durk ft. J. Cole",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 67,
+        "title": "KU LO SA",
+        "artist": "Oxlade & Camila Cabello",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 68,
+        "title": "Kpe Paso",
+        "artist": "Wande Coal & Olamide",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 69,
+        "title": "A1 (Feeling Disorder)",
+        "artist": "Zinoleesky",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 70,
+        "title": "BLOOD ON THE DANCE FLOOR",
+        "artist": "ODUMODUBLVCK, Bloody Civilian & Wale",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 71,
+        "title": "New Religion",
+        "artist": "Olamide & Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 72,
+        "title": "Philo",
+        "artist": "Bella Shmurda & Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 73,
+        "title": "Common Person",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 74,
+        "title": "Last Last",
+        "artist": "Burna Boy ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 75,
+        "title": "Jinja",
+        "artist": "Olamide",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 76,
+        "title": "For My Hand",
+        "artist": "Burna Boy ft. Ed Sheeran ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 77,
+        "title": "Electricity",
+        "artist": "Pheelz & Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 78,
+        "title": "Organise",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 79,
+        "title": "Duffel Bag",
+        "artist": "Joeboy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 80,
+        "title": "How Are You (My Friend)",
+        "artist": "Johnny Drille",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 81,
+        "title": "Ole",
+        "artist": "Qing Madi & BNXN",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 82,
+        "title": "Currency",
+        "artist": "Young Jonn & Olamide",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 83,
+        "title": "GoodSin",
+        "artist": "Olivetheboy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 84,
+        "title": "NA MONEY",
+        "artist": "Davido ft. The Cavemen. & Angelique Kidjo",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 85,
+        "title": "Ex Convict",
+        "artist": "Shallipopi",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 86,
+        "title": "Alone",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 87,
+        "title": "MOTO",
+        "artist": "Lojay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 88,
+        "title": "Sprinter",
+        "artist": "Dave & Central Cee",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 89,
+        "title": "Pick Up",
+        "artist": "Tiwa Savage",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 90,
+        "title": "Bad To Me",
+        "artist": "Wizkid ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 91,
+        "title": "Beast & Peace",
+        "artist": "MohBad",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 92,
+        "title": "Picanto",
+        "artist": "Odumodublvck ft. Zlatan & Ecko Miles",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 93,
+        "title": "It's Plenty",
+        "artist": "Burna Boy ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 94,
+        "title": "Flowers",
+        "artist": "Miley Cyrus",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 95,
+        "title": "Trumpet",
+        "artist": "Olamide & CKay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 96,
+        "title": "Traboski",
+        "artist": "BNXN",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 97,
+        "title": "Normally",
+        "artist": "Joeboy ft. BNXN & ODUMODUBLVCK ",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 98,
+        "title": "Oganigwe",
+        "artist": "Zlatan ft. ODUMODUBLVCK & Jeriq",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 99,
+        "title": "Sittin' On Top Of The World",
+        "artist": "Burna Boy ft. 21 Savage",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2023,
+        "rank": 100,
+        "title": "Pariwo",
+        "artist": "MohBad & Bella Shmurda",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      }
+    ],
+    "2024": [
+      {
+        "year": 2024,
+        "rank": 1,
+        "title": "Twe Twe",
+        "artist": "Kizz Daniel & Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 2,
+        "title": "Egwu",
+        "artist": "Chike & MohBad",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 3,
+        "title": "Different Pattern",
+        "artist": "Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 4,
+        "title": "Tshwala Bam (Remix)",
+        "artist": "Titom, Yuppe & Burna Boy ft. S.N.E",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 5,
+        "title": "Cast",
+        "artist": "Shallipopi ft. ODUMODUBLVCK",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 6,
+        "title": "Ogechi (Remix)",
+        "artist": "Brown Joel, BoyPee & Hyce ft. Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 7,
+        "title": "Lonely At The Top",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 8,
+        "title": "Higher",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 9,
+        "title": "Holy Ghost",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 10,
+        "title": "Dealer",
+        "artist": "Ayo Maff & Fireboy DML",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 11,
+        "title": "Commas",
+        "artist": "Ayra Starr",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 12,
+        "title": "My Dealer",
+        "artist": "Kaestyle & Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 13,
+        "title": "Cana",
+        "artist": "Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 14,
+        "title": "MMS",
+        "artist": "Asake & Wizkid",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 15,
+        "title": "Bahamas",
+        "artist": "Young Jonn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 16,
+        "title": "Showa",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 17,
+        "title": "Instagram",
+        "artist": "Vibez Inc, Muyeez & Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 18,
+        "title": "POE",
+        "artist": "Ruger & Bnxn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 19,
+        "title": "Happiness",
+        "artist": "Sarz, Asake & Gunna",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 20,
+        "title": "Big Big Things",
+        "artist": "Young Jonn ft. Kizz Daniel & Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 21,
+        "title": "Active",
+        "artist": "Asake & Travis Scott",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 22,
+        "title": "JUJU",
+        "artist": "Smur Lee & ODUMODUBLVCK ft. Shallipopi",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 23,
+        "title": "Favourite Girl",
+        "artist": "Darkoo & Rema",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 24,
+        "title": "IDK",
+        "artist": "Wizkid ft. Zlatan",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 25,
+        "title": "Stubborn",
+        "artist": "Victony & Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 26,
+        "title": "Only Me",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 27,
+        "title": "BENIN BOYS",
+        "artist": "Rema & Shallipopi",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 28,
+        "title": "OZEBA",
+        "artist": "Rema",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 29,
+        "title": "Metaverse",
+        "artist": "Olamide",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 30,
+        "title": "Too Busy To Be Bae",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 31,
+        "title": "BLOOD ON THE DANCE FLOOR",
+        "artist": "ODUMODUBLVCK, Bloody Civilian & Wale",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 32,
+        "title": "Stronger",
+        "artist": "Young Jonn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 33,
+        "title": "Bad Vibes",
+        "artist": "Ayra Starr & Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 34,
+        "title": "DND",
+        "artist": "Rema",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 35,
+        "title": "Wave",
+        "artist": "Asake & Central Cee",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 36,
+        "title": "HEHEHE",
+        "artist": "Rema",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 37,
+        "title": "Double",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 38,
+        "title": "Do I (Remix)",
+        "artist": "Phyno & Burna Boy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 39,
+        "title": "Doha",
+        "artist": "Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 40,
+        "title": "City Boys",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 41,
+        "title": "Big Baller",
+        "artist": "Flavour",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 42,
+        "title": "Romeo Must Die (RMD)",
+        "artist": "Ruger & Bnxn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 43,
+        "title": "Adenuga",
+        "artist": "Joeboy ft. Qing Madi",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 44,
+        "title": "American Love",
+        "artist": "Qing Madi",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 45,
+        "title": "WOTOWOTO SEASONING",
+        "artist": "ODUMODUBLVCK & Black Sherif",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 46,
+        "title": "FEEL",
+        "artist": "Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 47,
+        "title": "Ngozi",
+        "artist": "Crayon & Ayra Starr",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 48,
+        "title": "Moving",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 49,
+        "title": "Umbrella",
+        "artist": "Nasboi ft. Wande Coal",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 50,
+        "title": "Everyday",
+        "artist": "Fireboy DML",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 51,
+        "title": "UNAVAILABLE",
+        "artist": "Davido ft. Musa Keys",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 52,
+        "title": "Ololufe",
+        "artist": "Wizkid ft. Wande Coal",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 53,
+        "title": "Marhaba",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 54,
+        "title": "ASAP",
+        "artist": "Shallipopi",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 55,
+        "title": "Go Hard",
+        "artist": "Young Jonn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 56,
+        "title": "Awolowo",
+        "artist": "Fido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 57,
+        "title": "Remember",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 58,
+        "title": "Bust Down",
+        "artist": "Zlatan ft. Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 59,
+        "title": "OHEMA",
+        "artist": "Victony ft. Bella Shmurda & Crayon",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 60,
+        "title": "Hmmm",
+        "artist": "Chris Brown ft. Davido",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 61,
+        "title": "Everything",
+        "artist": "Victony",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 62,
+        "title": "reason",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 63,
+        "title": "Where I'm From",
+        "artist": "Tml Vibez ft. Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 64,
+        "title": "Pidgin & English",
+        "artist": "BNXN",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 65,
+        "title": "Ilashe",
+        "artist": "Ruger & Bnxn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 66,
+        "title": "Giza",
+        "artist": "Burna Boy ft. Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 67,
+        "title": "Tony Montana",
+        "artist": "Skepta & Portable",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 68,
+        "title": "Alone (Remix)",
+        "artist": "FOLA & Bnxn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 69,
+        "title": "Loner",
+        "artist": "Bella Shmurda",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 70,
+        "title": "Big 7",
+        "artist": "Burna Boy",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 71,
+        "title": "Aquafina",
+        "artist": "Young Jonn",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 72,
+        "title": "Rodo",
+        "artist": "Adekunle Gold",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 73,
+        "title": "YAYO",
+        "artist": "Rema",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 74,
+        "title": "Love Me JeJe",
+        "artist": "Tems",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 75,
+        "title": "KANTE",
+        "artist": "Davido ft. Fave",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 76,
+        "title": "Risk",
+        "artist": "Victony",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 77,
+        "title": "Diamonds",
+        "artist": "Wizkid",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 78,
+        "title": "Only Fine Girl (Remix)",
+        "artist": "Spyro & Simi",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 79,
+        "title": "GWAGWALADA",
+        "artist": "BNXN, Kizz Daniel & Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 80,
+        "title": "Dog Eat Dog II",
+        "artist": "ODUMODUBLVCK ft. Cruel Santino & Bella Shmurda",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 81,
+        "title": "Basquiat",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 82,
+        "title": "Hightension",
+        "artist": "Shallipopi",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 83,
+        "title": "Uptown Disco",
+        "artist": "Olamide, Fireboy DML & Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 84,
+        "title": "I Don't Care",
+        "artist": "Boy Spyce & Khaid",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 85,
+        "title": "iseoluwa",
+        "artist": "Fireboy DML",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 86,
+        "title": "Are you there?",
+        "artist": "Ayo Maff",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 87,
+        "title": "soso",
+        "artist": "Omah Lay",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 88,
+        "title": "Hello Habibi",
+        "artist": "Olamide",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 89,
+        "title": "My G",
+        "artist": "Kizz Daniel",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 90,
+        "title": "10 Bottles",
+        "artist": "Zlatan",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 91,
+        "title": "Fuji Vibe",
+        "artist": "Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 92,
+        "title": "Lovin On Me",
+        "artist": "Jack Harlow",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 93,
+        "title": "Obaa Sima",
+        "artist": "Fireboy DML",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 94,
+        "title": "Fi Kan We Kan",
+        "artist": "Bnxn & Rema",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 95,
+        "title": "Abanikanda",
+        "artist": "Zinoleesky ft. Naira Marley",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 96,
+        "title": "Pepe",
+        "artist": "Boy Spyce",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 97,
+        "title": "Man of the Year",
+        "artist": "Seyi Vibez",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 98,
+        "title": "Rush",
+        "artist": "Ayra Starr",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 99,
+        "title": "Goodbye (Warm Up)",
+        "artist": "Ayra Starr & Asake",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2024,
+        "rank": 100,
+        "title": "Jinja",
+        "artist": "Olamide",
+        "source": "TurnTable End of Year Top 100",
+        "status": "official_top_100"
+      }
+    ],
+    "2025": [
+      {
+        "year": 2025,
+        "rank": 1,
+        "title": "Joy is Coming",
+        "artist": "Fido",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 2,
+        "title": "With You",
+        "artist": "Davido feat. Omah Lay",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 3,
+        "title": "Laho II",
+        "artist": "Shallipopi & Burna Boy",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 4,
+        "title": "Kese (Dance)",
+        "artist": "Wizkid",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 5,
+        "title": "who does that?",
+        "artist": "FOLA (feat. Bella Shmurda)",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 6,
+        "title": "Funds",
+        "artist": "Davido feat. ODUMODUBLVCK & Chike",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 7,
+        "title": "Arike",
+        "artist": "Kunmie",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 8,
+        "title": "PITY THIS BOY",
+        "artist": "ODUMODUBLVCK, Victony",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 9,
+        "title": "Baby (Is it a Crime)",
+        "artist": "Rema",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 10,
+        "title": "SHAOLIN",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 11,
+        "title": "99",
+        "artist": "Olamide, Seyi Vibez, Asake & Young Jonn (feat. Daecolm)",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 12,
+        "title": "lost",
+        "artist": "FOLA & Kizz Daniel",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 13,
+        "title": "MMS",
+        "artist": "Asake & Wizkid",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 14,
+        "title": "My Darling",
+        "artist": "Chella",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 15,
+        "title": "Venus",
+        "artist": "Faceless & Serøtonin",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 16,
+        "title": "WHY LOVE",
+        "artist": "Asake",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 17,
+        "title": "Love",
+        "artist": "Burna Boy",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 18,
+        "title": "Ewo",
+        "artist": "Famous Pluto, Shallipopi, ZerryDL",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 19,
+        "title": "Pressure",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 20,
+        "title": "Very Soon",
+        "artist": "BNXN & FOLA",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 21,
+        "title": "Toma Toma",
+        "artist": "Ruger, Tiwa Savage",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 22,
+        "title": "Awuke",
+        "artist": "Davido & YG Marley",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 23,
+        "title": "Fi Kan We Kan",
+        "artist": "BNXN & Rema",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 24,
+        "title": "Lonely At The Top",
+        "artist": "Asake",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 25,
+        "title": "Get Better",
+        "artist": "Zlatan, Fola",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 26,
+        "title": "Bad Girl",
+        "artist": "Wizkid feat. Asake",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 27,
+        "title": "Bundle By Bundle",
+        "artist": "Burna Boy",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 28,
+        "title": "you",
+        "artist": "FOLA",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 29,
+        "title": "FUN",
+        "artist": "Rema",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 30,
+        "title": "MARIO KART",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 31,
+        "title": "Dangbana Riddim",
+        "artist": "Bella Shmurda, FOLA",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 32,
+        "title": "Gimme Dat",
+        "artist": "Ayra Starr, Wizkid",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 33,
+        "title": "Are you there?",
+        "artist": "Ayo Maff",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 34,
+        "title": "Update",
+        "artist": "Burna Boy",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 35,
+        "title": "JUJU (feat. Shallipopi)",
+        "artist": "Smur Lee, ODUMODUBLVCK, Shallipopi",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 36,
+        "title": "Kai!",
+        "artist": "Olamide & Wizkid",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 37,
+        "title": "One Condition",
+        "artist": "DJ Tunez, Wizkid and FOLA",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 38,
+        "title": "BADMAN GANGSTA",
+        "artist": "Asake & Tiakola",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 39,
+        "title": "Money",
+        "artist": "Teni",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 40,
+        "title": "Na Scra",
+        "artist": "Famous Pluto",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 41,
+        "title": "Awolowo",
+        "artist": "Fido",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 42,
+        "title": "Billionaires Club",
+        "artist": "Olamide, Wizkid & Darkoo",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 43,
+        "title": "Hot Body",
+        "artist": "Ayra Starr",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 44,
+        "title": "See me see God (SMSG)",
+        "artist": " Barry Jhay",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 45,
+        "title": "alone (Remix)",
+        "artist": "FOLA & Bnxn",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 46,
+        "title": "Be There Still",
+        "artist": "Davido",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 47,
+        "title": "HAPPY SONG",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 48,
+        "title": "Che Che (feat. Asake)",
+        "artist": "Young Jonn",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 49,
+        "title": "Titi",
+        "artist": "Kizz Daniel & FOLA",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 50,
+        "title": "Doha",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 51,
+        "title": "Favourite Girl (with Rema)",
+        "artist": "Darkoo, Rema",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 52,
+        "title": "Al-Jannah",
+        "artist": "Kizz Daniel, ODUMODUBLVCK & Bella Shmurda",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 53,
+        "title": "Dealer",
+        "artist": "Ayo Maff, Fireboy DML",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 54,
+        "title": "Constantly",
+        "artist": "Hyce, BoyPee & Brown Joel",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 55,
+        "title": "Higher",
+        "artist": "Burna Boy",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 56,
+        "title": "All The Love",
+        "artist": "Ayra Starr",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 57,
+        "title": "Bout U",
+        "artist": "Rema",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 58,
+        "title": "TaTaTa (feat. Travis Scott)",
+        "artist": "Burna Boy",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 59,
+        "title": "Beamer",
+        "artist": "T.I Blaze",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 60,
+        "title": "Active",
+        "artist": "Asake & Travis Scott",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 61,
+        "title": "Remember",
+        "artist": "Asake",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 62,
+        "title": "Laye Mi",
+        "artist": "BNXN",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 63,
+        "title": "UNAVAILABLE",
+        "artist": "Davido feat. Musa Keys",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 64,
+        "title": "LEGOLAS",
+        "artist": "ODUMODUBLVCK",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 65,
+        "title": "Piece of My Heart",
+        "artist": "Wizkid feat. Brent Faiyaz",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 66,
+        "title": "Stronger",
+        "artist": "Young Jonn",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 67,
+        "title": "Ordinary",
+        "artist": "Alex Warren",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 68,
+        "title": "Big 7",
+        "artist": "Burna Boy",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 69,
+        "title": "Rush",
+        "artist": "Ayra Starr",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 70,
+        "title": "Relationship",
+        "artist": "Berri-Tiga featuring Peruzzi",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 71,
+        "title": "Hope",
+        "artist": "T.I Blaze, TML Vibez",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 72,
+        "title": "Where I’m from",
+        "artist": "TML Vibez",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 73,
+        "title": "OZEBA",
+        "artist": "Rema",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 74,
+        "title": "Jay Jay",
+        "artist": "Ruger",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 75,
+        "title": "Obimo",
+        "artist": "Adekunle Gold",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 76,
+        "title": "Chandelier",
+        "artist": "Monaky",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 77,
+        "title": "No Turning Back II",
+        "artist": "Gaise Baba",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 78,
+        "title": "So it Goes",
+        "artist": "Black Sherif & Fireboy DML",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 79,
+        "title": "10 Kilo",
+        "artist": "Davido",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 80,
+        "title": "Hey Jago",
+        "artist": "Poco Lee, Shoday, Rahman Jago",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 81,
+        "title": "Marhaba",
+        "artist": "Kizz Daniel",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 82,
+        "title": "Giveaway",
+        "artist": "Ruger",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 83,
+        "title": "Dem Dey",
+        "artist": "Burna Boy",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 84,
+        "title": "Cash Flow (feat. Wizkid)",
+        "artist": "Young Jonn",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 85,
+        "title": "Isaka II (6am) [with Tems, Omah Lay, Thukuthela, JAZZWRLD, Lekaa Beats]",
+        "artist": "Ciza, Tems & Omah Lay",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 86,
+        "title": "HAUSAPIANO (Remix)",
+        "artist": "Kvng Vinci & Zerrydl",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 87,
+        "title": "MEGA MONEY MEGA",
+        "artist": "Tiwa Savage",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 88,
+        "title": "Police",
+        "artist": "Kizz Daniel, Angelique Kidjo & Johnny Drille",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 89,
+        "title": "Osusu",
+        "artist": "Famous Pluto, Jeriq",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 90,
+        "title": "Trenches Luv",
+        "artist": "T.I BLAZE",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 91,
+        "title": "Getting Paid ​(f​eat​. Asake, Wizkid, Skillibeng​)",
+        "artist": "Sarz and Asake and Wizkid and Skillibeng",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 92,
+        "title": "APT.",
+        "artist": "ROSÉ, Bruno Mars",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 93,
+        "title": "Instagram",
+        "artist": "Muyeez, Seyi Vibez",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 94,
+        "title": "Pano Tona",
+        "artist": "Kizz Daniel & Adekunle Gold",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 95,
+        "title": "Gaddem",
+        "artist": "Rybeena, Shoday",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 96,
+        "title": "forever be mine (feat. Wizkid)",
+        "artist": "Gunna",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 97,
+        "title": "Cana",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 98,
+        "title": "Gold",
+        "artist": "J Hus & Asake",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 99,
+        "title": "Gimme Your Love",
+        "artist": "Zlatan",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      },
+      {
+        "year": 2025,
+        "rank": 100,
+        "title": "Pxy Drip",
+        "artist": "Naira Marley",
+        "source": "Official Nigeria Top 100 2025 — TurnTable Charts / Audiomack",
+        "status": "official_top_100"
+      }
+    ],
+    "2026": [
+      {
+        "year": 2026,
+        "rank": 1,
+        "title": "Ilome",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 2,
+        "title": "GTA",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 3,
+        "title": "Oh No",
+        "artist": "Rema",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 4,
+        "title": "B4 B4",
+        "artist": "Davido, Mayorkun & FOLA",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 5,
+        "title": "Volume",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 6,
+        "title": "it's over",
+        "artist": "FOLA, Bella Shmurda & Zlatan",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 7,
+        "title": "Owo Oluwa",
+        "artist": "Kizz Daniel ft. Young Jonn, Krizbeatz & Wave Choir",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 8,
+        "title": "BACK 2 U",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 9,
+        "title": "Diamonds",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 10,
+        "title": "Pansa",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 11,
+        "title": "Gratitude",
+        "artist": "Asake",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 12,
+        "title": "BIG PERFORMER",
+        "artist": "Blaqbonez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 13,
+        "title": "Online",
+        "artist": "BNXN",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 14,
+        "title": "GOD",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 15,
+        "title": "Malaria",
+        "artist": "Ayo Maff & Zinoleesky",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 16,
+        "title": "Heaven Baby",
+        "artist": "Ayra Starr ft. ZAYN",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 17,
+        "title": "TEA",
+        "artist": "Rema",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 18,
+        "title": "Forgiveness",
+        "artist": "Asake",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 19,
+        "title": "attention!",
+        "artist": "FOLA",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 20,
+        "title": "IMALI",
+        "artist": "Fireboy DML, JAZZWRLD & Thukuthela",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 21,
+        "title": "El Jaja",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 22,
+        "title": "Alubarika",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 23,
+        "title": "Melanin",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 24,
+        "title": "Akpan Akpari",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 25,
+        "title": "Elumelu",
+        "artist": "Young Jonn",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 26,
+        "title": "Already Falling",
+        "artist": "Davido",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 27,
+        "title": "Baba",
+        "artist": "Hotkid ft. Zlatan",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 28,
+        "title": "Alafia",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 29,
+        "title": "Back Outside",
+        "artist": "BNXN & Sarz",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 30,
+        "title": "TWIN",
+        "artist": "Victony & FOLA",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 31,
+        "title": "Swaguu",
+        "artist": "Seyi Vibez ft. Quavo",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 32,
+        "title": "Eja Meja",
+        "artist": "BNXN ft. Asake",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 33,
+        "title": "SLICK",
+        "artist": "Victony",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 34,
+        "title": "MCBH",
+        "artist": "Asake",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 35,
+        "title": "Chanel",
+        "artist": "Blaqbonez ft. Asake",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 36,
+        "title": "CHE",
+        "artist": "Shoday ft. Magixx",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 37,
+        "title": "Shege",
+        "artist": "Young Jonn",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 38,
+        "title": "treat u right",
+        "artist": "FOLA & Ayra Starr",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 39,
+        "title": "Oble (Original)",
+        "artist": "Seyi Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 40,
+        "title": "WORSHIP",
+        "artist": "Asake & DJ Snake",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 41,
+        "title": "Big Bum Bum",
+        "artist": "Kidd Carder & Mavo",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 42,
+        "title": "I Know Who I Be",
+        "artist": "Davido, JAZZWRLD & GL_Ceejay",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 43,
+        "title": "MOVE",
+        "artist": "Shoday",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 44,
+        "title": "Diamond or Gold",
+        "artist": "Tml Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 45,
+        "title": "Tease Me",
+        "artist": "Zaylevelten",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 46,
+        "title": "ITALAWA",
+        "artist": "Zlatan",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 47,
+        "title": "Kaluba",
+        "artist": "Mayorkun",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 48,
+        "title": "Cairo",
+        "artist": "Kaestyle",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 49,
+        "title": "WHO THIS",
+        "artist": "Victony & BNXN",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 50,
+        "title": "Find My Babe",
+        "artist": "Mavo",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 51,
+        "title": "Tap Am",
+        "artist": "Famous PLuto",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 52,
+        "title": "Ice Cream",
+        "artist": "Mavo",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 53,
+        "title": "As We Get High",
+        "artist": "bees & honey, OMAH LAY, BEAM & Gyptian",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 54,
+        "title": "Anybody",
+        "artist": "Kidd Carder",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 55,
+        "title": "Hold Somebody",
+        "artist": "Young Jonn",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 56,
+        "title": "THAT GIRL!",
+        "artist": "Darkoo & Asake",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 57,
+        "title": "August Visitor",
+        "artist": "Afri Kyan",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 58,
+        "title": "Sunita",
+        "artist": "Rybeena & Tml Vibez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 59,
+        "title": "Aanu Ni",
+        "artist": "BisiManuel",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 60,
+        "title": "Wa",
+        "artist": "Asake",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 61,
+        "title": "Glass in the Air",
+        "artist": "Young Jonn",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 62,
+        "title": "Company",
+        "artist": "Clean Bandit, Chloe & OMAH LAY",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 63,
+        "title": "Brother",
+        "artist": "MOEC & Evado",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 64,
+        "title": "Pressure",
+        "artist": "Kunmie & Zlatan",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 65,
+        "title": "FRE$H",
+        "artist": "Victony",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 66,
+        "title": "A LOT A LOT",
+        "artist": "Abefe",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 67,
+        "title": "Lifestyle (Ya Man)",
+        "artist": "Ayo Maff",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 68,
+        "title": "Miss You",
+        "artist": "FAVE & Chike",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 69,
+        "title": "Hide Your Love",
+        "artist": "Mr Eazi & Dre Skull",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 70,
+        "title": "BB Lifestyle",
+        "artist": "Mavo & SSSoundGawd",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 71,
+        "title": "Salama",
+        "artist": "FirstKlaz",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 72,
+        "title": "Treasure",
+        "artist": "Ayra Starr",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 73,
+        "title": "Do Nothing",
+        "artist": "Ruger, Musa Keys & Young Stunna",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 74,
+        "title": "fine ting (fine $hit)",
+        "artist": "FOLA",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 75,
+        "title": "Tornado",
+        "artist": "Ayra Starr",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 76,
+        "title": "I Can't Look Away",
+        "artist": "Mr P",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 77,
+        "title": "Believe",
+        "artist": "Yedika",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 78,
+        "title": "So Good",
+        "artist": "Jhene Aiko ft. Kendrick Lamar",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 79,
+        "title": "2 Magarita",
+        "artist": "Chocolate City ft. Blaqbonez & Noon Dave",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 80,
+        "title": "Best",
+        "artist": "Tiakola & Rema",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 81,
+        "title": "Lodun",
+        "artist": "John Tony",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 82,
+        "title": "Different Wave",
+        "artist": "Jeriq & TUFF KING",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 83,
+        "title": "OVER THE NIGHT",
+        "artist": "Lovn & Ayanfe",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 84,
+        "title": "MOTION SICKNESS",
+        "artist": "ODUMODUBLVCK & Zlatan",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 85,
+        "title": "22",
+        "artist": "Kunmie",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 86,
+        "title": "Dantata",
+        "artist": "Zinoleesky",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 87,
+        "title": "Already",
+        "artist": "BNXN & Sarz",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 88,
+        "title": "Wuru Manya",
+        "artist": "Teni & Chike",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 89,
+        "title": "UNETHICAL",
+        "artist": "Faouzia",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 90,
+        "title": "Animal",
+        "artist": "KATSEYE",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 91,
+        "title": "Party Time I",
+        "artist": "DJ 2EFFECTS",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 92,
+        "title": "What Have You Done",
+        "artist": "DeeYasso & Syemca",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 93,
+        "title": "I Knoww II",
+        "artist": "EF Moon & Blaqbonez",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 94,
+        "title": "Happy Song",
+        "artist": "Bella Shmurda",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 95,
+        "title": "LET ME BE",
+        "artist": "Jason Derulo, The Second Voice & Qing Madi",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 96,
+        "title": "Love Again",
+        "artist": "Black Sherif ft. Full Blown",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 97,
+        "title": "Pass By",
+        "artist": "Yan Yan",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 98,
+        "title": "Ako (Live in London)",
+        "artist": "Asake",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 99,
+        "title": "Saki Ofori",
+        "artist": "Kaestyle ft. Duncan Mighty",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      },
+      {
+        "year": 2026,
+        "rank": 100,
+        "title": "Jolie",
+        "artist": "Black Sherif",
+        "source": "Official Nigeria Top 100 weekly snapshot — TurnTable Charts (week of 2026-10-01)",
+        "status": "provisional_current_snapshot"
+      }
+    ]
+  }
+}
