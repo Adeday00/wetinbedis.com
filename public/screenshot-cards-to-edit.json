@@ -1,0 +1,322 @@
+[
+  {
+    "Card Number": 439,
+    "ID": "NEW-STREET-014",
+    "Difficulty": "Medium",
+    "Category": "Street & Hustle",
+    "Forbidden Word 1": "Boss",
+    "Forbidden Word 2": "Office",
+    "Forbidden Word 3": "Meme",
+    "Main Word": "Oga At The Top"
+  },
+  {
+    "Card Number": 540,
+    "ID": "NEW-DIAS-025",
+    "Difficulty": "Hard",
+    "Category": "Diaspora",
+    "Forbidden Word 1": "America",
+    "Forbidden Word 2": "Immigration",
+    "Forbidden Word 3": "Forms",
+    "Main Word": "USCIS"
+  },
+  {
+    "Card Number": 541,
+    "ID": "NEW-DIAS-026",
+    "Difficulty": "Hard",
+    "Category": "Diaspora",
+    "Forbidden Word 1": "Britain",
+    "Forbidden Word 2": "Settlement",
+    "Forbidden Word 3": "Status",
+    "Main Word": "ILR"
+  },
+  {
+    "Card Number": 106,
+    "ID": "M-1015",
+    "Difficulty": "Easy",
+    "Category": "Music",
+    "Forbidden Word 1": "Lil Kesh",
+    "Forbidden Word 2": "Leg",
+    "Forbidden Word 3": "Street Dance",
+    "Main Word": "Shoki"
+  },
+  {
+    "Card Number": 565,
+    "ID": "NEW-SCHOOL-015",
+    "Difficulty": "Hard",
+    "Category": "School",
+    "Forbidden Word 1": "Book",
+    "Forbidden Word 2": "Study",
+    "Forbidden Word 3": "Exam",
+    "Main Word": "TDB"
+  },
+  {
+    "Card Number": 81,
+    "ID": "C-3018",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Forbidden Word 1": "Action",
+    "Forbidden Word 2": "Eze Ndi Ala",
+    "Forbidden Word 3": "Nollywood",
+    "Main Word": "Zubby Michael"
+  },
+  {
+    "Card Number": 95,
+    "ID": "M-082",
+    "Difficulty": "Easy",
+    "Category": "Music",
+    "Forbidden Word 1": "Ayra",
+    "Forbidden Word 2": "Sabi",
+    "Forbidden Word 3": "Starr",
+    "Main Word": "Rush"
+  },
+  {
+    "Card Number": 442,
+    "ID": "NEW-STREET-017",
+    "Difficulty": "Easy",
+    "Category": "Street & Hustle",
+    "Forbidden Word 1": "Match",
+    "Forbidden Word 2": "Road",
+    "Forbidden Word 3": "Goal",
+    "Main Word": "Street Football"
+  },
+  {
+    "Card Number": 473,
+    "ID": "NEW-MUSIC-023",
+    "Difficulty": "Hard",
+    "Category": "Music",
+    "Forbidden Word 1": "Hausa",
+    "Forbidden Word 2": "Bowed",
+    "Forbidden Word 3": "Music",
+    "Main Word": "Sakara"
+  },
+  {
+    "Card Number": 407,
+    "ID": "NEW-LIFE-007",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Forbidden Word 1": "Ring",
+    "Forbidden Word 2": "Phone",
+    "Forbidden Word 3": "Return",
+    "Main Word": "Missed Call"
+  },
+  {
+    "Card Number": 413,
+    "ID": "NEW-LIFE-013",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Forbidden Word 1": "Transfer",
+    "Forbidden Word 2": "Mobile",
+    "Forbidden Word 3": "Password",
+    "Main Word": "Bank App"
+  },
+  {
+    "Card Number": 516,
+    "ID": "NEW-CULT-026",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Forbidden Word 1": "Trousers",
+    "Forbidden Word 2": "Agbada",
+    "Forbidden Word 3": "Men",
+    "Main Word": "Abula"
+  },
+  {
+    "Card Number": 123,
+    "ID": "T-106",
+    "Difficulty": "Easy",
+    "Category": "Street & Hustle",
+    "Forbidden Word 1": "Wait",
+    "Forbidden Word 2": "Stand",
+    "Forbidden Word 3": "Enter",
+    "Main Word": "Bus Stop"
+  },
+  {
+    "Card Number": 440,
+    "ID": "NEW-STREET-015",
+    "Difficulty": "Easy",
+    "Category": "Street & Hustle",
+    "Forbidden Word 1": "Wages",
+    "Forbidden Word 2": "Work",
+    "Forbidden Word 3": "Today",
+    "Main Word": "Daily Pay"
+  },
+  {
+    "Card Number": 566,
+    "ID": "NEW-SCHOOL-016",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Forbidden Word 1": "Quiz",
+    "Forbidden Word 2": "Lecturer",
+    "Forbidden Word 3": "Weeks",
+    "Main Word": "Mid-Semester Test"
+  },
+  {
+    "Card Number": 471,
+    "ID": "NEW-MUSIC-021",
+    "Difficulty": "Medium",
+    "Category": "Music",
+    "Forbidden Word 1": "Yoruba",
+    "Forbidden Word 2": "Guitar",
+    "Forbidden Word 3": "Music",
+    "Main Word": "Juju"
+  },
+  {
+    "Card Number": 97,
+    "ID": "M-087",
+    "Difficulty": "Medium",
+    "Category": "Music",
+    "Forbidden Word 1": "Flute",
+    "Forbidden Word 2": "Kcee",
+    "Forbidden Word 3": "Dance",
+    "Main Word": "Ojapiano"
+  },
+  {
+    "Card Number": 82,
+    "ID": "C-3022",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Forbidden Word 1": "Street",
+    "Forbidden Word 2": "Singer",
+    "Forbidden Word 3": "Lagos",
+    "Main Word": "Seyi Vibez"
+  },
+  {
+    "Card Number": 417,
+    "ID": "NEW-LIFE-017",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Forbidden Word 1": "Wet",
+    "Forbidden Word 2": "Umbrella",
+    "Forbidden Word 3": "Weather",
+    "Main Word": "Rain Beat Me"
+  },
+  {
+    "Card Number": 409,
+    "ID": "NEW-LIFE-009",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Forbidden Word 1": "Star",
+    "Forbidden Word 2": "Hash",
+    "Forbidden Word 3": "Banking",
+    "Main Word": "USSD Code"
+  },
+  {
+    "Card Number": 410,
+    "ID": "NEW-LIFE-010",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Forbidden Word 1": "Identity",
+    "Forbidden Word 2": "Number",
+    "Forbidden Word 3": "Enrollment",
+    "Main Word": "NIN Slip"
+  },
+  {
+    "Card Number": 486,
+    "ID": "NEW-CELEB-011",
+    "Difficulty": "Easy",
+    "Category": "Celebrities",
+    "Forbidden Word 1": "Boo Of The Booless",
+    "Forbidden Word 2": "Singer",
+    "Forbidden Word 3": "Actor",
+    "Main Word": "Chike"
+  },
+  {
+    "Card Number": 487,
+    "ID": "NEW-CELEB-012",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Forbidden Word 1": "Actress",
+    "Forbidden Word 2": "Anikulapo",
+    "Forbidden Word 3": "Comedy",
+    "Main Word": "Bimbo Ademoye"
+  },
+  {
+    "Card Number": 431,
+    "ID": "NEW-STREET-006",
+    "Difficulty": "Easy",
+    "Category": "Street & Hustle",
+    "Forbidden Word 1": "Security",
+    "Forbidden Word 2": "Darkness",
+    "Forbidden Word 3": "Gate",
+    "Main Word": "Night Guard"
+  },
+  {
+    "Card Number": 563,
+    "ID": "NEW-SCHOOL-013",
+    "Difficulty": "Hard",
+    "Category": "School",
+    "Forbidden Word 1": "Industrial",
+    "Forbidden Word 2": "Training",
+    "Forbidden Word 3": "Student",
+    "Main Word": "SIWES"
+  },
+  {
+    "Card Number": 564,
+    "ID": "NEW-SCHOOL-014",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Forbidden Word 1": "Company",
+    "Forbidden Word 2": "Student",
+    "Forbidden Word 3": "Experience",
+    "Main Word": "Industrial Training"
+  },
+  {
+    "Card Number": 546,
+    "ID": "NEW-DIAS-031",
+    "Difficulty": "Easy",
+    "Category": "Diaspora",
+    "Forbidden Word 1": "Landlord",
+    "Forbidden Word 2": "Apartment",
+    "Forbidden Word 3": "Check",
+    "Main Word": "Room Inspection"
+  },
+  {
+    "Card Number": 547,
+    "ID": "NEW-DIAS-032",
+    "Difficulty": "Easy",
+    "Category": "Diaspora",
+    "Forbidden Word 1": "Airport",
+    "Forbidden Word 2": "Waiting",
+    "Forbidden Word 3": "Connection",
+    "Main Word": "Flight Layover"
+  },
+  {
+    "Card Number": 450,
+    "ID": "NEW-STREET-025",
+    "Difficulty": "Hard",
+    "Category": "Street & Hustle",
+    "Forbidden Word 1": "Street",
+    "Forbidden Word 2": "Gang",
+    "Forbidden Word 3": "Exploit",
+    "Main Word": "Area Boy"
+  },
+  {
+    "Card Number": 80,
+    "ID": "C-3015",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Forbidden Word 1": "Host",
+    "Forbidden Word 2": "Yellow",
+    "Forbidden Word 3": "Red Carpet",
+    "Main Word": "Nancy Isime"
+  },
+  {
+    "Card Number": 88,
+    "ID": "C-3051",
+    "Difficulty": "Hard",
+    "Category": "Celebrities",
+    "Forbidden Word 1": "Feeling",
+    "Forbidden Word 2": "R&B",
+    "Forbidden Word 3": "Singer",
+    "Main Word": "FOLA"
+  },
+  {
+    "Card Number": 89,
+    "ID": "C-3053",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Forbidden Word 1": "Pluto",
+    "Forbidden Word 2": "Elon Musk",
+    "Forbidden Word 3": "Rapper",
+    "Main Word": "Shallipopi"
+  }
+]
