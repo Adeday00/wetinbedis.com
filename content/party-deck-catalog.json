@@ -7,7 +7,7 @@
     "Main Word": "Japa",
     "Forbidden Word 1": "Visa",
     "Forbidden Word 2": "Airport",
-    "Forbidden Word 3": "Canada"
+    "Forbidden Word 3": "Travel"
   },
   {
     "Card Number": 2,
@@ -27,7 +27,7 @@
     "Main Word": "Wahala",
     "Forbidden Word 1": "Palava",
     "Forbidden Word 2": "Police",
-    "Forbidden Word 3": "Family Meeting"
+    "Forbidden Word 3": "Disturb"
   },
   {
     "Card Number": 4,
@@ -56,7 +56,7 @@
     "Category": "Slang",
     "Main Word": "Gbas Gbos",
     "Forbidden Word 1": "Clapback",
-    "Forbidden Word 2": "Twitter",
+    "Forbidden Word 2": "Aura for Aura",
     "Forbidden Word 3": "Dragging"
   },
   {
@@ -65,7 +65,7 @@
     "Difficulty": "Hard",
     "Category": "Slang",
     "Main Word": "No Gree For Anybody",
-    "Forbidden Word 1": "Agree",
+    "Forbidden Word 1": "Stubborn",
     "Forbidden Word 2": "Pressure",
     "Forbidden Word 3": "Bulldoze"
   },
@@ -264,7 +264,7 @@
     "ID": "S-031",
     "Difficulty": "Medium",
     "Category": "Slang",
-    "Main Word": "E Too Choke",
+    "Main Word": "E Choke",
     "Forbidden Word 1": "Too Much",
     "Forbidden Word 2": "Over",
     "Forbidden Word 3": "Plenty"
@@ -307,7 +307,7 @@
     "Main Word": "Jollof Rice",
     "Forbidden Word 1": "Party",
     "Forbidden Word 2": "Tomato",
-    "Forbidden Word 3": "Cook"
+    "Forbidden Word 3": "Smoky"
   },
   {
     "Card Number": 32,
@@ -367,7 +367,7 @@
     "Main Word": "Fufu",
     "Forbidden Word 1": "Swallow",
     "Forbidden Word 2": "White",
-    "Forbidden Word 3": "Pound"
+    "Forbidden Word 3": "Smell"
   },
   {
     "Card Number": 38,
@@ -402,12 +402,12 @@
   {
     "Card Number": 41,
     "ID": "F-037",
-    "Difficulty": "Medium",
+    "Difficulty": "Hard",
     "Category": "Food",
     "Main Word": "Tuwo",
     "Forbidden Word 1": "Northern",
     "Forbidden Word 2": "Soft",
-    "Forbidden Word 3": "Swallow"
+    "Forbidden Word 3": "Shinkafa"
   },
   {
     "Card Number": 42,
@@ -432,10 +432,10 @@
   {
     "Card Number": 44,
     "ID": "F-040",
-    "Difficulty": "Easy",
+    "Difficulty": "Medium",
     "Category": "Food",
     "Main Word": "Nkwobi",
-    "Forbidden Word 1": "Cow",
+    "Forbidden Word 1": "Cow head",
     "Forbidden Word 2": "Spicy",
     "Forbidden Word 3": "Pepper"
   },
@@ -536,7 +536,7 @@
     "Category": "Naija Life",
     "Main Word": "Up NEPA",
     "Forbidden Word 1": "Light",
-    "Forbidden Word 2": "Return",
+    "Forbidden Word 2": "Siren",
     "Forbidden Word 3": "Shout"
   },
   {
@@ -767,7 +767,7 @@
     "Main Word": "Zlatan",
     "Forbidden Word 1": "Zanku",
     "Forbidden Word 2": "Legwork",
-    "Forbidden Word 3": "Bolanle"
+    "Forbidden Word 3": "Kapaichumarimarichopaco"
   },
   {
     "Card Number": 78,
@@ -865,7 +865,7 @@
     "Difficulty": "Hard",
     "Category": "Celebrities",
     "Main Word": "ODUMODUBLVCK",
-    "Forbidden Word 1": "Declan Rice",
+    "Forbidden Word 1": "Black sheep forever",
     "Forbidden Word 2": "Abuja",
     "Forbidden Word 3": "Rapper"
   },
@@ -916,7 +916,7 @@
     "Category": "Music",
     "Main Word": "Unavailable",
     "Forbidden Word 1": "Davido",
-    "Forbidden Word 2": "Unavailable Challenge",
+    "Forbidden Word 2": "Dance",
     "Forbidden Word 3": "Timeless"
   },
   {
@@ -967,7 +967,7 @@
     "Main Word": "Ojapiano",
     "Forbidden Word 1": "Flute",
     "Forbidden Word 2": "Kcee",
-    "Forbidden Word 3": "Ojapiano Step"
+    "Forbidden Word 3": "Dance"
   },
   {
     "Card Number": 98,
@@ -1147,7 +1147,7 @@
     "Main Word": "Bandana",
     "Forbidden Word 1": "Fireboy",
     "Forbidden Word 2": "Asake",
-    "Forbidden Word 3": "YBNL"
+    "Forbidden Word 3": "Gang"
   },
   {
     "Card Number": 116,
@@ -1267,7 +1267,7 @@
     "Main Word": "Checkpoint",
     "Forbidden Word 1": "Police",
     "Forbidden Word 2": "Stop",
-    "Forbidden Word 3": "Officer"
+    "Forbidden Word 3": "Bribe"
   },
   {
     "Card Number": 128,
@@ -1497,7 +1497,7 @@
     "Main Word": "Hostel",
     "Forbidden Word 1": "Sleep",
     "Forbidden Word 2": "Students",
-    "Forbidden Word 3": "Bunk"
+    "Forbidden Word 3": "Bunk bed"
   },
   {
     "Card Number": 151,
@@ -2736,7 +2736,7 @@
     "Category": "Music",
     "Main Word": "Ye",
     "Forbidden Word 1": "Burna Boy",
-    "Forbidden Word 2": "Kanye",
+    "Forbidden Word 2": "Rapper",
     "Forbidden Word 3": "Outside"
   },
   {
@@ -3202,10 +3202,10 @@
   {
     "Card Number": 321,
     "ID": "NEW-FOOD-004",
-    "Difficulty": "Easy",
+    "Difficulty": "Medium",
     "Category": "Food",
-    "Main Word": "Akamu",
-    "Forbidden Word 1": "Pap",
+    "Main Word": "Akamu (Pap)",
+    "Forbidden Word 1": "Street",
     "Forbidden Word 2": "Corn",
     "Forbidden Word 3": "Breakfast"
   },
@@ -3489,22 +3489,22 @@
     "Forbidden Word 2": "Night",
     "Forbidden Word 3": "Magic"
   },
- {
-   "Card Number": 350,
-   "ID": "N-091",
-   "Difficulty": "Easy",
-   "Category": "Celebrities",
-   "Main Word": "Aki & Pawpaw",
-   "Forbidden Word 1": "Twins",
-   "Forbidden Word 2": "Mischief",
-   "Forbidden Word 3": "Short"
+  {
+    "Card Number": 350,
+    "ID": "N-091",
+    "Difficulty": "Easy",
+    "Category": "Celebrities",
+    "Main Word": "Aki & Pawpaw",
+    "Forbidden Word 1": "Twins",
+    "Forbidden Word 2": "Mischief",
+    "Forbidden Word 3": "Short"
   },
   {
     "Card Number": 351,
     "ID": "NEW-SLANG-002",
     "Difficulty": "Medium",
     "Category": "Slang",
-    "Main Word": "I Am Chosen",
+    "Main Word": "I Am A Chosen",
     "Forbidden Word 1": "Holy",
     "Forbidden Word 2": "Selected",
     "Forbidden Word 3": "Testimony"
@@ -3526,8 +3526,8 @@
     "Category": "Slang",
     "Main Word": "Oscroh",
     "Forbidden Word 1": "Money",
-    "Forbidden Word 2": "Flow",
-    "Forbidden Word 3": "Rich"
+    "Forbidden Word 2": "Shalipopi",
+    "Forbidden Word 3": "Runs girl"
   },
   {
     "Card Number": 354,
@@ -3535,7 +3535,7 @@
     "Difficulty": "Hard",
     "Category": "Slang",
     "Main Word": "T-Pain",
-    "Forbidden Word 1": "President",
+    "Forbidden Word 1": "President Tinubu ",
     "Forbidden Word 2": "Hardship",
     "Forbidden Word 3": "Nickname"
   },
@@ -3584,8 +3584,8 @@
     "ID": "NEW-SLANG-010",
     "Difficulty": "Medium",
     "Category": "Slang",
-    "Main Word": "Who Dey Breez",
-    "Forbidden Word 1": "Breathing",
+    "Main Word": "Who Dey Breathe",
+    "Forbidden Word 1": "Oppression",
     "Forbidden Word 2": "Calm",
     "Forbidden Word 3": "Air"
   },
@@ -3607,7 +3607,7 @@
     "Main Word": "Money Miss Road",
     "Forbidden Word 1": "Wealth",
     "Forbidden Word 2": "Lost",
-    "Forbidden Word 3": "Direction"
+    "Forbidden Word 3": "Reckless spending"
   },
   {
     "Card Number": 362,
@@ -3664,7 +3664,7 @@
     "ID": "NEW-SLANG-018",
     "Difficulty": "Medium",
     "Category": "Slang",
-    "Main Word": "You Don Do",
+    "Main Word": "E Don Do",
     "Forbidden Word 1": "Finished",
     "Forbidden Word 2": "Enough",
     "Forbidden Word 3": "Trouble"
@@ -3697,7 +3697,7 @@
     "Main Word": "Otilo",
     "Forbidden Word 1": "Gone",
     "Forbidden Word 2": "Disappear",
-    "Forbidden Word 3": "Travel"
+    "Forbidden Word 3": "Far"
   },
   {
     "Card Number": 371,
@@ -3739,15 +3739,15 @@
     "Forbidden Word 2": "Believe",
     "Forbidden Word 3": "Doubt"
   },
- {
-   "Card Number": 375,
-   "ID": "NEW-SLANG-026",
-   "Difficulty": "Easy",
-   "Category": "Slang",
-   "Main Word": "Abeg No Vex",
-   "Forbidden Word 1": "Sorry",
-   "Forbidden Word 2": "Angry",
-   "Forbidden Word 3": "Forgive"
+  {
+    "Card Number": 375,
+    "ID": "NEW-SLANG-026",
+    "Difficulty": "Easy",
+    "Category": "Slang",
+    "Main Word": "Abeg No Vex",
+    "Forbidden Word 1": "Sorry",
+    "Forbidden Word 2": "Angry",
+    "Forbidden Word 3": "Forgive"
   },
   {
     "Card Number": 376,
@@ -3946,7 +3946,7 @@
     "Category": "Food",
     "Main Word": "Boiled Corn",
     "Forbidden Word 1": "Cob",
-    "Forbidden Word 2": "Butter",
+    "Forbidden Word 2": "Coconut",
     "Forbidden Word 3": "Roadside"
   },
   {
@@ -3989,15 +3989,15 @@
     "Forbidden Word 2": "Calabar",
     "Forbidden Word 3": "Creamy"
   },
- {
-   "Card Number": 400,
-   "ID": "NEW-FOOD-035",
-   "Difficulty": "Hard",
-   "Category": "Food",
-   "Main Word": "Abak Atama",
-   "Forbidden Word 1": "Palm Fruit",
-   "Forbidden Word 2": "Herb",
-   "Forbidden Word 3": "Akwa Ibom"
+  {
+    "Card Number": 400,
+    "ID": "NEW-FOOD-035",
+    "Difficulty": "Hard",
+    "Category": "Food",
+    "Main Word": "Abak Atama",
+    "Forbidden Word 1": "Palm Fruit",
+    "Forbidden Word 2": "Herb",
+    "Forbidden Word 3": "Akwa Ibom"
   },
   {
     "Card Number": 401,
@@ -4057,7 +4057,7 @@
     "Main Word": "Call Me Back",
     "Forbidden Word 1": "Phone",
     "Forbidden Word 2": "Request",
-    "Forbidden Word 3": "Missed Call"
+    "Forbidden Word 3": "Return"
   },
   {
     "Card Number": 407,
@@ -4239,15 +4239,15 @@
     "Forbidden Word 2": "Engine",
     "Forbidden Word 3": "Can"
   },
- {
-   "Card Number": 425,
-   "ID": "NEW-LIFE-025",
-   "Difficulty": "Easy",
-   "Category": "Naija Life",
-   "Main Word": "Emergency Recharge",
-   "Forbidden Word 1": "Airtime",
-   "Forbidden Word 2": "Phone",
-   "Forbidden Word 3": "Credit"
+  {
+    "Card Number": 425,
+    "ID": "NEW-LIFE-025",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Emergency Recharge",
+    "Forbidden Word 1": "Airtime",
+    "Forbidden Word 2": "Phone",
+    "Forbidden Word 3": "Credit"
   },
   {
     "Card Number": 426,
@@ -4444,7 +4444,7 @@
     "ID": "NEW-STREET-020",
     "Difficulty": "Easy",
     "Category": "Street & Hustle",
-    "Main Word": "Shoe Shiner",
+    "Main Word": "Shoemaker ",
     "Forbidden Word 1": "Polish",
     "Forbidden Word 2": "Leather",
     "Forbidden Word 3": "Brush"
@@ -4489,15 +4489,15 @@
     "Forbidden Word 2": "Warehouse",
     "Forbidden Word 3": "Trolley"
   },
- {
-   "Card Number": 450,
-   "ID": "NEW-STREET-025",
-   "Difficulty": "Hard",
-   "Category": "Street & Hustle",
-   "Main Word": "Area Boy",
-   "Forbidden Word 1": "Street",
-   "Forbidden Word 2": "Gang",
-   "Forbidden Word 3": "Lagos"
+  {
+    "Card Number": 450,
+    "ID": "NEW-STREET-025",
+    "Difficulty": "Hard",
+    "Category": "Street & Hustle",
+    "Main Word": "Area Boy",
+    "Forbidden Word 1": "Street",
+    "Forbidden Word 2": "Gang",
+    "Forbidden Word 3": "Exploit"
   },
   {
     "Card Number": 451,
@@ -4527,7 +4527,7 @@
     "Main Word": "Finesse",
     "Forbidden Word 1": "Pheelz",
     "Forbidden Word 2": "BNXN",
-    "Forbidden Word 3": "Yahoo"
+    "Forbidden Word 3": "Broke"
   },
   {
     "Card Number": 454,
@@ -4557,7 +4557,7 @@
     "Main Word": "Attention",
     "Forbidden Word 1": "Omah Lay",
     "Forbidden Word 2": "Love",
-    "Forbidden Word 3": "Song"
+    "Forbidden Word 3": "Justin Bieber "
   },
   {
     "Card Number": 457,
@@ -4572,12 +4572,12 @@
   {
     "Card Number": 458,
     "ID": "NEW-MUSIC-008",
-    "Difficulty": "Medium",
+    "Difficulty": "Hard",
     "Category": "Music",
     "Main Word": "High",
     "Forbidden Word 1": "Adekunle Gold",
     "Forbidden Word 2": "Zinoleesky",
-    "Forbidden Word 3": "Money"
+    "Forbidden Word 3": "Drugs"
   },
   {
     "Card Number": 459,
@@ -4587,7 +4587,7 @@
     "Main Word": "Organise",
     "Forbidden Word 1": "Asake",
     "Forbidden Word 2": "Dance",
-    "Forbidden Word 3": "Album"
+    "Forbidden Word 3": "Mr Money"
   },
   {
     "Card Number": 460,
@@ -4665,9 +4665,9 @@
     "Difficulty": "Easy",
     "Category": "Music",
     "Main Word": "Jiggy Bop",
-    "Forbidden Word 1": "Kizz Daniel",
+    "Forbidden Word 1": "Young Jonn",
     "Forbidden Word 2": "Dance",
-    "Forbidden Word 3": "Vibe"
+    "Forbidden Word 3": "P.Prime"
   },
   {
     "Card Number": 468,
@@ -4685,9 +4685,9 @@
     "Difficulty": "Hard",
     "Category": "Music",
     "Main Word": "Alté",
-    "Forbidden Word 1": "Alternative",
+    "Forbidden Word 1": "Genre",
     "Forbidden Word 2": "Lagos",
-    "Forbidden Word 3": "Scene"
+    "Forbidden Word 3": "Alternative"
   },
   {
     "Card Number": 470,
@@ -4739,15 +4739,15 @@
     "Forbidden Word 2": "Highlife",
     "Forbidden Word 3": "Roots"
   },
- {
-   "Card Number": 475,
-   "ID": "NEW-MUSIC-025",
-   "Difficulty": "Medium",
-   "Category": "Music",
-   "Main Word": "Gospel Amapiano",
-   "Forbidden Word 1": "Church",
-   "Forbidden Word 2": "Dance",
-   "Forbidden Word 3": "Genre"
+  {
+    "Card Number": 475,
+    "ID": "NEW-MUSIC-025",
+    "Difficulty": "Medium",
+    "Category": "Music",
+    "Main Word": "Gospel Amapiano",
+    "Forbidden Word 1": "Church",
+    "Forbidden Word 2": "Dance",
+    "Forbidden Word 3": "Genre"
   },
   {
     "Card Number": 476,
@@ -4755,7 +4755,7 @@
     "Difficulty": "Medium",
     "Category": "Celebrities",
     "Main Word": "BNXN",
-    "Forbidden Word 1": "Fka",
+    "Forbidden Word 1": "Buju",
     "Forbidden Word 2": "Singer",
     "Forbidden Word 3": "Afrobeats"
   },
@@ -4817,7 +4817,7 @@
     "Main Word": "Teni",
     "Forbidden Word 1": "Mummy",
     "Forbidden Word 2": "Singer",
-    "Forbidden Word 3": "Dr Dolor"
+    "Forbidden Word 3": "Case"
   },
   {
     "Card Number": 483,
@@ -4837,7 +4837,7 @@
     "Main Word": "Adekunle Gold",
     "Forbidden Word 1": "Husband",
     "Forbidden Word 2": "Singer",
-    "Forbidden Word 3": "Art"
+    "Forbidden Word 3": "Sade"
   },
   {
     "Card Number": 485,
@@ -4989,15 +4989,15 @@
     "Forbidden Word 2": "Heavyweight",
     "Forbidden Word 3": "Britain"
   },
- {
-   "Card Number": 500,
-   "ID": "NEW-CELEB-025",
-   "Difficulty": "Easy",
-   "Category": "Celebrities",
-   "Main Word": "DJ Cuppy",
-   "Forbidden Word 1": "Piano",
-   "Forbidden Word 2": "Oxford",
-   "Forbidden Word 3": "Turntables"
+  {
+    "Card Number": 500,
+    "ID": "NEW-CELEB-025",
+    "Difficulty": "Easy",
+    "Category": "Celebrities",
+    "Main Word": "DJ Cuppy",
+    "Forbidden Word 1": "Piano",
+    "Forbidden Word 2": "Oxford",
+    "Forbidden Word 3": "Turntables"
   },
   {
     "Card Number": 501,
@@ -5239,15 +5239,15 @@
     "Forbidden Word 2": "Council",
     "Forbidden Word 3": "Royal"
   },
- {
-   "Card Number": 525,
-   "ID": "NEW-CULT-035",
-   "Difficulty": "Easy",
-   "Category": "Culture",
-   "Main Word": "Community Sanitation",
-   "Forbidden Word 1": "Saturday",
-   "Forbidden Word 2": "Street",
-   "Forbidden Word 3": "Cleaning"
+  {
+    "Card Number": 525,
+    "ID": "NEW-CULT-035",
+    "Difficulty": "Easy",
+    "Category": "Culture",
+    "Main Word": "Environmental",
+    "Forbidden Word 1": "Saturday",
+    "Forbidden Word 2": "Street",
+    "Forbidden Word 3": "Cleaning"
   },
   {
     "Card Number": 526,
@@ -5489,15 +5489,15 @@
     "Forbidden Word 2": "Meeting",
     "Forbidden Word 3": "Dues"
   },
- {
-   "Card Number": 550,
-   "ID": "NEW-DIAS-035",
-   "Difficulty": "Medium",
-   "Category": "Diaspora",
-   "Main Word": "Home Training",
-   "Forbidden Word 1": "Parents",
-   "Forbidden Word 2": "Chores",
-   "Forbidden Word 3": "Discipline"
+  {
+    "Card Number": 550,
+    "ID": "NEW-DIAS-035",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Home Training",
+    "Forbidden Word 1": "Parents",
+    "Forbidden Word 2": "Chores",
+    "Forbidden Word 3": "Discipline"
   },
   {
     "Card Number": 551,
@@ -5739,15 +5739,15 @@
     "Forbidden Word 2": "Semester",
     "Forbidden Word 3": "Classes"
   },
- {
-   "Card Number": 575,
-   "ID": "NEW-SCHOOL-025",
-   "Difficulty": "Medium",
-   "Category": "School",
-   "Main Word": "Departmental Dues",
-   "Forbidden Word 1": "Payment",
-   "Forbidden Word 2": "Faculty",
-   "Forbidden Word 3": "Students"
+  {
+    "Card Number": 575,
+    "ID": "NEW-SCHOOL-025",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Departmental Dues",
+    "Forbidden Word 1": "Payment",
+    "Forbidden Word 2": "Faculty",
+    "Forbidden Word 3": "Students"
   },
   {
     "Card Number": 576,
