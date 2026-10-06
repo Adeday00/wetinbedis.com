@@ -6,7 +6,7 @@
     "celebrityCount": 75,
     "updated": "2026-10-06",
     "cluePass": "song-specific-editorial-v2",
-    "cluePassNote": "Music clues were rewritten around track-specific artists, features, projects, hooks, scenes, and cultural associations. Generic fallback clues were removed."
+    "cluePassNote": "Music clues were rewritten around track-specific artists, features, projects, hooks, scenes, and cultural associations; celebrity clues were tightened to use recognizable work and affiliations instead of generic role labels."
   },
   "cards": [
     {
@@ -1835,9 +1835,9 @@
       "Difficulty": "Easy",
       "Category": "Celebrities",
       "Main Word": "Sarz",
-      "Forbidden Word 1": "Really",
-      "Forbidden Word 2": "Producer",
-      "Forbidden Word 3": "WurlD"
+      "Forbidden Word 1": "Sarz On The Beat",
+      "Forbidden Word 2": "WurlD",
+      "Forbidden Word 3": "Really"
     },
     {
       "Card Number": 784,
@@ -1896,8 +1896,8 @@
       "Category": "Celebrities",
       "Main Word": "Fave",
       "Forbidden Word 1": "Baby Riddim",
-      "Forbidden Word 2": "Riddim",
-      "Forbidden Word 3": "Afrobeats"
+      "Forbidden Word 2": "Mr Man",
+      "Forbidden Word 3": "Beautifully"
     },
     {
       "Card Number": 790,
@@ -1925,9 +1925,9 @@
       "Difficulty": "Easy",
       "Category": "Celebrities",
       "Main Word": "Pheelz",
-      "Forbidden Word 1": "Producer",
-      "Forbidden Word 2": "Finesse",
-      "Forbidden Word 3": "YBNL"
+      "Forbidden Word 1": "Finesse",
+      "Forbidden Word 2": "YBNL",
+      "Forbidden Word 3": "Pheelz Good"
     },
     {
       "Card Number": 793,
@@ -1935,9 +1935,9 @@
       "Difficulty": "Easy",
       "Category": "Celebrities",
       "Main Word": "Rexxie",
-      "Forbidden Word 1": "Producer",
-      "Forbidden Word 2": "KPK",
-      "Forbidden Word 3": "Ko Por Ke"
+      "Forbidden Word 1": "KPK",
+      "Forbidden Word 2": "Ko Por Ke",
+      "Forbidden Word 3": "Marlian"
     },
     {
       "Card Number": 794,
@@ -1957,7 +1957,7 @@
       "Main Word": "DJ Tunez",
       "Forbidden Word 1": "Pami",
       "Forbidden Word 2": "Starboy",
-      "Forbidden Word 3": "DJ"
+      "Forbidden Word 3": "TurnTable"
     },
     {
       "Card Number": 796,
@@ -1966,8 +1966,8 @@
       "Category": "Celebrities",
       "Main Word": "Masterkraft",
       "Forbidden Word 1": "Jasi",
-      "Forbidden Word 2": "Producer",
-      "Forbidden Word 3": "Hallelu"
+      "Forbidden Word 2": "Hallelu",
+      "Forbidden Word 3": "Mastaa"
     },
     {
       "Card Number": 797,
@@ -1987,7 +1987,7 @@
       "Main Word": "Olakira",
       "Forbidden Word 1": "Maserati",
       "Forbidden Word 2": "In My Maserati",
-      "Forbidden Word 3": "Singer"
+      "Forbidden Word 3": "Poco Lee"
     },
     {
       "Card Number": 799,
@@ -2117,7 +2117,7 @@
       "Main Word": "Kunmie",
       "Forbidden Word 1": "Arike",
       "Forbidden Word 2": "Pressure",
-      "Forbidden Word 3": "Singer"
+      "Forbidden Word 3": "Yoruba love"
     },
     {
       "Card Number": 812,
@@ -2127,7 +2127,7 @@
       "Main Word": "FirstKlaz",
       "Forbidden Word 1": "Big Body Benz",
       "Forbidden Word 2": "Salama",
-      "Forbidden Word 3": "Amapiano"
+      "Forbidden Word 3": "log drums"
     },
     {
       "Card Number": 813,
@@ -2137,7 +2137,7 @@
       "Main Word": "Mavo",
       "Forbidden Word 1": "Big Bum Bum",
       "Forbidden Word 2": "Ice Cream",
-      "Forbidden Word 3": "Singer"
+      "Forbidden Word 3": "Kidd Carder"
     },
     {
       "Card Number": 814,
@@ -2146,8 +2146,8 @@
       "Category": "Celebrities",
       "Main Word": "BisiManuel",
       "Forbidden Word 1": "Aanu Ni",
-      "Forbidden Word 2": "Producer",
-      "Forbidden Word 3": "Piano"
+      "Forbidden Word 2": "Vibez Inc",
+      "Forbidden Word 3": "piano keys"
     },
     {
       "Card Number": 815,
@@ -2165,8 +2165,8 @@
       "Difficulty": "Medium",
       "Category": "Celebrities",
       "Main Word": "Tobi Bakre",
-      "Forbidden Word 1": "Actor",
-      "Forbidden Word 2": "BBNaija",
+      "Forbidden Word 1": "BBNaija",
+      "Forbidden Word 2": "Double Wahala",
       "Forbidden Word 3": "Lagos"
     },
     {
@@ -2176,8 +2176,8 @@
       "Category": "Celebrities",
       "Main Word": "Yhemo Lee",
       "Forbidden Word 1": "Soji",
-      "Forbidden Word 2": "Afrobeats",
-      "Forbidden Word 3": "Actor"
+      "Forbidden Word 2": "Lagos nightlife",
+      "Forbidden Word 3": "skit world"
     },
     {
       "Card Number": 818,
@@ -2196,8 +2196,8 @@
       "Category": "Celebrities",
       "Main Word": "Nomcebo Zikode",
       "Forbidden Word 1": "Jerusalema",
-      "Forbidden Word 2": "South Africa",
-      "Forbidden Word 3": "Singer"
+      "Forbidden Word 2": "Master KG",
+      "Forbidden Word 3": "South Africa"
     },
     {
       "Card Number": 820,
@@ -2286,8 +2286,8 @@
       "Category": "Celebrities",
       "Main Word": "Sam Smith",
       "Forbidden Word 1": "Stay With Me",
-      "Forbidden Word 2": "UK",
-      "Forbidden Word 3": "Singer"
+      "Forbidden Word 2": "Unholy",
+      "Forbidden Word 3": "Grammy"
     },
     {
       "Card Number": 829,
@@ -2297,7 +2297,7 @@
       "Main Word": "Nicki Minaj",
       "Forbidden Word 1": "Barbie",
       "Forbidden Word 2": "Trinidad",
-      "Forbidden Word 3": "Rap"
+      "Forbidden Word 3": "Pink Friday"
     },
     {
       "Card Number": 830,
@@ -2306,7 +2306,7 @@
       "Category": "Celebrities",
       "Main Word": "21 Savage",
       "Forbidden Word 1": "Atlanta",
-      "Forbidden Word 2": "Rap",
+      "Forbidden Word 2": "Savage Mode",
       "Forbidden Word 3": "Knife Talk"
     },
     {
@@ -2316,8 +2316,8 @@
       "Category": "Celebrities",
       "Main Word": "Kendrick Lamar",
       "Forbidden Word 1": "Compton",
-      "Forbidden Word 2": "Rap",
-      "Forbidden Word 3": "DAMN."
+      "Forbidden Word 2": "DAMN.",
+      "Forbidden Word 3": "Pulitzer"
     },
     {
       "Card Number": 832,
@@ -2357,7 +2357,7 @@
       "Main Word": "Jeriq",
       "Forbidden Word 1": "Enugu",
       "Forbidden Word 2": "Oji River",
-      "Forbidden Word 3": "Rap"
+      "Forbidden Word 3": "Eastside"
     },
     {
       "Card Number": 836,
@@ -2367,7 +2367,7 @@
       "Main Word": "Tml Vibez",
       "Forbidden Word 1": "Poco Lee",
       "Forbidden Word 2": "Street Pop",
-      "Forbidden Word 3": "Artist"
+      "Forbidden Word 3": "Vibez Inc"
     },
     {
       "Card Number": 837,
@@ -2375,9 +2375,9 @@
       "Difficulty": "Medium",
       "Category": "Celebrities",
       "Main Word": "P2J",
-      "Forbidden Word 1": "Producer",
-      "Forbidden Word 2": "Wizkid",
-      "Forbidden Word 3": "Made In Lagos"
+      "Forbidden Word 1": "Wizkid",
+      "Forbidden Word 2": "Made In Lagos",
+      "Forbidden Word 3": "Starboy"
     },
     {
       "Card Number": 838,
@@ -2385,9 +2385,9 @@
       "Difficulty": "Medium",
       "Category": "Celebrities",
       "Main Word": "DJ Kaywise",
-      "Forbidden Word 1": "Amapiano",
-      "Forbidden Word 2": "DJ",
-      "Forbidden Word 3": "Highway"
+      "Forbidden Word 1": "High Way",
+      "Forbidden Word 2": "Joor",
+      "Forbidden Word 3": "mixtape"
     },
     {
       "Card Number": 839,
@@ -2416,8 +2416,8 @@
       "Category": "Celebrities",
       "Main Word": "Ms Banks",
       "Forbidden Word 1": "Bop Daddy",
-      "Forbidden Word 2": "UK",
-      "Forbidden Word 3": "Rap"
+      "Forbidden Word 2": "Falz",
+      "Forbidden Word 3": "London"
     },
     {
       "Card Number": 842,
@@ -2447,7 +2447,7 @@
       "Main Word": "Tay Iwar",
       "Forbidden Word 1": "True Love",
       "Forbidden Word 2": "Alté",
-      "Forbidden Word 3": "Singer"
+      "Forbidden Word 3": "Wahala"
     },
     {
       "Card Number": 845,
@@ -2464,10 +2464,10 @@
       "ID": "NEW-CELEB-071",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Chukwu",
-      "Forbidden Word 1": "Afrobeats",
-      "Forbidden Word 2": "Artist",
-      "Forbidden Word 3": "Nigeria"
+      "Main Word": "Boy Spyce",
+      "Forbidden Word 1": "Mavin",
+      "Forbidden Word 2": "Won Da Mo",
+      "Forbidden Word 3": "Folake"
     },
     {
       "Card Number": 847,
@@ -2477,7 +2477,7 @@
       "Main Word": "Full Blown",
       "Forbidden Word 1": "Black Sherif",
       "Forbidden Word 2": "Ghana",
-      "Forbidden Word 3": "Singer"
+      "Forbidden Word 3": "Kwaku"
     },
     {
       "Card Number": 848,
@@ -2495,9 +2495,9 @@
       "Difficulty": "Medium",
       "Category": "Celebrities",
       "Main Word": "Krizbeatz",
-      "Forbidden Word 1": "Producer",
-      "Forbidden Word 2": "Owo Oluwa",
-      "Forbidden Word 3": "Afrobeats"
+      "Forbidden Word 1": "Owo Oluwa",
+      "Forbidden Word 2": "Wave Choir",
+      "Forbidden Word 3": "studio"
     },
     {
       "Card Number": 850,
@@ -4721,9 +4721,9 @@
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
+      "artist": "Mavin Records",
       "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-072",
