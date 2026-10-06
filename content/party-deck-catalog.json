@@ -262,12 +262,12 @@
   {
     "Card Number": 27,
     "ID": "S-031",
-    "Difficulty": "Hard",
+    "Difficulty": "Medium",
     "Category": "Slang",
-    "Main Word": "Odogwu Paranra",
-    "Forbidden Word 1": "Love In Every Word",
-    "Forbidden Word 2": "Movie",
-    "Forbidden Word 3": "Endearment"
+    "Main Word": "Para",
+    "Forbidden Word 1": "Vex",
+    "Forbidden Word 2": "Angry",
+    "Forbidden Word 3": "Upset"
   },
   {
     "Card Number": 28,
@@ -3044,7 +3044,7 @@
     "ID": "W-2002",
     "Difficulty": "Medium",
     "Category": "Naija Life",
-    "Main Word": "Akawo",
+    "Main Word": "Ajo",
     "Forbidden Word 1": "Contribution",
     "Forbidden Word 2": "Savings",
     "Forbidden Word 3": "Collector"
