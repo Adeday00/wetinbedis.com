@@ -6,7 +6,9 @@
     "celebrityCount": 75,
     "updated": "2026-10-06",
     "cluePass": "song-specific-editorial-v2",
-    "cluePassNote": "Music clues were rewritten around track-specific artists, features, projects, hooks, scenes, and cultural associations; celebrity clues were tightened to use recognizable work and affiliations instead of generic role labels."
+    "cluePassNote": "Music clues were rewritten around track-specific artists, features, projects, hooks, scenes, and cultural associations; celebrity clues were tightened to use recognizable work and affiliations instead of generic role labels.",
+    "celebrityFilter": "Nigerian-focused",
+    "celebrityFilterNote": "International collaborators were replaced with Nigerian artists and entertainment figures so the Celebrities category stays Nigeria-focused."
   },
   "cards": [
     {
@@ -2094,10 +2096,10 @@
       "ID": "NEW-CELEB-034",
       "Difficulty": "Easy",
       "Category": "Celebrities",
-      "Main Word": "Darkoo",
-      "Forbidden Word 1": "Gangsta",
-      "Forbidden Word 2": "Weh You Dey Feel Like",
-      "Forbidden Word 3": "Ghana"
+      "Main Word": "Wande Coal",
+      "Forbidden Word 1": "Black Diamond",
+      "Forbidden Word 2": "Iskaba",
+      "Forbidden Word 3": "Mavin"
     },
     {
       "Card Number": 810,
@@ -2194,160 +2196,160 @@
       "ID": "NEW-CELEB-044",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Nomcebo Zikode",
-      "Forbidden Word 1": "Jerusalema",
-      "Forbidden Word 2": "Master KG",
-      "Forbidden Word 3": "South Africa"
+      "Main Word": "Khaid",
+      "Forbidden Word 1": "Anabella",
+      "Forbidden Word 2": "With You",
+      "Forbidden Word 3": "NEKTUNEZ"
     },
     {
       "Card Number": 820,
       "ID": "NEW-CELEB-045",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Gyakie",
-      "Forbidden Word 1": "Forever",
-      "Forbidden Word 2": "Ghana",
-      "Forbidden Word 3": "Songwriter"
+      "Main Word": "Bad Boy Timz",
+      "Forbidden Word 1": "MJ",
+      "Forbidden Word 2": "Anonymous",
+      "Forbidden Word 3": "Ibadan"
     },
     {
       "Card Number": 821,
       "ID": "NEW-CELEB-046",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Justin Bieber",
-      "Forbidden Word 1": "Peaches",
-      "Forbidden Word 2": "Canada",
-      "Forbidden Word 3": "Baby"
+      "Main Word": "CKay",
+      "Forbidden Word 1": "Love Nwantiti",
+      "Forbidden Word 2": "Boyfriend",
+      "Forbidden Word 3": "Chocolate City"
     },
     {
       "Card Number": 822,
       "ID": "NEW-CELEB-047",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Drake",
-      "Forbidden Word 1": "God’s Plan",
-      "Forbidden Word 2": "Toronto",
-      "Forbidden Word 3": "OVO"
+      "Main Word": "Magixx",
+      "Forbidden Word 1": "Love Don't Cost a Dime",
+      "Forbidden Word 2": "Mavin",
+      "Forbidden Word 3": "All Over"
     },
     {
       "Card Number": 823,
       "ID": "NEW-CELEB-048",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "The Weeknd",
-      "Forbidden Word 1": "Blinding Lights",
-      "Forbidden Word 2": "Toronto",
-      "Forbidden Word 3": "XO"
+      "Main Word": "T.I BLAZE",
+      "Forbidden Word 1": "Sometimes",
+      "Forbidden Word 2": "Olamide",
+      "Forbidden Word 3": "Try"
     },
     {
       "Card Number": 824,
       "ID": "NEW-CELEB-049",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Doja Cat",
-      "Forbidden Word 1": "Say So",
-      "Forbidden Word 2": "Planet Her",
-      "Forbidden Word 3": "California"
+      "Main Word": "WurlD",
+      "Forbidden Word 1": "Show You Off",
+      "Forbidden Word 2": "Sarz",
+      "Forbidden Word 3": "Love Is Contagious"
     },
     {
       "Card Number": 825,
       "ID": "NEW-CELEB-050",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Harry Styles",
-      "Forbidden Word 1": "As It Was",
-      "Forbidden Word 2": "One Direction",
-      "Forbidden Word 3": "Watermelon"
+      "Main Word": "Fido",
+      "Forbidden Word 1": "Awolowo",
+      "Forbidden Word 2": "Joy Is Coming",
+      "Forbidden Word 3": "Afro-fusion"
     },
     {
       "Card Number": 826,
       "ID": "NEW-CELEB-051",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Miley Cyrus",
-      "Forbidden Word 1": "Flowers",
-      "Forbidden Word 2": "Hannah Montana",
-      "Forbidden Word 3": "Disney"
+      "Main Word": "Famous Pluto",
+      "Forbidden Word 1": "Ewo",
+      "Forbidden Word 2": "Ojapiano",
+      "Forbidden Word 3": "Shallipopi"
     },
     {
       "Card Number": 827,
       "ID": "NEW-CELEB-052",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Chris Brown",
-      "Forbidden Word 1": "No Guidance",
-      "Forbidden Word 2": "R&B",
-      "Forbidden Word 3": "Virginia"
+      "Main Word": "Goya Menor",
+      "Forbidden Word 1": "Ameno Amapiano",
+      "Forbidden Word 2": "Ameno",
+      "Forbidden Word 3": "Edo"
     },
     {
       "Card Number": 828,
       "ID": "NEW-CELEB-053",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Sam Smith",
-      "Forbidden Word 1": "Stay With Me",
-      "Forbidden Word 2": "Unholy",
-      "Forbidden Word 3": "Grammy"
+      "Main Word": "Berri-Tiga",
+      "Forbidden Word 1": "Machala",
+      "Forbidden Word 2": "Cough",
+      "Forbidden Word 3": "Benin City"
     },
     {
       "Card Number": 829,
       "ID": "NEW-CELEB-054",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Nicki Minaj",
-      "Forbidden Word 1": "Barbie",
-      "Forbidden Word 2": "Trinidad",
-      "Forbidden Word 3": "Pink Friday"
+      "Main Word": "Brown Joel",
+      "Forbidden Word 1": "Ogechi",
+      "Forbidden Word 2": "BoyPee",
+      "Forbidden Word 3": "Hyce"
     },
     {
       "Card Number": 830,
       "ID": "NEW-CELEB-055",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "21 Savage",
-      "Forbidden Word 1": "Atlanta",
-      "Forbidden Word 2": "Savage Mode",
-      "Forbidden Word 3": "Knife Talk"
+      "Main Word": "BoyPee",
+      "Forbidden Word 1": "Ogechi",
+      "Forbidden Word 2": "Hyce",
+      "Forbidden Word 3": "Eastern pop"
     },
     {
       "Card Number": 831,
       "ID": "NEW-CELEB-056",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Kendrick Lamar",
-      "Forbidden Word 1": "Compton",
-      "Forbidden Word 2": "DAMN.",
-      "Forbidden Word 3": "Pulitzer"
+      "Main Word": "Muyeez",
+      "Forbidden Word 1": "Instagram",
+      "Forbidden Word 2": "Vibez Inc",
+      "Forbidden Word 3": "Seyi Vibez"
     },
     {
       "Card Number": 832,
       "ID": "NEW-CELEB-057",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "ZAYN",
-      "Forbidden Word 1": "One Direction",
-      "Forbidden Word 2": "Pillowtalk",
-      "Forbidden Word 3": "UK"
+      "Main Word": "Smur Lee",
+      "Forbidden Word 1": "Juju",
+      "Forbidden Word 2": "ODUMODUBLVCK",
+      "Forbidden Word 3": "Shallipopi"
     },
     {
       "Card Number": 833,
       "ID": "NEW-CELEB-058",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Quavo",
-      "Forbidden Word 1": "Migos",
-      "Forbidden Word 2": "Atlanta",
-      "Forbidden Word 3": "Offset"
+      "Main Word": "Spyro",
+      "Forbidden Word 1": "Who Is Your Guy",
+      "Forbidden Word 2": "Fine Girl",
+      "Forbidden Word 3": "Juju"
     },
     {
       "Card Number": 834,
       "ID": "NEW-CELEB-059",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Black Sherif",
-      "Forbidden Word 1": "Kwaku the Traveller",
-      "Forbidden Word 2": "Ghana",
-      "Forbidden Word 3": "Second Sermon"
+      "Main Word": "Cruel Santino",
+      "Forbidden Word 1": "Santi",
+      "Forbidden Word 2": "Rapid Fire",
+      "Forbidden Word 3": "Monster Boy"
     },
     {
       "Card Number": 835,
@@ -2394,50 +2396,50 @@
       "ID": "NEW-CELEB-064",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Kranium",
-      "Forbidden Word 1": "Nobody Has To Know",
-      "Forbidden Word 2": "Jamaica",
-      "Forbidden Word 3": "Reggae"
+      "Main Word": "Mavins",
+      "Forbidden Word 1": "Won Da Mo",
+      "Forbidden Word 2": "Don Jazzy",
+      "Forbidden Word 3": "record label"
     },
     {
       "Card Number": 840,
       "ID": "NEW-CELEB-065",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Busiswa",
-      "Forbidden Word 1": "South Africa",
-      "Forbidden Word 2": "Coming",
-      "Forbidden Word 3": "Rapper"
+      "Main Word": "Niniola",
+      "Forbidden Word 1": "Maradona",
+      "Forbidden Word 2": "Ginger",
+      "Forbidden Word 3": "Queen of Afro-house"
     },
     {
       "Card Number": 841,
       "ID": "NEW-CELEB-066",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Ms Banks",
-      "Forbidden Word 1": "Bop Daddy",
-      "Forbidden Word 2": "Falz",
-      "Forbidden Word 3": "London"
+      "Main Word": "Morravey",
+      "Forbidden Word 1": "Magician",
+      "Forbidden Word 2": "Timeless",
+      "Forbidden Word 3": "Davido"
     },
     {
       "Card Number": 842,
       "ID": "NEW-CELEB-067",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Stormzy",
-      "Forbidden Word 1": "Ghana",
-      "Forbidden Word 2": "Grime",
-      "Forbidden Word 3": "Vossi Bop"
+      "Main Word": "KieKie",
+      "Forbidden Word 1": "Jenifa",
+      "Forbidden Word 2": "Nollywood",
+      "Forbidden Word 3": "skit comedy"
     },
     {
       "Card Number": 843,
       "ID": "NEW-CELEB-068",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Projexx",
-      "Forbidden Word 1": "True Love",
-      "Forbidden Word 2": "Jamaica",
-      "Forbidden Word 3": "Wizkid"
+      "Main Word": "Emanuella",
+      "Forbidden Word 1": "Mark Angel",
+      "Forbidden Word 2": "comedy skit",
+      "Forbidden Word 3": "YouTube"
     },
     {
       "Card Number": 844,
@@ -2474,10 +2476,10 @@
       "ID": "NEW-CELEB-072",
       "Difficulty": "Medium",
       "Category": "Celebrities",
-      "Main Word": "Full Blown",
-      "Forbidden Word 1": "Black Sherif",
-      "Forbidden Word 2": "Ghana",
-      "Forbidden Word 3": "Kwaku"
+      "Main Word": "Rybeena",
+      "Forbidden Word 1": "Ogechi",
+      "Forbidden Word 2": "Vibez Inc",
+      "Forbidden Word 3": "street pop"
     },
     {
       "Card Number": 848,
@@ -4388,9 +4390,9 @@
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-035",
@@ -4478,144 +4480,144 @@
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-045",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-046",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-047",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-048",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-049",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-050",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-051",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-052",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-053",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-054",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-055",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-056",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-057",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-058",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-059",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-060",
@@ -4658,45 +4660,45 @@
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-065",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-066",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-067",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-068",
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-069",
@@ -4730,9 +4732,9 @@
       "type": "Celebrity",
       "year": null,
       "chartRank": null,
-      "artist": null,
-      "sourceStatus": "From research-list artists/collaborators",
-      "editorNote": "Strong candidate"
+      "artist": "Nigerian entertainment figure",
+      "sourceStatus": "Nigerian-focused replacement",
+      "editorNote": "Review familiarity"
     },
     {
       "id": "NEW-CELEB-073",
