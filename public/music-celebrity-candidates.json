@@ -1,14 +1,16 @@
 {
   "meta": {
     "count": 250,
-    "description": "Draft music and celebrity cards pulled from the 2020–2026 Nigerian song research list. Existing deck duplicates were removed.",
+    "description": "Draft music and celebrity cards selected for viral, party, and sing-along familiarity across current 2026 rotation and relevant 2020–2025 Nigerian music. Existing deck duplicates were removed.",
     "musicCount": 175,
     "celebrityCount": 75,
-    "updated": "2026-10-06",
+    "updated": "2026-10-07",
     "cluePass": "song-specific-editorial-v2",
     "cluePassNote": "Music clues were rewritten around track-specific artists, features, projects, hooks, scenes, and cultural associations; celebrity clues were tightened to use recognizable work and affiliations instead of generic role labels.",
     "celebrityFilter": "Nigerian-focused",
-    "celebrityFilterNote": "International collaborators were replaced with Nigerian artists and entertainment figures so the Celebrities category stays Nigeria-focused."
+    "celebrityFilterNote": "International collaborators were replaced with Nigerian artists and entertainment figures so the Celebrities category stays Nigeria-focused.",
+    "selectionPass": "viral-party-singalong-v1",
+    "selectionPassNote": "Music candidates were retuned around current Spotify and Apple Music rotation, TikTok/viral signals, party-playlist evidence, and recognizable 2020-2025 staples. Chart position is a signal, not the sole selection rule."
   },
   "cards": [
     {
@@ -66,10 +68,10 @@
       "ID": "NEW-MUSIC-006",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "it's over",
-      "Forbidden Word 1": "FOLA",
-      "Forbidden Word 2": "Bella Shmurda",
-      "Forbidden Word 3": "Zlatan"
+      "Main Word": "Energy",
+      "Forbidden Word 1": "Tiwa Savage",
+      "Forbidden Word 2": "Wande Coal",
+      "Forbidden Word 3": "Mavo"
     },
     {
       "Card Number": 607,
@@ -96,20 +98,20 @@
       "ID": "NEW-MUSIC-009",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "Diamonds",
-      "Forbidden Word 1": "Seyi Vibez",
-      "Forbidden Word 2": "precious stone",
-      "Forbidden Word 3": "shine"
+      "Main Word": "FRE$H",
+      "Forbidden Word 1": "Victony",
+      "Forbidden Word 2": "polished",
+      "Forbidden Word 3": "new wave"
     },
     {
       "Card Number": 610,
       "ID": "NEW-MUSIC-010",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "Pansa",
-      "Forbidden Word 1": "Seyi Vibez",
-      "Forbidden Word 2": "bounce",
-      "Forbidden Word 3": "street-pop"
+      "Main Word": "Dance",
+      "Forbidden Word 1": "Fave",
+      "Forbidden Word 2": "groove",
+      "Forbidden Word 3": "move your body"
     },
     {
       "Card Number": 611,
@@ -146,10 +148,10 @@
       "ID": "NEW-MUSIC-014",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "GOD",
-      "Forbidden Word 1": "Seyi Vibez",
-      "Forbidden Word 2": "prayer",
-      "Forbidden Word 3": "blessing"
+      "Main Word": "Heavenly Race",
+      "Forbidden Word 1": "Boy Spyce",
+      "Forbidden Word 2": "Ajebo Hustlers",
+      "Forbidden Word 3": "marathon"
     },
     {
       "Card Number": 615,
@@ -196,60 +198,60 @@
       "ID": "NEW-MUSIC-019",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "attention!",
-      "Forbidden Word 1": "FOLA",
-      "Forbidden Word 2": "notice me",
-      "Forbidden Word 3": "exclamation mark"
+      "Main Word": "State Of Mind",
+      "Forbidden Word 1": "DJ Tunez",
+      "Forbidden Word 2": "Wizkid",
+      "Forbidden Word 3": "mental space"
     },
     {
       "Card Number": 620,
       "ID": "NEW-MUSIC-020",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "IMALI",
-      "Forbidden Word 1": "Fireboy DML",
-      "Forbidden Word 2": "JAZZWRLD",
-      "Forbidden Word 3": "Thukuthela"
+      "Main Word": "Hello",
+      "Forbidden Word 1": "TML Vibez",
+      "Forbidden Word 2": "Victony",
+      "Forbidden Word 3": "greeting"
     },
     {
       "Card Number": 621,
       "ID": "NEW-MUSIC-021",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "El Jaja",
-      "Forbidden Word 1": "Seyi Vibez",
-      "Forbidden Word 2": "Opobo",
-      "Forbidden Word 3": "warrior"
+      "Main Word": "Jembe",
+      "Forbidden Word 1": "Famous Pluto",
+      "Forbidden Word 2": "Mavo",
+      "Forbidden Word 3": "percussion"
     },
     {
       "Card Number": 622,
       "ID": "NEW-MUSIC-022",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Alubarika",
-      "Forbidden Word 1": "Seyi Vibez",
-      "Forbidden Word 2": "blessing",
-      "Forbidden Word 3": "prayer"
+      "Main Word": "Aura Salad",
+      "Forbidden Word 1": "Mavo",
+      "Forbidden Word 2": "SSSoundGawd",
+      "Forbidden Word 3": "energy field"
     },
     {
       "Card Number": 623,
       "ID": "NEW-MUSIC-023",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Melanin",
-      "Forbidden Word 1": "Seyi Vibez",
-      "Forbidden Word 2": "skin tone",
-      "Forbidden Word 3": "beauty"
+      "Main Word": "Tap Am",
+      "Forbidden Word 1": "Famous Pluto",
+      "Forbidden Word 2": "hit it",
+      "Forbidden Word 3": "street command"
     },
     {
       "Card Number": 624,
       "ID": "NEW-MUSIC-024",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Akpan Akpari",
-      "Forbidden Word 1": "Seyi Vibez",
-      "Forbidden Word 2": "Calabar",
-      "Forbidden Word 3": "Efik"
+      "Main Word": "Tornado",
+      "Forbidden Word 1": "Ayra Starr",
+      "Forbidden Word 2": "storm",
+      "Forbidden Word 3": "whirlwind"
     },
     {
       "Card Number": 625,
@@ -266,10 +268,10 @@
       "ID": "NEW-MUSIC-026",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Already Falling",
-      "Forbidden Word 1": "Davido",
-      "Forbidden Word 2": "love song",
-      "Forbidden Word 3": "falling in love"
+      "Main Word": "16",
+      "Forbidden Word 1": "BNXN",
+      "Forbidden Word 2": "routine",
+      "Forbidden Word 3": "focus"
     },
     {
       "Card Number": 627,
@@ -286,10 +288,10 @@
       "ID": "NEW-MUSIC-028",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Alafia",
-      "Forbidden Word 1": "Seyi Vibez",
-      "Forbidden Word 2": "peace",
-      "Forbidden Word 3": "Yoruba"
+      "Main Word": "On The Road",
+      "Forbidden Word 1": "Davido",
+      "Forbidden Word 2": "journey",
+      "Forbidden Word 3": "driving"
     },
     {
       "Card Number": 629,
@@ -316,10 +318,10 @@
       "ID": "NEW-MUSIC-031",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Swaguu",
-      "Forbidden Word 1": "Seyi Vibez",
-      "Forbidden Word 2": "Quavo",
-      "Forbidden Word 3": "Migos"
+      "Main Word": "Lifestyle (YA MAN)",
+      "Forbidden Word 1": "Ayo Maff",
+      "Forbidden Word 2": "soft life",
+      "Forbidden Word 3": "way of living"
     },
     {
       "Card Number": 632,
@@ -346,10 +348,10 @@
       "ID": "NEW-MUSIC-034",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "MCBH",
-      "Forbidden Word 1": "Asake",
-      "Forbidden Word 2": "YBNL",
-      "Forbidden Word 3": "initials"
+      "Main Word": "MOTION SICKNESS",
+      "Forbidden Word 1": "ODUMODUBLVCK",
+      "Forbidden Word 2": "Zlatan",
+      "Forbidden Word 3": "cars"
     },
     {
       "Card Number": 635,
@@ -366,10 +368,10 @@
       "ID": "NEW-MUSIC-036",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "CHE",
-      "Forbidden Word 1": "Shoday",
-      "Forbidden Word 2": "Magixx",
-      "Forbidden Word 3": "three letters"
+      "Main Word": "Don't Leave",
+      "Forbidden Word 1": "Fameboy BL",
+      "Forbidden Word 2": "Berri-Tiga",
+      "Forbidden Word 3": "stay"
     },
     {
       "Card Number": 637,
@@ -386,20 +388,20 @@
       "ID": "NEW-MUSIC-038",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Oble (Original)",
-      "Forbidden Word 1": "Seyi Vibez",
-      "Forbidden Word 2": "Vibez Inc",
-      "Forbidden Word 3": "original version"
+      "Main Word": "Gimme Dat Ting",
+      "Forbidden Word 1": "Davido",
+      "Forbidden Word 2": "NO11",
+      "Forbidden Word 3": "request"
     },
     {
       "Card Number": 639,
       "ID": "NEW-MUSIC-039",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Big Bum Bum",
-      "Forbidden Word 1": "Kidd Carder",
-      "Forbidden Word 2": "Mavo",
-      "Forbidden Word 3": "Ice Cream"
+      "Main Word": "Dai Dai",
+      "Forbidden Word 1": "Shakira",
+      "Forbidden Word 2": "Burna Boy",
+      "Forbidden Word 3": "slowly"
     },
     {
       "Card Number": 640,
@@ -426,20 +428,20 @@
       "ID": "NEW-MUSIC-042",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Diamond or Gold",
-      "Forbidden Word 1": "Tml Vibez",
-      "Forbidden Word 2": "jewellery",
-      "Forbidden Word 3": "precious metal"
+      "Main Word": "Nakupenda",
+      "Forbidden Word 1": "TxC",
+      "Forbidden Word 2": "Davido",
+      "Forbidden Word 3": "Shoday"
     },
     {
       "Card Number": 643,
       "ID": "NEW-MUSIC-043",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "ITALAWA",
-      "Forbidden Word 1": "Zlatan",
-      "Forbidden Word 2": "street slang",
-      "Forbidden Word 3": "Yoruba"
+      "Main Word": "Omonigho",
+      "Forbidden Word 1": "ICent",
+      "Forbidden Word 2": "Edo name",
+      "Forbidden Word 3": "person's name"
     },
     {
       "Card Number": 644,
@@ -476,10 +478,10 @@
       "ID": "NEW-MUSIC-047",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Find My Babe",
-      "Forbidden Word 1": "Mavo",
-      "Forbidden Word 2": "search",
-      "Forbidden Word 3": "romance"
+      "Main Word": "Colorado",
+      "Forbidden Word 1": "Johnny Drille",
+      "Forbidden Word 2": "Ayra Starr",
+      "Forbidden Word 3": "Young Jonn"
     },
     {
       "Card Number": 648,
@@ -586,10 +588,10 @@
       "ID": "NEW-MUSIC-058",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "lost",
-      "Forbidden Word 1": "FOLA",
-      "Forbidden Word 2": "Kizz Daniel",
-      "Forbidden Word 3": "missing"
+      "Main Word": "Joy Is Coming",
+      "Forbidden Word 1": "Fido",
+      "Forbidden Word 2": "hope",
+      "Forbidden Word 3": "good news"
     },
     {
       "Card Number": 659,
@@ -606,10 +608,10 @@
       "ID": "NEW-MUSIC-060",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "WHY LOVE",
-      "Forbidden Word 1": "Asake",
-      "Forbidden Word 2": "YBNL",
-      "Forbidden Word 3": "romance"
+      "Main Word": "My Darling",
+      "Forbidden Word 1": "Chella",
+      "Forbidden Word 2": "sweetheart",
+      "Forbidden Word 3": "Shazam"
     },
     {
       "Card Number": 661,
@@ -716,10 +718,10 @@
       "ID": "NEW-MUSIC-071",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "you",
-      "Forbidden Word 1": "FOLA",
-      "Forbidden Word 2": "second person",
-      "Forbidden Word 3": "romance"
+      "Main Word": "Wasiu Ayinde",
+      "Forbidden Word 1": "BhadBoi OML",
+      "Forbidden Word 2": "Fuji legend",
+      "Forbidden Word 3": "summer"
     },
     {
       "Card Number": 672,
@@ -816,20 +818,20 @@
       "ID": "NEW-MUSIC-081",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Money",
-      "Forbidden Word 1": "Teni",
-      "Forbidden Word 2": "cash",
-      "Forbidden Word 3": "wealth"
+      "Main Word": "TaTaTa",
+      "Forbidden Word 1": "Burna Boy",
+      "Forbidden Word 2": "Travis Scott",
+      "Forbidden Word 3": "three syllables"
     },
     {
       "Card Number": 682,
       "ID": "NEW-MUSIC-082",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Na Scra",
-      "Forbidden Word 1": "Famous Pluto",
-      "Forbidden Word 2": "scrap",
-      "Forbidden Word 3": "street slang"
+      "Main Word": "Ameno Amapiano (Remix)",
+      "Forbidden Word 1": "Goya Menor",
+      "Forbidden Word 2": "Nektunez",
+      "Forbidden Word 3": "You Wanna Bamba"
     },
     {
       "Card Number": 683,
@@ -1046,20 +1048,20 @@
       "ID": "NEW-MUSIC-104",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Metaverse",
-      "Forbidden Word 1": "Olamide",
-      "Forbidden Word 2": "virtual world",
-      "Forbidden Word 3": "YBNL"
+      "Main Word": "Jowo",
+      "Forbidden Word 1": "Davido",
+      "Forbidden Word 2": "A Better Time",
+      "Forbidden Word 3": "Yoruba"
     },
     {
       "Card Number": 705,
       "ID": "NEW-MUSIC-105",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Too Busy To Be Bae",
-      "Forbidden Word 1": "Kizz Daniel",
-      "Forbidden Word 2": "dating",
-      "Forbidden Word 3": "time"
+      "Main Word": "No Wahala",
+      "Forbidden Word 1": "1da Banton",
+      "Forbidden Word 2": "problem",
+      "Forbidden Word 3": "street-pop"
     },
     {
       "Card Number": 706,
@@ -2562,10 +2564,10 @@
       "id": "NEW-MUSIC-006",
       "type": "Music",
       "year": 2026,
-      "chartRank": 6,
-      "artist": "FOLA, Bella Shmurda & Zlatan",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Tiwa Savage, Wande Coal & Mavo",
+      "sourceStatus": "current_party_signal",
+      "editorNote": "Current-party editorial pick; recognizable chorus test"
     },
     {
       "id": "NEW-MUSIC-007",
@@ -2589,19 +2591,19 @@
       "id": "NEW-MUSIC-009",
       "type": "Music",
       "year": 2026,
-      "chartRank": 9,
-      "artist": "Seyi Vibez",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Victony",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; review the hook with local players"
     },
     {
       "id": "NEW-MUSIC-010",
       "type": "Music",
       "year": 2026,
-      "chartRank": 10,
-      "artist": "Seyi Vibez",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Fave",
+      "sourceStatus": "current_party_signal",
+      "editorNote": "Current-party editorial pick; dance-floor recognition test"
     },
     {
       "id": "NEW-MUSIC-011",
@@ -2634,10 +2636,10 @@
       "id": "NEW-MUSIC-014",
       "type": "Music",
       "year": 2026,
-      "chartRank": 14,
-      "artist": "Seyi Vibez",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Boy Spyce & Ajebo Hustlers",
+      "sourceStatus": "current_party_signal",
+      "editorNote": "Current-party editorial pick; easy artist-and-image clues"
     },
     {
       "id": "NEW-MUSIC-015",
@@ -2679,55 +2681,55 @@
       "id": "NEW-MUSIC-019",
       "type": "Music",
       "year": 2026,
-      "chartRank": 19,
-      "artist": "FOLA",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "DJ Tunez & Wizkid",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current rotation pick; title is recognizable without relying on lyrics"
     },
     {
       "id": "NEW-MUSIC-020",
       "type": "Music",
       "year": 2026,
-      "chartRank": 20,
-      "artist": "Fireboy DML, JAZZWRLD & Thukuthela",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "TML Vibez & Victony",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current rotation pick; simple sing-along title"
     },
     {
       "id": "NEW-MUSIC-021",
       "type": "Music",
       "year": 2026,
-      "chartRank": 21,
-      "artist": "Seyi Vibez",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Famous Pluto & Mavo",
+      "sourceStatus": "viral_amapiano_signal",
+      "editorNote": "Amapiano/TikTok playlist signal; test street familiarity"
     },
     {
       "id": "NEW-MUSIC-022",
       "type": "Music",
       "year": 2026,
-      "chartRank": 22,
-      "artist": "Seyi Vibez",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Mavo & SSSoundGawd",
+      "sourceStatus": "viral_amapiano_signal",
+      "editorNote": "Amapiano/TikTok playlist signal; test whether the title is already natural in play"
     },
     {
       "id": "NEW-MUSIC-023",
       "type": "Music",
       "year": 2026,
-      "chartRank": 23,
-      "artist": "Seyi Vibez",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Famous Pluto",
+      "sourceStatus": "viral_amapiano_signal",
+      "editorNote": "Current viral/street signal; short title with a physical cue"
     },
     {
       "id": "NEW-MUSIC-024",
       "type": "Music",
       "year": 2026,
-      "chartRank": 24,
-      "artist": "Seyi Vibez",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Ayra Starr",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; artist-and-image clue set"
     },
     {
       "id": "NEW-MUSIC-025",
@@ -2742,10 +2744,10 @@
       "id": "NEW-MUSIC-026",
       "type": "Music",
       "year": 2026,
-      "chartRank": 26,
-      "artist": "Davido",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "BNXN",
+      "sourceStatus": "current_apple_music_signal",
+      "editorNote": "Fresh Apple Music/current-rotation pick; review after it has had more party time"
     },
     {
       "id": "NEW-MUSIC-027",
@@ -2760,10 +2762,10 @@
       "id": "NEW-MUSIC-028",
       "type": "Music",
       "year": 2026,
-      "chartRank": 28,
-      "artist": "Seyi Vibez",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Davido",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; familiar artist plus travel image"
     },
     {
       "id": "NEW-MUSIC-029",
@@ -2787,10 +2789,10 @@
       "id": "NEW-MUSIC-031",
       "type": "Music",
       "year": 2026,
-      "chartRank": 31,
-      "artist": "Seyi Vibez ft. Quavo",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Ayo Maff",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; lifestyle phrase is playable without giving away the title"
     },
     {
       "id": "NEW-MUSIC-032",
@@ -2814,10 +2816,10 @@
       "id": "NEW-MUSIC-034",
       "type": "Music",
       "year": 2026,
-      "chartRank": 34,
-      "artist": "Asake",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "ODUMODUBLVCK & Zlatan",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; street-rap and movement clues"
     },
     {
       "id": "NEW-MUSIC-035",
@@ -2832,10 +2834,10 @@
       "id": "NEW-MUSIC-036",
       "type": "Music",
       "year": 2026,
-      "chartRank": 36,
-      "artist": "Shoday ft. Magixx",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Fameboy BL & Berri-Tiga",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; relationship hook and two-artist clue set"
     },
     {
       "id": "NEW-MUSIC-037",
@@ -2850,19 +2852,19 @@
       "id": "NEW-MUSIC-038",
       "type": "Music",
       "year": 2026,
-      "chartRank": 39,
-      "artist": "Seyi Vibez",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Davido & NO11",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; party-request phrasing"
     },
     {
       "id": "NEW-MUSIC-039",
       "type": "Music",
       "year": 2026,
-      "chartRank": 41,
-      "artist": "Kidd Carder & Mavo",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Shakira & Burna Boy",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; cross-border dance record"
     },
     {
       "id": "NEW-MUSIC-040",
@@ -2886,19 +2888,19 @@
       "id": "NEW-MUSIC-042",
       "type": "Music",
       "year": 2026,
-      "chartRank": 44,
-      "artist": "Tml Vibez",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "TxC, Davido, Shoday, Scotts Maphuma & Zlatan",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; amapiano collaboration"
     },
     {
       "id": "NEW-MUSIC-043",
       "type": "Music",
       "year": 2026,
-      "chartRank": 46,
-      "artist": "Zlatan",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "ICent",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; review local-name familiarity"
     },
     {
       "id": "NEW-MUSIC-044",
@@ -2931,10 +2933,10 @@
       "id": "NEW-MUSIC-047",
       "type": "Music",
       "year": 2026,
-      "chartRank": 50,
-      "artist": "Mavo",
-      "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Johnny Drille, Ayra Starr & Young Jonn",
+      "sourceStatus": "current_rotation_signal",
+      "editorNote": "Current Spotify rotation; three-artist recognition clue set"
     },
     {
       "id": "NEW-MUSIC-048",
@@ -3030,10 +3032,10 @@
       "id": "NEW-MUSIC-058",
       "type": "Music",
       "year": 2025,
-      "chartRank": 12,
-      "artist": "FOLA & Kizz Daniel",
-      "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Fido",
+      "sourceStatus": "viral_2025_signal",
+      "editorNote": "Viral 2025 anthem; strong chorus and positive sing-along test"
     },
     {
       "id": "NEW-MUSIC-059",
@@ -3048,10 +3050,10 @@
       "id": "NEW-MUSIC-060",
       "type": "Music",
       "year": 2025,
-      "chartRank": 16,
-      "artist": "Asake",
-      "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Chella",
+      "sourceStatus": "viral_2025_signal",
+      "editorNote": "Viral 2025/TikTok-era breakout; test title recognition"
     },
     {
       "id": "NEW-MUSIC-061",
@@ -3147,10 +3149,10 @@
       "id": "NEW-MUSIC-071",
       "type": "Music",
       "year": 2025,
-      "chartRank": 28,
-      "artist": "FOLA",
-      "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "BhadBoi OML",
+      "sourceStatus": "viral_2025_signal",
+      "editorNote": "TikTok Nigeria summer-2025 signal; culturally specific clue set"
     },
     {
       "id": "NEW-MUSIC-072",
@@ -3237,19 +3239,19 @@
       "id": "NEW-MUSIC-081",
       "type": "Music",
       "year": 2025,
-      "chartRank": 39,
-      "artist": "Teni",
-      "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Burna Boy feat. Travis Scott",
+      "sourceStatus": "viral_2025_signal",
+      "editorNote": "2025 crossover pick; recognizable artists and rhythm clue"
     },
     {
       "id": "NEW-MUSIC-082",
       "type": "Music",
-      "year": 2025,
-      "chartRank": 40,
-      "artist": "Famous Pluto",
-      "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2022,
+      "chartRank": null,
+      "artist": "Goya Menor & Nektunez",
+      "sourceStatus": "viral_amapiano_signal",
+      "editorNote": "Amapiano/TikTok-era crossover; dance-challenge memory"
     },
     {
       "id": "NEW-MUSIC-083",
@@ -3443,20 +3445,20 @@
     {
       "id": "NEW-MUSIC-104",
       "type": "Music",
-      "year": 2024,
-      "chartRank": 29,
-      "artist": "Olamide",
-      "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2020,
+      "chartRank": null,
+      "artist": "Davido",
+      "sourceStatus": "2020_party_staple",
+      "editorNote": "2020 party-era staple; simple title and memorable chorus"
     },
     {
       "id": "NEW-MUSIC-105",
       "type": "Music",
-      "year": 2024,
-      "chartRank": 30,
-      "artist": "Kizz Daniel",
-      "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2022,
+      "chartRank": null,
+      "artist": "1da Banton",
+      "sourceStatus": "viral_party_staple",
+      "editorNote": "Party/street-pop staple; everyday phrase players can act out"
     },
     {
       "id": "NEW-MUSIC-106",
