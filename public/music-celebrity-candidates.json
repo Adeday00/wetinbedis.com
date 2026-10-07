@@ -10,7 +10,8 @@
     "celebrityFilter": "Nigerian-focused",
     "celebrityFilterNote": "International collaborators were replaced with Nigerian artists and entertainment figures so the Celebrities category stays Nigeria-focused.",
     "selectionPass": "viral-party-singalong-v1",
-    "selectionPassNote": "Music candidates were retuned around current Spotify and Apple Music rotation, TikTok/viral signals, party-playlist evidence, and recognizable 2020-2025 staples. Chart position is a signal, not the sole selection rule."
+    "selectionPassNote": "Music candidates were retuned around current Spotify and Apple Music rotation, TikTok/viral signals, party-playlist evidence, and recognizable 2020-2025 staples. Chart position is a signal, not the sole selection rule.",
+    "viralPoolPolicy": "Viral/current candidates are the main pool; niche_under_review cards remain visible for community review and promotion decisions."
   },
   "cards": [
     {
@@ -548,10 +549,10 @@
       "ID": "NEW-MUSIC-054",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "PITY THIS BOY",
-      "Forbidden Word 1": "ODUMODUBLVCK",
-      "Forbidden Word 2": "Victony",
-      "Forbidden Word 3": "boy"
+      "Main Word": "We 2 Fly",
+      "Forbidden Word 1": "Monochrome",
+      "Forbidden Word 2": "S1orDie",
+      "Forbidden Word 3": "Abuja underground"
     },
     {
       "Card Number": 655,
@@ -688,10 +689,10 @@
       "ID": "NEW-MUSIC-068",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Get Better",
-      "Forbidden Word 1": "Zlatan",
-      "Forbidden Word 2": "FOLA",
-      "Forbidden Word 3": "improvement"
+      "Main Word": "Maye",
+      "Forbidden Word 1": "Zaylevelten",
+      "Forbidden Word 2": "Fresh Finds Africa",
+      "Forbidden Word 3": "Tenski"
     },
     {
       "Card Number": 669,
@@ -1188,10 +1189,10 @@
       "ID": "NEW-MUSIC-118",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Basquiat",
-      "Forbidden Word 1": "Asake",
-      "Forbidden Word 2": "New York artist",
-      "Forbidden Word 3": "painting"
+      "Main Word": "Guide Pass",
+      "Forbidden Word 1": "Zaylevelten",
+      "Forbidden Word 2": "breakthrough mixtape",
+      "Forbidden Word 3": "Lagos"
     },
     {
       "Card Number": 719,
@@ -1478,10 +1479,10 @@
       "ID": "NEW-MUSIC-147",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "High Way",
-      "Forbidden Word 1": "DJ Kaywise",
-      "Forbidden Word 2": "Phyno",
-      "Forbidden Word 3": "road"
+      "Main Word": "HOW FAR",
+      "Forbidden Word 1": "NO11",
+      "Forbidden Word 2": "Ayjay Bobo",
+      "Forbidden Word 3": "Monochrome"
     },
     {
       "Card Number": 748,
@@ -1548,10 +1549,10 @@
       "ID": "NEW-MUSIC-154",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Running (To You)",
-      "Forbidden Word 1": "Chike",
-      "Forbidden Word 2": "distance",
-      "Forbidden Word 3": "romance"
+      "Main Word": "Omo To Sexy",
+      "Forbidden Word 1": "BLNDE",
+      "Forbidden Word 2": "Tiwa Savage",
+      "Forbidden Word 3": "remix"
     },
     {
       "Card Number": 755,
@@ -1598,10 +1599,10 @@
       "ID": "NEW-MUSIC-159",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Focus",
-      "Forbidden Word 1": "Joeboy",
-      "Forbidden Word 2": "Young Legend",
-      "Forbidden Word 3": "concentration"
+      "Main Word": "MONEY CONSTANT",
+      "Forbidden Word 1": "Mavo",
+      "Forbidden Word 2": "Wizkid",
+      "Forbidden Word 3": "cash"
     },
     {
       "Card Number": 760,
@@ -1648,10 +1649,10 @@
       "ID": "NEW-MUSIC-164",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "Abule",
-      "Forbidden Word 1": "Patoranking",
-      "Forbidden Word 2": "village",
-      "Forbidden Word 3": "Three"
+      "Main Word": "Tumo Weto",
+      "Forbidden Word 1": "Mavo",
+      "Forbidden Word 2": "underground favorite",
+      "Forbidden Word 3": "Edo"
     },
     {
       "Card Number": 765,
@@ -1678,50 +1679,50 @@
       "ID": "NEW-MUSIC-167",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "Something Different",
-      "Forbidden Word 1": "Adekunle Gold",
-      "Forbidden Word 2": "AG Baby",
-      "Forbidden Word 3": "unusual"
+      "Main Word": "BODY (danz)",
+      "Forbidden Word 1": "CKay",
+      "Forbidden Word 2": "Mavo",
+      "Forbidden Word 3": "number one"
     },
     {
       "Card Number": 768,
       "ID": "NEW-MUSIC-168",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "Vibration",
-      "Forbidden Word 1": "Fireboy DML",
-      "Forbidden Word 2": "Apollo",
-      "Forbidden Word 3": "dance"
+      "Main Word": "Ikeja (No Go Thief)",
+      "Forbidden Word 1": "Danpapa GTA",
+      "Forbidden Word 2": "Lagos",
+      "Forbidden Word 3": "social media"
     },
     {
       "Card Number": 769,
       "ID": "NEW-MUSIC-169",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "Bad Influence",
-      "Forbidden Word 1": "Omah Lay",
-      "Forbidden Word 2": "boy alone",
-      "Forbidden Word 3": "toxic"
+      "Main Word": "GLACIER GIRL",
+      "Forbidden Word 1": "scottyolorin",
+      "Forbidden Word 2": "DaveTheOracle",
+      "Forbidden Word 3": "Kobilou"
     },
     {
       "Card Number": 770,
       "ID": "NEW-MUSIC-170",
       "Difficulty": "Easy",
       "Category": "Music",
-      "Main Word": "Lo Lo",
-      "Forbidden Word 1": "Omah Lay",
-      "Forbidden Word 2": "boy alone",
-      "Forbidden Word 3": "refrain"
+      "Main Word": "Wuse Tu",
+      "Forbidden Word 1": "Zaylevelten",
+      "Forbidden Word 2": "Mavo",
+      "Forbidden Word 3": "Abuja"
     },
     {
       "Card Number": 771,
       "ID": "NEW-MUSIC-171",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Woman",
-      "Forbidden Word 1": "Rema",
-      "Forbidden Word 2": "Mavin",
-      "Forbidden Word 3": "ladies"
+      "Main Word": "Muzz",
+      "Forbidden Word 1": "Zaylevelten",
+      "Forbidden Word 2": "rage rap",
+      "Forbidden Word 3": "2026 single"
     },
     {
       "Card Number": 772,
@@ -1738,30 +1739,30 @@
       "ID": "NEW-MUSIC-173",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Beamer (Bad Boys)",
-      "Forbidden Word 1": "Rema",
-      "Forbidden Word 2": "Rvssian",
-      "Forbidden Word 3": "car"
+      "Main Word": "COMPUTER",
+      "Forbidden Word 1": "Monochrome",
+      "Forbidden Word 2": "Abuja",
+      "Forbidden Word 3": "fashion"
     },
     {
       "Card Number": 774,
       "ID": "NEW-MUSIC-174",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Betty Butter",
-      "Forbidden Word 1": "Mayorkun",
-      "Forbidden Word 2": "Davido",
-      "Forbidden Word 3": "sweetheart"
+      "Main Word": "Tease Me",
+      "Forbidden Word 1": "Zaylevelten",
+      "Forbidden Word 2": "B4SaveMe",
+      "Forbidden Word 3": "September"
     },
     {
       "Card Number": 775,
       "ID": "NEW-MUSIC-175",
       "Difficulty": "Medium",
       "Category": "Music",
-      "Main Word": "Wonderful",
-      "Forbidden Word 1": "Burna Boy",
-      "Forbidden Word 2": "African Giant",
-      "Forbidden Word 3": "amazing"
+      "Main Word": "Escaladizzy",
+      "Forbidden Word 1": "Mavo",
+      "Forbidden Word 2": "Wave$tar",
+      "Forbidden Word 3": "izzy"
     },
     {
       "Card Number": 776,
@@ -2522,7 +2523,8 @@
       "chartRank": 1,
       "artist": "Seyi Vibez",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-002",
@@ -2531,7 +2533,8 @@
       "chartRank": 2,
       "artist": "Seyi Vibez",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-003",
@@ -2540,7 +2543,8 @@
       "chartRank": 3,
       "artist": "Rema",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-004",
@@ -2549,7 +2553,8 @@
       "chartRank": 4,
       "artist": "Davido, Mayorkun & FOLA",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-005",
@@ -2558,7 +2563,8 @@
       "chartRank": 5,
       "artist": "Seyi Vibez",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-006",
@@ -2567,7 +2573,8 @@
       "chartRank": null,
       "artist": "Tiwa Savage, Wande Coal & Mavo",
       "sourceStatus": "current_party_signal",
-      "editorNote": "Current-party editorial pick; recognizable chorus test"
+      "editorNote": "Current-party editorial pick; recognizable chorus test",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-007",
@@ -2576,7 +2583,8 @@
       "chartRank": 7,
       "artist": "Kizz Daniel ft. Young Jonn, Krizbeatz & Wave Choir",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-008",
@@ -2585,7 +2593,8 @@
       "chartRank": 8,
       "artist": "Seyi Vibez",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-009",
@@ -2594,7 +2603,8 @@
       "chartRank": null,
       "artist": "Victony",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; review the hook with local players"
+      "editorNote": "Current Spotify rotation; review the hook with local players",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-010",
@@ -2603,7 +2613,8 @@
       "chartRank": null,
       "artist": "Fave",
       "sourceStatus": "current_party_signal",
-      "editorNote": "Current-party editorial pick; dance-floor recognition test"
+      "editorNote": "Current-party editorial pick; dance-floor recognition test",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-011",
@@ -2612,7 +2623,8 @@
       "chartRank": 11,
       "artist": "Asake",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-012",
@@ -2621,7 +2633,8 @@
       "chartRank": 12,
       "artist": "Blaqbonez",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-013",
@@ -2630,7 +2643,8 @@
       "chartRank": 13,
       "artist": "BNXN",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-014",
@@ -2639,7 +2653,8 @@
       "chartRank": null,
       "artist": "Boy Spyce & Ajebo Hustlers",
       "sourceStatus": "current_party_signal",
-      "editorNote": "Current-party editorial pick; easy artist-and-image clues"
+      "editorNote": "Current-party editorial pick; easy artist-and-image clues",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-015",
@@ -2648,7 +2663,8 @@
       "chartRank": 15,
       "artist": "Ayo Maff & Zinoleesky",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-016",
@@ -2657,7 +2673,8 @@
       "chartRank": 16,
       "artist": "Ayra Starr ft. ZAYN",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-017",
@@ -2666,7 +2683,8 @@
       "chartRank": 17,
       "artist": "Rema",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-018",
@@ -2675,7 +2693,8 @@
       "chartRank": 18,
       "artist": "Asake",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-019",
@@ -2684,7 +2703,8 @@
       "chartRank": null,
       "artist": "DJ Tunez & Wizkid",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current rotation pick; title is recognizable without relying on lyrics"
+      "editorNote": "Current rotation pick; title is recognizable without relying on lyrics",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-020",
@@ -2693,7 +2713,8 @@
       "chartRank": null,
       "artist": "TML Vibez & Victony",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current rotation pick; simple sing-along title"
+      "editorNote": "Current rotation pick; simple sing-along title",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-021",
@@ -2702,7 +2723,8 @@
       "chartRank": null,
       "artist": "Famous Pluto & Mavo",
       "sourceStatus": "viral_amapiano_signal",
-      "editorNote": "Amapiano/TikTok playlist signal; test street familiarity"
+      "editorNote": "Amapiano/TikTok playlist signal; test street familiarity",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-022",
@@ -2711,7 +2733,8 @@
       "chartRank": null,
       "artist": "Mavo & SSSoundGawd",
       "sourceStatus": "viral_amapiano_signal",
-      "editorNote": "Amapiano/TikTok playlist signal; test whether the title is already natural in play"
+      "editorNote": "Amapiano/TikTok playlist signal; test whether the title is already natural in play",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-023",
@@ -2720,7 +2743,8 @@
       "chartRank": null,
       "artist": "Famous Pluto",
       "sourceStatus": "viral_amapiano_signal",
-      "editorNote": "Current viral/street signal; short title with a physical cue"
+      "editorNote": "Current viral/street signal; short title with a physical cue",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-024",
@@ -2729,7 +2753,8 @@
       "chartRank": null,
       "artist": "Ayra Starr",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; artist-and-image clue set"
+      "editorNote": "Current Spotify rotation; artist-and-image clue set",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-025",
@@ -2738,7 +2763,8 @@
       "chartRank": 25,
       "artist": "Young Jonn",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-026",
@@ -2747,7 +2773,8 @@
       "chartRank": null,
       "artist": "BNXN",
       "sourceStatus": "current_apple_music_signal",
-      "editorNote": "Fresh Apple Music/current-rotation pick; review after it has had more party time"
+      "editorNote": "Fresh Apple Music/current-rotation pick; review after it has had more party time",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-027",
@@ -2756,7 +2783,8 @@
       "chartRank": 27,
       "artist": "Hotkid ft. Zlatan",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-028",
@@ -2765,7 +2793,8 @@
       "chartRank": null,
       "artist": "Davido",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; familiar artist plus travel image"
+      "editorNote": "Current Spotify rotation; familiar artist plus travel image",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-029",
@@ -2774,7 +2803,8 @@
       "chartRank": 29,
       "artist": "BNXN & Sarz",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-030",
@@ -2783,7 +2813,8 @@
       "chartRank": 30,
       "artist": "Victony & FOLA",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-031",
@@ -2792,7 +2823,8 @@
       "chartRank": null,
       "artist": "Ayo Maff",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; lifestyle phrase is playable without giving away the title"
+      "editorNote": "Current Spotify rotation; lifestyle phrase is playable without giving away the title",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-032",
@@ -2801,7 +2833,8 @@
       "chartRank": 32,
       "artist": "BNXN ft. Asake",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-033",
@@ -2810,7 +2843,8 @@
       "chartRank": 33,
       "artist": "Victony",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-034",
@@ -2819,7 +2853,8 @@
       "chartRank": null,
       "artist": "ODUMODUBLVCK & Zlatan",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; street-rap and movement clues"
+      "editorNote": "Current Spotify rotation; street-rap and movement clues",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-035",
@@ -2828,7 +2863,8 @@
       "chartRank": 35,
       "artist": "Blaqbonez ft. Asake",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-036",
@@ -2837,7 +2873,8 @@
       "chartRank": null,
       "artist": "Fameboy BL & Berri-Tiga",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; relationship hook and two-artist clue set"
+      "editorNote": "Current Spotify rotation; relationship hook and two-artist clue set",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-037",
@@ -2846,7 +2883,8 @@
       "chartRank": 38,
       "artist": "FOLA & Ayra Starr",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-038",
@@ -2855,7 +2893,8 @@
       "chartRank": null,
       "artist": "Davido & NO11",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; party-request phrasing"
+      "editorNote": "Current Spotify rotation; party-request phrasing",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-039",
@@ -2864,7 +2903,8 @@
       "chartRank": null,
       "artist": "Shakira & Burna Boy",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; cross-border dance record"
+      "editorNote": "Current Spotify rotation; cross-border dance record",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-040",
@@ -2873,7 +2913,8 @@
       "chartRank": 42,
       "artist": "Davido, JAZZWRLD & GL_Ceejay",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-041",
@@ -2882,7 +2923,8 @@
       "chartRank": 43,
       "artist": "Shoday",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-042",
@@ -2891,7 +2933,8 @@
       "chartRank": null,
       "artist": "TxC, Davido, Shoday, Scotts Maphuma & Zlatan",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; amapiano collaboration"
+      "editorNote": "Current Spotify rotation; amapiano collaboration",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-043",
@@ -2900,7 +2943,8 @@
       "chartRank": null,
       "artist": "ICent",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; review local-name familiarity"
+      "editorNote": "Current Spotify rotation; review local-name familiarity",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-044",
@@ -2909,7 +2953,8 @@
       "chartRank": 47,
       "artist": "Mayorkun",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-045",
@@ -2918,7 +2963,8 @@
       "chartRank": 48,
       "artist": "Kaestyle",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-046",
@@ -2927,7 +2973,8 @@
       "chartRank": 49,
       "artist": "Victony & BNXN",
       "sourceStatus": "provisional_current_snapshot",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Current chart — viral check"
     },
     {
       "id": "NEW-MUSIC-047",
@@ -2936,7 +2983,8 @@
       "chartRank": null,
       "artist": "Johnny Drille, Ayra Starr & Young Jonn",
       "sourceStatus": "current_rotation_signal",
-      "editorNote": "Current Spotify rotation; three-artist recognition clue set"
+      "editorNote": "Current Spotify rotation; three-artist recognition clue set",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-048",
@@ -2945,7 +2993,8 @@
       "chartRank": 2,
       "artist": "Davido feat. Omah Lay",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-049",
@@ -2954,7 +3003,8 @@
       "chartRank": 3,
       "artist": "Shallipopi & Burna Boy",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-050",
@@ -2963,7 +3013,8 @@
       "chartRank": 4,
       "artist": "Wizkid",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-051",
@@ -2972,7 +3023,8 @@
       "chartRank": 5,
       "artist": "FOLA (feat. Bella Shmurda)",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-052",
@@ -2981,7 +3033,8 @@
       "chartRank": 6,
       "artist": "Davido feat. ODUMODUBLVCK & Chike",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-053",
@@ -2990,16 +3043,18 @@
       "chartRank": 7,
       "artist": "Kunmie",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-054",
       "type": "Music",
-      "year": 2025,
-      "chartRank": 8,
-      "artist": "ODUMODUBLVCK, Victony",
-      "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2026,
+      "chartRank": null,
+      "artist": "Monochrome & S1orDie",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "New alté/underground wave; strong Nigerian traction, review party familiarity",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-055",
@@ -3008,7 +3063,8 @@
       "chartRank": 9,
       "artist": "Rema",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-056",
@@ -3017,7 +3073,8 @@
       "chartRank": 10,
       "artist": "Seyi Vibez",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-057",
@@ -3026,7 +3083,8 @@
       "chartRank": 11,
       "artist": "Olamide, Seyi Vibez, Asake & Young Jonn (feat. Daecolm)",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-058",
@@ -3035,7 +3093,8 @@
       "chartRank": null,
       "artist": "Fido",
       "sourceStatus": "viral_2025_signal",
-      "editorNote": "Viral 2025 anthem; strong chorus and positive sing-along test"
+      "editorNote": "Viral 2025 anthem; strong chorus and positive sing-along test",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-059",
@@ -3044,7 +3103,8 @@
       "chartRank": 13,
       "artist": "Asake & Wizkid",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-060",
@@ -3053,7 +3113,8 @@
       "chartRank": null,
       "artist": "Chella",
       "sourceStatus": "viral_2025_signal",
-      "editorNote": "Viral 2025/TikTok-era breakout; test title recognition"
+      "editorNote": "Viral 2025/TikTok-era breakout; test title recognition",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-061",
@@ -3062,7 +3123,8 @@
       "chartRank": 17,
       "artist": "Burna Boy",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-062",
@@ -3071,7 +3133,8 @@
       "chartRank": 18,
       "artist": "Famous Pluto, Shallipopi, ZerryDL",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-063",
@@ -3080,7 +3143,8 @@
       "chartRank": 19,
       "artist": "Seyi Vibez",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-064",
@@ -3089,7 +3153,8 @@
       "chartRank": 20,
       "artist": "BNXN & FOLA",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-065",
@@ -3098,7 +3163,8 @@
       "chartRank": 21,
       "artist": "Ruger, Tiwa Savage",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-066",
@@ -3107,7 +3173,8 @@
       "chartRank": 22,
       "artist": "Davido & YG Marley",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-067",
@@ -3116,16 +3183,18 @@
       "chartRank": 23,
       "artist": "BNXN & Rema",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-068",
       "type": "Music",
       "year": 2025,
-      "chartRank": 25,
-      "artist": "Zlatan, Fola",
-      "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "chartRank": null,
+      "artist": "Zaylevelten",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "Spotify editorial breakout; review whether the hook is familiar enough for the main deck",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-069",
@@ -3134,7 +3203,8 @@
       "chartRank": 26,
       "artist": "Wizkid feat. Asake",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-070",
@@ -3143,7 +3213,8 @@
       "chartRank": 27,
       "artist": "Burna Boy",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-071",
@@ -3152,7 +3223,8 @@
       "chartRank": null,
       "artist": "BhadBoi OML",
       "sourceStatus": "viral_2025_signal",
-      "editorNote": "TikTok Nigeria summer-2025 signal; culturally specific clue set"
+      "editorNote": "TikTok Nigeria summer-2025 signal; culturally specific clue set",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-072",
@@ -3161,7 +3233,8 @@
       "chartRank": 29,
       "artist": "Rema",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-073",
@@ -3170,7 +3243,8 @@
       "chartRank": 31,
       "artist": "Bella Shmurda, FOLA",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-074",
@@ -3179,7 +3253,8 @@
       "chartRank": 32,
       "artist": "Ayra Starr, Wizkid",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-075",
@@ -3188,7 +3263,8 @@
       "chartRank": 33,
       "artist": "Ayo Maff",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-076",
@@ -3197,7 +3273,8 @@
       "chartRank": 34,
       "artist": "Burna Boy",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-077",
@@ -3206,7 +3283,8 @@
       "chartRank": 35,
       "artist": "Smur Lee, ODUMODUBLVCK, Shallipopi",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-078",
@@ -3215,7 +3293,8 @@
       "chartRank": 36,
       "artist": "Olamide & Wizkid",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-079",
@@ -3224,7 +3303,8 @@
       "chartRank": 37,
       "artist": "DJ Tunez, Wizkid and FOLA",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-080",
@@ -3233,7 +3313,8 @@
       "chartRank": 38,
       "artist": "Asake & Tiakola",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-081",
@@ -3242,7 +3323,8 @@
       "chartRank": null,
       "artist": "Burna Boy feat. Travis Scott",
       "sourceStatus": "viral_2025_signal",
-      "editorNote": "2025 crossover pick; recognizable artists and rhythm clue"
+      "editorNote": "2025 crossover pick; recognizable artists and rhythm clue",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-082",
@@ -3251,7 +3333,8 @@
       "chartRank": null,
       "artist": "Goya Menor & Nektunez",
       "sourceStatus": "viral_amapiano_signal",
-      "editorNote": "Amapiano/TikTok-era crossover; dance-challenge memory"
+      "editorNote": "Amapiano/TikTok-era crossover; dance-challenge memory",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-083",
@@ -3260,7 +3343,8 @@
       "chartRank": 3,
       "artist": "Seyi Vibez",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-084",
@@ -3269,7 +3353,8 @@
       "chartRank": 4,
       "artist": "Titom, Yuppe & Burna Boy ft. S.N.E",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-085",
@@ -3278,7 +3363,8 @@
       "chartRank": 5,
       "artist": "Shallipopi ft. ODUMODUBLVCK",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-086",
@@ -3287,7 +3373,8 @@
       "chartRank": 6,
       "artist": "Brown Joel, BoyPee & Hyce ft. Davido",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-087",
@@ -3296,7 +3383,8 @@
       "chartRank": 8,
       "artist": "Burna Boy",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-088",
@@ -3305,7 +3393,8 @@
       "chartRank": 9,
       "artist": "Omah Lay",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-089",
@@ -3314,7 +3403,8 @@
       "chartRank": 10,
       "artist": "Ayo Maff & Fireboy DML",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-090",
@@ -3323,7 +3413,8 @@
       "chartRank": 12,
       "artist": "Kaestyle & Omah Lay",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-091",
@@ -3332,7 +3423,8 @@
       "chartRank": 13,
       "artist": "Seyi Vibez",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-092",
@@ -3341,7 +3433,8 @@
       "chartRank": 15,
       "artist": "Young Jonn",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-093",
@@ -3350,7 +3443,8 @@
       "chartRank": 16,
       "artist": "Kizz Daniel",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-094",
@@ -3359,7 +3453,8 @@
       "chartRank": 17,
       "artist": "Vibez Inc, Muyeez & Seyi Vibez",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-095",
@@ -3368,7 +3463,8 @@
       "chartRank": 18,
       "artist": "Ruger & Bnxn",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-096",
@@ -3377,7 +3473,8 @@
       "chartRank": 19,
       "artist": "Sarz, Asake & Gunna",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-097",
@@ -3386,7 +3483,8 @@
       "chartRank": 21,
       "artist": "Asake & Travis Scott",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-098",
@@ -3395,7 +3493,8 @@
       "chartRank": 23,
       "artist": "Darkoo & Rema",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-099",
@@ -3404,7 +3503,8 @@
       "chartRank": 24,
       "artist": "Wizkid ft. Zlatan",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-100",
@@ -3413,7 +3513,8 @@
       "chartRank": 25,
       "artist": "Victony & Asake",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-101",
@@ -3422,7 +3523,8 @@
       "chartRank": 26,
       "artist": "Asake",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-102",
@@ -3431,7 +3533,8 @@
       "chartRank": 27,
       "artist": "Rema & Shallipopi",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-103",
@@ -3440,7 +3543,8 @@
       "chartRank": 28,
       "artist": "Rema",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-104",
@@ -3449,7 +3553,8 @@
       "chartRank": null,
       "artist": "Davido",
       "sourceStatus": "2020_party_staple",
-      "editorNote": "2020 party-era staple; simple title and memorable chorus"
+      "editorNote": "2020 party-era staple; simple title and memorable chorus",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-105",
@@ -3458,7 +3563,8 @@
       "chartRank": null,
       "artist": "1da Banton",
       "sourceStatus": "viral_party_staple",
-      "editorNote": "Party/street-pop staple; everyday phrase players can act out"
+      "editorNote": "Party/street-pop staple; everyday phrase players can act out",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-106",
@@ -3467,7 +3573,8 @@
       "chartRank": 2,
       "artist": "Omah Lay",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-107",
@@ -3476,7 +3583,8 @@
       "chartRank": 3,
       "artist": "BNXN, Kizz Daniel & Seyi Vibez",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-108",
@@ -3485,7 +3593,8 @@
       "chartRank": 4,
       "artist": "Ruger",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-109",
@@ -3494,7 +3603,8 @@
       "chartRank": 6,
       "artist": "Spyro & Tiwa Savage",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-110",
@@ -3503,7 +3613,8 @@
       "chartRank": 7,
       "artist": "Victony, Tempoe & Rema ft. Don Toliver",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-111",
@@ -3512,7 +3623,8 @@
       "chartRank": 10,
       "artist": "Asake",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-112",
@@ -3521,7 +3633,8 @@
       "chartRank": 11,
       "artist": "Rema",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-113",
@@ -3530,7 +3643,8 @@
       "chartRank": 12,
       "artist": "Omah Lay",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-114",
@@ -3539,7 +3653,8 @@
       "chartRank": 14,
       "artist": "Young Jonn",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-115",
@@ -3548,7 +3663,8 @@
       "chartRank": 15,
       "artist": "Kizz Daniel",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-116",
@@ -3557,7 +3673,8 @@
       "chartRank": 16,
       "artist": "Rema",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-117",
@@ -3566,16 +3683,18 @@
       "chartRank": 17,
       "artist": "MohBad",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-118",
       "type": "Music",
-      "year": 2023,
-      "chartRank": 18,
-      "artist": "Asake",
-      "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2025,
+      "chartRank": null,
+      "artist": "Zaylevelten",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "Alté/underground anthem; review title and sing-along recognition",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-119",
@@ -3584,7 +3703,8 @@
       "chartRank": 19,
       "artist": "Zinoleesky",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-120",
@@ -3593,7 +3713,8 @@
       "chartRank": 20,
       "artist": "Mavins, Boy Spyce & Rema ft. Crayon, Bayanni, Magixx, LADIPOE, Ayra Starr & Johnny Drille",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-121",
@@ -3602,7 +3723,8 @@
       "chartRank": 21,
       "artist": "Tiwa Savage, Ayra Starr & Young Jonn",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-122",
@@ -3611,7 +3733,8 @@
       "chartRank": 23,
       "artist": "Ayra Starr",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-123",
@@ -3620,7 +3743,8 @@
       "chartRank": 24,
       "artist": "Rexxie, Naira Marley & Skiibii ft. Wizkid",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-124",
@@ -3629,7 +3753,8 @@
       "chartRank": 25,
       "artist": "EMPIRE & Kizz Daniel",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-125",
@@ -3638,7 +3763,8 @@
       "chartRank": 1,
       "artist": "Kizz Daniel & Tekno",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-126",
@@ -3647,7 +3773,8 @@
       "chartRank": 3,
       "artist": "Mavins, Ayra Starr & Crayon ft. Magixx, LADIPOE & Boy Spyce",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-127",
@@ -3656,7 +3783,8 @@
       "chartRank": 4,
       "artist": "Asake ft. Burna Boy",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-128",
@@ -3665,7 +3793,8 @@
       "chartRank": 6,
       "artist": "Asake",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-129",
@@ -3674,7 +3803,8 @@
       "chartRank": 8,
       "artist": "Skiibii ft. Davido",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-130",
@@ -3683,7 +3813,8 @@
       "chartRank": 10,
       "artist": "Asake ft. Olamide",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-131",
@@ -3692,7 +3823,8 @@
       "chartRank": 11,
       "artist": "Asake",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-132",
@@ -3701,7 +3833,8 @@
       "chartRank": 12,
       "artist": "SPINALL & Asake",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-133",
@@ -3710,7 +3843,8 @@
       "chartRank": 13,
       "artist": "Lil Kesh ft. Zinoleesky",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-134",
@@ -3719,7 +3853,8 @@
       "chartRank": 14,
       "artist": "Burna Boy ft. Ed Sheeran",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-135",
@@ -3728,7 +3863,8 @@
       "chartRank": 16,
       "artist": "T.I BLAZE ft. Olamide",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-136",
@@ -3737,7 +3873,8 @@
       "chartRank": 17,
       "artist": "Fireboy DML",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-137",
@@ -3746,7 +3883,8 @@
       "chartRank": 18,
       "artist": "Pheelz & Davido",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-138",
@@ -3755,7 +3893,8 @@
       "chartRank": 19,
       "artist": "Burna Boy",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-139",
@@ -3764,7 +3903,8 @@
       "chartRank": 20,
       "artist": "Camidoh ft. Mayorkun, Darkoo & King Promise",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-140",
@@ -3773,7 +3913,8 @@
       "chartRank": 21,
       "artist": "Kizz Daniel",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-141",
@@ -3782,7 +3923,8 @@
       "chartRank": 22,
       "artist": "Black Sherif",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-142",
@@ -3791,7 +3933,8 @@
       "chartRank": 23,
       "artist": "Ruger",
       "sourceStatus": "official_top_100",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-143",
@@ -3800,7 +3943,8 @@
       "chartRank": 1,
       "artist": "Omah Lay",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-144",
@@ -3809,7 +3953,8 @@
       "chartRank": 4,
       "artist": "Omah Lay",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-145",
@@ -3818,7 +3963,8 @@
       "chartRank": 5,
       "artist": "Olamide",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-146",
@@ -3827,16 +3973,18 @@
       "chartRank": 6,
       "artist": "Kizz Daniel",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-147",
       "type": "Music",
-      "year": 2021,
-      "chartRank": 7,
-      "artist": "DJ Kaywise ft. Phyno",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2026,
+      "chartRank": null,
+      "artist": "NO11 & Ayjay Bobo feat. Monochrome",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "Runaway Abuja underground signal; review broader player familiarity",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-148",
@@ -3845,7 +3993,8 @@
       "chartRank": 9,
       "artist": "Joeboy",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-149",
@@ -3854,7 +4003,8 @@
       "chartRank": 10,
       "artist": "Ayra Starr",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-150",
@@ -3863,7 +4013,8 @@
       "chartRank": 12,
       "artist": "Teni ft. Davido",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-151",
@@ -3872,7 +4023,8 @@
       "chartRank": 13,
       "artist": "Gyakie ft. Omah Lay",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-152",
@@ -3881,7 +4033,8 @@
       "chartRank": 14,
       "artist": "Davido ft. Mayorkun",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-153",
@@ -3890,16 +4043,18 @@
       "chartRank": 15,
       "artist": "Olamide ft. Omah Lay",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-154",
       "type": "Music",
-      "year": 2021,
-      "chartRank": 16,
-      "artist": "Chike",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2025,
+      "chartRank": null,
+      "artist": "BLNDE",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "Alté-adjacent breakout; reported hit, review party recognition",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-155",
@@ -3908,7 +4063,8 @@
       "chartRank": 17,
       "artist": "Rexxie ft. MohBad",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-156",
@@ -3917,7 +4073,8 @@
       "chartRank": 18,
       "artist": "Bella Shmurda ft. Zlatan & Lincoln",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-157",
@@ -3926,7 +4083,8 @@
       "chartRank": 19,
       "artist": "Wizkid ft. Burna Boy",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-158",
@@ -3935,16 +4093,18 @@
       "chartRank": 20,
       "artist": "Ruger",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-159",
       "type": "Music",
-      "year": 2021,
-      "chartRank": 21,
-      "artist": "Joeboy",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2025,
+      "chartRank": null,
+      "artist": "Mavo & Wizkid",
+      "sourceStatus": "viral_new_wave",
+      "editorNote": "New-wave breakout with mainstream co-sign; likely promotion candidate",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-160",
@@ -3953,7 +4113,8 @@
       "chartRank": 22,
       "artist": "Burna Boy",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-161",
@@ -3962,7 +4123,8 @@
       "chartRank": 24,
       "artist": "Ajebo Hustlers",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-162",
@@ -3971,7 +4133,8 @@
       "chartRank": 1,
       "artist": "DJ Neptune ft. Mr Eazi & Joeboy",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-163",
@@ -3980,16 +4143,18 @@
       "chartRank": 2,
       "artist": "Davido",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-164",
       "type": "Music",
-      "year": 2020,
-      "chartRank": 3,
-      "artist": "Patoranking",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2026,
+      "chartRank": null,
+      "artist": "Mavo",
+      "sourceStatus": "viral_new_wave",
+      "editorNote": "Current Mavo chart/radio wave; review local hook familiarity",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-165",
@@ -3998,7 +4163,8 @@
       "chartRank": 4,
       "artist": "Master KG ft. Burna Boy & Nomcebo Zikode",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-166",
@@ -4007,52 +4173,58 @@
       "chartRank": 5,
       "artist": "Simi",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-167",
       "type": "Music",
-      "year": 2020,
-      "chartRank": 6,
-      "artist": "Adekunle Gold",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2025,
+      "chartRank": null,
+      "artist": "CKay feat. Mavo",
+      "sourceStatus": "viral_new_wave",
+      "editorNote": "Mavo crossover hit and Nigerian chart-topper; promotion candidate",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-168",
       "type": "Music",
-      "year": 2020,
-      "chartRank": 8,
-      "artist": "Fireboy DML",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2026,
+      "chartRank": null,
+      "artist": "Danpapa GTA",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "Underground social-media wave; review whether players know the title",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-169",
       "type": "Music",
-      "year": 2020,
-      "chartRank": 9,
-      "artist": "Omah Lay",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2026,
+      "chartRank": null,
+      "artist": "scottyolorin, DaveTheOracle & Kobilou",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "Underground cult anthem; review for the alté lane",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-170",
       "type": "Music",
-      "year": 2020,
-      "chartRank": 10,
-      "artist": "Omah Lay",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2025,
+      "chartRank": null,
+      "artist": "Zaylevelten & Mavo",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "New-wave collaboration; review slang and player familiarity",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-171",
       "type": "Music",
-      "year": 2020,
-      "chartRank": 11,
-      "artist": "Rema",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2026,
+      "chartRank": null,
+      "artist": "Zaylevelten",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "Fresh Zaylevelten release; deliberately held for review",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-172",
@@ -4061,34 +4233,38 @@
       "chartRank": 12,
       "artist": "DJ Tunez ft. Wizkid, Adekunle Gold & Omah Lay",
       "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "editorNote": "Editorial clue pass; review familiarity and local slang",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-MUSIC-173",
       "type": "Music",
-      "year": 2020,
-      "chartRank": 13,
-      "artist": "Rema & Rvssian",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2026,
+      "chartRank": null,
+      "artist": "Monochrome",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "New alté/underground cut; review title recognition",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-174",
       "type": "Music",
-      "year": 2020,
-      "chartRank": 14,
-      "artist": "Mayorkun ft. Davido",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2026,
+      "chartRank": null,
+      "artist": "Zaylevelten",
+      "sourceStatus": "niche_under_review",
+      "editorNote": "Very recent release; hold under review until it proves party familiarity",
+      "reviewStatus": "Niche — under review"
     },
     {
       "id": "NEW-MUSIC-175",
       "type": "Music",
-      "year": 2020,
-      "chartRank": 15,
-      "artist": "Burna Boy",
-      "sourceStatus": "official_top_50",
-      "editorNote": "Editorial clue pass; review familiarity and local slang"
+      "year": 2025,
+      "chartRank": null,
+      "artist": "Mavo & Wave$tar",
+      "sourceStatus": "viral_new_wave",
+      "editorNote": "Breakout record that helped define the new-wave sound; promotion candidate",
+      "reviewStatus": "Viral/current candidate"
     },
     {
       "id": "NEW-CELEB-001",
