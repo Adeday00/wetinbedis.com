@@ -1,4 +1,4 @@
-CREATE TABLE `google_play_purchases` (
+CREATE TABLE IF NOT EXISTS `google_play_purchases` (
   `token_hash` text PRIMARY KEY NOT NULL,
   `player_id` text NOT NULL REFERENCES `players`(`id`) ON DELETE cascade,
   `product_id` text NOT NULL,
@@ -10,11 +10,11 @@ CREATE TABLE `google_play_purchases` (
   `updated_at` integer NOT NULL
 );
 --> statement-breakpoint
-CREATE INDEX `google_play_purchases_player_idx` ON `google_play_purchases` (`player_id`,`product_id`);
+CREATE INDEX IF NOT EXISTS `google_play_purchases_player_idx` ON `google_play_purchases` (`player_id`,`product_id`);
 --> statement-breakpoint
-CREATE UNIQUE INDEX `google_play_purchases_order_unique` ON `google_play_purchases` (`order_id`);
+CREATE UNIQUE INDEX IF NOT EXISTS `google_play_purchases_order_unique` ON `google_play_purchases` (`order_id`);
 --> statement-breakpoint
-CREATE TABLE `player_entitlements` (
+CREATE TABLE IF NOT EXISTS `player_entitlements` (
   `player_id` text NOT NULL REFERENCES `players`(`id`) ON DELETE cascade,
   `product_id` text NOT NULL,
   `source` text NOT NULL,
@@ -24,4 +24,4 @@ CREATE TABLE `player_entitlements` (
   CONSTRAINT `player_entitlements_active_check` CHECK (`active` in (0, 1))
 );
 --> statement-breakpoint
-CREATE INDEX `player_entitlements_active_idx` ON `player_entitlements` (`player_id`,`active`);
+CREATE INDEX IF NOT EXISTS `player_entitlements_active_idx` ON `player_entitlements` (`player_id`,`active`);
