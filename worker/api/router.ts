@@ -2819,19 +2819,24 @@ async function currentAppConfig(request: Request, env: ApiEnv): Promise<Response
     const config = safeDefaultAppConfig();
     return cacheableJsonResponse(request, config, { etag: appConfigETag(config), cacheControl: "no-store" });
   }
-  const row = await env.DB.prepare(
-    `SELECT config_json FROM app_config_revisions
-     WHERE status = 'published' ORDER BY revision DESC LIMIT 1`,
-  ).first<{ config_json: string }>();
   let config = safeDefaultAppConfig();
-  if (row) {
-    try {
-      const parsed = JSON.parse(row.config_json) as unknown;
-      const validation = validateAppConfig(parsed);
-      if (validation.config && validation.issues.length === 0) config = validation.config;
-    } catch {
-      // Fail closed to the safe defaults rather than serving corrupt controls.
+  try {
+    const row = await env.DB.prepare(
+      `SELECT config_json FROM app_config_revisions
+       WHERE status = 'published' ORDER BY revision DESC LIMIT 1`,
+    ).first<{ config_json: string }>();
+    if (row) {
+      try {
+        const parsed = JSON.parse(row.config_json) as unknown;
+        const validation = validateAppConfig(parsed);
+        if (validation.config && validation.issues.length === 0) config = validation.config;
+      } catch {
+        // Fail closed to the safe defaults rather than serving corrupt controls.
+      }
     }
+  } catch {
+    // A missing or temporarily unavailable config table must not take down the app.
+    // The validated safe defaults keep financial features disabled.
   }
   return cacheableJsonResponse(request, config, {
     etag: appConfigETag(config),
