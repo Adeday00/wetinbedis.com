@@ -13,6 +13,8 @@ interface Env {
   WBD_CONTENT_ADMIN_EMAILS?: string;
   WBD_PUSH_TOKEN_ENCRYPTION_SECRET?: string;
   WBD_PLAY_ON_CALL_SIGNING_SECRET?: string;
+  GOOGLE_PLAY_SERVICE_ACCOUNT_JSON?: string;
+  WBD_GOOGLE_REVIEW_ACCESS_CODE?: string;
   IMAGES: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {

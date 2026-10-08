@@ -257,7 +257,7 @@ test("Play on a Call room API is capability-gated and preserves the host's selec
   }, environment);
   assert.equal(createdResponse.status, 201);
   const created = await createdResponse.json();
-  assert.match(created.room_code, /^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{6}$/);
+  assert.match(created.room_code, /^\d{4}$/);
   assert.equal(created.room.mode, "team_battle");
   assert.match(created.connection.socket_url, new RegExp(`/api/v1/call-rooms/${created.room_code}/socket\\?ticket=`));
 

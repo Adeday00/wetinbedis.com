@@ -24,7 +24,10 @@
 - Android debug unit tests: passed.
 - Android debug lint: passed.
 - iOS generic-device build with signing disabled: passed. The build emitted existing Swift concurrency/deprecation warnings but no errors.
-- No production deployment was performed or claimed.
+- Production Worker deployment is now live as of 2026-10-07. The live health
+  endpoint reports the database configured, and the production D1 contains the
+  Google Play purchase, entitlement, and reviewer-access tables. A real
+  Play-installed purchase and physical-device validation remain outstanding.
 
 ## Cash gates still blocked
 
@@ -37,4 +40,5 @@ Cash prizes remain disabled in code and remote config. The server still requires
 3. Confirm `GET /api/v1/app-config` returns the new revision and `GET /api/v1/competitions/current` presents practice/no-cash behavior.
 4. Monitor attempt integrity and review queues; use emergency disable if the event must be paused.
 
-Production deployment, physical-device parity, and the legal/payment/App Store/Play Store launch gates remain outstanding.
+Physical-device parity, a real Play-installed purchase, and the legal/payment/
+App Store/Play Store launch gates remain outstanding.

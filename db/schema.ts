@@ -634,3 +634,44 @@ export const appConfigAudit = sqliteTable(
   },
   (table) => [index("app_config_audit_revision_idx").on(table.revisionId, table.changedAt)],
 );
+
+export const googleReviewAccess = sqliteTable("google_review_access", {
+  playerId: text("player_id").primaryKey().references(() => players.id, { onDelete: "cascade" }),
+  codeHash: text("code_hash").notNull(),
+  grantedAt: integer("granted_at").notNull(),
+});
+
+export const googlePlayPurchases = sqliteTable(
+  "google_play_purchases",
+  {
+    tokenHash: text("token_hash").primaryKey(),
+    playerId: text("player_id").notNull().references(() => players.id, { onDelete: "cascade" }),
+    productId: text("product_id").notNull(),
+    packageName: text("package_name").notNull(),
+    orderId: text("order_id"),
+    purchaseState: integer("purchase_state").notNull(),
+    acknowledgedAt: integer("acknowledged_at"),
+    verifiedAt: integer("verified_at").notNull(),
+    updatedAt: integer("updated_at").notNull(),
+  },
+  (table) => [
+    index("google_play_purchases_player_idx").on(table.playerId, table.productId),
+    uniqueIndex("google_play_purchases_order_unique").on(table.orderId),
+  ],
+);
+
+export const playerEntitlements = sqliteTable(
+  "player_entitlements",
+  {
+    playerId: text("player_id").notNull().references(() => players.id, { onDelete: "cascade" }),
+    productId: text("product_id").notNull(),
+    source: text("source").notNull(),
+    active: integer("active").notNull().default(1),
+    updatedAt: integer("updated_at").notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.playerId, table.productId] }),
+    index("player_entitlements_active_idx").on(table.playerId, table.active),
+    check("player_entitlements_active_check", sql`${table.active} in (0, 1)`),
+  ],
+);

@@ -56,6 +56,8 @@ export interface ApiEnv {
   WBD_CONTENT_ADMIN_EMAILS?: string;
   WBD_PUSH_TOKEN_ENCRYPTION_SECRET?: string;
   WBD_PLAY_ON_CALL_SIGNING_SECRET?: string;
+  GOOGLE_PLAY_SERVICE_ACCOUNT_JSON?: string;
+  WBD_GOOGLE_REVIEW_ACCESS_CODE?: string;
 }
 
 class ApiError extends Error {
@@ -221,6 +223,8 @@ const PARTY_DECK_EDITOR_CATEGORIES = new Set([
 const CASH_PRIZE_ATTEMPTS_AVAILABLE = false;
 const MAX_LEADERBOARD_ROWS = 10_000;
 const PUBLIC_LEADERBOARD_ROWS = 100;
+const GOOGLE_PLAY_PACKAGE_NAME = "com.davidadekanbi.wetinbedis";
+const GOOGLE_PLAY_PRODUCT_ID = "com.davidadekanbi.wetinbedis.fullgist";
 
 function json(
   body: unknown,
@@ -538,6 +542,154 @@ async function authenticate(
   };
 }
 
+function base64Url(value: string | Uint8Array): string {
+  const bytes = typeof value === "string" ? new TextEncoder().encode(value) : value;
+  let binary = "";
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
+}
+
+function pemBytes(pem: string): ArrayBuffer {
+  const encoded = pem.replace(/\\n/g, "\n").replace(/-----BEGIN PRIVATE KEY-----|-----END PRIVATE KEY-----|\s/g, "");
+  const binary = atob(encoded);
+  const bytes = new Uint8Array(binary.length);
+  for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+  return bytes.buffer;
+}
+
+async function googlePlayAccessToken(env: ApiEnv): Promise<string> {
+  if (!env.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON) {
+    throw new ApiError(503, "billing_verifier_misconfigured", "Google Play purchase verification is not configured yet.");
+  }
+  let account: { client_email?: string; private_key?: string };
+  try {
+    account = JSON.parse(env.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON) as typeof account;
+  } catch {
+    throw new ApiError(503, "billing_verifier_misconfigured", "The Google Play verifier credentials are invalid.");
+  }
+  if (!account.client_email || !account.private_key) {
+    throw new ApiError(503, "billing_verifier_misconfigured", "The Google Play verifier credentials are incomplete.");
+  }
+  const now = Math.floor(Date.now() / 1000);
+  const header = base64Url(JSON.stringify({ alg: "RS256", typ: "JWT" }));
+  const claim = base64Url(JSON.stringify({
+    iss: account.client_email,
+    scope: "https://www.googleapis.com/auth/androidpublisher",
+    aud: "https://oauth2.googleapis.com/token",
+    iat: now,
+    exp: now + 3600,
+  }));
+  const signingInput = `${header}.${claim}`;
+  let key: CryptoKey;
+  try {
+    key = await crypto.subtle.importKey(
+      "pkcs8",
+      pemBytes(account.private_key),
+      { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+      false,
+      ["sign"],
+    );
+  } catch {
+    throw new ApiError(503, "billing_verifier_misconfigured", "The Google Play verifier key could not be loaded.");
+  }
+  const signature = await crypto.subtle.sign(
+    { name: "RSASSA-PKCS1-v1_5" },
+    key,
+    new TextEncoder().encode(signingInput),
+  );
+  const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "content-type": "application/x-www-form-urlencoded" },
+    body: `grant_type=${encodeURIComponent("urn:ietf:params:oauth:grant-type:jwt-bearer")}&assertion=${encodeURIComponent(`${signingInput}.${base64Url(new Uint8Array(signature))}`)}`,
+  });
+  if (!tokenResponse.ok) {
+    throw new ApiError(502, "billing_verifier_unavailable", "Google Play verification is temporarily unavailable.");
+  }
+  const payload = await tokenResponse.json() as { access_token?: string };
+  if (!payload.access_token) throw new ApiError(502, "billing_verifier_unavailable", "Google Play did not return a verifier token.");
+  return payload.access_token;
+}
+
+async function googleReviewAccess(request: Request, env: ApiEnv): Promise<Response> {
+  const db = database(env);
+  const player = await authenticate(request, db);
+  const body = await readJsonObject(request, { maximumBytes: 1024, requireApplicationJSON: true });
+  const configured = env.WBD_GOOGLE_REVIEW_ACCESS_CODE?.trim();
+  if (!configured || configured.length < 24) {
+    throw new ApiError(503, "review_access_unavailable", "Review access is temporarily unavailable.");
+  }
+  const codeHash = await sha256Hex(configured);
+  if (body.code !== undefined) {
+    if (typeof body.code !== "string" || body.code.trim().length > 128 || await sha256Hex(body.code.trim()) !== codeHash) {
+      throw new ApiError(403, "review_code_invalid", "The review access code is incorrect.");
+    }
+    await db.prepare(`INSERT INTO google_review_access (player_id, code_hash, granted_at)
+      VALUES (?1, ?2, ?3) ON CONFLICT(player_id) DO UPDATE SET code_hash = excluded.code_hash, granted_at = excluded.granted_at`)
+      .bind(player.id, codeHash, Date.now()).run();
+  }
+  const grant = await db.prepare("SELECT code_hash FROM google_review_access WHERE player_id = ?1 LIMIT 1")
+    .bind(player.id).first<{ code_hash: string }>();
+  return json({ entitlement: { product_id: GOOGLE_PLAY_PRODUCT_ID, active: grant?.code_hash === codeHash, source: "google_review", verified_at: Date.now() } });
+}
+
+async function verifyGooglePlayPurchase(request: Request, env: ApiEnv): Promise<Response> {
+  const db = database(env);
+  const player = await authenticate(request, db);
+  const body = await readJsonObject(request, { maximumBytes: 16_000, requireApplicationJSON: true });
+  const productId = typeof body.product_id === "string" ? body.product_id : "";
+  const purchaseToken = typeof body.purchase_token === "string" ? body.purchase_token.trim() : "";
+  if (productId !== GOOGLE_PLAY_PRODUCT_ID || purchaseToken.length < 20 || purchaseToken.length > 4096) {
+    throw new ApiError(400, "purchase_invalid", "The Google Play purchase details are invalid.");
+  }
+
+  const tokenHash = await sha256Hex(purchaseToken);
+  const existing = await db.prepare("SELECT player_id FROM google_play_purchases WHERE token_hash = ?1 LIMIT 1").bind(tokenHash).first<{ player_id: string }>();
+  if (existing && existing.player_id !== player.id) {
+    throw new ApiError(409, "purchase_already_linked", "This purchase is already linked to another player.");
+  }
+
+  const accessToken = await googlePlayAccessToken(env);
+  const purchaseUrl = `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(GOOGLE_PLAY_PACKAGE_NAME)}/purchases/products/${encodeURIComponent(productId)}/tokens/${encodeURIComponent(purchaseToken)}`;
+  const googleResponse = await fetch(purchaseUrl, { headers: { authorization: `Bearer ${accessToken}` } });
+  if (!googleResponse.ok) {
+    throw new ApiError(502, "purchase_verification_failed", "Google Play could not verify this purchase.");
+  }
+  const purchase = await googleResponse.json() as {
+    purchaseState?: number;
+    acknowledgementState?: number;
+    orderId?: string;
+  };
+  const verifiedAt = Date.now();
+  const active = purchase.purchaseState === 0;
+  if (!active) {
+    return json({ entitlement: { product_id: productId, active: false, source: "google_play", verified_at: verifiedAt } });
+  }
+
+  let acknowledgedAt: number | null = purchase.acknowledgementState === 1 ? verifiedAt : null;
+  if (purchase.acknowledgementState !== 1) {
+    const acknowledgement = await fetch(`${purchaseUrl}:acknowledge`, {
+      method: "POST",
+      headers: { authorization: `Bearer ${accessToken}`, "content-type": "application/json" },
+      body: JSON.stringify({ developerPayload: "wetinbedis-fullgist-v1" }),
+    });
+    if (!acknowledgement.ok && acknowledgement.status !== 409) {
+      throw new ApiError(502, "purchase_acknowledgement_failed", "Google Play could not finish confirming this purchase.");
+    }
+    acknowledgedAt = verifiedAt;
+  }
+
+  await db.batch([
+    db.prepare(`INSERT INTO google_play_purchases (token_hash, player_id, product_id, package_name, order_id, purchase_state, acknowledged_at, verified_at, updated_at)
+      VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?8)
+      ON CONFLICT(token_hash) DO UPDATE SET player_id = excluded.player_id, order_id = excluded.order_id, purchase_state = excluded.purchase_state, acknowledged_at = excluded.acknowledged_at, verified_at = excluded.verified_at, updated_at = excluded.updated_at`).bind(tokenHash, player.id, productId, GOOGLE_PLAY_PACKAGE_NAME, purchase.orderId ?? null, purchase.purchaseState ?? 0, acknowledgedAt, verifiedAt),
+    db.prepare(`INSERT INTO player_entitlements (player_id, product_id, source, active, updated_at)
+      VALUES (?1, ?2, 'google_play', 1, ?3)
+      ON CONFLICT(player_id, product_id) DO UPDATE SET source = excluded.source, active = 1, updated_at = excluded.updated_at`).bind(player.id, productId, verifiedAt),
+  ]);
+
+  return json({ entitlement: { product_id: productId, active: true, source: "google_play", verified_at: verifiedAt } });
+}
+
 function playerPayload(player: AuthenticatedPlayer) {
   return {
     id: player.id,
@@ -732,7 +884,7 @@ async function playOnCallConnection(
   displayName: string,
 ): Promise<{
   room_code: string;
-  connection: { ticket: string; ticket_expires_at: number; socket_url: string };
+  connection: { ticket: string; ticket_expires_at: number; socket_url: string; player_id: string };
 }> {
   const ticketExpiresAt = Date.now() + PLAY_ON_CALL_TICKET_TTL_MS;
   const ticket = await signPlayOnCallTicket(
@@ -751,6 +903,7 @@ async function playOnCallConnection(
       ticket,
       ticket_expires_at: ticketExpiresAt,
       socket_url: socketURL.href,
+      player_id: player.id,
     },
   };
 }
@@ -761,10 +914,10 @@ async function createPlayOnCallRoom(request: Request, env: ApiEnv): Promise<Resp
   const body = playOnCallRequestBody(await readJsonObject(request, { optional: true }));
   const displayName = normalizePlayOnCallDisplayName(body.displayName, player.publicHandle);
 
-  // Eight characters from a non-confusing alphabet gives a friendly spoken
-  // code without treating a room code itself as authentication. The ticket is
-  // the actual short-lived join capability.
-  for (let attempt = 0; attempt < 3; attempt += 1) {
+  // The four digits are only a friendly lookup code; the signed ticket is the
+  // actual short-lived capability. Retry collisions because the human-sized
+  // code space is intentionally small.
+  for (let attempt = 0; attempt < 12; attempt += 1) {
     const roomCode = createPlayOnCallRoomCode();
     const stub = playOnCallRoomStub(env, roomCode);
     const response = await stub.fetch(
@@ -3158,6 +3311,14 @@ async function routeApiRequest(request: Request, env: ApiEnv): Promise<Response>
   if (path === "/api/v1/app-config") {
     assertMethod(request, "GET");
     return currentAppConfig(request, env);
+  }
+  if (path === "/api/v1/billing/google-play/purchases") {
+    assertMethod(request, "POST");
+    return verifyGooglePlayPurchase(request, env);
+  }
+  if (path === "/api/v1/billing/google-play/review-access") {
+    assertMethod(request, "POST");
+    return googleReviewAccess(request, env);
   }
   if (path === "/api/v1/admin/content/session") {
     assertMethod(request, "GET");

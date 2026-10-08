@@ -22,9 +22,13 @@ const ticket = {
 
 test("Play on a Call room codes are short for new rooms and preserve legacy joins", () => {
   const code = createPlayOnCallRoomCode(() => 0);
-  assert.equal(code, "AAAAAA");
+  assert.equal(code, "1000");
+  assert.equal(createPlayOnCallRoomCode(() => 0.999999), "9999");
+  assert.equal(normalizePlayOnCallRoomCode(" 4827 "), "4827");
   assert.equal(normalizePlayOnCallRoomCode(" wbd-abcd 23 "), "ABCD23");
   assert.equal(normalizePlayOnCallRoomCode(" wbd-abcd 2345 "), "ABCD2345");
+  assert.equal(normalizePlayOnCallRoomCode("0123"), "0123");
+  assert.equal(normalizePlayOnCallRoomCode("123"), null);
   assert.equal(normalizePlayOnCallRoomCode("ABCD-2345"), null);
   assert.equal(normalizePlayOnCallRoomCode("ABCD1234"), null);
 });
@@ -61,7 +65,7 @@ test("Play on a Call accepts only bounded, known client event shapes", () => {
           round_id: "round_123",
           round_number: 1,
           turn_player_id: "11111111-2222-4333-8444-555555555555",
-          deadline_ms: 2_000_000_000_000,
+          start_card_index: 0,
         },
       },
     })),
@@ -75,7 +79,7 @@ test("Play on a Call accepts only bounded, known client event shapes", () => {
           round_id: "round_123",
           round_number: 1,
           turn_player_id: "11111111-2222-4333-8444-555555555555",
-          deadline_ms: 2_000_000_000_000,
+          start_card_index: 0,
         },
       },
     },
@@ -89,8 +93,41 @@ test("Play on a Call accepts only bounded, known client event shapes", () => {
     null,
   );
   assert.equal(
-    parsePlayOnCallClientFrame("x".repeat(9_000)),
+    parsePlayOnCallClientFrame("x".repeat(70_000)),
     null,
+  );
+  const configured = parsePlayOnCallClientFrame(JSON.stringify({
+    type: "event",
+    event_id: "configure_123",
+    event: {
+      type: "game_event",
+      event_type: "configure_game",
+      payload: {
+        mode: "hot_seat",
+        round_seconds: 60,
+        turns_each: 2,
+        deck_ids: ["FOOD-001", "SLANG-002"],
+        uses_companion_phone: true,
+        full_gist_enabled: false,
+      },
+    },
+  }));
+  assert.equal(configured?.event.event_type, "configure_game");
+  assert.deepEqual(
+    parsePlayOnCallClientFrame(JSON.stringify({
+      type: "event",
+      event_id: "assignTeam_123",
+      event: {
+        type: "assign_team",
+        player_id: "11111111-2222-4333-8444-555555555555",
+        team: 1,
+      },
+    }))?.event,
+    {
+      type: "assign_team",
+      player_id: "11111111-2222-4333-8444-555555555555",
+      team: 1,
+    },
   );
   assert.equal(
     parsePlayOnCallClientFrame(JSON.stringify({

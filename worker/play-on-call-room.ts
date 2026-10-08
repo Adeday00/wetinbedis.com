@@ -6,6 +6,7 @@ import {
   parsePlayOnCallClientFrame,
   serverFrame,
   type PlayOnCallMode,
+  type PlayOnCallEvent,
   type PlayOnCallParticipant,
   type PlayOnCallRoomSnapshot,
   type PlayOnCallServerFrame,
@@ -23,22 +24,33 @@ const ROOM_STATE_KEY = "play_on_call_room_v1";
 const GAME_AUTHORITY_KEY = "play_on_call_game_authority_v1";
 const REACTION_AUTHORITY_KEY = "play_on_call_reaction_authority_v1";
 const SEEN_EVENT_IDS_KEY = "play_on_call_seen_event_ids_v1";
+const GAME_EVENT_LOG_KEY = "play_on_call_game_event_log_v2";
 const ROOM_PROXY_HEADER = "x-wbd-call-room-proxy";
 const PLAYER_ID_HEADER = "x-wbd-call-room-player-id";
 const DISPLAY_NAME_HEADER = "x-wbd-call-room-display-name";
 
 const HOST_GAME_EVENTS = new Set([
+  "configure_game",
   "round_start",
   "round_reassign",
-  "reaction_checkpoint",
-  "reaction_resolution",
+  "post_game_ad_break",
+  "game_over",
+  "return_to_lobby",
 ]);
 const PARTICIPANT_GAME_EVENTS = new Set([
   "guesser_ready",
   "card_action",
   "award",
+  "reaction_checkpoint",
   "reaction_consent",
+  "reaction_resolution",
 ]);
+
+type LoggedGameEvent = {
+  senderPlayerID: string;
+  eventID: string;
+  event: Extract<PlayOnCallEvent, { type: "game_event" }>;
+};
 
 function json(body: unknown, status = 200): Response {
   return Response.json(body, {
@@ -150,6 +162,23 @@ export class PlayOnCallRoom {
       this.broadcast({ type: "room_event", sender_player_id: playerID, event_id: frame.event_id, event: frame.event });
       return;
     }
+    case "assign_team": {
+      if (room.hostPlayerID !== playerID) {
+        return this.send(socket, { type: "error", code: "host_only", message: "Only the Chairman can assign teams." });
+      }
+      if (room.phase !== "lobby") {
+        return this.send(socket, { type: "error", code: "teams_locked", message: "Teams lock when the game begins." });
+      }
+      const assignedPlayerID = frame.event.player_id;
+      const assignedParticipant = room.participants.find((entry) => entry.playerID === assignedPlayerID);
+      if (!assignedParticipant) {
+        return this.send(socket, { type: "error", code: "unknown_player", message: "That player is no longer in the room." });
+      }
+      assignedParticipant.team = frame.event.team;
+      await this.save(room);
+      this.broadcast({ type: "room_event", sender_player_id: playerID, event_id: frame.event_id, event: frame.event });
+      return;
+    }
     case "leave_room":
       await this.removeParticipant(room, playerID, "left");
       socket.close(1000, "You left the room.");
@@ -169,6 +198,15 @@ export class PlayOnCallRoom {
         return this.send(socket, { type: "error", code: "room_event_not_allowed", message: "That control is not available to this player." });
       }
       const authority = await this.state.storage.get<PlayOnCallGameAuthority>(GAME_AUTHORITY_KEY);
+      if (frame.event.event_type === "configure_game") {
+        if (!isHost || room.phase !== "lobby") {
+          return this.send(socket, { type: "error", code: "game_configuration_not_allowed", message: "Only the Chairman can set up a new game from the lobby." });
+        }
+        await this.state.storage.put(GAME_EVENT_LOG_KEY, []);
+        await this.state.storage.delete(GAME_AUTHORITY_KEY);
+        await this.state.storage.delete(REACTION_AUTHORITY_KEY);
+        room.mode = frame.event.payload.mode;
+      }
       if (frame.event.event_type === "round_start") {
         const payload = frame.event.payload;
         if (!isHost || !room.participants.some((entry) => entry.playerID === payload.turn_player_id)) {
@@ -197,6 +235,12 @@ export class PlayOnCallRoom {
           return this.send(socket, { type: "error", code: "turn_owner_required", message: "Only the current turn owner can send that control." });
         }
       }
+      if (frame.event.event_type === "guesser_ready") {
+        const deadline = frame.event.payload.deadline_ms;
+        if (deadline <= Date.now() || deadline > Date.now() + 3 * 60 * 1000) {
+          return this.send(socket, { type: "error", code: "invalid_round_deadline", message: "That round clock is not valid." });
+        }
+      }
       if (frame.event.event_type === "award") {
         const payload = frame.event.payload;
         if (!turnControlIsAllowed(authority, payload.round_id, playerID)
@@ -208,11 +252,14 @@ export class PlayOnCallRoom {
         const payload = frame.event.payload;
         const roster = [...payload.required_player_ids];
         const participants = room.participants.map((entry) => entry.playerID);
-        if (!isHost || !reactionRosterIsValid(participants, payload.recorder_player_id, roster)) {
+        if (payload.recorder_player_id !== playerID
+          || !turnControlIsAllowed(authority, `round_${String(payload.round_number).padStart(4, "0")}`, playerID)
+          || !reactionRosterIsValid(participants, payload.recorder_player_id, roster)) {
           return this.send(socket, { type: "error", code: "invalid_reaction_roster", message: "Reaction consent must include everyone in the room." });
         }
         await this.state.storage.put<PlayOnCallReactionAuthority>(REACTION_AUTHORITY_KEY, {
           checkpointID: payload.checkpoint_id,
+          recorderPlayerID: payload.recorder_player_id,
           requiredPlayerIDs: roster,
         });
       }
@@ -227,7 +274,7 @@ export class PlayOnCallRoom {
       if (frame.event.event_type === "reaction_resolution") {
         const payload = frame.event.payload;
         const checkpoint = await this.state.storage.get<PlayOnCallReactionAuthority>(REACTION_AUTHORITY_KEY);
-        if (!isHost || !reactionResolutionIsValid(
+        if (!checkpoint || checkpoint.recorderPlayerID !== playerID || !reactionResolutionIsValid(
           checkpoint,
           payload.checkpoint_id,
           payload.kept,
@@ -237,8 +284,24 @@ export class PlayOnCallRoom {
         }
         await this.state.storage.delete(REACTION_AUTHORITY_KEY);
       }
+      if (frame.event.event_type === "return_to_lobby") {
+        if (!isHost) {
+          return this.send(socket, { type: "error", code: "host_only", message: "Only the Chairman can restart the room." });
+        }
+        room.phase = "lobby";
+        await this.state.storage.delete(GAME_AUTHORITY_KEY);
+        await this.state.storage.delete(REACTION_AUTHORITY_KEY);
+      }
       await this.save(room);
-      this.broadcast({ type: "room_event", sender_player_id: playerID, event_id: frame.event_id, event: frame.event });
+      const outbound: PlayOnCallServerFrame = { type: "room_event", sender_player_id: playerID, event_id: frame.event_id, event: frame.event };
+      this.broadcast(outbound);
+      if (frame.event.event_type === "return_to_lobby") {
+        await this.state.storage.put(GAME_EVENT_LOG_KEY, []);
+      } else {
+        const log = await this.state.storage.get<LoggedGameEvent[]>(GAME_EVENT_LOG_KEY) ?? [];
+        log.push({ senderPlayerID: playerID, eventID: frame.event_id, event: frame.event });
+        await this.state.storage.put(GAME_EVENT_LOG_KEY, log.slice(-2_048));
+      }
     }
     }
   }
@@ -327,6 +390,15 @@ export class PlayOnCallRoom {
     server.serializeAttachment(playerID);
     this.state.acceptWebSocket(server);
     this.send(server, { type: "room_snapshot", room });
+    const gameEvents = await this.state.storage.get<LoggedGameEvent[]>(GAME_EVENT_LOG_KEY) ?? [];
+    for (const event of gameEvents) {
+      this.send(server, {
+        type: "room_event",
+        sender_player_id: event.senderPlayerID,
+        event_id: event.eventID,
+        event: event.event,
+      });
+    }
     return new Response(null, { status: 101, webSocket: client } as ResponseInit);
   }
 

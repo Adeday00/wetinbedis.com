@@ -1,5 +1,5 @@
 export type PlayOnCallGameAuthority = { roundID: string; turnPlayerID: string };
-export type PlayOnCallReactionAuthority = { checkpointID: string; requiredPlayerIDs: string[] };
+export type PlayOnCallReactionAuthority = { checkpointID: string; recorderPlayerID: string; requiredPlayerIDs: string[] };
 
 export function reservePlayOnCallEventID(
   seenEventIDs: string[],
