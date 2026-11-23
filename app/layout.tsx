@@ -6,11 +6,11 @@ import TrackedAppStoreLink from "@/components/TrackedAppStoreLink";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wetinbedis.com"),
-  title: "Wetin Be Dis — The Nigerian Party Guessing Game",
-  description: "Bring your people, pick your gist, and prove who really knows Nigerian culture. Play in person, over FaceTime, or at your next house party.",
+  title: "Wetin Be Dis — Nigerian Party Game",
+  description: "The Nigerian party game for loud rooms, family gatherings, FaceTime, and calls across iPhone and Android. Give clues, avoid the no-mention words, and prove who knows the gist.",
   openGraph: {
-    title: "Wetin Be Dis?",
-    description: "Bring your people. Prove you know the gist.",
+    title: "Wetin Be Dis — Nigerian Party Game",
+    description: "You know the culture. Can you explain it?",
     url: "https://wetinbedis.com",
     siteName: "Wetin Be Dis",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wetin Be Dis?",
-    description: "Bring your people. Prove you know the gist.",
+    title: "Wetin Be Dis — Nigerian Party Game",
+    description: "You know the culture. Can you explain it?",
     images: ["/og.png"],
   },
   icons: { icon: "/brand/app-icon.png", apple: "/brand/app-icon.png" },
@@ -42,7 +42,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer>
           <div className="footer-brand"><Brand /><p>Your people already know the gist.</p></div>
           <div className="footer-links"><strong>Play</strong><TrackedAppStoreLink>Download on the App Store</TrackedAppStoreLink><Link href="/#play">Try a round</Link><Link href="/#modes">Ways to play</Link><Link href="/#full-gist">Full Gist</Link></div>
-          <div className="footer-links"><strong>Help</strong><Link href="/support/">Support</Link><Link href="/privacy/">Privacy</Link><a href="mailto:support@wetinbedis.com">Contact</a></div>
+          <div className="footer-links"><strong>Help</strong><Link href="/support/">Support</Link><Link href="/privacy/">Privacy</Link><Link href="/rules/challenge/">Challenge rules</Link><Link href="/rules/weekly-league/">Weekly League rules</Link><a href="mailto:support@wetinbedis.com">Contact</a></div>
           <div className="footer-bottom"><span>© 2026 David Adekanbi</span><span>Made with gist, from Naija to everywhere.</span></div>
         </footer>
       </body>

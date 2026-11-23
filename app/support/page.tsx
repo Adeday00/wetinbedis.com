@@ -6,7 +6,7 @@ import FAQ from "@/components/FAQ";
 export const metadata: Metadata = { title: "Support — Wetin Be Dis", description: "Help with gameplay, purchases, ads, House Party, FaceTime, and reaction videos." };
 
 const topics = [
-  { href: "#faq-full-gist", Icon: Crown, title: "Full Gist", body: "Unlocking, purchasing, or restoring your one-time purchase." },
+  { href: "#faq-full-gist", Icon: Crown, title: "Full Gist", body: "Current store pricing, unlocking, and restoring your one-time purchase." },
   { href: "#faq-house-party", Icon: HouseLine, title: "House Party", body: "Hosting, joining, room codes, and connection help." },
   { href: "#faq-rewarded-ads", Icon: PlayCircle, title: "Rewarded ads", body: "What to do if an ad does not complete or grant progress." },
   { href: "#faq-reaction-videos", Icon: VideoCamera, title: "Reaction videos", body: "Camera, microphone, recording, saving, and deleting clips." },

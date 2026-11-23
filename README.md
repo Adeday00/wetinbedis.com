@@ -22,3 +22,4 @@ Next.js exports the static site to `out/`. Netlify deploys that directory using 
 - `/` — interactive brand and gameplay experience
 - `/support/` — support and contact information
 - `/privacy/` — privacy policy
+- `/rules/weekly-league/` — Weekly League rules and practice/cash status

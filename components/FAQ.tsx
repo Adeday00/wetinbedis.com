@@ -5,11 +5,12 @@ import { Minus, Plus } from "@phosphor-icons/react";
 
 const questions = [
   { id: "one-phone", question: "Can we play with one phone?", answer: "Yes. In Person mode is built around one phone. Split into teams, pass the phone, and let the room do the rest." },
-  { id: "full-gist", question: "Does everybody need Full Gist?", answer: "No. In hosted multiplayer, the host’s selected access determines the categories available for that game. Your friends can join the fun without buying the same pack first." },
+  { id: "full-gist", question: "Does everybody need Full Gist?", answer: "No. In hosted multiplayer, the host’s selected access determines the categories available for that game. Your friends can join without buying the same pack first. On FaceTime, each player uses the decks available on their own device." },
   { id: "house-party", question: "What is House Party?", answer: "House Party lets one person host and everybody else join using a room code. The game clearly labels the chairman and guests so nobody confuses who controls the session." },
   { id: "rewarded-ads", question: "What if a rewarded ad does not finish?", answer: "Check your connection, reopen the app, and try once more. If the reward still does not appear, email support with your device model, iOS version, and app version." },
   { id: "reaction-videos", question: "Are reaction videos uploaded?", answer: "No. Reaction clips are created for your game experience and stored locally on your device. You decide whether to keep or delete them." },
-  { id: "subscription", question: "Is Full Gist a subscription?", answer: "No. Full Gist is a one-time purchase that unlocks every premium category and removes ads. No monthly bill." },
+  { id: "subscription", question: "How much does Full Gist cost?", answer: "Full Gist is a one-time purchase, not a subscription. It is currently $4.99 in the US and ₦2,500 in Nigeria. The App Store shows your local price before you confirm. Prices may change by storefront." },
+  { id: "refund", question: "What does Full Gist unlock?", answer: "It unlocks all current party decks and All Gist shuffle, longer Solo formats such as Marathon, and removes gameplay ads. It does not change Today’s 5 or Weekly League fairness, attempts, or prize eligibility." },
 ];
 
 export default function FAQ() {

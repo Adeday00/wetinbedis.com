@@ -4,9 +4,11 @@ import { useRef, useState, type KeyboardEvent } from "react";
 import { CheckCircle } from "@phosphor-icons/react";
 
 const modes = [
-  { id: "room", number: "01", label: "IN PERSON", title: "One phone. Whole room. Maximum noise.", body: "Pass the phone, split into crews, and race the timer together. Perfect for game nights, family visits, weddings, and anywhere your people gather.", bullets: ["2+ players", "Pass one phone", "Reaction videos"], screen: "/app-screens/play.png" },
-  { id: "house", number: "02", label: "HOUSE PARTY", title: "Everybody joins. One clear chairman.", body: "The host creates a room code, guests join from their own phones, and everyone always knows who controls the game. Built for the same room without the confusion.", bullets: ["Host + join codes", "Synced game state", "Clear player roles"], screen: "/app-screens/house-party.png" },
-  { id: "facetime", number: "03", label: "FACETIME", title: "Distance no fit stop the gist.", body: "Start SharePlay during a compatible FaceTime call and keep the card, timer, scores, and turns moving across everyone’s devices.", bullets: ["SharePlay enabled", "Play from anywhere", "Synced turns"], screen: "/app-screens/setup.png" },
+  { id: "room", number: "01", label: "IN PERSON", title: "One phone. Pass it round.", body: "Split into teams. One person holds the phone to their forehead while everyone else gives clues. Get the word before the timer runs out.", bullets: ["2+ players", "Pass one phone", "Reaction videos"], screen: "/app-screens/game-portrait.png" },
+  { id: "house", number: "02", label: "HOUSE PARTY", title: "Everybody joins the room.", body: "One person hosts. The rest join with a room code on their own phones. The host runs the game; everybody gets in on the shouting.", bullets: ["Host + join codes", "Play together in person", "Clear player roles"], screen: "/app-screens/house-party.png" },
+  { id: "facetime", number: "03", label: "FACETIME", title: "Play while you FaceTime.", body: "Start SharePlay on a compatible FaceTime call. The cards, timer, scores, and turns move along with the conversation.", bullets: ["SharePlay enabled", "Play from anywhere", "Synced turns"], screen: "/app-screens/setup-current.png" },
+  { id: "call", number: "04", label: "PLAY ON A CALL", title: "Call each other. Play together.", body: "Open a room, then call on WhatsApp, FaceTime, Discord, or whatever your crew uses. iPhone and Android players can join the same game.", bullets: ["iPhone + Android", "Use your own call app", "Game runs separately"], screen: "/app-screens/game-landscape.png" },
+  { id: "solo", number: "05", label: "SOLO GIST", title: "Just you and the cards.", body: "Try Today’s 5, play a quick category, or keep going with Marathon. Your stats stay yours.", bullets: ["Today’s 5", "Quick Play and Marathon", "Personal stats"], screen: "/app-screens/game-portrait.png" },
 ];
 
 export default function ModeExplorer() {
