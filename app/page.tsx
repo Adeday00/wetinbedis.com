@@ -80,8 +80,8 @@ export default function Home() {
       <section className="reaction-section" id="reactions">
         <div className="reaction-layout">
           <div className="reaction-video-wrap">
-            <video className="reaction-video" autoPlay muted loop playsInline poster="/reactions/pepper-soup-round-poster.jpg" aria-label="Friends playing Wetin Be Dis and reacting to a Pepper Soup card">
-              <source src="/reactions/pepper-soup-round.mp4" type="video/mp4" />
+            <video className="reaction-video" autoPlay muted loop playsInline poster="/reactions/pepper-soup-room-poster.jpg" aria-label="Friends playing Wetin Be Dis together">
+              <source src="/reactions/pepper-soup-room.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="reaction-copy">
