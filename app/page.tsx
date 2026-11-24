@@ -34,7 +34,7 @@ export default function Home() {
             poster="/app-screens/home-current.png"
             aria-label="Friends playing Wetin Be Dis at home"
           >
-            <source src="/reactions/pepper-soup-social.mp4" type="video/mp4" />
+            <source src="/reactions/dodo-party-gameplay.mp4" type="video/mp4" />
           </video>
           <figcaption>Actual people. Actual gist.</figcaption>
         </figure>
