@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wetin-be-dis-api",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "triggers": { "crons": ["* * * * *"] },
+  "routes": [
+    { "pattern": "admin.wetinbedis.com", "custom_domain": true },
+    { "pattern": "play.wetinbedis.com", "custom_domain": true },
+    { "pattern": "api.wetinbedis.com/*", "zone_name": "wetinbedis.com" }
+  ],
+  "durable_objects": {
+    "bindings": [
+      { "name": "PLAY_ON_CALL_ROOMS", "class_name": "PlayOnCallRoom" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["PlayOnCallRoom"] }
+  ],
+  "vars": {
+    "WBD_APNS_HOST": "https://api.push.apple.com"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "wetin-be-dis-production",
+      "database_id": "a1aec8d8-2a48-4995-9b99-8c9b09073d8a",
+      "migrations_dir": "drizzle"
+    }
+  ]
+}

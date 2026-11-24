@@ -20,9 +20,11 @@
     "content:trends:check": "node scripts/check-trend-intake.mjs",
     "content:status": "node scripts/content-status.mjs",
     "content:validate": "node scripts/publish-content.mjs",
-    "content:publish": "node scripts/publish-content.mjs --publish"
+  "content:publish": "node scripts/publish-content.mjs --publish",
+  "event-pack:publish": "node scripts/publish-event-pack.mjs"
   },
   "dependencies": {
+    "@bradford-tech/supabase-integrity-attest": "0.9.1",
     "drizzle-orm": "0.45.2",
     "react": "19.2.6",
     "react-dom": "19.2.6"

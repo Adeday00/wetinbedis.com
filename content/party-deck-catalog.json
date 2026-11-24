@@ -154,7 +154,7 @@
     "ID": "S-016",
     "Difficulty": "Medium",
     "Category": "Slang",
-    "Main Word": "Dey Play",
+    "Main Word": "You Dey Play?",
     "Forbidden Word 1": "Joke",
     "Forbidden Word 2": "Laugh",
     "Forbidden Word 3": "Serious"
@@ -198,16 +198,6 @@
     "Forbidden Word 1": "Space",
     "Forbidden Word 2": "Boundaries",
     "Forbidden Word 3": "Distance"
-  },
-  {
-    "Card Number": 21,
-    "ID": "S-022",
-    "Difficulty": "Medium",
-    "Category": "Slang",
-    "Main Word": "On Colos",
-    "Forbidden Word 1": "High",
-    "Forbidden Word 2": "Smoke",
-    "Forbidden Word 3": "Drug"
   },
   {
     "Card Number": 22,
@@ -820,16 +810,6 @@
     "Forbidden Word 3": "Man of the Year"
   },
   {
-    "Card Number": 83,
-    "ID": "C-3026",
-    "Difficulty": "Medium",
-    "Category": "Celebrities",
-    "Main Word": "Mohbad",
-    "Forbidden Word 1": "Imole",
-    "Forbidden Word 2": "Marlian",
-    "Forbidden Word 3": "Peace"
-  },
-  {
     "Card Number": 84,
     "ID": "C-3030",
     "Difficulty": "Medium",
@@ -1167,7 +1147,7 @@
     "Main Word": "Feel",
     "Forbidden Word 1": "Davido",
     "Forbidden Word 2": "Timeless",
-    "Forbidden Word 3": "5ive"
+    "Forbidden Word 3": "Dance"
   },
   {
     "Card Number": 118,
@@ -1183,7 +1163,7 @@
     "Card Number": 119,
     "ID": "T-102",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Molue",
     "Forbidden Word 1": "Big",
     "Forbidden Word 2": "Yellow",
@@ -1193,7 +1173,7 @@
     "Card Number": 120,
     "ID": "T-103",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Korope",
     "Forbidden Word 1": "Small",
     "Forbidden Word 2": "Bus",
@@ -1223,7 +1203,7 @@
     "Card Number": 123,
     "ID": "T-106",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Bus Stop",
     "Forbidden Word 1": "Wait",
     "Forbidden Word 2": "Stand",
@@ -1253,7 +1233,7 @@
     "Card Number": 126,
     "ID": "T-113",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Car Don Spoil",
     "Forbidden Word 1": "Mechanic",
     "Forbidden Word 2": "Push",
@@ -1283,10 +1263,10 @@
     "Card Number": 129,
     "ID": "T-120",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Okada Ban",
-    "Forbidden Word 1": "Bike",
-    "Forbidden Word 2": "Lagos",
+    "Forbidden Word 1": "Lagos",
+    "Forbidden Word 2": "Government",
     "Forbidden Word 3": "Motorcycle"
   },
   {
@@ -1573,7 +1553,7 @@
     "Card Number": 158,
     "ID": "W-174",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Mechanic",
     "Forbidden Word 1": "Fix",
     "Forbidden Word 2": "Workshop",
@@ -1593,7 +1573,7 @@
     "Card Number": 160,
     "ID": "W-176",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Barber Shop",
     "Forbidden Word 1": "Hair",
     "Forbidden Word 2": "Cut",
@@ -1623,7 +1603,7 @@
     "Card Number": 163,
     "ID": "W-179",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "House Agent",
     "Forbidden Word 1": "Rent",
     "Forbidden Word 2": "Inspection",
@@ -1653,7 +1633,7 @@
     "Card Number": 166,
     "ID": "W-183",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Salary Day",
     "Forbidden Word 1": "Alert",
     "Forbidden Word 2": "Month End",
@@ -1663,7 +1643,7 @@
     "Card Number": 167,
     "ID": "W-184",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Work-from-Home",
     "Forbidden Word 1": "Laptop",
     "Forbidden Word 2": "Remote",
@@ -2120,16 +2100,6 @@
     "Forbidden Word 3": "Hostel"
   },
   {
-    "Card Number": 213,
-    "ID": "S-034",
-    "Difficulty": "Medium",
-    "Category": "Slang",
-    "Main Word": "Ganusi",
-    "Forbidden Word 1": "Snap",
-    "Forbidden Word 2": "Camera",
-    "Forbidden Word 3": "Caught"
-  },
-  {
     "Card Number": 214,
     "ID": "S-035",
     "Difficulty": "Medium",
@@ -2326,8 +2296,8 @@
     "Category": "Naija Life",
     "Main Word": "Urgent 2k",
     "Forbidden Word 1": "Borrow",
-    "Forbidden Word 2": "Money",
-    "Forbidden Word 3": "Loan"
+    "Forbidden Word 2": "Two Thousand",
+    "Forbidden Word 3": "Emergency"
   },
   {
     "Card Number": 234,
@@ -3520,26 +3490,6 @@
     "Forbidden Word 3": "Insult"
   },
   {
-    "Card Number": 353,
-    "ID": "NEW-SLANG-004",
-    "Difficulty": "Medium",
-    "Category": "Slang",
-    "Main Word": "Oscroh",
-    "Forbidden Word 1": "Money",
-    "Forbidden Word 2": "Shalipopi",
-    "Forbidden Word 3": "Runs girl"
-  },
-  {
-    "Card Number": 354,
-    "ID": "NEW-SLANG-005",
-    "Difficulty": "Hard",
-    "Category": "Slang",
-    "Main Word": "T-Pain",
-    "Forbidden Word 1": "President Tinubu ",
-    "Forbidden Word 2": "Hardship",
-    "Forbidden Word 3": "Nickname"
-  },
-  {
     "Card Number": 355,
     "ID": "NEW-SLANG-006",
     "Difficulty": "Medium",
@@ -3574,7 +3524,7 @@
     "ID": "NEW-SLANG-009",
     "Difficulty": "Easy",
     "Category": "Slang",
-    "Main Word": "Wetin Be This",
+    "Main Word": "Wetin Dey Happen?",
     "Forbidden Word 1": "What",
     "Forbidden Word 2": "Question",
     "Forbidden Word 3": "Confusion"
@@ -4070,16 +4020,6 @@
     "Forbidden Word 3": "Return"
   },
   {
-    "Card Number": 408,
-    "ID": "NEW-LIFE-008",
-    "Difficulty": "Easy",
-    "Category": "Naija Life",
-    "Main Word": "Flash Me",
-    "Forbidden Word 1": "Phone",
-    "Forbidden Word 2": "Ring",
-    "Forbidden Word 3": "Signal"
-  },
-  {
     "Card Number": 409,
     "ID": "NEW-LIFE-009",
     "Difficulty": "Medium",
@@ -4175,9 +4115,9 @@
     "Difficulty": "Easy",
     "Category": "Naija Life",
     "Main Word": "Landlady",
-    "Forbidden Word 1": "Rent",
-    "Forbidden Word 2": "House",
-    "Forbidden Word 3": "Woman"
+    "Forbidden Word 1": "Woman",
+    "Forbidden Word 2": "Mama",
+    "Forbidden Word 3": "Tenant"
   },
   {
     "Card Number": 419,
@@ -4253,7 +4193,7 @@
     "Card Number": 426,
     "ID": "NEW-STREET-001",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Wheelbarrow Pusher",
     "Forbidden Word 1": "Load",
     "Forbidden Word 2": "Market",
@@ -4263,7 +4203,7 @@
     "Card Number": 427,
     "ID": "NEW-STREET-002",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Buka",
     "Forbidden Word 1": "Food",
     "Forbidden Word 2": "Local",
@@ -4273,7 +4213,7 @@
     "Card Number": 428,
     "ID": "NEW-STREET-003",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Market Woman",
     "Forbidden Word 1": "Trade",
     "Forbidden Word 2": "Wrapper",
@@ -4283,7 +4223,7 @@
     "Card Number": 429,
     "ID": "NEW-STREET-004",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Bus Driver",
     "Forbidden Word 1": "Steering",
     "Forbidden Word 2": "Road",
@@ -4293,7 +4233,7 @@
     "Card Number": 430,
     "ID": "NEW-STREET-005",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Uber Ride",
     "Forbidden Word 1": "App",
     "Forbidden Word 2": "Driver",
@@ -4303,7 +4243,7 @@
     "Card Number": 431,
     "ID": "NEW-STREET-006",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Night Guard",
     "Forbidden Word 1": "Security",
     "Forbidden Word 2": "Darkness",
@@ -4313,7 +4253,7 @@
     "Card Number": 432,
     "ID": "NEW-STREET-007",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Bricklayer",
     "Forbidden Word 1": "Block",
     "Forbidden Word 2": "Cement",
@@ -4323,7 +4263,7 @@
     "Card Number": 433,
     "ID": "NEW-STREET-008",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Carpenter",
     "Forbidden Word 1": "Wood",
     "Forbidden Word 2": "Hammer",
@@ -4333,7 +4273,7 @@
     "Card Number": 434,
     "ID": "NEW-STREET-009",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Plumber",
     "Forbidden Word 1": "Pipe",
     "Forbidden Word 2": "Water",
@@ -4343,7 +4283,7 @@
     "Card Number": 435,
     "ID": "NEW-STREET-010",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Electrician",
     "Forbidden Word 1": "Wire",
     "Forbidden Word 2": "Current",
@@ -4353,7 +4293,7 @@
     "Card Number": 436,
     "ID": "NEW-STREET-011",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Welder",
     "Forbidden Word 1": "Metal",
     "Forbidden Word 2": "Sparks",
@@ -4363,7 +4303,7 @@
     "Card Number": 437,
     "ID": "NEW-STREET-012",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Painter",
     "Forbidden Word 1": "Brush",
     "Forbidden Word 2": "Color",
@@ -4373,7 +4313,7 @@
     "Card Number": 438,
     "ID": "NEW-STREET-013",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Apprentice",
     "Forbidden Word 1": "Learn",
     "Forbidden Word 2": "Oga",
@@ -4383,7 +4323,7 @@
     "Card Number": 439,
     "ID": "NEW-STREET-014",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Oga At The Top",
     "Forbidden Word 1": "Boss",
     "Forbidden Word 2": "Office",
@@ -4393,27 +4333,17 @@
     "Card Number": 440,
     "ID": "NEW-STREET-015",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
-    "Main Word": "Daily 2k",
-    "Forbidden Word 1": "Quick",
-    "Forbidden Word 2": "Work",
-    "Forbidden Word 3": "Urgent "
-  },
-  {
-    "Card Number": 441,
-    "ID": "NEW-STREET-016",
-    "Difficulty": "Medium",
-    "Category": "Street & Hustle",
-    "Main Word": "Delivery Rider",
-    "Forbidden Word 1": "Package",
-    "Forbidden Word 2": "Bike",
-    "Forbidden Word 3": "Order"
+    "Category": "Naija Life",
+    "Main Word": "Daily Pay",
+    "Forbidden Word 1": "Casual Work",
+    "Forbidden Word 2": "Labourer",
+    "Forbidden Word 3": "Wages"
   },
   {
     "Card Number": 442,
     "ID": "NEW-STREET-017",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Keke Driver",
     "Forbidden Word 1": "Tricycle",
     "Forbidden Word 2": "Passenger",
@@ -4423,7 +4353,7 @@
     "Card Number": 443,
     "ID": "NEW-STREET-018",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Viewing Centre",
     "Forbidden Word 1": "Football",
     "Forbidden Word 2": "Screen",
@@ -4433,7 +4363,7 @@
     "Card Number": 444,
     "ID": "NEW-STREET-019",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Phone Repairer",
     "Forbidden Word 1": "Screen",
     "Forbidden Word 2": "Screwdriver",
@@ -4443,7 +4373,7 @@
     "Card Number": 445,
     "ID": "NEW-STREET-020",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Shoemaker ",
     "Forbidden Word 1": "Polish",
     "Forbidden Word 2": "Leather",
@@ -4453,7 +4383,7 @@
     "Card Number": 446,
     "ID": "NEW-STREET-021",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Car Wash",
     "Forbidden Word 1": "Soap",
     "Forbidden Word 2": "Vehicle",
@@ -4463,7 +4393,7 @@
     "Card Number": 447,
     "ID": "NEW-STREET-022",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Barber",
     "Forbidden Word 1": "Clippers",
     "Forbidden Word 2": "Hair",
@@ -4473,7 +4403,7 @@
     "Card Number": 448,
     "ID": "NEW-STREET-023",
     "Difficulty": "Easy",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Food Vendor",
     "Forbidden Word 1": "Sell",
     "Forbidden Word 2": "Plate",
@@ -4483,7 +4413,7 @@
     "Card Number": 449,
     "ID": "NEW-STREET-024",
     "Difficulty": "Medium",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Construction Worker",
     "Forbidden Word 1": "Building",
     "Forbidden Word 2": "Site",
@@ -4493,7 +4423,7 @@
     "Card Number": 450,
     "ID": "NEW-STREET-025",
     "Difficulty": "Hard",
-    "Category": "Street & Hustle",
+    "Category": "Naija Life",
     "Main Word": "Area Boy",
     "Forbidden Word 1": "Street",
     "Forbidden Word 2": "Gang",
@@ -4576,8 +4506,8 @@
     "Category": "Music",
     "Main Word": "High",
     "Forbidden Word 1": "Adekunle Gold",
-    "Forbidden Word 2": "Zinoleesky",
-    "Forbidden Word 3": "Drugs"
+    "Forbidden Word 2": "Davido",
+    "Forbidden Word 3": "Up"
   },
   {
     "Card Number": 459,
@@ -4595,9 +4525,9 @@
     "Difficulty": "Hard",
     "Category": "Music",
     "Main Word": "Overloading",
-    "Forbidden Word 1": "Lojay",
-    "Forbidden Word 2": "Sarz",
-    "Forbidden Word 3": "Remix"
+    "Forbidden Word 1": "Mavin",
+    "Forbidden Word 2": "Overdose",
+    "Forbidden Word 3": "Crayon"
   },
   {
     "Card Number": 461,
@@ -4725,9 +4655,9 @@
     "Difficulty": "Hard",
     "Category": "Music",
     "Main Word": "Sakara",
-    "Forbidden Word 1": "Hausa",
-    "Forbidden Word 2": "Bowed",
-    "Forbidden Word 3": "Music"
+    "Forbidden Word 1": "Yoruba",
+    "Forbidden Word 2": "Yusuf Olatunji",
+    "Forbidden Word 3": "Drum"
   },
   {
     "Card Number": 474,
@@ -5420,16 +5350,6 @@
     "Forbidden Word 3": "Embassy"
   },
   {
-    "Card Number": 543,
-    "ID": "NEW-DIAS-028",
-    "Difficulty": "Medium",
-    "Category": "Diaspora",
-    "Main Word": "International Transfer",
-    "Forbidden Word 1": "Bank",
-    "Forbidden Word 2": "Money",
-    "Forbidden Word 3": "Abroad"
-  },
-  {
     "Card Number": 544,
     "ID": "NEW-DIAS-029",
     "Difficulty": "Medium",
@@ -5528,16 +5448,6 @@
     "Forbidden Word 1": "Gown",
     "Forbidden Word 2": "University",
     "Forbidden Word 3": "Freshers"
-  },
-  {
-    "Card Number": 554,
-    "ID": "NEW-SCHOOL-004",
-    "Difficulty": "Easy",
-    "Category": "School",
-    "Main Word": "Convocation",
-    "Forbidden Word 1": "Graduation",
-    "Forbidden Word 2": "Gown",
-    "Forbidden Word 3": "Degree"
   },
   {
     "Card Number": 555,
@@ -5645,9 +5555,9 @@
     "Difficulty": "Hard",
     "Category": "School",
     "Main Word": "TDB",
-    "Forbidden Word 1": "Book",
-    "Forbidden Word 2": "Study",
-    "Forbidden Word 3": "Exam"
+    "Forbidden Word 1": "Night",
+    "Forbidden Word 2": "Overnight",
+    "Forbidden Word 3": "Read"
   },
   {
     "Card Number": 566,
@@ -5910,16 +5820,6 @@
     "Forbidden Word 3": "Minor"
   },
   {
-    "Card Number": 592,
-    "ID": "NEW-RELIGION-017",
-    "Difficulty": "Medium",
-    "Category": "Religion",
-    "Main Word": "Ablution",
-    "Forbidden Word 1": "Water",
-    "Forbidden Word 2": "Wash",
-    "Forbidden Word 3": "Prayer"
-  },
-  {
     "Card Number": 593,
     "ID": "NEW-RELIGION-018",
     "Difficulty": "Hard",
@@ -5998,5 +5898,2035 @@
     "Forbidden Word 1": "Ramadan",
     "Forbidden Word 2": "Night",
     "Forbidden Word 3": "Prayer"
+  },
+  {
+    "Card Number": 803,
+    "ID": "N26-STREET-001",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Okrika",
+    "Forbidden Word 1": "Second-Hand",
+    "Forbidden Word 2": "Clothes",
+    "Forbidden Word 3": "Bale"
+  },
+  {
+    "Card Number": 804,
+    "ID": "N26-STREET-002",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Mai Shayi",
+    "Forbidden Word 1": "Tea",
+    "Forbidden Word 2": "Bread",
+    "Forbidden Word 3": "Mallam"
+  },
+  {
+    "Card Number": 805,
+    "ID": "N26-STREET-003",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Mai Ruwa",
+    "Forbidden Word 1": "Water",
+    "Forbidden Word 2": "Jerrycan",
+    "Forbidden Word 3": "Cart"
+  },
+  {
+    "Card Number": 806,
+    "ID": "N26-STREET-004",
+    "Difficulty": "Hard",
+    "Category": "Naija Life",
+    "Main Word": "Alaru",
+    "Forbidden Word 1": "Load",
+    "Forbidden Word 2": "Head",
+    "Forbidden Word 3": "Market"
+  },
+  {
+    "Card Number": 807,
+    "ID": "N26-STREET-005",
+    "Difficulty": "Hard",
+    "Category": "Naija Life",
+    "Main Word": "Iyaloja",
+    "Forbidden Word 1": "Market",
+    "Forbidden Word 2": "Leader",
+    "Forbidden Word 3": "Women"
+  },
+  {
+    "Card Number": 808,
+    "ID": "N26-STREET-006",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "BDC",
+    "Forbidden Word 1": "Dollar",
+    "Forbidden Word 2": "Exchange",
+    "Forbidden Word 3": "Mallam"
+  },
+  {
+    "Card Number": 809,
+    "ID": "N26-STREET-007",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Computer Village",
+    "Forbidden Word 1": "Ikeja",
+    "Forbidden Word 2": "Phones",
+    "Forbidden Word 3": "Market"
+  },
+  {
+    "Card Number": 810,
+    "ID": "N26-STREET-008",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Balogun Market",
+    "Forbidden Word 1": "Lagos Island",
+    "Forbidden Word 2": "Fabrics",
+    "Forbidden Word 3": "Crowd"
+  },
+  {
+    "Card Number": 811,
+    "ID": "N26-STREET-009",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Alaba Market",
+    "Forbidden Word 1": "Electronics",
+    "Forbidden Word 2": "Lagos",
+    "Forbidden Word 3": "Igbo"
+  },
+  {
+    "Card Number": 812,
+    "ID": "N26-STREET-010",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Oshodi",
+    "Forbidden Word 1": "Under Bridge",
+    "Forbidden Word 2": "Danfo",
+    "Forbidden Word 3": "Crowd"
+  },
+  {
+    "Card Number": 813,
+    "ID": "N26-STREET-011",
+    "Difficulty": "Hard",
+    "Category": "Naija Life",
+    "Main Word": "Ladipo Market",
+    "Forbidden Word 1": "Spare Parts",
+    "Forbidden Word 2": "Mushin",
+    "Forbidden Word 3": "Car"
+  },
+  {
+    "Card Number": 814,
+    "ID": "N26-STREET-012",
+    "Difficulty": "Hard",
+    "Category": "Naija Life",
+    "Main Word": "Ariaria",
+    "Forbidden Word 1": "Aba",
+    "Forbidden Word 2": "Market",
+    "Forbidden Word 3": "Shoes"
+  },
+  {
+    "Card Number": 815,
+    "ID": "N26-STREET-013",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Made In Aba",
+    "Forbidden Word 1": "Fake",
+    "Forbidden Word 2": "Shoes",
+    "Forbidden Word 3": "Local"
+  },
+  {
+    "Card Number": 816,
+    "ID": "N26-STREET-014",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Sales Girl",
+    "Forbidden Word 1": "Shop",
+    "Forbidden Word 2": "Customer",
+    "Forbidden Word 3": "Price"
+  },
+  {
+    "Card Number": 817,
+    "ID": "N26-STREET-015",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Freelancer",
+    "Forbidden Word 1": "Laptop",
+    "Forbidden Word 2": "Clients",
+    "Forbidden Word 3": "Upwork"
+  },
+  {
+    "Card Number": 818,
+    "ID": "N26-STREET-016",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Crypto",
+    "Forbidden Word 1": "Bitcoin",
+    "Forbidden Word 2": "Trading",
+    "Forbidden Word 3": "Coin"
+  },
+  {
+    "Card Number": 819,
+    "ID": "N26-STREET-017",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Forex Trader",
+    "Forbidden Word 1": "Charts",
+    "Forbidden Word 2": "Dollar",
+    "Forbidden Word 3": "Trading"
+  },
+  {
+    "Card Number": 820,
+    "ID": "N26-STREET-018",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Skit Maker",
+    "Forbidden Word 1": "Comedy",
+    "Forbidden Word 2": "Instagram",
+    "Forbidden Word 3": "Content"
+  },
+  {
+    "Card Number": 821,
+    "ID": "N26-STREET-019",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Content Creator",
+    "Forbidden Word 1": "Video",
+    "Forbidden Word 2": "Followers",
+    "Forbidden Word 3": "Camera"
+  },
+  {
+    "Card Number": 822,
+    "ID": "N26-STREET-020",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Panel Beater",
+    "Forbidden Word 1": "Car",
+    "Forbidden Word 2": "Dent",
+    "Forbidden Word 3": "Hammer"
+  },
+  {
+    "Card Number": 823,
+    "ID": "N26-STREET-021",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Generator Repairer",
+    "Forbidden Word 1": "Plug",
+    "Forbidden Word 2": "Engine",
+    "Forbidden Word 3": "Fix"
+  },
+  {
+    "Card Number": 824,
+    "ID": "N26-STREET-022",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Makeup Artist",
+    "Forbidden Word 1": "Face",
+    "Forbidden Word 2": "Brush",
+    "Forbidden Word 3": "Beat"
+  },
+  {
+    "Card Number": 825,
+    "ID": "N26-STREET-023",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Nail Tech",
+    "Forbidden Word 1": "Nails",
+    "Forbidden Word 2": "Fixing",
+    "Forbidden Word 3": "Salon"
+  },
+  {
+    "Card Number": 826,
+    "ID": "N26-STREET-024",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Wholesaler",
+    "Forbidden Word 1": "Bulk",
+    "Forbidden Word 2": "Carton",
+    "Forbidden Word 3": "Retail"
+  },
+  {
+    "Card Number": 827,
+    "ID": "N26-STREET-025",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Market Day",
+    "Forbidden Word 1": "Village",
+    "Forbidden Word 2": "Weekly",
+    "Forbidden Word 3": "Buy"
+  },
+  {
+    "Card Number": 828,
+    "ID": "N26-STREET-026",
+    "Difficulty": "Hard",
+    "Category": "Naija Life",
+    "Main Word": "Igba Boi",
+    "Forbidden Word 1": "Apprentice",
+    "Forbidden Word 2": "Igbo",
+    "Forbidden Word 3": "Settle"
+  },
+  {
+    "Card Number": 829,
+    "ID": "N26-STREET-027",
+    "Difficulty": "Hard",
+    "Category": "Naija Life",
+    "Main Word": "Mai Gwangwan",
+    "Forbidden Word 1": "Scrap",
+    "Forbidden Word 2": "Iron",
+    "Forbidden Word 3": "Cart"
+  },
+  {
+    "Card Number": 830,
+    "ID": "N26-STREET-028",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Dry Cleaner",
+    "Forbidden Word 1": "Laundry",
+    "Forbidden Word 2": "Iron",
+    "Forbidden Word 3": "Starch"
+  },
+  {
+    "Card Number": 831,
+    "ID": "N26-STREET-029",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Recharge Card Seller",
+    "Forbidden Word 1": "Airtime",
+    "Forbidden Word 2": "Umbrella",
+    "Forbidden Word 3": "Scratch"
+  },
+  {
+    "Card Number": 832,
+    "ID": "N26-SCHOOL-001",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Efiko",
+    "Forbidden Word 1": "Bookworm",
+    "Forbidden Word 2": "Read",
+    "Forbidden Word 3": "Brilliant"
+  },
+  {
+    "Card Number": 833,
+    "ID": "N26-SCHOOL-002",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Olodo",
+    "Forbidden Word 1": "Dull",
+    "Forbidden Word 2": "Fail",
+    "Forbidden Word 3": "Dunce"
+  },
+  {
+    "Card Number": 834,
+    "ID": "N26-SCHOOL-003",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Senior Prefect",
+    "Forbidden Word 1": "Head Boy",
+    "Forbidden Word 2": "Badge",
+    "Forbidden Word 3": "Assembly"
+  },
+  {
+    "Card Number": 835,
+    "ID": "N26-SCHOOL-004",
+    "Difficulty": "Easy",
+    "Category": "School",
+    "Main Word": "Dining Hall",
+    "Forbidden Word 1": "Food",
+    "Forbidden Word 2": "Boarding",
+    "Forbidden Word 3": "Table"
+  },
+  {
+    "Card Number": 836,
+    "ID": "N26-SCHOOL-005",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Prep",
+    "Forbidden Word 1": "Night",
+    "Forbidden Word 2": "Study",
+    "Forbidden Word 3": "Boarding"
+  },
+  {
+    "Card Number": 837,
+    "ID": "N26-SCHOOL-006",
+    "Difficulty": "Easy",
+    "Category": "School",
+    "Main Word": "Lights Out",
+    "Forbidden Word 1": "Bell",
+    "Forbidden Word 2": "Hostel",
+    "Forbidden Word 3": "Sleep"
+  },
+  {
+    "Card Number": 838,
+    "ID": "N26-SCHOOL-007",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Squatter",
+    "Forbidden Word 1": "Hostel",
+    "Forbidden Word 2": "Room",
+    "Forbidden Word 3": "Share"
+  },
+  {
+    "Card Number": 839,
+    "ID": "N26-SCHOOL-008",
+    "Difficulty": "Easy",
+    "Category": "School",
+    "Main Word": "Frog Jump",
+    "Forbidden Word 1": "Punishment",
+    "Forbidden Word 2": "Squat",
+    "Forbidden Word 3": "Hop"
+  },
+  {
+    "Card Number": 840,
+    "ID": "N26-SCHOOL-009",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Koboko",
+    "Forbidden Word 1": "Whip",
+    "Forbidden Word 2": "Cane",
+    "Forbidden Word 3": "Flog"
+  },
+  {
+    "Card Number": 841,
+    "ID": "N26-SCHOOL-010",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Cut Off Mark",
+    "Forbidden Word 1": "JAMB",
+    "Forbidden Word 2": "Score",
+    "Forbidden Word 3": "Admission"
+  },
+  {
+    "Card Number": 842,
+    "ID": "N26-SCHOOL-011",
+    "Difficulty": "Easy",
+    "Category": "School",
+    "Main Word": "Admission Letter",
+    "Forbidden Word 1": "University",
+    "Forbidden Word 2": "Accepted",
+    "Forbidden Word 3": "Offer"
+  },
+  {
+    "Card Number": 843,
+    "ID": "N26-SCHOOL-012",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "ASUU Strike",
+    "Forbidden Word 1": "Lecturers",
+    "Forbidden Word 2": "Holiday",
+    "Forbidden Word 3": "University"
+  },
+  {
+    "Card Number": 844,
+    "ID": "N26-SCHOOL-013",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Final Year Project",
+    "Forbidden Word 1": "Supervisor",
+    "Forbidden Word 2": "Chapter",
+    "Forbidden Word 3": "Defence"
+  },
+  {
+    "Card Number": 845,
+    "ID": "N26-SCHOOL-014",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Jambite",
+    "Forbidden Word 1": "Fresher",
+    "Forbidden Word 2": "New Student",
+    "Forbidden Word 3": "Year One"
+  },
+  {
+    "Card Number": 846,
+    "ID": "N26-SCHOOL-015",
+    "Difficulty": "Easy",
+    "Category": "School",
+    "Main Word": "Sign Out",
+    "Forbidden Word 1": "Shirt",
+    "Forbidden Word 2": "Graduation",
+    "Forbidden Word 3": "Marker"
+  },
+  {
+    "Card Number": 847,
+    "ID": "N26-SCHOOL-016",
+    "Difficulty": "Easy",
+    "Category": "School",
+    "Main Word": "Lesson Teacher",
+    "Forbidden Word 1": "Home",
+    "Forbidden Word 2": "Tutor",
+    "Forbidden Word 3": "Extra"
+  },
+  {
+    "Card Number": 848,
+    "ID": "N26-SCHOOL-017",
+    "Difficulty": "Easy",
+    "Category": "School",
+    "Main Word": "Cultural Day",
+    "Forbidden Word 1": "Attire",
+    "Forbidden Word 2": "Dance",
+    "Forbidden Word 3": "Tribes"
+  },
+  {
+    "Card Number": 849,
+    "ID": "N26-SCHOOL-018",
+    "Difficulty": "Hard",
+    "Category": "School",
+    "Main Word": "Speech And Prize Giving Day",
+    "Forbidden Word 1": "Award",
+    "Forbidden Word 2": "Parents",
+    "Forbidden Word 3": "Ceremony"
+  },
+  {
+    "Card Number": 850,
+    "ID": "N26-SCHOOL-019",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Debate Competition",
+    "Forbidden Word 1": "Argue",
+    "Forbidden Word 2": "Motion",
+    "Forbidden Word 3": "Speaker"
+  },
+  {
+    "Card Number": 851,
+    "ID": "N26-SCHOOL-020",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Quiz Competition",
+    "Forbidden Word 1": "Questions",
+    "Forbidden Word 2": "Buzzer",
+    "Forbidden Word 3": "Answer"
+  },
+  {
+    "Card Number": 852,
+    "ID": "N26-SCHOOL-021",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Mathematics Set",
+    "Forbidden Word 1": "Compass",
+    "Forbidden Word 2": "Protractor",
+    "Forbidden Word 3": "Ruler"
+  },
+  {
+    "Card Number": 853,
+    "ID": "N26-SCHOOL-022",
+    "Difficulty": "Easy",
+    "Category": "School",
+    "Main Word": "Chalkboard",
+    "Forbidden Word 1": "Duster",
+    "Forbidden Word 2": "Teacher",
+    "Forbidden Word 3": "Write"
+  },
+  {
+    "Card Number": 854,
+    "ID": "N26-SCHOOL-023",
+    "Difficulty": "Easy",
+    "Category": "School",
+    "Main Word": "Excursion",
+    "Forbidden Word 1": "Trip",
+    "Forbidden Word 2": "Bus",
+    "Forbidden Word 3": "Zoo"
+  },
+  {
+    "Card Number": 855,
+    "ID": "N26-SCHOOL-024",
+    "Difficulty": "Easy",
+    "Category": "School",
+    "Main Word": "Mufti Day",
+    "Forbidden Word 1": "Uniform",
+    "Forbidden Word 2": "Clothes",
+    "Forbidden Word 3": "Friday"
+  },
+  {
+    "Card Number": 856,
+    "ID": "N26-SCHOOL-025",
+    "Difficulty": "Medium",
+    "Category": "School",
+    "Main Word": "Obey Before Complain",
+    "Forbidden Word 1": "Military",
+    "Forbidden Word 2": "Order",
+    "Forbidden Word 3": "Senior"
+  },
+  {
+    "Card Number": 857,
+    "ID": "N26-RELIGION-001",
+    "Difficulty": "Medium",
+    "Category": "Religion",
+    "Main Word": "Hallelujah Challenge",
+    "Forbidden Word 1": "Nathaniel Bassey",
+    "Forbidden Word 2": "Midnight",
+    "Forbidden Word 3": "Praise"
+  },
+  {
+    "Card Number": 858,
+    "ID": "N26-RELIGION-002",
+    "Difficulty": "Hard",
+    "Category": "Religion",
+    "Main Word": "Shiloh",
+    "Forbidden Word 1": "Winners",
+    "Forbidden Word 2": "December",
+    "Forbidden Word 3": "Ota"
+  },
+  {
+    "Card Number": 859,
+    "ID": "N26-RELIGION-003",
+    "Difficulty": "Medium",
+    "Category": "Religion",
+    "Main Word": "Redemption Camp",
+    "Forbidden Word 1": "RCCG",
+    "Forbidden Word 2": "Convention",
+    "Forbidden Word 3": "Expressway"
+  },
+  {
+    "Card Number": 860,
+    "ID": "N26-RELIGION-004",
+    "Difficulty": "Easy",
+    "Category": "Religion",
+    "Main Word": "Sunday Best",
+    "Forbidden Word 1": "Church Clothes",
+    "Forbidden Word 2": "Dress",
+    "Forbidden Word 3": "Fine"
+  },
+  {
+    "Card Number": 861,
+    "ID": "N26-RELIGION-005",
+    "Difficulty": "Easy",
+    "Category": "Religion",
+    "Main Word": "Tambourine",
+    "Forbidden Word 1": "Shake",
+    "Forbidden Word 2": "Church",
+    "Forbidden Word 3": "Instrument"
+  },
+  {
+    "Card Number": 862,
+    "ID": "N26-RELIGION-006",
+    "Difficulty": "Medium",
+    "Category": "Religion",
+    "Main Word": "Speaking In Tongues",
+    "Forbidden Word 1": "Holy Spirit",
+    "Forbidden Word 2": "Pray",
+    "Forbidden Word 3": "Language"
+  },
+  {
+    "Card Number": 863,
+    "ID": "N26-RELIGION-007",
+    "Difficulty": "Medium",
+    "Category": "Religion",
+    "Main Word": "Rosary",
+    "Forbidden Word 1": "Catholic",
+    "Forbidden Word 2": "Beads",
+    "Forbidden Word 3": "Pray"
+  },
+  {
+    "Card Number": 864,
+    "ID": "N26-RELIGION-008",
+    "Difficulty": "Easy",
+    "Category": "Religion",
+    "Main Word": "Mass",
+    "Forbidden Word 1": "Catholic",
+    "Forbidden Word 2": "Priest",
+    "Forbidden Word 3": "Sunday"
+  },
+  {
+    "Card Number": 865,
+    "ID": "N26-RELIGION-009",
+    "Difficulty": "Hard",
+    "Category": "Religion",
+    "Main Word": "Ash Wednesday",
+    "Forbidden Word 1": "Lent",
+    "Forbidden Word 2": "Forehead",
+    "Forbidden Word 3": "Catholic"
+  },
+  {
+    "Card Number": 866,
+    "ID": "N26-RELIGION-010",
+    "Difficulty": "Medium",
+    "Category": "Religion",
+    "Main Word": "Palm Sunday",
+    "Forbidden Word 1": "Leaves",
+    "Forbidden Word 2": "Easter",
+    "Forbidden Word 3": "Procession"
+  },
+  {
+    "Card Number": 867,
+    "ID": "N26-RELIGION-011",
+    "Difficulty": "Easy",
+    "Category": "Religion",
+    "Main Word": "Good Friday",
+    "Forbidden Word 1": "Easter",
+    "Forbidden Word 2": "Cross",
+    "Forbidden Word 3": "Holiday"
+  },
+  {
+    "Card Number": 868,
+    "ID": "N26-RELIGION-012",
+    "Difficulty": "Medium",
+    "Category": "Religion",
+    "Main Word": "Mid-Week Service",
+    "Forbidden Word 1": "Wednesday",
+    "Forbidden Word 2": "Church",
+    "Forbidden Word 3": "Evening"
+  },
+  {
+    "Card Number": 869,
+    "ID": "N26-RELIGION-013",
+    "Difficulty": "Easy",
+    "Category": "Religion",
+    "Main Word": "Sermon",
+    "Forbidden Word 1": "Pastor",
+    "Forbidden Word 2": "Preach",
+    "Forbidden Word 3": "Message"
+  },
+  {
+    "Card Number": 870,
+    "ID": "N26-RELIGION-014",
+    "Difficulty": "Easy",
+    "Category": "Religion",
+    "Main Word": "Grace Before Meal",
+    "Forbidden Word 1": "Pray",
+    "Forbidden Word 2": "Food",
+    "Forbidden Word 3": "Thank"
+  },
+  {
+    "Card Number": 871,
+    "ID": "N26-RELIGION-015",
+    "Difficulty": "Easy",
+    "Category": "Religion",
+    "Main Word": "Family Devotion",
+    "Forbidden Word 1": "Morning",
+    "Forbidden Word 2": "Pray",
+    "Forbidden Word 3": "Bible"
+  },
+  {
+    "Card Number": 872,
+    "ID": "N26-RELIGION-016",
+    "Difficulty": "Medium",
+    "Category": "Religion",
+    "Main Word": "Mummy G.O.",
+    "Forbidden Word 1": "Pastor's Wife",
+    "Forbidden Word 2": "Church",
+    "Forbidden Word 3": "Sermon"
+  },
+  {
+    "Card Number": 873,
+    "ID": "N26-RELIGION-017",
+    "Difficulty": "Easy",
+    "Category": "Religion",
+    "Main Word": "Daddy G.O.",
+    "Forbidden Word 1": "Pastor",
+    "Forbidden Word 2": "General Overseer",
+    "Forbidden Word 3": "Church"
+  },
+  {
+    "Card Number": 874,
+    "ID": "N26-RELIGION-018",
+    "Difficulty": "Easy",
+    "Category": "Religion",
+    "Main Word": "Hijab",
+    "Forbidden Word 1": "Head",
+    "Forbidden Word 2": "Muslim",
+    "Forbidden Word 3": "Women"
+  },
+  {
+    "Card Number": 875,
+    "ID": "N26-RELIGION-019",
+    "Difficulty": "Easy",
+    "Category": "Religion",
+    "Main Word": "Prayer Mat",
+    "Forbidden Word 1": "Muslim",
+    "Forbidden Word 2": "Kneel",
+    "Forbidden Word 3": "Rug"
+  },
+  {
+    "Card Number": 876,
+    "ID": "N26-RELIGION-020",
+    "Difficulty": "Medium",
+    "Category": "Religion",
+    "Main Word": "Alfa",
+    "Forbidden Word 1": "Muslim Cleric",
+    "Forbidden Word 2": "Prayer",
+    "Forbidden Word 3": "Islam"
+  },
+  {
+    "Card Number": 877,
+    "ID": "N26-RELIGION-021",
+    "Difficulty": "Hard",
+    "Category": "Religion",
+    "Main Word": "Walimah",
+    "Forbidden Word 1": "Quran",
+    "Forbidden Word 2": "Graduation",
+    "Forbidden Word 3": "Celebration"
+  },
+  {
+    "Card Number": 878,
+    "ID": "N26-RELIGION-022",
+    "Difficulty": "Medium",
+    "Category": "Religion",
+    "Main Word": "Crusade",
+    "Forbidden Word 1": "Open Field",
+    "Forbidden Word 2": "Preacher",
+    "Forbidden Word 3": "Miracle"
+  },
+  {
+    "Card Number": 879,
+    "ID": "N26-DIASPORA-001",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Care Home",
+    "Forbidden Word 1": "Elderly",
+    "Forbidden Word 2": "UK",
+    "Forbidden Word 3": "Shift"
+  },
+  {
+    "Card Number": 880,
+    "ID": "N26-DIASPORA-002",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "NHS",
+    "Forbidden Word 1": "Hospital",
+    "Forbidden Word 2": "UK",
+    "Forbidden Word 3": "Nurse"
+  },
+  {
+    "Card Number": 881,
+    "ID": "N26-DIASPORA-003",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "IELTS",
+    "Forbidden Word 1": "English",
+    "Forbidden Word 2": "Test",
+    "Forbidden Word 3": "Exam"
+  },
+  {
+    "Card Number": 882,
+    "ID": "N26-DIASPORA-004",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Proof Of Funds",
+    "Forbidden Word 1": "Bank Statement",
+    "Forbidden Word 2": "Visa",
+    "Forbidden Word 3": "Money"
+  },
+  {
+    "Card Number": 883,
+    "ID": "N26-DIASPORA-005",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Biometrics",
+    "Forbidden Word 1": "Fingerprint",
+    "Forbidden Word 2": "Visa",
+    "Forbidden Word 3": "Photo"
+  },
+  {
+    "Card Number": 884,
+    "ID": "N26-DIASPORA-006",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Visa Refusal",
+    "Forbidden Word 1": "Denied",
+    "Forbidden Word 2": "Embassy",
+    "Forbidden Word 3": "Letter"
+  },
+  {
+    "Card Number": 885,
+    "ID": "N26-DIASPORA-007",
+    "Difficulty": "Hard",
+    "Category": "Diaspora",
+    "Main Word": "Express Entry",
+    "Forbidden Word 1": "Canada",
+    "Forbidden Word 2": "Points",
+    "Forbidden Word 3": "Permanent Residence"
+  },
+  {
+    "Card Number": 886,
+    "ID": "N26-DIASPORA-008",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Peckham",
+    "Forbidden Word 1": "London",
+    "Forbidden Word 2": "Nigerians",
+    "Forbidden Word 3": "Area"
+  },
+  {
+    "Card Number": 887,
+    "ID": "N26-DIASPORA-009",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Houston",
+    "Forbidden Word 1": "Texas",
+    "Forbidden Word 2": "Nigerians",
+    "Forbidden Word 3": "America"
+  },
+  {
+    "Card Number": 888,
+    "ID": "N26-DIASPORA-010",
+    "Difficulty": "Hard",
+    "Category": "Diaspora",
+    "Main Word": "Council Tax",
+    "Forbidden Word 1": "UK",
+    "Forbidden Word 2": "Bill",
+    "Forbidden Word 3": "House"
+  },
+  {
+    "Card Number": 889,
+    "ID": "N26-DIASPORA-011",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "The Tube",
+    "Forbidden Word 1": "Underground",
+    "Forbidden Word 2": "London",
+    "Forbidden Word 3": "Train"
+  },
+  {
+    "Card Number": 890,
+    "ID": "N26-DIASPORA-012",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Charity Shop",
+    "Forbidden Word 1": "Cheap",
+    "Forbidden Word 2": "Second-Hand",
+    "Forbidden Word 3": "UK"
+  },
+  {
+    "Card Number": 891,
+    "ID": "N26-DIASPORA-013",
+    "Difficulty": "Easy",
+    "Category": "Diaspora",
+    "Main Word": "Primark",
+    "Forbidden Word 1": "Cheap",
+    "Forbidden Word 2": "Clothes",
+    "Forbidden Word 3": "UK"
+  },
+  {
+    "Card Number": 892,
+    "ID": "N26-DIASPORA-014",
+    "Difficulty": "Easy",
+    "Category": "Diaspora",
+    "Main Word": "Walmart",
+    "Forbidden Word 1": "Store",
+    "Forbidden Word 2": "America",
+    "Forbidden Word 3": "Shopping"
+  },
+  {
+    "Card Number": 893,
+    "ID": "N26-DIASPORA-015",
+    "Difficulty": "Hard",
+    "Category": "Diaspora",
+    "Main Word": "SSN",
+    "Forbidden Word 1": "Social Security",
+    "Forbidden Word 2": "Number",
+    "Forbidden Word 3": "America"
+  },
+  {
+    "Card Number": 894,
+    "ID": "N26-DIASPORA-016",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Driving Test",
+    "Forbidden Word 1": "Licence",
+    "Forbidden Word 2": "Examiner",
+    "Forbidden Word 3": "Car"
+  },
+  {
+    "Card Number": 895,
+    "ID": "N26-DIASPORA-017",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Fourth Of July",
+    "Forbidden Word 1": "Fireworks",
+    "Forbidden Word 2": "America",
+    "Forbidden Word 3": "Independence"
+  },
+  {
+    "Card Number": 896,
+    "ID": "N26-DIASPORA-018",
+    "Difficulty": "Hard",
+    "Category": "Diaspora",
+    "Main Word": "Bonfire Night",
+    "Forbidden Word 1": "UK",
+    "Forbidden Word 2": "Fireworks",
+    "Forbidden Word 3": "November"
+  },
+  {
+    "Card Number": 897,
+    "ID": "N26-DIASPORA-019",
+    "Difficulty": "Easy",
+    "Category": "Diaspora",
+    "Main Word": "Halloween",
+    "Forbidden Word 1": "Costume",
+    "Forbidden Word 2": "Pumpkin",
+    "Forbidden Word 3": "Trick"
+  },
+  {
+    "Card Number": 898,
+    "ID": "N26-DIASPORA-020",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Super Bowl",
+    "Forbidden Word 1": "Football",
+    "Forbidden Word 2": "Halftime",
+    "Forbidden Word 3": "America"
+  },
+  {
+    "Card Number": 899,
+    "ID": "N26-DIASPORA-021",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Daylight Saving",
+    "Forbidden Word 1": "Clock",
+    "Forbidden Word 2": "Hour",
+    "Forbidden Word 3": "Time"
+  },
+  {
+    "Card Number": 900,
+    "ID": "N26-DIASPORA-022",
+    "Difficulty": "Hard",
+    "Category": "Diaspora",
+    "Main Word": "Vitamin D",
+    "Forbidden Word 1": "Sun",
+    "Forbidden Word 2": "Winter",
+    "Forbidden Word 3": "Tablets"
+  },
+  {
+    "Card Number": 901,
+    "ID": "N26-DIASPORA-023",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Overdraft",
+    "Forbidden Word 1": "Bank",
+    "Forbidden Word 2": "Minus",
+    "Forbidden Word 3": "Account"
+  },
+  {
+    "Card Number": 902,
+    "ID": "N26-DIASPORA-024",
+    "Difficulty": "Medium",
+    "Category": "Diaspora",
+    "Main Word": "Student Loan",
+    "Forbidden Word 1": "University",
+    "Forbidden Word 2": "Debt",
+    "Forbidden Word 3": "Repay"
+  },
+  {
+    "Card Number": 903,
+    "ID": "N26-CULTURE-001",
+    "Difficulty": "Hard",
+    "Category": "Culture",
+    "Main Word": "Ichafu",
+    "Forbidden Word 1": "Igbo",
+    "Forbidden Word 2": "Headwrap",
+    "Forbidden Word 3": "Scarf"
+  },
+  {
+    "Card Number": 904,
+    "ID": "N26-CULTURE-002",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "Introduction Ceremony",
+    "Forbidden Word 1": "Families",
+    "Forbidden Word 2": "Meet",
+    "Forbidden Word 3": "Engagement"
+  },
+  {
+    "Card Number": 905,
+    "ID": "N26-CULTURE-003",
+    "Difficulty": "Hard",
+    "Category": "Culture",
+    "Main Word": "Knocking Ceremony",
+    "Forbidden Word 1": "Igbo",
+    "Forbidden Word 2": "Door",
+    "Forbidden Word 3": "Wine"
+  },
+  {
+    "Card Number": 906,
+    "ID": "N26-CULTURE-004",
+    "Difficulty": "Hard",
+    "Category": "Culture",
+    "Main Word": "Ojude Oba",
+    "Forbidden Word 1": "Ijebu",
+    "Forbidden Word 2": "Horses",
+    "Forbidden Word 3": "Festival"
+  },
+  {
+    "Card Number": 907,
+    "ID": "N26-CULTURE-005",
+    "Difficulty": "Hard",
+    "Category": "Culture",
+    "Main Word": "Fattening Room",
+    "Forbidden Word 1": "Efik",
+    "Forbidden Word 2": "Bride",
+    "Forbidden Word 3": "Calabar"
+  },
+  {
+    "Card Number": 908,
+    "ID": "N26-CULTURE-006",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "Moonlight Tales",
+    "Forbidden Word 1": "Story",
+    "Forbidden Word 2": "Grandma",
+    "Forbidden Word 3": "Night"
+  },
+  {
+    "Card Number": 909,
+    "ID": "N26-CULTURE-007",
+    "Difficulty": "Hard",
+    "Category": "Culture",
+    "Main Word": "Ijapa",
+    "Forbidden Word 1": "Tortoise",
+    "Forbidden Word 2": "Folk Tale",
+    "Forbidden Word 3": "Trick"
+  },
+  {
+    "Card Number": 910,
+    "ID": "N26-CULTURE-008",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "George Wrapper",
+    "Forbidden Word 1": "Fabric",
+    "Forbidden Word 2": "Delta",
+    "Forbidden Word 3": "Igbo"
+  },
+  {
+    "Card Number": 911,
+    "ID": "N26-CULTURE-009",
+    "Difficulty": "Hard",
+    "Category": "Culture",
+    "Main Word": "Babanriga",
+    "Forbidden Word 1": "Northern",
+    "Forbidden Word 2": "Robe",
+    "Forbidden Word 3": "Hausa"
+  },
+  {
+    "Card Number": 912,
+    "ID": "N26-CULTURE-010",
+    "Difficulty": "Easy",
+    "Category": "Culture",
+    "Main Word": "Senator Wear",
+    "Forbidden Word 1": "Kaftan",
+    "Forbidden Word 2": "Men",
+    "Forbidden Word 3": "Native"
+  },
+  {
+    "Card Number": 913,
+    "ID": "N26-CULTURE-011",
+    "Difficulty": "Easy",
+    "Category": "Culture",
+    "Main Word": "Fila",
+    "Forbidden Word 1": "Cap",
+    "Forbidden Word 2": "Yoruba",
+    "Forbidden Word 3": "Men"
+  },
+  {
+    "Card Number": 914,
+    "ID": "N26-CULTURE-012",
+    "Difficulty": "Hard",
+    "Category": "Culture",
+    "Main Word": "Ozo Title",
+    "Forbidden Word 1": "Igbo",
+    "Forbidden Word 2": "Chief",
+    "Forbidden Word 3": "Red Cap"
+  },
+  {
+    "Card Number": 915,
+    "ID": "N26-CULTURE-013",
+    "Difficulty": "Easy",
+    "Category": "Culture",
+    "Main Word": "Taiwo And Kehinde",
+    "Forbidden Word 1": "Twins",
+    "Forbidden Word 2": "Yoruba",
+    "Forbidden Word 3": "First"
+  },
+  {
+    "Card Number": 916,
+    "ID": "N26-CULTURE-014",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "Omugwo",
+    "Forbidden Word 1": "Mother",
+    "Forbidden Word 2": "New Baby",
+    "Forbidden Word 3": "Care"
+  },
+  {
+    "Card Number": 917,
+    "ID": "N26-CULTURE-015",
+    "Difficulty": "Hard",
+    "Category": "Culture",
+    "Main Word": "Boat Regatta",
+    "Forbidden Word 1": "Rivers",
+    "Forbidden Word 2": "Canoe",
+    "Forbidden Word 3": "Festival"
+  },
+  {
+    "Card Number": 918,
+    "ID": "N26-CULTURE-016",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "Ooni Of Ife",
+    "Forbidden Word 1": "Yoruba",
+    "Forbidden Word 2": "King",
+    "Forbidden Word 3": "Ile-Ife"
+  },
+  {
+    "Card Number": 919,
+    "ID": "N26-CULTURE-017",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "Oba Of Benin",
+    "Forbidden Word 1": "Edo",
+    "Forbidden Word 2": "King",
+    "Forbidden Word 3": "Palace"
+  },
+  {
+    "Card Number": 920,
+    "ID": "N26-CULTURE-018",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "Emir",
+    "Forbidden Word 1": "Northern",
+    "Forbidden Word 2": "Horse",
+    "Forbidden Word 3": "Palace"
+  },
+  {
+    "Card Number": 921,
+    "ID": "N26-CULTURE-019",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "Alligator Pepper",
+    "Forbidden Word 1": "Kola",
+    "Forbidden Word 2": "Seed",
+    "Forbidden Word 3": "Ceremony"
+  },
+  {
+    "Card Number": 922,
+    "ID": "N26-CULTURE-020",
+    "Difficulty": "Hard",
+    "Category": "Culture",
+    "Main Word": "Ayo Olopon",
+    "Forbidden Word 1": "Board Game",
+    "Forbidden Word 2": "Seeds",
+    "Forbidden Word 3": "Holes"
+  },
+  {
+    "Card Number": 923,
+    "ID": "N26-CULTURE-021",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "Ten-Ten",
+    "Forbidden Word 1": "Clap",
+    "Forbidden Word 2": "Girls",
+    "Forbidden Word 3": "Game"
+  },
+  {
+    "Card Number": 924,
+    "ID": "N26-CULTURE-022",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "Suwe",
+    "Forbidden Word 1": "Hopscotch",
+    "Forbidden Word 2": "Chalk",
+    "Forbidden Word 3": "Jump"
+  },
+  {
+    "Card Number": 925,
+    "ID": "N26-CULTURE-023",
+    "Difficulty": "Medium",
+    "Category": "Culture",
+    "Main Word": "Boju Boju",
+    "Forbidden Word 1": "Hide",
+    "Forbidden Word 2": "Seek",
+    "Forbidden Word 3": "Game"
+  },
+  {
+    "Card Number": 926,
+    "ID": "N26-FOOD-001",
+    "Difficulty": "Easy",
+    "Category": "Food",
+    "Main Word": "Sunday Rice",
+    "Forbidden Word 1": "Jollof",
+    "Forbidden Word 2": "Church",
+    "Forbidden Word 3": "Weekend"
+  },
+  {
+    "Card Number": 927,
+    "ID": "N26-FOOD-002",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Point And Kill",
+    "Forbidden Word 1": "Fish",
+    "Forbidden Word 2": "Choose",
+    "Forbidden Word 3": "Pepper Soup"
+  },
+  {
+    "Card Number": 928,
+    "ID": "N26-FOOD-003",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Okpa",
+    "Forbidden Word 1": "Bambara Nut",
+    "Forbidden Word 2": "Enugu",
+    "Forbidden Word 3": "Steam"
+  },
+  {
+    "Card Number": 929,
+    "ID": "N26-FOOD-004",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Masa",
+    "Forbidden Word 1": "Rice Cake",
+    "Forbidden Word 2": "Northern",
+    "Forbidden Word 3": "Hausa"
+  },
+  {
+    "Card Number": 930,
+    "ID": "N26-FOOD-005",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Fura De Nunu",
+    "Forbidden Word 1": "Fulani",
+    "Forbidden Word 2": "Milk",
+    "Forbidden Word 3": "Millet"
+  },
+  {
+    "Card Number": 931,
+    "ID": "N26-FOOD-006",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Kunu",
+    "Forbidden Word 1": "Millet",
+    "Forbidden Word 2": "Drink",
+    "Forbidden Word 3": "Northern"
+  },
+  {
+    "Card Number": 932,
+    "ID": "N26-FOOD-007",
+    "Difficulty": "Hard",
+    "Category": "Food",
+    "Main Word": "Agidi",
+    "Forbidden Word 1": "Eko",
+    "Forbidden Word 2": "Corn",
+    "Forbidden Word 3": "Wrap"
+  },
+  {
+    "Card Number": 933,
+    "ID": "N26-FOOD-008",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Bitter Leaf Soup",
+    "Forbidden Word 1": "Onugbu",
+    "Forbidden Word 2": "Igbo",
+    "Forbidden Word 3": "Cocoyam"
+  },
+  {
+    "Card Number": 934,
+    "ID": "N26-FOOD-009",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Gizdodo",
+    "Forbidden Word 1": "Gizzard",
+    "Forbidden Word 2": "Plantain",
+    "Forbidden Word 3": "Pepper"
+  },
+  {
+    "Card Number": 935,
+    "ID": "N26-FOOD-010",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Peppered Snail",
+    "Forbidden Word 1": "Slimy",
+    "Forbidden Word 2": "Shell",
+    "Forbidden Word 3": "Igbin"
+  },
+  {
+    "Card Number": 936,
+    "ID": "N26-FOOD-011",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Bush Meat",
+    "Forbidden Word 1": "Grasscutter",
+    "Forbidden Word 2": "Hunter",
+    "Forbidden Word 3": "Roadside"
+  },
+  {
+    "Card Number": 937,
+    "ID": "N26-FOOD-012",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Ice Fish",
+    "Forbidden Word 1": "Frozen",
+    "Forbidden Word 2": "Cold Room",
+    "Forbidden Word 3": "Titus"
+  },
+  {
+    "Card Number": 938,
+    "ID": "N26-FOOD-013",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Stockfish",
+    "Forbidden Word 1": "Okporoko",
+    "Forbidden Word 2": "Dried",
+    "Forbidden Word 3": "Soup"
+  },
+  {
+    "Card Number": 939,
+    "ID": "N26-FOOD-014",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Crayfish",
+    "Forbidden Word 1": "Seasoning",
+    "Forbidden Word 2": "Soup",
+    "Forbidden Word 3": "Ground"
+  },
+  {
+    "Card Number": 940,
+    "ID": "N26-FOOD-015",
+    "Difficulty": "Easy",
+    "Category": "Food",
+    "Main Word": "Maggi",
+    "Forbidden Word 1": "Cube",
+    "Forbidden Word 2": "Seasoning",
+    "Forbidden Word 3": "Knorr"
+  },
+  {
+    "Card Number": 941,
+    "ID": "N26-FOOD-016",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Iru",
+    "Forbidden Word 1": "Locust Beans",
+    "Forbidden Word 2": "Smell",
+    "Forbidden Word 3": "Seasoning"
+  },
+  {
+    "Card Number": 942,
+    "ID": "N26-FOOD-017",
+    "Difficulty": "Easy",
+    "Category": "Food",
+    "Main Word": "Palm Oil",
+    "Forbidden Word 1": "Red",
+    "Forbidden Word 2": "Stew",
+    "Forbidden Word 3": "Vegetable Oil"
+  },
+  {
+    "Card Number": 943,
+    "ID": "N26-FOOD-018",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Garden Egg",
+    "Forbidden Word 1": "Bitter",
+    "Forbidden Word 2": "Green",
+    "Forbidden Word 3": "Groundnut Paste"
+  },
+  {
+    "Card Number": 944,
+    "ID": "N26-FOOD-019",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Agbalumo",
+    "Forbidden Word 1": "Udara",
+    "Forbidden Word 2": "Seeds",
+    "Forbidden Word 3": "Sticky"
+  },
+  {
+    "Card Number": 945,
+    "ID": "N26-FOOD-020",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Coconut Candy",
+    "Forbidden Word 1": "Sweet",
+    "Forbidden Word 2": "Grated",
+    "Forbidden Word 3": "Brown"
+  },
+  {
+    "Card Number": 946,
+    "ID": "N26-FOOD-021",
+    "Difficulty": "Easy",
+    "Category": "Food",
+    "Main Word": "Milo",
+    "Forbidden Word 1": "Chocolate",
+    "Forbidden Word 2": "Drink",
+    "Forbidden Word 3": "Tin"
+  },
+  {
+    "Card Number": 947,
+    "ID": "N26-FOOD-022",
+    "Difficulty": "Easy",
+    "Category": "Food",
+    "Main Word": "Peak Milk",
+    "Forbidden Word 1": "Tin",
+    "Forbidden Word 2": "Evaporated",
+    "Forbidden Word 3": "Tea"
+  },
+  {
+    "Card Number": 948,
+    "ID": "N26-FOOD-023",
+    "Difficulty": "Easy",
+    "Category": "Food",
+    "Main Word": "Malt",
+    "Forbidden Word 1": "Maltina",
+    "Forbidden Word 2": "Drink",
+    "Forbidden Word 3": "Non-Alcoholic"
+  },
+  {
+    "Card Number": 949,
+    "ID": "N26-FOOD-024",
+    "Difficulty": "Medium",
+    "Category": "Food",
+    "Main Word": "Yamarita",
+    "Forbidden Word 1": "Egg",
+    "Forbidden Word 2": "Fries",
+    "Forbidden Word 3": "Batter"
+  },
+  {
+    "Card Number": 950,
+    "ID": "N26-FOOD-025",
+    "Difficulty": "Hard",
+    "Category": "Food",
+    "Main Word": "Ukwa",
+    "Forbidden Word 1": "Breadfruit",
+    "Forbidden Word 2": "Igbo",
+    "Forbidden Word 3": "Porridge"
+  },
+  {
+    "Card Number": 951,
+    "ID": "N26-FOOD-026",
+    "Difficulty": "Hard",
+    "Category": "Food",
+    "Main Word": "Miyan Kuka",
+    "Forbidden Word 1": "Baobab",
+    "Forbidden Word 2": "Northern",
+    "Forbidden Word 3": "Soup"
+  },
+  {
+    "Card Number": 952,
+    "ID": "N26-NAIJA-001",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Tokunbo",
+    "Forbidden Word 1": "Fairly Used",
+    "Forbidden Word 2": "Imported",
+    "Forbidden Word 3": "Car"
+  },
+  {
+    "Card Number": 953,
+    "ID": "N26-NAIJA-002",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Ice Cream Bucket",
+    "Forbidden Word 1": "Soup",
+    "Forbidden Word 2": "Fridge",
+    "Forbidden Word 3": "Mum"
+  },
+  {
+    "Card Number": 954,
+    "ID": "N26-NAIJA-003",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Gas Refill",
+    "Forbidden Word 1": "Cylinder",
+    "Forbidden Word 2": "Cooking Gas",
+    "Forbidden Word 3": "Kilo"
+  },
+  {
+    "Card Number": 955,
+    "ID": "N26-NAIJA-004",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Kerosene Stove",
+    "Forbidden Word 1": "Wick",
+    "Forbidden Word 2": "Fuel",
+    "Forbidden Word 3": "Cooking"
+  },
+  {
+    "Card Number": 956,
+    "ID": "N26-NAIJA-005",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Ludo",
+    "Forbidden Word 1": "Dice",
+    "Forbidden Word 2": "Board",
+    "Forbidden Word 3": "Six"
+  },
+  {
+    "Card Number": 957,
+    "ID": "N26-NAIJA-006",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Whot",
+    "Forbidden Word 1": "Cards",
+    "Forbidden Word 2": "Last Card",
+    "Forbidden Word 3": "Game"
+  },
+  {
+    "Card Number": 958,
+    "ID": "N26-NAIJA-007",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Jumia",
+    "Forbidden Word 1": "Online",
+    "Forbidden Word 2": "Order",
+    "Forbidden Word 3": "Delivery"
+  },
+  {
+    "Card Number": 959,
+    "ID": "N26-NAIJA-008",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Opay",
+    "Forbidden Word 1": "Transfer",
+    "Forbidden Word 2": "App",
+    "Forbidden Word 3": "POS"
+  },
+  {
+    "Card Number": 960,
+    "ID": "N26-NAIJA-009",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Fake Alert",
+    "Forbidden Word 1": "Transfer",
+    "Forbidden Word 2": "Scam",
+    "Forbidden Word 3": "Screenshot"
+  },
+  {
+    "Card Number": 961,
+    "ID": "N26-NAIJA-010",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Solar Panel",
+    "Forbidden Word 1": "Sun",
+    "Forbidden Word 2": "Inverter",
+    "Forbidden Word 3": "Roof"
+  },
+  {
+    "Card Number": 962,
+    "ID": "N26-NAIJA-011",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Flying Slipper",
+    "Forbidden Word 1": "Mum",
+    "Forbidden Word 2": "Throw",
+    "Forbidden Word 3": "Chase"
+  },
+  {
+    "Card Number": 963,
+    "ID": "N26-NAIJA-012",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Power Bank",
+    "Forbidden Word 1": "Charge",
+    "Forbidden Word 2": "Phone",
+    "Forbidden Word 3": "Battery"
+  },
+  {
+    "Card Number": 964,
+    "ID": "N26-NAIJA-013",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "WhatsApp Status",
+    "Forbidden Word 1": "Story",
+    "Forbidden Word 2": "Views",
+    "Forbidden Word 3": "Post"
+  },
+  {
+    "Card Number": 965,
+    "ID": "N26-NAIJA-014",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Voice Note",
+    "Forbidden Word 1": "Record",
+    "Forbidden Word 2": "WhatsApp",
+    "Forbidden Word 3": "Long"
+  },
+  {
+    "Card Number": 966,
+    "ID": "N26-NAIJA-015",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Group Admin",
+    "Forbidden Word 1": "WhatsApp",
+    "Forbidden Word 2": "Remove",
+    "Forbidden Word 3": "Rules"
+  },
+  {
+    "Card Number": 967,
+    "ID": "N26-NAIJA-016",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "Canopy",
+    "Forbidden Word 1": "Tent",
+    "Forbidden Word 2": "Chairs",
+    "Forbidden Word 3": "Party"
+  },
+  {
+    "Card Number": 968,
+    "ID": "N26-NAIJA-017",
+    "Difficulty": "Easy",
+    "Category": "Naija Life",
+    "Main Word": "AFCON",
+    "Forbidden Word 1": "Super Eagles",
+    "Forbidden Word 2": "Football",
+    "Forbidden Word 3": "Cup"
+  },
+  {
+    "Card Number": 969,
+    "ID": "N26-NAIJA-018",
+    "Difficulty": "Medium",
+    "Category": "Naija Life",
+    "Main Word": "Super Falcons",
+    "Forbidden Word 1": "Women",
+    "Forbidden Word 2": "Football",
+    "Forbidden Word 3": "WAFCON"
+  },
+  {
+    "Card Number": 970,
+    "ID": "N26-SLANG-001",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Ajebutter",
+    "Forbidden Word 1": "Spoilt",
+    "Forbidden Word 2": "Rich",
+    "Forbidden Word 3": "Soft"
+  },
+  {
+    "Card Number": 971,
+    "ID": "N26-SLANG-002",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Ajepako",
+    "Forbidden Word 1": "Tough",
+    "Forbidden Word 2": "Poor",
+    "Forbidden Word 3": "Rugged"
+  },
+  {
+    "Card Number": 972,
+    "ID": "N26-SLANG-003",
+    "Difficulty": "Easy",
+    "Category": "Slang",
+    "Main Word": "Shayo",
+    "Forbidden Word 1": "Drink",
+    "Forbidden Word 2": "Alcohol",
+    "Forbidden Word 3": "Bar"
+  },
+  {
+    "Card Number": 973,
+    "ID": "N26-SLANG-004",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Gbedu",
+    "Forbidden Word 1": "Music",
+    "Forbidden Word 2": "Party",
+    "Forbidden Word 3": "Jam"
+  },
+  {
+    "Card Number": 974,
+    "ID": "N26-SLANG-005",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Faji",
+    "Forbidden Word 1": "Enjoyment",
+    "Forbidden Word 2": "Fun",
+    "Forbidden Word 3": "Party"
+  },
+  {
+    "Card Number": 975,
+    "ID": "N26-SLANG-006",
+    "Difficulty": "Easy",
+    "Category": "Slang",
+    "Main Word": "Mumu",
+    "Forbidden Word 1": "Fool",
+    "Forbidden Word 2": "Stupid",
+    "Forbidden Word 3": "Idiot"
+  },
+  {
+    "Card Number": 976,
+    "ID": "N26-SLANG-007",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Yarn Dust",
+    "Forbidden Word 1": "Nonsense",
+    "Forbidden Word 2": "Talk",
+    "Forbidden Word 3": "Lie"
+  },
+  {
+    "Card Number": 977,
+    "ID": "N26-SLANG-008",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Wayo",
+    "Forbidden Word 1": "Trick",
+    "Forbidden Word 2": "Cheat",
+    "Forbidden Word 3": "Fake"
+  },
+  {
+    "Card Number": 978,
+    "ID": "N26-SLANG-009",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Long Throat",
+    "Forbidden Word 1": "Greedy",
+    "Forbidden Word 2": "Food",
+    "Forbidden Word 3": "Want"
+  },
+  {
+    "Card Number": 979,
+    "ID": "N26-SLANG-010",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Bad Belle",
+    "Forbidden Word 1": "Jealous",
+    "Forbidden Word 2": "Envy",
+    "Forbidden Word 3": "Hate"
+  },
+  {
+    "Card Number": 980,
+    "ID": "N26-SLANG-011",
+    "Difficulty": "Easy",
+    "Category": "Slang",
+    "Main Word": "Bone Face",
+    "Forbidden Word 1": "Frown",
+    "Forbidden Word 2": "Angry",
+    "Forbidden Word 3": "Serious"
+  },
+  {
+    "Card Number": 981,
+    "ID": "N26-SLANG-012",
+    "Difficulty": "Easy",
+    "Category": "Slang",
+    "Main Word": "Shine Your Eye",
+    "Forbidden Word 1": "Alert",
+    "Forbidden Word 2": "Careful",
+    "Forbidden Word 3": "Watch"
+  },
+  {
+    "Card Number": 982,
+    "ID": "N26-SLANG-013",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "K-Leg",
+    "Forbidden Word 1": "Problem",
+    "Forbidden Word 2": "Fault",
+    "Forbidden Word 3": "Hitch"
+  },
+  {
+    "Card Number": 983,
+    "ID": "N26-SLANG-014",
+    "Difficulty": "Easy",
+    "Category": "Slang",
+    "Main Word": "Tear Rubber",
+    "Forbidden Word 1": "Brand New",
+    "Forbidden Word 2": "Fresh",
+    "Forbidden Word 3": "Unused"
+  },
+  {
+    "Card Number": 984,
+    "ID": "N26-SLANG-015",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Gbese",
+    "Forbidden Word 1": "Debt",
+    "Forbidden Word 2": "Owe",
+    "Forbidden Word 3": "Trouble"
+  },
+  {
+    "Card Number": 985,
+    "ID": "N26-SLANG-016",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Ojoro",
+    "Forbidden Word 1": "Cheat",
+    "Forbidden Word 2": "Unfair",
+    "Forbidden Word 3": "Foul"
+  },
+  {
+    "Card Number": 986,
+    "ID": "N26-SLANG-017",
+    "Difficulty": "Hard",
+    "Category": "Slang",
+    "Main Word": "Lori Iro",
+    "Forbidden Word 1": "Lies",
+    "Forbidden Word 2": "False",
+    "Forbidden Word 3": "Cap"
+  },
+  {
+    "Card Number": 987,
+    "ID": "N26-SLANG-018",
+    "Difficulty": "Easy",
+    "Category": "Slang",
+    "Main Word": "Thunder Fire You",
+    "Forbidden Word 1": "Curse",
+    "Forbidden Word 2": "Strike",
+    "Forbidden Word 3": "Lightning"
+  },
+  {
+    "Card Number": 988,
+    "ID": "N26-SLANG-019",
+    "Difficulty": "Medium",
+    "Category": "Slang",
+    "Main Word": "Packaging",
+    "Forbidden Word 1": "Fake",
+    "Forbidden Word 2": "Appearance",
+    "Forbidden Word 3": "Pretend"
+  },
+  {
+    "Card Number": 989,
+    "ID": "N26-SLANG-020",
+    "Difficulty": "Easy",
+    "Category": "Slang",
+    "Main Word": "Chop Life",
+    "Forbidden Word 1": "Enjoy",
+    "Forbidden Word 2": "Spend",
+    "Forbidden Word 3": "Party"
+  },
+  {
+    "Card Number": 990,
+    "ID": "N26-SLANG-021",
+    "Difficulty": "Easy",
+    "Category": "Slang",
+    "Main Word": "Carry Go",
+    "Forbidden Word 1": "Continue",
+    "Forbidden Word 2": "Proceed",
+    "Forbidden Word 3": "Go Ahead"
+  },
+  {
+    "Card Number": 991,
+    "ID": "N26-CELEBRITIES-001",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "Asa",
+    "Forbidden Word 1": "Jailer",
+    "Forbidden Word 2": "Singer",
+    "Forbidden Word 3": "Guitar"
+  },
+  {
+    "Card Number": 992,
+    "ID": "N26-CELEBRITIES-002",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "Wande Coal",
+    "Forbidden Word 1": "Mo Hits",
+    "Forbidden Word 2": "Bumper To Bumper",
+    "Forbidden Word 3": "Singer"
+  },
+  {
+    "Card Number": 993,
+    "ID": "N26-CELEBRITIES-003",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "Timaya",
+    "Forbidden Word 1": "Dem Mama",
+    "Forbidden Word 2": "Egberi Papa",
+    "Forbidden Word 3": "Port Harcourt"
+  },
+  {
+    "Card Number": 994,
+    "ID": "N26-CELEBRITIES-004",
+    "Difficulty": "Easy",
+    "Category": "Celebrities",
+    "Main Word": "Flavour",
+    "Forbidden Word 1": "Igbo",
+    "Forbidden Word 2": "Highlife",
+    "Forbidden Word 3": "Ada Ada"
+  },
+  {
+    "Card Number": 995,
+    "ID": "N26-CELEBRITIES-005",
+    "Difficulty": "Easy",
+    "Category": "Celebrities",
+    "Main Word": "Yemi Alade",
+    "Forbidden Word 1": "Johnny",
+    "Forbidden Word 2": "Mama Africa",
+    "Forbidden Word 3": "Singer"
+  },
+  {
+    "Card Number": 996,
+    "ID": "N26-CELEBRITIES-006",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "Phyno",
+    "Forbidden Word 1": "Igbo",
+    "Forbidden Word 2": "Rapper",
+    "Forbidden Word 3": "Fada Fada"
+  },
+  {
+    "Card Number": 997,
+    "ID": "N26-CELEBRITIES-007",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "Mr Eazi",
+    "Forbidden Word 1": "Banku",
+    "Forbidden Word 2": "Skin Tight",
+    "Forbidden Word 3": "Singer"
+  },
+  {
+    "Card Number": 998,
+    "ID": "N26-CELEBRITIES-008",
+    "Difficulty": "Easy",
+    "Category": "Celebrities",
+    "Main Word": "Basketmouth",
+    "Forbidden Word 1": "Comedian",
+    "Forbidden Word 2": "Stand-Up",
+    "Forbidden Word 3": "Jokes"
+  },
+  {
+    "Card Number": 999,
+    "ID": "N26-CELEBRITIES-009",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "AY Makun",
+    "Forbidden Word 1": "Comedian",
+    "Forbidden Word 2": "30 Days In Atlanta",
+    "Forbidden Word 3": "Open Air"
+  },
+  {
+    "Card Number": 1000,
+    "ID": "N26-CELEBRITIES-010",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "Kanu Nwankwo",
+    "Forbidden Word 1": "Papilo",
+    "Forbidden Word 2": "Super Eagles",
+    "Forbidden Word 3": "Arsenal"
+  },
+  {
+    "Card Number": 1001,
+    "ID": "N26-CELEBRITIES-011",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "Tobi Amusan",
+    "Forbidden Word 1": "Hurdles",
+    "Forbidden Word 2": "Athlete",
+    "Forbidden Word 3": "World Record"
+  },
+  {
+    "Card Number": 1002,
+    "ID": "N26-CELEBRITIES-012",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "Asisat Oshoala",
+    "Forbidden Word 1": "Super Falcons",
+    "Forbidden Word 2": "Barcelona",
+    "Forbidden Word 3": "Football"
+  },
+  {
+    "Card Number": 1003,
+    "ID": "N26-CELEBRITIES-013",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "King Sunny Ade",
+    "Forbidden Word 1": "Juju",
+    "Forbidden Word 2": "KSA",
+    "Forbidden Word 3": "Guitar"
+  },
+  {
+    "Card Number": 1004,
+    "ID": "N26-CELEBRITIES-014",
+    "Difficulty": "Hard",
+    "Category": "Celebrities",
+    "Main Word": "Layi Wasabi",
+    "Forbidden Word 1": "Skits",
+    "Forbidden Word 2": "Comedy",
+    "Forbidden Word 3": "Instagram"
+  },
+  {
+    "Card Number": 1005,
+    "ID": "N26-CELEBRITIES-015",
+    "Difficulty": "Medium",
+    "Category": "Celebrities",
+    "Main Word": "Kie Kie",
+    "Forbidden Word 1": "Skits",
+    "Forbidden Word 2": "Actress",
+    "Forbidden Word 3": "Comedy"
   }
 ]

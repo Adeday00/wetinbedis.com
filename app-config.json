@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "revision": 6,
+  "published_at": "2026-10-09T23:34:00.000Z",
+  "cache_ttl_seconds": 60,
+  "home": {
+    "show_todays_five": true,
+    "show_gather_people": true,
+    "show_sharp_sharp": false,
+    "event_banner": {
+      "event_id": "odogwu-league-rehearsal",
+      "headline": "INTERNAL TEST · League rehearsal",
+      "artwork_url": null,
+      "starts_at": "2026-10-09T23:34:00.000Z",
+      "ends_at": "2026-10-10T00:16:38.000Z"
+    }
+  },
+  "categories": [],
+  "events": {
+    "odogwu_league": {
+      "enabled": true,
+      "visible_from": "2026-10-09T23:34:00.000Z",
+      "starts_at": "2026-10-09T23:34:00.000Z",
+      "ends_at": "2026-10-10T00:16:38.000Z",
+      "mode": "practice",
+      "home_placement": "banner",
+      "headline": "INTERNAL TEST · League rehearsal",
+      "rules_url": "https://wetinbedis.com/rules/weekly-league",
+      "content_release_id": "league-rehearsal-pack-v1",
+      "cash_enabled": false,
+      "weekly_schedule": {
+        "timezone": "Africa/Lagos",
+        "first_open_at": "2026-10-09T00:00:00.000Z",
+        "open_weekday": 5,
+        "open_time_local": "01:00",
+        "close_weekday": 0,
+        "close_time_local": "23:59"
+      }
+    }
+  }
+}

@@ -15,6 +15,8 @@ import {
   reactionResolutionIsValid,
   reactionRosterIsValid,
   reservePlayOnCallEventID,
+  cardActionIsAllowed,
+  postGameAdBreakIsAllowed,
   turnControlIsAllowed,
   type PlayOnCallGameAuthority,
   type PlayOnCallReactionAuthority,
@@ -22,12 +24,126 @@ import {
 
 const ROOM_STATE_KEY = "play_on_call_room_v1";
 const GAME_AUTHORITY_KEY = "play_on_call_game_authority_v1";
+const GAME_SETTINGS_KEY = "play_on_call_game_settings_v1";
 const REACTION_AUTHORITY_KEY = "play_on_call_reaction_authority_v1";
 const SEEN_EVENT_IDS_KEY = "play_on_call_seen_event_ids_v1";
 const GAME_EVENT_LOG_KEY = "play_on_call_game_event_log_v2";
 const ROOM_PROXY_HEADER = "x-wbd-call-room-proxy";
 const PLAYER_ID_HEADER = "x-wbd-call-room-player-id";
 const DISPLAY_NAME_HEADER = "x-wbd-call-room-display-name";
+const TV_STATE_KEY = "project_to_tv_state_v1";
+const TV_EXPIRY_MS = 2 * 60 * 60 * 1000;
+const TV_PAIRING_RATE_LIMIT_KEY = "project_to_tv_pairing_rate_limit_v1";
+const TV_PAIRING_RATE_WINDOW_MS = 60 * 1000;
+const TV_PAIRING_RATE_LIMIT = 10;
+
+type TVPairingRateLimit = { resetAt: number; failures: number };
+type ProjectToTVTeamResult = { name: string; score: number };
+type ProjectToTVCardHistoryItem = {
+  team: string;
+  round: number;
+  category: string;
+  answer: string;
+  forbiddenWords: string[];
+  result: "correct" | "skipped" | "timed_out";
+};
+
+type ProjectToTVState = {
+  phase: "waiting" | "placement" | "countdown" | "playing" | "round_end" | "game_over";
+  team: string;
+  round: number;
+  roundDuration: number;
+  secondsRemaining: number;
+  countdownRemaining: number;
+  score: number;
+  teams: ProjectToTVTeamResult[];
+  category: string | null;
+  difficulty: string | null;
+  answer: string | null;
+  forbiddenWords: string[];
+  cardHistory: ProjectToTVCardHistoryItem[];
+  cardHistoryTruncated: boolean;
+  updatedAt: number;
+};
+
+type ProjectToTVSession = {
+  ownerHash: string;
+  viewerHash: string;
+  expiresAt: number;
+  viewerConnectedAt: number | null;
+  state: ProjectToTVState;
+};
+
+async function secretHash(secret: string): Promise<string> {
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(secret));
+  return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+function parseTVState(value: unknown): Omit<ProjectToTVState, "updatedAt"> | null {
+  if (!value || Array.isArray(value) || typeof value !== "object") return null;
+  const state = value as Record<string, unknown>;
+  const teams = state.teams ?? [];
+  const countdownRemaining = state.countdown_remaining ?? 0;
+  const cardHistory = state.card_history ?? [];
+  const cardHistoryTruncated = state.card_history_truncated ?? false;
+  if (!("phase" in state) || !("team" in state) || !("round" in state)
+    || !("round_duration" in state) || !("seconds_remaining" in state) || !("score" in state)
+    || !("category" in state) || !("difficulty" in state)
+    || !("answer" in state) || !("forbidden_words" in state)
+    || Object.keys(state).some((key) => !["phase", "team", "round", "round_duration", "seconds_remaining", "countdown_remaining", "score", "teams", "category", "difficulty", "answer", "forbidden_words", "card_history", "card_history_truncated"].includes(key))) return null;
+  const valid = ["waiting", "placement", "countdown", "playing", "round_end", "game_over"].includes(String(state.phase))
+    && typeof state.team === "string" && state.team.length <= 40
+    && Number.isInteger(state.round) && Number(state.round) >= 0 && Number(state.round) <= 99
+    && Number.isInteger(state.round_duration) && Number(state.round_duration) >= 1 && Number(state.round_duration) <= 3600
+    && Number.isInteger(state.seconds_remaining) && Number(state.seconds_remaining) >= 0 && Number(state.seconds_remaining) <= 3600
+    && Number.isInteger(countdownRemaining) && Number(countdownRemaining) >= 0 && Number(countdownRemaining) <= 3
+    && Number.isInteger(state.score) && Number(state.score) >= 0 && Number(state.score) <= 999
+    && Array.isArray(teams) && teams.length <= 20
+    && teams.every((entry) => entry && typeof entry === "object" && !Array.isArray(entry)
+      && typeof (entry as Record<string, unknown>).name === "string"
+      && ((entry as Record<string, unknown>).name as string).length <= 40
+      && Number.isInteger((entry as Record<string, unknown>).score)
+      && Number((entry as Record<string, unknown>).score) >= 0
+      && Number((entry as Record<string, unknown>).score) <= 999)
+    && (state.category === null || (typeof state.category === "string" && state.category.length <= 40))
+    && (state.difficulty === null || (typeof state.difficulty === "string" && state.difficulty.length <= 20))
+    && (state.answer === null || (typeof state.answer === "string" && state.answer.length <= 100))
+    && Array.isArray(state.forbidden_words) && state.forbidden_words.length <= 5
+    && state.forbidden_words.every((word) => typeof word === "string" && word.length <= 60)
+    && Array.isArray(cardHistory) && cardHistory.length <= 240
+    && typeof cardHistoryTruncated === "boolean"
+    && cardHistory.every((entry) => {
+      if (!entry || typeof entry !== "object" || Array.isArray(entry)) return false;
+      const item = entry as Record<string, unknown>;
+      return Object.keys(item).every((key) => ["team", "round", "category", "answer", "forbidden_words", "result"].includes(key))
+        && typeof item.team === "string" && item.team.length <= 40
+        && Number.isInteger(item.round) && Number(item.round) >= 0 && Number(item.round) <= 99
+        && typeof item.category === "string" && item.category.length <= 40
+        && typeof item.answer === "string" && item.answer.length <= 100
+        && Array.isArray(item.forbidden_words) && item.forbidden_words.length <= 5
+        && item.forbidden_words.every((word) => typeof word === "string" && word.length <= 60)
+        && ["correct", "skipped", "timed_out"].includes(String(item.result));
+    });
+  if (!valid) return null;
+  return {
+    phase: state.phase as ProjectToTVState["phase"], team: state.team as string,
+    round: state.round as number, roundDuration: state.round_duration as number,
+    secondsRemaining: state.seconds_remaining as number,
+    countdownRemaining: countdownRemaining as number,
+    score: state.score as number, teams: teams as ProjectToTVTeamResult[], category: state.category as string | null,
+    difficulty: state.difficulty as string | null, answer: state.answer as string | null,
+    forbiddenWords: state.forbidden_words as string[],
+    cardHistory: (cardHistory as Record<string, unknown>[]).map((entry) => ({
+      team: entry.team as string,
+      round: entry.round as number,
+      category: entry.category as string,
+      answer: entry.answer as string,
+      forbiddenWords: entry.forbidden_words as string[],
+      result: entry.result as ProjectToTVCardHistoryItem["result"],
+    })),
+    cardHistoryTruncated: cardHistoryTruncated as boolean,
+  };
+}
 
 const HOST_GAME_EVENTS = new Set([
   "configure_game",
@@ -50,6 +166,11 @@ type LoggedGameEvent = {
   senderPlayerID: string;
   eventID: string;
   event: Extract<PlayOnCallEvent, { type: "game_event" }>;
+};
+
+type PlayOnCallGameSettings = {
+  mode: PlayOnCallMode;
+  usesCompanionPhone: boolean;
 };
 
 function json(body: unknown, status = 200): Response {
@@ -113,6 +234,11 @@ export class PlayOnCallRoom {
       return json({ error: { code: "room_proxy_required" } }, 403);
     }
     const path = new URL(request.url).pathname;
+    if (path === "/tv/create" && request.method === "POST") return this.createTVDisplay(request);
+    if (path === "/tv/rate-limit" && request.method === "POST") return this.recordTVPairingFailure();
+    if (path === "/tv/state" && request.method === "PUT") return this.publishTVState(request);
+    if (path === "/tv/state" && request.method === "GET") return this.readTVState(request);
+    if (path === "/tv/state" && request.method === "DELETE") return this.endTVDisplay(request);
     if (path === "/create" && request.method === "POST") return this.create(request);
     if (path === "/join" && request.method === "POST") return this.join(request);
     if (path === "/status" && request.method === "GET") return this.status();
@@ -205,6 +331,10 @@ export class PlayOnCallRoom {
         await this.state.storage.put(GAME_EVENT_LOG_KEY, []);
         await this.state.storage.delete(GAME_AUTHORITY_KEY);
         await this.state.storage.delete(REACTION_AUTHORITY_KEY);
+        await this.state.storage.put<PlayOnCallGameSettings>(GAME_SETTINGS_KEY, {
+          mode: frame.event.payload.mode,
+          usesCompanionPhone: frame.event.payload.uses_companion_phone,
+        });
         room.mode = frame.event.payload.mode;
       }
       if (frame.event.event_type === "round_start") {
@@ -213,9 +343,12 @@ export class PlayOnCallRoom {
           return this.send(socket, { type: "error", code: "invalid_round_authority", message: "That round owner is not available." });
         }
         room.phase = "playing";
+        const settings = await this.state.storage.get<PlayOnCallGameSettings>(GAME_SETTINGS_KEY);
         await this.state.storage.put<PlayOnCallGameAuthority>(GAME_AUTHORITY_KEY, {
           roundID: payload.round_id,
           turnPlayerID: payload.turn_player_id,
+          mode: settings?.mode ?? room.mode,
+          usesCompanionPhone: settings?.usesCompanionPhone ?? false,
         });
       }
       if (frame.event.event_type === "round_reassign") {
@@ -227,12 +360,28 @@ export class PlayOnCallRoom {
         await this.state.storage.put<PlayOnCallGameAuthority>(GAME_AUTHORITY_KEY, {
           roundID: payload.round_id,
           turnPlayerID: payload.turn_player_id,
+          mode: authority.mode,
+          usesCompanionPhone: authority.usesCompanionPhone,
         });
       }
-      if (frame.event.event_type === "guesser_ready" || frame.event.event_type === "card_action") {
+      if (frame.event.event_type === "post_game_ad_break") {
+        const log = await this.state.storage.get<LoggedGameEvent[]>(GAME_EVENT_LOG_KEY) ?? [];
+        const previous = log.at(-1)?.event;
+        const active = frame.event.payload.active;
+        if (!postGameAdBreakIsAllowed(active, previous && { type: previous.event_type, payload: previous.payload })) {
+          return this.send(socket, { type: "error", code: "post_game_ad_break_not_allowed", message: "A post-game break is only available after a completed game." });
+        }
+      }
+      if (frame.event.event_type === "guesser_ready") {
         const payload = frame.event.payload;
         if (!turnControlIsAllowed(authority, payload.round_id, playerID)) {
           return this.send(socket, { type: "error", code: "turn_owner_required", message: "Only the current turn owner can send that control." });
+        }
+      }
+      if (frame.event.event_type === "card_action") {
+        const payload = frame.event.payload;
+        if (!cardActionIsAllowed(authority, payload.round_id, playerID, room.participants.map((entry) => entry.playerID))) {
+          return this.send(socket, { type: "error", code: "scorekeeper_required", message: "Only the player who can see this card can keep score." });
         }
       }
       if (frame.event.event_type === "guesser_ready") {
@@ -290,6 +439,7 @@ export class PlayOnCallRoom {
         }
         room.phase = "lobby";
         await this.state.storage.delete(GAME_AUTHORITY_KEY);
+        await this.state.storage.delete(GAME_SETTINGS_KEY);
         await this.state.storage.delete(REACTION_AUTHORITY_KEY);
       }
       await this.save(room);
@@ -314,6 +464,24 @@ export class PlayOnCallRoom {
   }
 
   async alarm(): Promise<void> {
+    const tvDisplay = await this.state.storage.get<ProjectToTVSession>(TV_STATE_KEY);
+    if (tvDisplay) {
+      if (tvDisplay.expiresAt <= Date.now()) {
+        await this.state.storage.delete(TV_STATE_KEY);
+        return;
+      }
+      await this.state.storage.setAlarm(tvDisplay.expiresAt);
+      return;
+    }
+    const pairingLimit = await this.state.storage.get<TVPairingRateLimit>(TV_PAIRING_RATE_LIMIT_KEY);
+    if (pairingLimit) {
+      if (pairingLimit.resetAt <= Date.now()) {
+        await this.state.storage.delete(TV_PAIRING_RATE_LIMIT_KEY);
+        return;
+      }
+      await this.state.storage.setAlarm(pairingLimit.resetAt);
+      return;
+    }
     const room = await this.load();
     if (!room || room.phase === "ended") return;
     if (room.expiresAt > Date.now()) {
@@ -342,6 +510,74 @@ export class PlayOnCallRoom {
     );
     await this.save(room);
     return json({ room }, 201);
+  }
+
+  private async createTVDisplay(request: Request): Promise<Response> {
+    const body = await readJson(request);
+    if (typeof body?.owner_token !== "string" || typeof body?.viewer_token !== "string") {
+      return json({ error: { code: "invalid_tv_display" } }, 400);
+    }
+    const existing = await this.state.storage.get<ProjectToTVSession>(TV_STATE_KEY);
+    if (existing && existing.expiresAt > Date.now()) return json({ error: { code: "tv_display_exists" } }, 409);
+    const expiresAt = Date.now() + TV_EXPIRY_MS;
+    await this.state.storage.put<ProjectToTVSession>(TV_STATE_KEY, {
+      ownerHash: await secretHash(body.owner_token),
+      viewerHash: await secretHash(body.viewer_token),
+      expiresAt,
+      viewerConnectedAt: null,
+      state: { phase: "waiting", team: "", round: 0, roundDuration: 60, secondsRemaining: 0, countdownRemaining: 0, score: 0, teams: [], category: null, difficulty: null, answer: null, forbiddenWords: [], cardHistory: [], cardHistoryTruncated: false, updatedAt: Date.now() },
+    });
+    await this.state.storage.setAlarm(expiresAt);
+    return json({ expires_at: expiresAt }, 201);
+  }
+
+  private async recordTVPairingFailure(): Promise<Response> {
+    const now = Date.now();
+    const current = await this.state.storage.get<TVPairingRateLimit>(TV_PAIRING_RATE_LIMIT_KEY);
+    const limit = current && current.resetAt > now
+      ? current
+      : { resetAt: now + TV_PAIRING_RATE_WINDOW_MS, failures: 0 };
+    limit.failures += 1;
+    await this.state.storage.put(TV_PAIRING_RATE_LIMIT_KEY, limit);
+    await this.state.storage.setAlarm(limit.resetAt);
+    return json({ allowed: limit.failures <= TV_PAIRING_RATE_LIMIT, retry_after_seconds: Math.max(1, Math.ceil((limit.resetAt - now) / 1000)) });
+  }
+
+  private async publishTVState(request: Request): Promise<Response> {
+    const session = await this.state.storage.get<ProjectToTVSession>(TV_STATE_KEY);
+    if (!session || session.expiresAt <= Date.now()) return json({ error: { code: "tv_display_expired" } }, 410);
+    const ownerToken = request.headers.get("x-wbd-tv-owner-token") ?? "";
+    if (!ownerToken || await secretHash(ownerToken) !== session.ownerHash) return json({ error: { code: "tv_display_forbidden" } }, 403);
+    const body = await readJson(request);
+    const nextState = parseTVState(body);
+    if (!nextState) return json({ error: { code: "invalid_tv_state" } }, 400);
+    session.state = { ...nextState, updatedAt: Date.now() };
+    await this.state.storage.put(TV_STATE_KEY, session);
+    const viewerConnected = typeof session.viewerConnectedAt === "number"
+      && Date.now() - session.viewerConnectedAt < 5_000;
+    return json({ ok: true, display_connected: viewerConnected });
+  }
+
+  private async readTVState(request: Request): Promise<Response> {
+    const session = await this.state.storage.get<ProjectToTVSession>(TV_STATE_KEY);
+    if (!session || session.expiresAt <= Date.now()) return json({ error: { code: "tv_display_expired" } }, 410);
+    const viewerToken = new URL(request.url).searchParams.get("key") ?? "";
+    if (!viewerToken || await secretHash(viewerToken) !== session.viewerHash) return json({ error: { code: "tv_display_forbidden" } }, 403);
+    const now = Date.now();
+    if (typeof session.viewerConnectedAt !== "number" || now - session.viewerConnectedAt >= 1_000) {
+      session.viewerConnectedAt = now;
+      await this.state.storage.put(TV_STATE_KEY, session);
+    }
+    return json({ state: session.state, expires_at: session.expiresAt });
+  }
+
+  private async endTVDisplay(request: Request): Promise<Response> {
+    const session = await this.state.storage.get<ProjectToTVSession>(TV_STATE_KEY);
+    if (!session) return json({ ok: true });
+    const ownerToken = request.headers.get("x-wbd-tv-owner-token") ?? "";
+    if (!ownerToken || await secretHash(ownerToken) !== session.ownerHash) return json({ error: { code: "tv_display_forbidden" } }, 403);
+    await this.state.storage.delete(TV_STATE_KEY);
+    return json({ ok: true });
   }
 
   private async join(request: Request): Promise<Response> {

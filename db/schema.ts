@@ -37,6 +37,18 @@ export const players = sqliteTable(
   ],
 );
 
+export const ownerCardPreviewTokens = sqliteTable(
+  "owner_card_preview_tokens",
+  {
+    id: text("id").primaryKey(),
+    tokenHash: text("token_hash").notNull(),
+    createdBy: text("created_by").notNull(),
+    createdAt: integer("created_at").notNull(),
+    revokedAt: integer("revoked_at"),
+  },
+  (table) => [index("owner_card_preview_tokens_active_idx").on(table.revokedAt, table.createdAt)],
+);
+
 export const playerSessions = sqliteTable(
   "player_sessions",
   {
@@ -59,6 +71,69 @@ export const playerSessions = sqliteTable(
     check(
       "player_sessions_platform_check",
       sql`${table.platform} in ('ios', 'android', 'web', 'unknown')`,
+    ),
+  ],
+);
+
+/**
+ * A privacy request is a workflow record, not the underlying identity or
+ * payout evidence. Completion is an operator decision because prize, fraud,
+ * dispute, and accounting holds can lawfully delay a deletion.
+ */
+export const privacyRequests = sqliteTable(
+  "privacy_requests",
+  {
+    id: text("id").primaryKey(),
+    playerId: text("player_id")
+      .notNull()
+      .references(() => players.id, { onDelete: "restrict" }),
+    requestType: text("request_type").notNull(),
+    status: text("status").notNull().default("queued"),
+    statement: text("statement").notNull(),
+    operatorNote: text("operator_note"),
+    handledBy: text("handled_by"),
+    handledAt: integer("handled_at"),
+    createdAt: integer("created_at").notNull(),
+    updatedAt: integer("updated_at").notNull(),
+  },
+  (table) => [
+    index("privacy_requests_player_idx").on(table.playerId, table.createdAt),
+    index("privacy_requests_status_idx").on(table.status, table.createdAt),
+    check(
+      "privacy_requests_type_check",
+      sql`${table.requestType} in ('access', 'correction', 'deletion')`,
+    ),
+    check(
+      "privacy_requests_status_check",
+      sql`${table.status} in ('queued', 'in_review', 'completed', 'denied', 'withdrawn')`,
+    ),
+  ],
+);
+
+/**
+ * Restricted operational decisions. A verified phone and player attestation
+ * place a player in `pending`; only a documented review can grant cash
+ * eligibility. Identity and payout documents never belong in this database.
+ */
+export const playerEligibilityReviews = sqliteTable(
+  "player_eligibility_reviews",
+  {
+    id: text("id").primaryKey(),
+    playerId: text("player_id")
+      .notNull()
+      .references(() => players.id, { onDelete: "restrict" }),
+    status: text("status").notNull(),
+    rulesVersion: text("rules_version").notNull(),
+    countryCode: text("country_code").notNull(),
+    note: text("note").notNull(),
+    reviewer: text("reviewer").notNull(),
+    reviewedAt: integer("reviewed_at").notNull(),
+  },
+  (table) => [
+    index("player_eligibility_reviews_player_idx").on(table.playerId, table.reviewedAt),
+    check(
+      "player_eligibility_reviews_status_check",
+      sql`${table.status} in ('eligible', 'ineligible', 'suspended')`,
     ),
   ],
 );
@@ -124,6 +199,8 @@ export const competitions = sqliteTable(
     perCardLimitMs: integer("per_card_limit_ms").notNull().default(12000),
     uploadGraceMs: integer("upload_grace_ms").notNull().default(15000),
     entryMode: text("entry_mode").notNull().default("phone_verified"),
+    /** ISO-3166 alpha-2 countries allowed to enter; legacy countryCode is retained for compatibility. */
+    eligibleCountriesJson: text("eligible_countries_json").notNull().default('["NG"]'),
     countryCode: text("country_code").notNull().default("NG"),
     minimumAge: integer("minimum_age").notNull().default(18),
     currency: text("currency").notNull().default("NGN"),
@@ -493,6 +570,7 @@ export const competitionPayouts = sqliteTable(
     index("competition_payouts_status_idx").on(table.competitionId, table.status, table.createdAt),
     check("competition_payouts_place_check", sql`${table.place} > 0`),
     check("competition_payouts_amount_check", sql`${table.amountMinor} > 0`),
+    check("competition_payouts_currency_check", sql`${table.currency} = 'NGN'`),
     check("competition_payouts_status_check", sql`${table.status} in ('pending', 'approved', 'sent', 'failed', 'cancelled')`),
   ],
 );
@@ -513,6 +591,37 @@ export const competitionPayoutAudit = sqliteTable(
   (table) => [index("competition_payout_audit_idx").on(table.payoutId, table.changedAt)],
 );
 
+/**
+ * A deliberately non-payable record used only by the private League rehearsal.
+ * It keeps enough information to QA the winner handoff without retaining an
+ * account number or creating a record the payout operations flow can process.
+ */
+export const rehearsalPayoutPreviews = sqliteTable(
+  "rehearsal_payout_previews",
+  {
+    id: text("id").primaryKey(),
+    competitionId: text("competition_id")
+      .notNull()
+      .references(() => competitions.id, { onDelete: "restrict" }),
+    playerId: text("player_id")
+      .notNull()
+      .references(() => players.id, { onDelete: "restrict" }),
+    rankAtSubmission: integer("rank_at_submission").notNull(),
+    displayName: text("display_name").notNull(),
+    bankLabel: text("bank_label").notNull(),
+    accountLast4: text("account_last4").notNull(),
+    countryCode: text("country_code").notNull(),
+    submittedAt: integer("submitted_at").notNull(),
+    updatedAt: integer("updated_at").notNull(),
+  },
+  (table) => [
+    uniqueIndex("rehearsal_payout_previews_player_unique").on(table.competitionId, table.playerId),
+    index("rehearsal_payout_previews_queue_idx").on(table.competitionId, table.rankAtSubmission, table.submittedAt),
+    check("rehearsal_payout_previews_rank_check", sql`${table.rankAtSubmission} between 1 and 3`),
+    check("rehearsal_payout_previews_last4_check", sql`length(${table.accountLast4}) = 4`),
+  ],
+);
+
 export const contentReleases = sqliteTable(
   "content_releases",
   {
@@ -527,6 +636,8 @@ export const contentReleases = sqliteTable(
     sponsorKind: text("sponsor_kind"),
     sponsorName: text("sponsor_name"),
     sponsorMessage: text("sponsor_message"),
+    sponsorCampaignTitle: text("sponsor_campaign_title"),
+    sponsorLogoUrl: text("sponsor_logo_url"),
     publishedBy: text("published_by").notNull(),
     publishedAt: integer("published_at").notNull(),
     createdAt: integer("created_at").notNull(),
@@ -635,6 +746,64 @@ export const appConfigAudit = sqliteTable(
   (table) => [index("app_config_audit_revision_idx").on(table.revisionId, table.changedAt)],
 );
 
+/**
+ * Cash cannot be enabled by a single flag. Each required launch gate needs a
+ * reviewed evidence reference before the Worker will accept a public cash
+ * attempt. References must point to restricted evidence, never contain it.
+ */
+export const cashLaunchGates = sqliteTable(
+  "cash_launch_gates",
+  {
+    gateKey: text("gate_key").primaryKey(),
+    status: text("status").notNull().default("pending"),
+    evidenceReference: text("evidence_reference"),
+    note: text("note"),
+    reviewedBy: text("reviewed_by"),
+    reviewedAt: integer("reviewed_at"),
+    updatedAt: integer("updated_at").notNull(),
+  },
+  (table) => [
+    check(
+      "cash_launch_gates_status_check",
+      sql`${table.status} in ('pending', 'passed', 'failed')`,
+    ),
+  ],
+);
+
+/** Immutable history of every cash-launch gate decision. */
+export const cashLaunchGateAudit = sqliteTable(
+  "cash_launch_gate_audit",
+  {
+    id: text("id").primaryKey(),
+    gateKey: text("gate_key").notNull(),
+    status: text("status").notNull(),
+    evidenceReference: text("evidence_reference"),
+    note: text("note").notNull(),
+    reviewedBy: text("reviewed_by").notNull(),
+    changedAt: integer("changed_at").notNull(),
+  },
+  (table) => [
+    index("cash_launch_gate_audit_gate_changed_idx").on(table.gateKey, table.changedAt),
+    check(
+      "cash_launch_gate_audit_status_check",
+      sql`${table.status} in ('pending', 'passed', 'failed')`,
+    ),
+  ],
+);
+
+export const competitionEligibilityPolicyAudit = sqliteTable(
+  "competition_eligibility_policy_audit",
+  {
+    id: text("id").primaryKey(),
+    competitionId: text("competition_id").notNull().references(() => competitions.id, { onDelete: "restrict" }),
+    eligibleCountriesJson: text("eligible_countries_json").notNull(),
+    actor: text("actor").notNull(),
+    note: text("note").notNull(),
+    changedAt: integer("changed_at").notNull(),
+  },
+  (table) => [index("competition_eligibility_policy_audit_competition_idx").on(table.competitionId, table.changedAt)],
+);
+
 export const googleReviewAccess = sqliteTable("google_review_access", {
   playerId: text("player_id").primaryKey().references(() => players.id, { onDelete: "cascade" }),
   codeHash: text("code_hash").notNull(),
@@ -675,3 +844,121 @@ export const playerEntitlements = sqliteTable(
     check("player_entitlements_active_check", sql`${table.active} in (0, 1)`),
   ],
 );
+
+/**
+ * Verified App Attest public keys. The private key never leaves the iPhone;
+ * the server persists only the public key material and monotonic assertion
+ * counter.
+ */
+export const appAttestKeys = sqliteTable(
+  "app_attest_keys",
+  {
+    keyId: text("key_id").primaryKey(),
+    playerId: text("player_id")
+      .notNull()
+      .references(() => players.id, { onDelete: "restrict" }),
+    appId: text("app_id").notNull(),
+    environment: text("environment").notNull(),
+    publicKeyPem: text("public_key_pem").notNull(),
+    assertionCounter: integer("assertion_counter").notNull().default(0),
+    receiptB64: text("receipt_b64"),
+    attestedAt: integer("attested_at").notNull(),
+    lastVerifiedAt: integer("last_verified_at").notNull(),
+    revokedAt: integer("revoked_at"),
+    createdAt: integer("created_at").notNull(),
+    updatedAt: integer("updated_at").notNull(),
+  },
+  (table) => [
+    index("app_attest_keys_player_idx").on(table.playerId, table.revokedAt),
+    index("app_attest_keys_active_idx").on(
+      table.appId,
+      table.environment,
+      table.revokedAt,
+      table.lastVerifiedAt,
+    ),
+    check(
+      "app_attest_keys_environment_check",
+      sql`${table.environment} in ('development', 'production')`,
+    ),
+    check("app_attest_keys_counter_check", sql`${table.assertionCounter} >= 0`),
+  ],
+);
+
+/**
+ * Short-lived, single-use nonces for App Attest registration and cash answers.
+ * The Worker derives every protected request binding itself; the app never
+ * chooses a challenge or its expiry.
+ */
+export const appAttestChallenges = sqliteTable(
+  "app_attest_challenges",
+  {
+    id: text("id").primaryKey(),
+    playerId: text("player_id")
+      .notNull()
+      .references(() => players.id, { onDelete: "cascade" }),
+    attemptId: text("attempt_id")
+      .notNull()
+      .references(() => attempts.id, { onDelete: "cascade" }),
+    keyId: text("key_id").references(() => appAttestKeys.keyId, {
+      onDelete: "restrict",
+    }),
+    purpose: text("purpose").notNull(),
+    challengeB64: text("challenge_b64").notNull(),
+    requestBindingHash: text("request_binding_hash"),
+    cardOrdinal: integer("card_ordinal"),
+    issuedAt: integer("issued_at").notNull(),
+    expiresAt: integer("expires_at").notNull(),
+    consumedAt: integer("consumed_at"),
+    createdAt: integer("created_at").notNull(),
+  },
+  (table) => [
+    index("app_attest_challenges_active_idx").on(
+      table.attemptId,
+      table.purpose,
+      table.cardOrdinal,
+      table.expiresAt,
+      table.consumedAt,
+    ),
+    index("app_attest_challenges_expiry_idx").on(
+      table.expiresAt,
+      table.consumedAt,
+    ),
+    check(
+      "app_attest_challenges_purpose_check",
+      sql`${table.purpose} in ('registration', 'cash_answer')`,
+    ),
+    check(
+      "app_attest_challenges_expiry_check",
+      sql`${table.expiresAt} > ${table.issuedAt}`,
+    ),
+    check(
+      "app_attest_challenges_ordinal_check",
+      sql`${table.cardOrdinal} is null or ${table.cardOrdinal} > 0`,
+    ),
+  ],
+);
+
+export const attemptDeviceBindings = sqliteTable("attempt_device_bindings", {
+  attemptId: text("attempt_id").primaryKey().references(() => attempts.id, { onDelete: "cascade" }),
+  playerId: text("player_id").notNull().references(() => players.id, { onDelete: "cascade" }),
+  platform: text("platform").notNull(), registeredAt: integer("registered_at").notNull(),
+}, (t) => [check("attempt_device_binding_platform_check", sql`${t.platform} in ('ios-app-attest', 'android-play-integrity')`)]);
+
+export const androidIntegrityChallenges = sqliteTable("android_integrity_challenges", {
+  id: text("id").primaryKey(), playerId: text("player_id").notNull().references(() => players.id, { onDelete: "cascade" }),
+  attemptId: text("attempt_id").notNull().references(() => attempts.id, { onDelete: "cascade" }),
+  purpose: text("purpose").notNull(), nonce: text("nonce").notNull(), requestHash: text("request_hash").notNull(),
+  cardOrdinal: integer("card_ordinal"), selectedOptionId: text("selected_option_id"), issuedAt: integer("issued_at").notNull(),
+  expiresAt: integer("expires_at").notNull(), consumedAt: integer("consumed_at"), tokenHash: text("token_hash"),
+}, (t) => [index("android_integrity_challenges_active_idx").on(t.attemptId, t.purpose, t.cardOrdinal, t.expiresAt, t.consumedAt),
+  uniqueIndex("android_integrity_token_replay_idx").on(t.tokenHash).where(sql`${t.tokenHash} is not null`),
+  check("android_integrity_purpose_check", sql`${t.purpose} in ('registration', 'cash_answer')`),
+  check("android_integrity_expiry_check", sql`${t.expiresAt} > ${t.issuedAt}`),
+  check("android_integrity_ordinal_check", sql`(${t.purpose} = 'registration' and ${t.cardOrdinal} is null and ${t.selectedOptionId} is null) or (${t.purpose} = 'cash_answer' and ${t.cardOrdinal} > 0)`)]);
+
+export const androidIntegrityVerifications = sqliteTable("android_integrity_verifications", {
+  attemptId: text("attempt_id").primaryKey().references(() => attempts.id, { onDelete: "cascade" }),
+  playerId: text("player_id").notNull().references(() => players.id, { onDelete: "cascade" }),
+  packageName: text("package_name").notNull(), versionCode: text("version_code").notNull(), certificatesJson: text("certificates_json").notNull(),
+  registeredAt: integer("registered_at").notNull(), lastVerifiedAt: integer("last_verified_at").notNull(),
+});

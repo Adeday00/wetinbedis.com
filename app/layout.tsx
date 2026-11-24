@@ -3,6 +3,12 @@ import { headers } from "next/headers";
 import Link from "next/link";
 import "./globals.css";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
@@ -15,6 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(origin),
     title,
     description,
+    icons: { icon: "/favicon.svg?v=2", shortcut: "/favicon.svg?v=2" },
     openGraph: { title, description, type: "website", images: [{ url: `${origin}/og.png`, width: 1200, height: 630 }] },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
   };

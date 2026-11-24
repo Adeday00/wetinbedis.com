@@ -217,6 +217,44 @@ test("an early cash skip is recorded by the server but still receives the full p
   assert.equal(score.adjustedTotalMs, 12_000);
 });
 
+test("round-deadline timeouts do not need another card release and keep full penalties", () => {
+  const cards = [makeCard(1), makeCard(2), makeCard(3)];
+  const score = scoreServerTimedSubmission({
+    cards,
+    answers: [
+      {
+        cardId: "card-1",
+        position: 1,
+        selectedOptionId: "card-1-option-1",
+        issuedAtMs: 0,
+        answeredAtMs: 900,
+      },
+      // Cards two and three were never released before the global deadline.
+      // The service represents both as no-active-time, server-recorded misses.
+      {
+        cardId: "card-2",
+        position: 2,
+        selectedOptionId: null,
+        issuedAtMs: 144_000,
+        answeredAtMs: 144_000,
+      },
+      {
+        cardId: "card-3",
+        position: 3,
+        selectedOptionId: null,
+        issuedAtMs: 144_000,
+        answeredAtMs: 144_000,
+      },
+    ],
+    perCardLimitMs: 12_000,
+  });
+
+  assert.equal(score.correctCount, 1);
+  assert.equal(score.clientActiveMs, 900);
+  assert.equal(score.adjustedTotalMs, 24_900);
+  assert.deepEqual(score.answers.map((answer) => answer.responseMs), [900, 0, 0]);
+});
+
 test("exact score and timing ties share rank", () => {
   const base = {
     correctCount: 12,

@@ -19,7 +19,7 @@
   </main>
   <script>
     (()=>{const key="wetin-be-dis-screenshot-review-v1",$=id=>document.getElementById(id),state={cards:[]};
-      const categories=["Celebrities","Culture","Diaspora","Food","Music","Naija Life","Religion","School","Slang","Street & Hustle"], difficulties=["Easy","Medium","Hard"];
+      const categories=["Celebrities","Culture","Diaspora","Food","Music","Naija Life","Nollywood","Religion","School","Slang","Celebrations","Trending Now"], difficulties=["Easy","Medium","Hard"];
       const setStatus=(text,good=false)=>{const n=$("status");n.textContent=text;n.style.color=good?"#8ee8a7":""};
       const local=()=>{try{const v=JSON.parse(localStorage.getItem(key)||"null");return Array.isArray(v)?v:null}catch{return null}};
       const saveLocal=()=>localStorage.setItem(key,JSON.stringify(state.cards));

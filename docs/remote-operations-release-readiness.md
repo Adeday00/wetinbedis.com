@@ -5,9 +5,9 @@
 - Versioned `GET /api/v1/app-config` with strict schema validation, safe defaults, ETag support, bounded cache TTL, and monotonic revisions.
 - Authenticated owner workflows for app-config draft, review, publish, rollback, revoke, and emergency disable, plus content-release rollback/revoke. Every mutation records actor, reason, timestamp, action, and revision/release in D1.
 - Existing content-release validation remains authoritative for reviewed cards, hashes, schedules, category integrity, Today’s 5 freshness, and immutable asset URLs.
-- iOS and Android consume the same app-config contract, persist a validated last-known-good snapshot, refresh at launch/foreground boundaries, and reject malformed or cash-enabling responses.
+- iOS and Android consume the same app-config contract, persist a validated last-known-good snapshot, refresh at launch/foreground boundaries, and reject malformed responses. A cash-enabled response still cannot open a cash attempt unless the Worker independently verifies every launch gate.
 - Home League placement is remotely shown/removed on both platforms and always displays practice/no-cash copy while cash gates are false.
-- Existing League server controls remain fail-closed: server time, attempt tokens, fixed/private pack snapshots, sequential cash protocol, replay protection, server scoring, integrity flags, review states, privacy-safe leaderboard output, and cash capability hard-off.
+- Existing League server controls remain fail-closed: server time, attempt tokens, fixed/private pack snapshots, sequential cash protocol, replay protection, server scoring, integrity flags, review states, privacy-safe leaderboard output, and evidence-gated cash capability.
 - Cash operations now have restricted review and payout records with immutable payout-status audit entries; no bank details are stored in the competition database.
 - iOS App Attest and Android Play Integrity client foundations are present, but production provider verification remains a launch gate.
 - Restricted cash review and payout endpoints are available for owner operations; they require a cleared attempt, published prize amount, audit notes, and separate approval/release actors.
@@ -31,7 +31,7 @@
 
 ## Cash gates still blocked
 
-Cash prizes remain disabled in code and remote config. The server still requires independently completed legal/jurisdiction review, adult Nigeria-first eligibility, identity/sanctions/fraud and payout verification, App Attest, Play Integrity, abuse controls, server timing/scoring, winner review, appeals, privacy/retention/deletion operations, support, confirmed prize funding, and tested cancellation messaging.
+Cash prizes remain unavailable because no complete evidence record exists for every required launch gate, and the remote cash switch remains off. The server requires independently completed legal/jurisdiction review for each enabled country, adult eligibility, identity/sanctions/fraud and payout verification, App Attest, Play Integrity, abuse controls, server timing/scoring, winner review, appeals, privacy/retention/deletion operations, support, confirmed prize funding, and tested cancellation messaging.
 
 ## Owner practice-League release
 

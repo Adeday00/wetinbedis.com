@@ -27,7 +27,19 @@ const CANONICAL_CATEGORIES = new Map<string, string>([
   ["religion", "Religion"],
   ["school", "School"],
   ["slang", "Slang"],
-  ["street & hustle", "Street & Hustle"],
+  ["nollywood", "Nollywood"],
+  ["celebrations", "Celebrations"],
+  ["trending now", "Trending Now"],
+  ["street & hustle", "Naija Life"],
+  ["festive", "Celebrations"],
+  ["afrobeats songs", "Music"],
+  ["wetin dey trend", "Trending Now"],
+]);
+const LEGACY_CATEGORY_ALIASES = new Set([
+  "street & hustle",
+  "festive",
+  "afrobeats songs",
+  "wetin dey trend",
 ]);
 const PARTY_CATEGORY_FLOORS = new Map<string, number>([
   ["celebrities", 47],
@@ -39,7 +51,7 @@ const PARTY_CATEGORY_FLOORS = new Map<string, number>([
   ["religion", 18],
   ["school", 18],
   ["slang", 54],
-  ["street & hustle", 10],
+  ["nollywood", 1],
 ]);
 
 type JsonRecord = Record<string, unknown>;
@@ -57,6 +69,8 @@ export type PreparedSponsorConfiguration = {
   kind: "commercial" | "prizeFunding";
   sponsorName: string;
   message: string | null;
+  campaignTitle: string | null;
+  logoURL: string | null;
 };
 
 export type PreparedContentRelease = {
@@ -336,7 +350,10 @@ function parsePartyDeck(value: unknown, issues: string[]) {
     if (!new Set(["Easy", "Medium", "Hard"]).has(difficulty)) {
       issues.push(`${path}.difficulty:invalid:${difficulty}`);
     }
-    if (CANONICAL_CATEGORIES.get(normalized(category)) !== category) {
+    const legacyCategory = CANONICAL_CATEGORIES.get(normalized(category));
+    const canonicalCategory = legacyCategory ?? category.trim();
+    if (!canonicalCategory || canonicalCategory.length > 80 ||
+      (legacyCategory && category !== canonicalCategory && !LEGACY_CATEGORY_ALIASES.has(normalized(category)))) {
       issues.push(`${path}.category:canonical_value_required`);
     }
     if (!uniqueNormalized(forbiddenWords)) issues.push(`${path}.forbidden_words:duplicates`);
@@ -353,7 +370,7 @@ function parsePartyDeck(value: unknown, issues: string[]) {
       card_number: cardNumber,
       id,
       difficulty,
-      category,
+      category: canonicalCategory,
       main_word: mainWord,
       forbidden_words: forbiddenWords,
     });
@@ -446,7 +463,8 @@ function parseSoloGist(
       issues,
     );
     const id = requiredString(question, "id", path, issues, 80);
-    const category = requiredString(question, "category", path, issues, 80);
+    const rawCategory = requiredString(question, "category", path, issues, 80);
+    const category = CANONICAL_CATEGORIES.get(normalized(rawCategory)) ?? rawCategory;
     const answerFamily = requiredString(question, "answer_family", path, issues, 120);
     const clues = stringArray(question.clues, `${path}.clues`, issues, SOLO_CLUE_COUNT);
     const correctOptionID = requiredString(question, "correct_option_id", path, issues, 120);
@@ -455,7 +473,8 @@ function parseSoloGist(
     if (questionIDs.has(normalizedID)) issues.push(`${path}.id:duplicate:${id}`);
     questionIDs.add(normalizedID);
     questionByID.set(id, { category });
-    if (CANONICAL_CATEGORIES.get(normalized(category)) !== category) {
+    const knownCategory = CANONICAL_CATEGORIES.has(normalized(rawCategory));
+    if (!category.trim() || category.length > 80 || (knownCategory && rawCategory !== category && !LEGACY_CATEGORY_ALIASES.has(normalized(rawCategory)))) {
       issues.push(`${path}.category:canonical_value_required`);
     }
 
@@ -480,7 +499,8 @@ function parseSoloGist(
         );
         const optionID = requiredString(option, "id", optionPath, issues, 120);
         const label = requiredString(option, "label", optionPath, issues, 160);
-        const optionCategory = requiredString(option, "category", optionPath, issues, 80);
+        const rawOptionCategory = requiredString(option, "category", optionPath, issues, 80);
+        const optionCategory = CANONICAL_CATEGORIES.get(normalized(rawOptionCategory)) ?? rawOptionCategory;
         const optionAnswerFamily = requiredString(
           option,
           "answer_family",
@@ -490,6 +510,10 @@ function parseSoloGist(
         );
         const normalizedOptionID = normalized(optionID);
         const normalizedLabel = normalized(label);
+        const knownOptionCategory = CANONICAL_CATEGORIES.has(normalized(rawOptionCategory));
+        if (!optionCategory.trim() || optionCategory.length > 80 || (knownOptionCategory && rawOptionCategory !== optionCategory && !LEGACY_CATEGORY_ALIASES.has(normalized(rawOptionCategory)))) {
+          issues.push(`${optionPath}.category:canonical_value_required`);
+        }
         if (optionIDs.has(normalizedOptionID)) issues.push(`${optionPath}.id:duplicate`);
         if (optionLabels.has(normalizedLabel)) issues.push(`${optionPath}.label:duplicate`);
         if (globalOptionIDs.has(normalizedOptionID)) {
@@ -642,7 +666,7 @@ function parseSponsor(
   if (value === undefined || value === null) return null;
   const sponsor = asRecord(value, "sponsor", issues);
   if (!sponsor) return null;
-  exactKeys(sponsor, ["kind", "sponsor_name", "message"], "sponsor", issues);
+  exactKeys(sponsor, ["kind", "sponsor_name", "message", "campaign_title", "logo_url"], "sponsor", issues);
   const kind = requiredString(sponsor, "kind", "sponsor", issues, 20);
   const sponsorName = requiredString(
     sponsor,
@@ -652,11 +676,20 @@ function parseSponsor(
     64,
   ).replace(/\s+/g, " ");
   const message = optionalString(sponsor, "message", "sponsor", issues, 180);
+  const campaignTitle = optionalString(sponsor, "campaign_title", "sponsor", issues, 80);
+  const logoURL = optionalString(sponsor, "logo_url", "sponsor", issues, 2_000);
+  if (logoURL) {
+    try {
+      if (new URL(logoURL).protocol !== "https:") issues.push("sponsor.logo_url:https_required");
+    } catch {
+      issues.push("sponsor.logo_url:url_invalid");
+    }
+  }
   if (kind !== "commercial" && kind !== "prizeFunding") {
     issues.push("sponsor.kind:invalid");
     return null;
   }
-  return { kind, sponsorName, message };
+  return { kind, sponsorName, message, campaignTitle, logoURL };
 }
 
 /// Every Solo option must resolve to a concrete Party card in the same release

@@ -9,6 +9,14 @@ function base64Url(bytes: Uint8Array): string {
     .replace(/=+$/g, "");
 }
 
+/** A raw, URL-safe nonce for a server-owned challenge. */
+export function createBase64UrlNonce(byteCount = SESSION_TOKEN_BYTES): string {
+  if (!Number.isSafeInteger(byteCount) || byteCount < 16 || byteCount > 128) {
+    throw new Error("invalid_nonce_length");
+  }
+  return base64Url(crypto.getRandomValues(new Uint8Array(byteCount)));
+}
+
 function base64UrlDecode(value: string): Uint8Array | null {
   if (!/^[A-Za-z0-9_-]+$/.test(value)) return null;
   const padded = value.replace(/-/g, "+").replace(/_/g, "/")
@@ -22,8 +30,7 @@ function base64UrlDecode(value: string): Uint8Array | null {
 }
 
 export function createOpaqueToken(prefix: string): string {
-  const bytes = crypto.getRandomValues(new Uint8Array(SESSION_TOKEN_BYTES));
-  return `${prefix}_${base64Url(bytes)}`;
+  return `${prefix}_${createBase64UrlNonce()}`;
 }
 
 export async function sha256Hex(value: string): Promise<string> {
@@ -37,9 +44,16 @@ export async function sha256Hex(value: string): Promise<string> {
 }
 
 const PUSH_TOKEN_AAD = "wetin-be-dis-push-token-v1";
+const PAYOUT_DATA_AAD = "wetin-be-dis-payout-data-v1";
 
 function base64UrlToString(bytes: Uint8Array): string {
   return base64Url(bytes);
+}
+
+function detachedArrayBuffer(bytes: Uint8Array): ArrayBuffer {
+  const copy = new ArrayBuffer(bytes.byteLength);
+  new Uint8Array(copy).set(bytes);
+  return copy;
 }
 
 /**
@@ -79,6 +93,80 @@ export async function encryptPushToken(
     new TextEncoder().encode(token),
   );
   return `v1.${base64UrlToString(iv)}.${base64UrlToString(new Uint8Array(ciphertext))}`;
+}
+
+export async function decryptPushToken(
+  ciphertext: string,
+  encryptionSecret: string | undefined,
+): Promise<string> {
+  const secret = encryptionSecret?.trim();
+  const parts = ciphertext.split(".");
+  if (!secret || secret.length < 32 || parts.length !== 3 || parts[0] !== "v1") {
+    throw new Error("push_token_decryption_unavailable");
+  }
+  const iv = base64UrlDecode(parts[1]);
+  const encrypted = base64UrlDecode(parts[2]);
+  if (!iv || !encrypted) throw new Error("push_token_ciphertext_invalid");
+  const keyMaterial = await crypto.subtle.digest(
+    "SHA-256",
+    new TextEncoder().encode(secret),
+  );
+  const key = await crypto.subtle.importKey(
+    "raw",
+    keyMaterial,
+    { name: "AES-GCM" },
+    false,
+    ["decrypt"],
+  );
+  const plaintext = await crypto.subtle.decrypt(
+    {
+      name: "AES-GCM",
+      iv: detachedArrayBuffer(iv),
+      additionalData: new TextEncoder().encode(PUSH_TOKEN_AAD),
+    },
+    key,
+    detachedArrayBuffer(encrypted),
+  );
+  return new TextDecoder().decode(plaintext);
+}
+
+export async function encryptConfidentialPayload(
+  payload: string,
+  encryptionSecret: string | undefined,
+): Promise<string> {
+  const secret = encryptionSecret?.trim();
+  if (!secret || secret.length < 32) throw new Error("payout_data_encryption_unavailable");
+  const keyMaterial = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(secret));
+  const key = await crypto.subtle.importKey("raw", keyMaterial, { name: "AES-GCM" }, false, ["encrypt"]);
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const ciphertext = await crypto.subtle.encrypt(
+    { name: "AES-GCM", iv, additionalData: new TextEncoder().encode(PAYOUT_DATA_AAD) },
+    key,
+    new TextEncoder().encode(payload),
+  );
+  return `v1.${base64Url(iv)}.${base64Url(new Uint8Array(ciphertext))}`;
+}
+
+export async function decryptConfidentialPayload(
+  ciphertext: string,
+  encryptionSecret: string | undefined,
+): Promise<string> {
+  const secret = encryptionSecret?.trim();
+  const parts = ciphertext.split(".");
+  if (!secret || secret.length < 32 || parts.length !== 3 || parts[0] !== "v1") {
+    throw new Error("payout_data_decryption_unavailable");
+  }
+  const iv = base64UrlDecode(parts[1]);
+  const encrypted = base64UrlDecode(parts[2]);
+  if (!iv || !encrypted) throw new Error("payout_data_ciphertext_invalid");
+  const keyMaterial = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(secret));
+  const key = await crypto.subtle.importKey("raw", keyMaterial, { name: "AES-GCM" }, false, ["decrypt"]);
+  const plaintext = await crypto.subtle.decrypt(
+    { name: "AES-GCM", iv: detachedArrayBuffer(iv), additionalData: new TextEncoder().encode(PAYOUT_DATA_AAD) },
+    key,
+    detachedArrayBuffer(encrypted),
+  );
+  return new TextDecoder("utf-8", { fatal: true }).decode(plaintext);
 }
 
 export type PlayOnCallTicket = {

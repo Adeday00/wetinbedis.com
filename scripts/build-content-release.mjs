@@ -299,15 +299,37 @@ if (!/^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$/.test(releaseID)) {
   throw new Error("--release-id contains unsupported characters");
 }
 
+const partyDeckInput = args.get("party-deck")
+  ? path.resolve(process.cwd(), args.get("party-deck"))
+  : partyDeckPath;
+const minimumAppVersion = args.get("minimum-app-version") ?? "1.0.0";
+if (!/^\d+\.\d+\.\d+$/.test(minimumAppVersion)) {
+  throw new Error("--minimum-app-version must be a three-part version such as 2.1.0");
+}
+
 const [catalog, partyRows] = await Promise.all([
   fs.readFile(catalogPath, "utf8").then(JSON.parse),
-  fs.readFile(partyDeckPath, "utf8").then(JSON.parse),
+  fs.readFile(partyDeckInput, "utf8").then(JSON.parse),
 ]);
 validateCatalog(catalog, partyRows);
 
 const readyCards = catalog.cards.filter(
   (card) => card.final_qc === "READY" && card.family_review === "Pass",
 );
+let previousDailyQuestionIDs = new Set();
+if (args.has("previous-release")) {
+  const previousPath = path.resolve(process.cwd(), args.get("previous-release"));
+  const previousRelease = JSON.parse(await fs.readFile(previousPath, "utf8"));
+  previousDailyQuestionIDs = new Set(
+    (previousRelease.solo_gist?.daily_packs ?? []).flatMap((pack) => pack.question_ids ?? []),
+  );
+}
+const dailyPackCards = readyCards.filter((card) => !previousDailyQuestionIDs.has(card.id));
+if (dailyPackCards.length < MINIMUM_READY_SOLO_CARDS) {
+  throw new Error(
+    `Need ${MINIMUM_READY_SOLO_CARDS} READY cards outside the previous release's daily packs; found ${dailyPackCards.length}`,
+  );
+}
 const heldCards = catalog.cards.filter((card) => !readyCards.includes(card));
 if (readyCards.length < MINIMUM_READY_SOLO_CARDS) {
   throw new Error(
@@ -330,7 +352,7 @@ const release = {
   effective_week_wat: effectiveWeekWAT,
   effective_from_wat: watISOString(effectiveFromMs),
   expires_at_wat: watISOString(effectiveFromMs + 7 * DAY_MS),
-  minimum_app_version: "1.0.0",
+  minimum_app_version: minimumAppVersion,
   ...(sponsorKind && sponsorName
     ? {
         sponsor: {
@@ -347,7 +369,7 @@ const release = {
     effective_week_wat: effectiveWeekWAT,
     questions: makeQuestions(readyCards),
     quick_play_question_ids: readyCards.map((card) => card.id),
-    daily_packs: makeDailyPacks(readyCards, effectiveFromMs),
+    daily_packs: makeDailyPacks(dailyPackCards, effectiveFromMs),
   },
 };
 

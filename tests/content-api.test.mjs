@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { execFile as execFileCallback } from "node:child_process";
 import { createHash } from "node:crypto";
-import { mkdtemp, readFile, rm } from "node:fs/promises";
+import { mkdtemp, readdir, readFile, rm } from "node:fs/promises";
 import { promisify } from "node:util";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
@@ -83,12 +83,10 @@ async function builtWorker() {
 }
 
 async function migrate(database) {
-  for (const name of [
-    "0000_brainy_giant_girl.sql",
-    "0001_silly_northstar.sql",
-    "0002_nice_shiva.sql",
-    "0003_mysterious_smasher.sql",
-  ]) {
+  const names = (await readdir(new URL("../drizzle/", import.meta.url)))
+    .filter((name) => /^\d{4}_.*\.sql$/.test(name))
+    .sort();
+  for (const name of names) {
     const migration = await readFile(new URL(`../drizzle/${name}`, import.meta.url), "utf8");
     database.sqlite.exec(migration.replaceAll("--> statement-breakpoint", ""));
   }
@@ -334,6 +332,8 @@ test("owner validation and publishing produce hashed immutable public assets", a
       kind: "commercial",
       sponsor_name: "Test Sponsor",
       message: "Supporting this week's reviewed fixture.",
+      campaign_title: null,
+      logo_url: null,
     },
   });
 
@@ -374,7 +374,7 @@ test("owner validation and publishing produce hashed immutable public assets", a
   assert.deepEqual(manifest.sponsor, release.sponsor);
   assert.deepEqual(validation.release.sponsor, release.sponsor);
   assert.match(manifest.effective_from_wat, /T00:00:00\+01:00$/);
-  assert.doesNotMatch(JSON.stringify(manifest.sponsor), /url|action|league/i);
+  assert.doesNotMatch(JSON.stringify(Object.values(manifest.sponsor)), /url|action|league/i);
   assert.doesNotMatch(JSON.stringify(manifest), /correct_option|answer_family|league/i);
 
   const notModified = await request(worker, database, "/api/v1/content/manifest", {
@@ -401,13 +401,12 @@ test("owner validation and publishing produce hashed immutable public assets", a
   assert.doesNotMatch(soloText, /editorial|source_urls|competition|league_answer/i);
 });
 
-test("the owner catalog build fails closed until every option has independent family evidence", async (t) => {
+test("the owner catalog build succeeds once every option has independent family evidence", async (t) => {
   const root = await mkdtemp(join(tmpdir(), "wbd-content-release-test-"));
   t.after(() => rm(root, { recursive: true, force: true }));
   const output = join(root, "next-week.json");
 
-  await assert.rejects(
-    execFile(
+  await execFile(
       process.execPath,
       [
         "scripts/build-content-release.mjs",
@@ -416,10 +415,9 @@ test("the owner catalog build fails closed until every option has independent fa
         "--output", output,
       ],
       { cwd: process.cwd() },
-    ),
-    /family evidence failed: option_family_reviews: seven explicit editorial reviews required/,
-  );
-  await assert.rejects(readFile(output, "utf8"), { code: "ENOENT" });
+    );
+  const built = JSON.parse(await readFile(output, "utf8"));
+  assert.ok(built.solo_gist.questions.length >= 35);
 });
 
 test("publishing is fail-closed and rejects content that fails Solo QC", async (t) => {

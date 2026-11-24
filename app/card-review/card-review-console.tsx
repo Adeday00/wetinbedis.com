@@ -15,7 +15,6 @@ type Card = {
 };
 type Notice = { tone: "good" | "bad" | "neutral"; title: string; detail?: string };
 
-const categories = ["All", "Celebrities", "Culture", "Diaspora", "Food", "Music", "Naija Life", "Religion", "School", "Slang", "Street & Hustle"];
 const difficulties = ["All", "Easy", "Medium", "Hard"];
 
 function cloneCards(cards: Card[]): Card[] {
@@ -61,6 +60,7 @@ export function CardReviewConsole() {
         .join(" ").toLocaleLowerCase().includes(needle);
     });
   }, [cards, category, difficulty, query]);
+  const categories = useMemo(() => [...new Set(cards.map((card) => card.Category.trim()).filter(Boolean))].sort((a, b) => a.localeCompare(b)), [cards]);
 
   function updateCard(cardNumber: number, field: keyof Card, value: string) {
     setCards((current) => current.map((card) => card["Card Number"] === cardNumber ? { ...card, [field]: field === "Difficulty" ? value as Difficulty : value } : card));
@@ -135,7 +135,7 @@ export function CardReviewConsole() {
             <div className="review-card-heading"><span className="review-number">#{card["Card Number"]}</span><span className="review-id">{card.ID}</span></div>
             <label>Answer<input value={card["Main Word"]} onChange={(event) => updateCard(card["Card Number"], "Main Word", event.target.value)} /></label>
             <div className="review-two-up">
-              <label>Category<select value={card.Category} onChange={(event) => updateCard(card["Card Number"], "Category", event.target.value)}>{categories.slice(1).map((item) => <option key={item}>{item}</option>)}</select></label>
+              <label>Category<input value={card.Category} maxLength={80} onChange={(event) => updateCard(card["Card Number"], "Category", event.target.value)} placeholder="Create or choose a category" /></label>
               <label>Difficulty<select value={card.Difficulty} onChange={(event) => updateCard(card["Card Number"], "Difficulty", event.target.value)}><option>Easy</option><option>Medium</option><option>Hard</option></select></label>
             </div>
             <fieldset><legend>Forbidden words</legend>

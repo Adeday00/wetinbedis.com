@@ -2,6 +2,71 @@
 
 The production app fetches an anonymous HTTPS manifest and two immutable, hashed assets. A release changes the complete Party inventory and the active Solo Gist week without an App Store update. The iOS client validates the same product floors as the server, installs all files atomically, and keeps a last-known-good and bundled fallback.
 
+## Private event packs (pilot)
+
+Private packs are separate from the public release manifest. The apps require an
+authenticated guest player session to redeem and fetch them; cards are returned
+only to a player with a server-side access grant. In this pilot, packs are
+playable in local games only and are not sent to multiplayer participants.
+
+Prepare a JSON file with 5–300 reviewed cards:
+
+```json
+{
+  "cards": [
+    {
+      "id": "SOD-001",
+      "main_word": "Example",
+      "category": "Naija Life",
+      "difficulty": "Medium",
+      "forbidden_words": ["One", "Two", "Three"]
+    }
+  ]
+}
+```
+
+Publish after confirming the organizer payment/license. Use only a secure
+operator shell; the admin token is read from environment and never stored in
+the repository. Event access expires at the chosen timestamp; permanent access
+has no pack expiry. The generated redemption code is shown once, so share it
+with the organizer through the agreed private channel.
+
+```sh
+export WBD_CONTENT_ADMIN_BASE_URL="https://api.wetinbedis.com"
+export WBD_CONTENT_ADMIN_TOKEN="set-this-in-the-host-environment-too"
+npm run event-pack:publish -- \
+  --file /secure/path/sodexo-event.json \
+  --title "Sodexo Event Pack" \
+  --access-mode event_end \
+  --expires-at "2027-01-01T05:00:00Z" \
+  --max-redemptions 500
+```
+
+Use `--access-mode permanent` and omit `--expires-at` for an event pack that
+stays unlocked. Optional `--code-expires-at` limits when invitations may be
+redeemed. The access grant is attached to the player's anonymous account and
+the pack is cached on that device. Cross-device recovery after reinstall needs
+account linking, which is not part of this pilot. Private packs are not yet
+attendee-paid products; adding that path requires server verification of Apple
+and Google purchase transactions.
+
+Revoke an invitation code (existing attendee grants remain active) with the
+authenticated API:
+
+```sh
+curl -X POST -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $WBD_CONTENT_ADMIN_TOKEN" \
+  -d '{"code":"WBD-ABCDE-FG234-HJKLM-NP567"}' \
+  "${WBD_CONTENT_ADMIN_BASE_URL}/api/v1/admin/event-packs/codes/revoke"
+```
+
+Revoke the complete pack, including all active grants, with:
+
+```sh
+curl -X POST -H "Authorization: Bearer $WBD_CONTENT_ADMIN_TOKEN" \
+  "${WBD_CONTENT_ADMIN_BASE_URL}/api/v1/admin/event-packs/ep_<pack-id>/revoke"
+```
+
 ## Owner workflow (recommended)
 
 1. Start from the next-week template or generate a new WAT week from a clean `wbd-site` clone:
@@ -16,7 +81,7 @@ The production app fetches an anonymous HTTPS manifest and two immutable, hashed
 
 3. Open `/content-admin` on the deployed site and sign in with the allowlisted Sign in with ChatGPT owner account. Upload or paste the JSON. The optional sponsor controls support only `commercial` or `prizeFunding`, a sponsor name, and optional copy. They never accept a link or action.
 
-4. Select **Validate release**. Check the WAT week, revision, 600 Party cards, and active Solo count. Validation is fail-closed for hashes, schedules, category spelling and floors, option families, daily packs, Bonus Gist inventory, and unknown fields. Every Solo answer choice must also resolve to a Party-card label in the same category, so a Food word cannot be relabelled as Slang in a hand-edited release.
+4. Select **Validate release**. Check the WAT week, revision, 793 Party cards, and active Solo count. Validation is fail-closed for hashes, schedules, category spelling and floors, option families, daily packs, Bonus Gist inventory, and unknown fields. Every Solo answer choice must also resolve to a Party-card label in the same category, so a Food word cannot be relabelled as Slang in a hand-edited release.
 
 5. Check the confirmation and select **Publish atomically**. The public manifest activates only from Monday 00:00 WAT through the following Monday. A replacement for the same week must use a higher revision; old asset URLs remain immutable for last-known-good recovery.
 
@@ -149,13 +214,13 @@ Public Party and Solo assets contain their answers, so no public card may be reu
 
 Public manifest/assets contain no League pack or League key. Keep draft/candidate prize packs outside the public release JSON.
 
-Cash attempts are deliberately unavailable until phone verification, device attestation, and trusted timing are all implemented. Current API competition payloads are labeled `practice`, expose no active prize places, and mark client timing untrusted. Practice results may appear in a practice ranking; a prize ranking accepts only explicitly integrity-passed attempts. Do not change these gates just to make a giveaway appear live.
+Public cash attempts remain unavailable until all database-backed cash launch gates have approved evidence references and the published app configuration explicitly enables cash. The Worker now implements iOS App Attest and Android Play Integrity challenge/verification, attempt binding, replay checks, sequential server-issued cards, and server-side timing/scoring; local tests cover these paths with provider fixtures. Production phone verification remains disabled, and production provider/device evidence, approved private content, operations, payout funding, and retention controls remain launch gates. Current practice payloads remain non-prize-eligible and use untrusted client timing. Practice results may appear in a practice ranking; a prize ranking accepts only explicitly integrity-passed attempts. Keep every cash gate fail-closed until its evidence is reviewed.
 
 ### Prize-mode threat model (required before enabling cash)
 
-The current practice start response returns the whole 12-card pack, so an early player could relay or research later answers. `CASH_PRIZE_ATTEMPTS_AVAILABLE` must remain server-owned and `false` until the launch design includes all of the following, with adversarial tests and operations monitoring:
+The current practice start response returns the whole 12-card practice pack, so an early player could relay or research later answers. Public cash remains fail-closed until the database-backed launch gates and published `cash_enabled` control are satisfied, with adversarial tests and operations monitoring. The owner-approved cash policy is currently iOS-only; Android prize entry requires an explicit approved platform-scope change. Required controls include:
 
-- the hard-gated sequential server-issuance foundation instead of returning all answers/clues/options at start, plus attested device state and trusted server timing before it is enabled;
+- the hard-gated sequential server-issuance path for cash instead of returning all answers/clues/options at start, plus production-verified attested device state and trusted server timing before it is enabled;
 - a randomized per-player subset drawn from a substantially larger private, isolated bank;
 - a short synchronized competition window, rate/relay anomaly monitoring, and a documented human review/void procedure;
 - real phone verification, replay-resistant device attestation, and a trusted timing source that does not rank client-provided milliseconds.

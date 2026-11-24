@@ -1,5 +1,22 @@
-export type PlayOnCallGameAuthority = { roundID: string; turnPlayerID: string };
+export type PlayOnCallGameAuthority = {
+  roundID: string;
+  turnPlayerID: string;
+  mode: "hot_seat" | "everybody_guess" | "team_battle";
+  usesCompanionPhone: boolean;
+};
 export type PlayOnCallReactionAuthority = { checkpointID: string; recorderPlayerID: string; requiredPlayerIDs: string[] };
+
+export function postGameAdBreakIsAllowed(
+  active: boolean,
+  previous: { type: string; payload?: unknown } | undefined,
+): boolean {
+  const payload = previous?.payload;
+  const wasActive = typeof payload === "object" && payload !== null && "active" in payload
+    && (payload as { active?: unknown }).active === true;
+  return active
+    ? previous?.type === "game_over"
+    : previous?.type === "post_game_ad_break" && wasActive;
+}
 
 export function reservePlayOnCallEventID(
   seenEventIDs: string[],
@@ -17,6 +34,31 @@ export function turnControlIsAllowed(
   senderPlayerID: string,
 ): boolean {
   return authority?.roundID === roundID && authority.turnPlayerID === senderPlayerID;
+}
+
+/**
+ * Hot Seat has two deliberately different controllers. In a nearby House
+ * Party the blind player wears the companion phone and records by tilt. In a
+ * Call room, the blind player guesses while the next connected player sees
+ * the cards and keeps score. Every other mode has the active presenter
+ * control the card.
+ */
+export function cardActionIsAllowed(
+  authority: PlayOnCallGameAuthority | undefined,
+  roundID: string,
+  senderPlayerID: string,
+  participantIDs: string[],
+): boolean {
+  if (!authority || authority.roundID !== roundID) return false;
+  if (authority.mode !== "hot_seat" || authority.usesCompanionPhone) {
+    return authority.turnPlayerID === senderPlayerID;
+  }
+
+  const order = [...participantIDs].sort();
+  const guesserIndex = order.indexOf(authority.turnPlayerID);
+  if (guesserIndex < 0 || order.length < 2) return false;
+  const scorekeeperID = order[(guesserIndex + 1) % order.length];
+  return scorekeeperID === senderPlayerID;
 }
 
 export function reactionRosterIsValid(

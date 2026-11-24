@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wetin-be-dis-join",
+  "main": "worker/join-edge.ts",
+  "compatibility_date": "2026-10-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    { "pattern": "play.wetinbedis.com/join*", "zone_name": "wetinbedis.com" },
+    { "pattern": "play.wetinbedis.com/.well-known/assetlinks.json", "zone_name": "wetinbedis.com" }
+  ]
+}

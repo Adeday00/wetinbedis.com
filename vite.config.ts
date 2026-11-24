@@ -14,20 +14,11 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 const localBindingConfig = {
   name: "wetin-be-dis-api",
   main: "./worker/index.ts",
-  compatibility_flags: ["nodejs_compat"],
-  durable_objects: {
-    bindings: [{ name: "PLAY_ON_CALL_ROOMS", class_name: "PlayOnCallRoom" }],
-  },
-  migrations: [{ tag: "v1", new_sqlite_classes: ["PlayOnCallRoom"] }],
-  d1_databases: d1
-    ? [
-        {
-          binding: d1,
-          database_name: "wetin-be-dis-production",
-          database_id: SITE_CREATOR_PLACEHOLDER_DATABASE_ID,
-        },
-      ]
-    : [],
+  // Compatibility flags are declared in wrangler.jsonc.
+  compatibility_flags: [],
+  // Durable Objects and D1 are declared in wrangler.jsonc to avoid duplicate
+  // bindings in the generated deployment config.
+  d1_databases: [],
   r2_buckets: r2
     ? [
         {
