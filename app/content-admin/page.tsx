@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BrandingManager, CategoryManager, ContentAdminConsole, HomeAnnouncementManager, OwnerCardPreviewAdminPanel } from "./content-admin-console";
 import { RehearsalPayoutQueue } from "./rehearsal-payout-queue";
+import { PicsPackAdminPanel } from "./pics-pack-admin";
 
 export const metadata: Metadata = {
   title: "Content Admin — Wetin Be Dis",
@@ -22,6 +23,7 @@ export default async function ContentAdminPage() {
         <a className="admin-review-link" href="/content-admin/solo-candidates">Review Solo Gist candidate bank</a>
       </section>
       <ContentAdminConsole />
+      <PicsPackAdminPanel />
       <BrandingManager />
       <HomeAnnouncementManager />
       <CategoryManager />

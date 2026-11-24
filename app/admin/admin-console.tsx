@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { ContentAdminConsole, OwnerCardPreviewAdminPanel, OwnerContentCatalogPanel } from "../content-admin/content-admin-console";
+import { PicsPackAdminPanel } from "../content-admin/pics-pack-admin";
 
 type Tab =
   | "overview"
@@ -2428,6 +2429,9 @@ function ContentHub({ releases = [], releasesError = "", reload }: any) {
           ))
         )}
         {releaseMessage && <p style={{ color: "#ffd76b" }}>{releaseMessage}</p>}
+      </div>
+      <div style={{ ...card, gridColumn: "1 / -1" }}>
+        <PicsPackAdminPanel />
       </div>
       <div style={{ ...card, gridColumn: "1 / -1" }}>
         <h2 style={{ marginTop: 0 }}>Release publisher</h2>

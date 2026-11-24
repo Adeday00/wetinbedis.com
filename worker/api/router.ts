@@ -5767,6 +5767,120 @@ async function savePartyDeckEditorState(request: Request, env: ApiEnv): Promise<
   return json({ saved: true, cards: validation.cards, updated_at: now, updated_by: authorization.publishedBy });
 }
 
+type RemotePicsPack = {
+  version: 1;
+  content_version: string;
+  levels: Array<Record<string, unknown> & { id: number; enabled: boolean }>;
+};
+
+function httpsURL(value: unknown): boolean {
+  if (typeof value !== "string") return false;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" && !url.username && !url.password;
+  } catch { return false; }
+}
+
+function validateRemotePicsPack(value: unknown): { pack: RemotePicsPack | null; issues: string[] } {
+  const issues: string[] = [];
+  if (!value || typeof value !== "object" || Array.isArray(value)) return { pack: null, issues: ["pack:object_required"] };
+  const input = value as Record<string, unknown>;
+  for (const key of Object.keys(input)) if (!["version", "content_version", "levels"].includes(key)) issues.push(`pack:unknown_field:${key}`);
+  const contentVersion = typeof input.content_version === "string" ? input.content_version.trim() : "1.0.0";
+  if (!/^\d+\.\d+\.\d+(?:[-+][A-Za-z0-9.-]+)?$/.test(contentVersion)) issues.push("pack.content_version:invalid");
+  if (input.version !== undefined && input.version !== 1) issues.push("pack.version:unsupported");
+  if (!Array.isArray(input.levels) || input.levels.length < 1 || input.levels.length > 2_000) return { pack: null, issues: [...issues, "pack.levels:count_must_be_1_to_2000"] };
+  const ids = new Set<number>();
+  const levels: Array<Record<string, unknown> & { id: number; enabled: boolean }> = [];
+  input.levels.forEach((candidate, index) => {
+    const path = `pack.levels[${index}]`;
+    if (!candidate || typeof candidate !== "object" || Array.isArray(candidate)) { issues.push(`${path}:object_required`); return; }
+    const level = candidate as Record<string, unknown>;
+    for (const key of Object.keys(level)) if (!["id", "answer", "category", "difficulty", "photos", "enabled"].includes(key)) issues.push(`${path}:unknown_field:${key}`);
+    const id = Number(level.id);
+    const answer = typeof level.answer === "string" ? level.answer.trim() : "";
+    const category = typeof level.category === "string" ? level.category.trim() : "";
+    const difficulty = Number(level.difficulty);
+    if (!Number.isSafeInteger(id) || id < 1) issues.push(`${path}.id:positive_integer_required`);
+    if (ids.has(id)) issues.push(`${path}.id:duplicate`);
+    ids.add(id);
+    if (!answer || answer.length > 160 || !/\p{L}/u.test(answer)) issues.push(`${path}.answer:invalid`);
+    if (!category || category.length > 80) issues.push(`${path}.category:invalid`);
+    if (!Number.isInteger(difficulty) || difficulty < 1 || difficulty > 3) issues.push(`${path}.difficulty:must_be_1_to_3`);
+    if (level.enabled !== undefined && typeof level.enabled !== "boolean") issues.push(`${path}.enabled:must_be_boolean`);
+    if (!Array.isArray(level.photos) || level.photos.length !== 4) issues.push(`${path}.photos:must_have_four`);
+    const photos: Array<Record<string, unknown>> = [];
+    if (Array.isArray(level.photos)) level.photos.forEach((candidatePhoto, photoIndex) => {
+      const photoPath = `${path}.photos[${photoIndex}]`;
+      if (!candidatePhoto || typeof candidatePhoto !== "object" || Array.isArray(candidatePhoto)) { issues.push(`${photoPath}:object_required`); return; }
+      const photo = candidatePhoto as Record<string, unknown>;
+      for (const key of Object.keys(photo)) if (!["asset", "title", "author", "license", "licenseURL", "sourceURL", "image_url"].includes(key)) issues.push(`${photoPath}:unknown_field:${key}`);
+      const asset = typeof photo.asset === "string" ? photo.asset.trim() : "";
+      const title = typeof photo.title === "string" ? photo.title.trim() : "";
+      const author = typeof photo.author === "string" ? photo.author.trim() : "";
+      const license = typeof photo.license === "string" ? photo.license.trim() : "";
+      if (!/^[A-Za-z0-9_-]{1,120}$/.test(asset)) issues.push(`${photoPath}.asset:invalid`);
+      if (!title || title.length > 240) issues.push(`${photoPath}.title:invalid`);
+      if (!author || author.length > 160) issues.push(`${photoPath}.author:invalid`);
+      if (!license || license.length > 100) issues.push(`${photoPath}.license:invalid`);
+      if (photo.licenseURL !== undefined && photo.licenseURL !== null && photo.licenseURL !== "" && !httpsURL(photo.licenseURL)) issues.push(`${photoPath}.licenseURL:must_be_https`);
+      if (!httpsURL(photo.sourceURL)) issues.push(`${photoPath}.sourceURL:must_be_https`);
+      if (photo.image_url !== undefined && !httpsURL(photo.image_url)) issues.push(`${photoPath}.image_url:must_be_https`);
+      photos.push({ asset, title, author, license, ...(photo.licenseURL ? { licenseURL: photo.licenseURL } : {}), sourceURL: photo.sourceURL, ...(photo.image_url ? { image_url: photo.image_url } : {}) });
+    });
+    levels.push({ id, answer, category, difficulty, enabled: level.enabled !== false, photos });
+  });
+  if (!levels.some((level) => level.enabled)) issues.push("pack.levels:at_least_one_enabled_required");
+  return issues.length ? { pack: null, issues: [...new Set(issues)].sort() } : { pack: { version: 1, content_version: contentVersion, levels }, issues: [] };
+}
+
+async function getAdminPicsPack(request: Request, env: ApiEnv): Promise<Response> {
+  await authorizeContentAdmin(request, env);
+  const row = await database(env).prepare("SELECT revision, content_version, pack_json, updated_by, updated_at FROM pics_pack_state WHERE id = 'current' LIMIT 1")
+    .first<{ revision: number; content_version: string; pack_json: string; updated_by: string; updated_at: number }>();
+  if (!row) return json({ pack: null, revision: 0, updated_by: null, updated_at: null });
+  let pack: unknown;
+  try { pack = JSON.parse(row.pack_json); } catch { throw new ApiError(503, "pics_pack_corrupt", "The saved Four Pics pack could not be read."); }
+  return json({ pack, revision: row.revision, content_version: row.content_version, updated_by: row.updated_by, updated_at: row.updated_at });
+}
+
+async function saveAdminPicsPack(request: Request, env: ApiEnv): Promise<Response> {
+  const authorization = await authorizeContentAdmin(request, env);
+  assertContentAdminOrigin(request, authorization);
+  const payload = await readJsonObject(request, { maximumBytes: 4 * 1_024 * 1_024, requireApplicationJSON: true });
+  const validation = validateRemotePicsPack(payload.pack);
+  if (!validation.pack) return json({ saved: false, issues: validation.issues }, 422);
+  const db = database(env);
+  const existing = await db.prepare("SELECT revision FROM pics_pack_state WHERE id = 'current' LIMIT 1").first<{ revision: number }>();
+  const expectedRevision = Number(payload.expected_revision ?? 0);
+  if (!Number.isSafeInteger(expectedRevision) || expectedRevision !== (existing?.revision ?? 0)) {
+    throw new ApiError(409, "pics_pack_conflict", "The Four Pics pack changed elsewhere. Reload it before saving.", { revision: existing?.revision ?? 0 });
+  }
+  const revision = (existing?.revision ?? 0) + 1;
+  const now = Date.now();
+  const packJSON = JSON.stringify(validation.pack);
+  await db.prepare(`INSERT INTO pics_pack_state (id, revision, content_version, pack_json, updated_by, updated_at)
+    VALUES ('current', ?1, ?2, ?3, ?4, ?5)
+    ON CONFLICT(id) DO UPDATE SET revision = excluded.revision, content_version = excluded.content_version,
+      pack_json = excluded.pack_json, updated_by = excluded.updated_by, updated_at = excluded.updated_at`)
+    .bind(revision, validation.pack.content_version, packJSON, authorization.publishedBy, now).run();
+  await recordAdminAudit(db, authorization, "update", "pics_pack", "current", "Updated remote Four Pics level pack", { revision, levelCount: validation.pack.levels.length, enabledCount: validation.pack.levels.filter((level) => level.enabled).length, contentVersion: validation.pack.content_version });
+  return json({ saved: true, pack: validation.pack, revision, updated_by: authorization.publishedBy, updated_at: now });
+}
+
+async function getPublicPicsPack(request: Request, env: ApiEnv): Promise<Response> {
+  const row = await database(env).prepare("SELECT revision, content_version, pack_json, updated_at FROM pics_pack_state WHERE id = 'current' LIMIT 1")
+    .first<{ revision: number; content_version: string; pack_json: string; updated_at: number }>();
+  if (!row) throw new ApiError(404, "pics_pack_not_published", "No remote Four Pics pack has been published yet.");
+  let pack: unknown;
+  try { pack = JSON.parse(row.pack_json); } catch { throw new ApiError(503, "pics_pack_corrupt", "The published Four Pics pack is unavailable."); }
+  return cacheableJsonResponse(request, { revision: row.revision, content_version: row.content_version, pack }, {
+    etag: `\"wbd-pics-r${row.revision}\"`,
+    cacheControl: "public, max-age=60, must-revalidate",
+    lastModifiedMs: row.updated_at,
+  });
+}
+
 function phoneVerificationUnavailable(): Response {
   const capability = getPhoneVerificationProvider().capability;
   return json(
@@ -7281,6 +7395,10 @@ async function routeApiRequest(request: Request, env: ApiEnv): Promise<Response>
     assertMethod(request, "GET");
     return currentContentManifest(request, env);
   }
+  if (path === "/api/v1/content/pics-pack") {
+    assertMethod(request, "GET");
+    return getPublicPicsPack(request, env);
+  }
   if (path === "/api/v1/admin/event-packs/publish") {
     assertMethod(request, "POST");
     return publishEventPack(request, env);
@@ -7402,6 +7520,11 @@ async function routeApiRequest(request: Request, env: ApiEnv): Promise<Response>
   if (path === "/api/v1/admin/party-deck") {
     if (request.method === "GET") return getPartyDeckEditorState(request, env);
     if (request.method === "PUT") return savePartyDeckEditorState(request, env);
+    throw new ApiError(405, "method_not_allowed", "Use GET or PUT for this endpoint.");
+  }
+  if (path === "/api/v1/admin/pics-pack") {
+    if (request.method === "GET") return getAdminPicsPack(request, env);
+    if (request.method === "PUT") return saveAdminPicsPack(request, env);
     throw new ApiError(405, "method_not_allowed", "Use GET or PUT for this endpoint.");
   }
   const contentAssetMatch =

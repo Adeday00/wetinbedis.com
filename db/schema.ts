@@ -962,3 +962,15 @@ export const androidIntegrityVerifications = sqliteTable("android_integrity_veri
   packageName: text("package_name").notNull(), versionCode: text("version_code").notNull(), certificatesJson: text("certificates_json").notNull(),
   registeredAt: integer("registered_at").notNull(), lastVerifiedAt: integer("last_verified_at").notNull(),
 });
+
+export const picsPackState = sqliteTable("pics_pack_state", {
+  id: text("id").primaryKey(),
+  revision: integer("revision").notNull(),
+  contentVersion: text("content_version").notNull(),
+  packJson: text("pack_json").notNull(),
+  updatedBy: text("updated_by").notNull(),
+  updatedAt: integer("updated_at").notNull(),
+}, (table) => [
+  check("pics_pack_state_id_check", sql`${table.id} = 'current'`),
+  check("pics_pack_state_revision_check", sql`${table.revision} > 0`),
+]);
