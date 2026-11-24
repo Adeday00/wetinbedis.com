@@ -71,6 +71,8 @@ type ProjectToTVSession = {
   viewerHash: string;
   expiresAt: number;
   viewerConnectedAt: number | null;
+  phoneConnectedAt?: number | null;
+  claimable?: boolean;
   state: ProjectToTVState;
 };
 
@@ -235,6 +237,7 @@ export class PlayOnCallRoom {
     }
     const path = new URL(request.url).pathname;
     if (path === "/tv/create" && request.method === "POST") return this.createTVDisplay(request);
+    if (path === "/tv/claim" && request.method === "POST") return this.claimTVDisplay(request);
     if (path === "/tv/rate-limit" && request.method === "POST") return this.recordTVPairingFailure();
     if (path === "/tv/state" && request.method === "PUT") return this.publishTVState(request);
     if (path === "/tv/state" && request.method === "GET") return this.readTVState(request);
@@ -525,10 +528,28 @@ export class PlayOnCallRoom {
       viewerHash: await secretHash(body.viewer_token),
       expiresAt,
       viewerConnectedAt: null,
+      phoneConnectedAt: null,
+      claimable: body.claimable === true,
       state: { phase: "waiting", team: "", round: 0, roundDuration: 60, secondsRemaining: 0, countdownRemaining: 0, score: 0, teams: [], category: null, difficulty: null, answer: null, forbiddenWords: [], cardHistory: [], cardHistoryTruncated: false, updatedAt: Date.now() },
     });
     await this.state.storage.setAlarm(expiresAt);
     return json({ expires_at: expiresAt }, 201);
+  }
+
+  private async claimTVDisplay(request: Request): Promise<Response> {
+    const session = await this.state.storage.get<ProjectToTVSession>(TV_STATE_KEY);
+    if (!session || session.expiresAt <= Date.now()) return json({ error: { code: "tv_display_expired" } }, 410);
+    if (!session.claimable || session.phoneConnectedAt) return json({ error: { code: "tv_display_already_claimed" } }, 409);
+    const body = await readJson(request);
+    if (typeof body?.viewer_token !== "string" || typeof body?.owner_token !== "string"
+      || await secretHash(body.viewer_token) !== session.viewerHash) {
+      return json({ error: { code: "tv_display_code_invalid" } }, 404);
+    }
+    session.ownerHash = await secretHash(body.owner_token);
+    session.phoneConnectedAt = Date.now();
+    session.claimable = false;
+    await this.state.storage.put(TV_STATE_KEY, session);
+    return json({ expires_at: session.expiresAt }, 200);
   }
 
   private async recordTVPairingFailure(): Promise<Response> {
@@ -568,7 +589,7 @@ export class PlayOnCallRoom {
       session.viewerConnectedAt = now;
       await this.state.storage.put(TV_STATE_KEY, session);
     }
-    return json({ state: session.state, expires_at: session.expiresAt });
+    return json({ state: session.state, expires_at: session.expiresAt, phone_connected: typeof session.phoneConnectedAt === "number" });
   }
 
   private async endTVDisplay(request: Request): Promise<Response> {

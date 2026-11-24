@@ -1349,6 +1349,59 @@ function projectToTVStub(env: ApiEnv & { PLAY_ON_CALL_ROOMS: DurableObjectNamesp
   );
 }
 
+async function createProjectToTVPairingCode(request: Request, env: ApiEnv): Promise<Response> {
+  if (!playOnCallIsConfigured(env)) return playOnCallUnavailable();
+  const clientAddress = request.headers.get("cf-connecting-ip")?.trim() || "unknown";
+  const addressHash = await sha256Hex(clientAddress);
+  const limiter = env.PLAY_ON_CALL_ROOMS!.get(
+    env.PLAY_ON_CALL_ROOMS!.idFromName(`wetin-be-dis-tv-pairing-rate-v1:${addressHash}`),
+  );
+  const limitResponse = await limiter.fetch(new Request("https://project-to-tv.internal/tv/rate-limit", {
+    method: "POST", headers: playOnCallProxyHeaders(),
+  }));
+  if (!limitResponse.ok) throw new ApiError(503, "tv_pairing_rate_limit_unavailable", "The big-screen code is temporarily unavailable.");
+  const limit = await limitResponse.json() as { allowed: boolean; retry_after_seconds: number };
+  if (!limit.allowed) {
+    const retryAfter = Math.max(1, Math.min(60, Math.ceil(limit.retry_after_seconds)));
+    return json({ error: { code: "tv_pairing_rate_limited", message: "Too many big-screen codes were requested. Wait a minute and try again." } }, 429, { "retry-after": String(retryAfter) });
+  }
+  const alphabet = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+  for (let attempt = 0; attempt < 12; attempt += 1) {
+    const random = crypto.getRandomValues(new Uint8Array(4));
+    const pairingCode = [...random].map((byte) => alphabet[byte & 31]).join("");
+    const created = await projectToTVStub(env, pairingCode).fetch(new Request("https://project-to-tv.internal/tv/create", {
+      method: "POST", headers: playOnCallProxyHeaders(),
+      body: JSON.stringify({ owner_token: createBase64UrlNonce(32), viewer_token: pairingCode, claimable: true }),
+    }));
+    if (created.status === 409) continue;
+    if (!created.ok) throw new ApiError(503, "tv_display_create_failed", "Could not create a big-screen code.");
+    const result = await created.json() as { expires_at: number };
+    return json({ pairing_code: pairingCode, display_url: "https://play.wetinbedis.com", expires_at: result.expires_at }, 201);
+  }
+  throw new ApiError(503, "tv_display_code_unavailable", "Could not reserve a display code. Refresh the page to try again.");
+}
+
+async function claimProjectToTVSession(request: Request, env: ApiEnv, rawCode: string): Promise<Response> {
+  if (!playOnCallIsConfigured(env)) return playOnCallUnavailable();
+  await authenticate(request, database(env));
+  const pairingCode = rawCode.toUpperCase();
+  if (!/^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{4}$/.test(pairingCode)) throw new ApiError(404, "tv_display_not_found", "That big-screen code is not valid.");
+  const ownerToken = createBase64UrlNonce(32);
+  const response = await projectToTVStub(env, pairingCode).fetch(new Request("https://project-to-tv.internal/tv/claim", {
+    method: "POST", headers: playOnCallProxyHeaders({ "content-type": "application/json" }),
+    body: JSON.stringify({ viewer_token: pairingCode, owner_token: ownerToken }),
+  }));
+  if (!response.ok) {
+    const payload = await response.json().catch(() => null) as { error?: { code?: string } } | null;
+    const code = payload?.error?.code;
+    if (response.status === 410 || code === "tv_display_expired") throw new ApiError(410, "tv_display_expired", "That code has expired. Refresh the big-screen page for a new one.");
+    if (response.status === 409) throw new ApiError(409, "tv_display_already_claimed", "That screen is already connected to a phone.");
+    throw new ApiError(404, "tv_display_not_found", "That code is not active. Check the code on the big screen and try again.");
+  }
+  const result = await response.json() as { expires_at: number };
+  return json({ session_id: pairingCode, pairing_code: pairingCode, owner_token: ownerToken, display_url: "https://play.wetinbedis.com", expires_at: result.expires_at }, 200);
+}
+
 async function createProjectToTVSession(request: Request, env: ApiEnv): Promise<Response> {
   if (!playOnCallIsConfigured(env)) return playOnCallUnavailable();
   await authenticate(request, database(env));
@@ -1361,7 +1414,7 @@ async function createProjectToTVSession(request: Request, env: ApiEnv): Promise<
     const response = await stub.fetch(new Request("https://project-to-tv.internal/tv/create", {
       method: "POST",
       headers: playOnCallProxyHeaders(),
-      body: JSON.stringify({ owner_token: ownerToken, viewer_token: pairingCode }),
+      body: JSON.stringify({ owner_token: ownerToken, viewer_token: pairingCode, claimable: false }),
     }));
     if (response.status === 409) continue;
     if (!response.ok) throw new ApiError(503, "tv_display_create_failed", "Could not start the big-screen display.");
@@ -7555,6 +7608,13 @@ async function routeApiRequest(request: Request, env: ApiEnv): Promise<Response>
   if (path === "/api/v1/me/rehearsal/payout-preview") {
     assertMethod(request, "POST");
     return submitRehearsalPayoutPreview(request, env);
+  }
+  if (path === "/api/v1/tv-displays/display" && request.method === "POST") {
+    return createProjectToTVPairingCode(request, env);
+  }
+  const tvDisplayClaimMatch = /^\/api\/v1\/tv-displays\/([23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{4})\/claim$/.exec(path);
+  if (tvDisplayClaimMatch && request.method === "POST") {
+    return claimProjectToTVSession(request, env, tvDisplayClaimMatch[1]);
   }
   if (path === "/api/v1/tv-displays" && request.method === "POST") {
     return createProjectToTVSession(request, env);

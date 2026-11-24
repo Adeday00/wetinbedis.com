@@ -52,14 +52,11 @@ body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 86% 4%,rgb
 .join h1{max-width:690px;margin:0;color:var(--paper);font:700 clamp(46px,6.2vw,88px)/.97 Georgia,serif;letter-spacing:-.045em}
 .joinLead{max-width:600px;margin:24px 0 34px;color:#d1cbd2;font-size:clamp(16px,1.35vw,20px);line-height:1.65}
 .codeLabel{display:grid;gap:12px;max-width:570px;color:#f4e9d6;font-size:14px;font-weight:850;letter-spacing:.04em}
-.join input{width:100%;height:84px;padding:12px 22px;border:2px solid rgba(255,177,0,.72);border-radius:15px;background:#080709;color:var(--paper);font:900 clamp(34px,4.4vw,52px)/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.42em;text-align:center;text-transform:uppercase;box-shadow:inset 0 0 0 4px rgba(255,255,255,.025)}
-.join input:focus{outline:3px solid rgba(24,166,64,.8);outline-offset:4px}
 .join button{width:max-content;min-width:210px;min-height:58px;margin-top:18px;border:0;border-radius:12px;background:linear-gradient(110deg,#ffb100,#ffd05b);color:#090909;padding:14px 28px;font-size:16px;font-weight:950;letter-spacing:.025em;cursor:pointer;box-shadow:0 10px 28px rgba(255,177,0,.18);transition:transform .18s ease,box-shadow .18s ease}
-.join button:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(255,177,0,.28)}
+.join button:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(255,177,0,.28)} .pairCodePanel{max-width:620px;margin-top:26px;padding:clamp(18px,3vw,30px);border:1px solid rgba(255,177,0,.5);border-radius:22px;background:rgba(8,7,9,.68);text-align:center}.pairCodeLabel{margin:0;color:#ffd65b;font-size:clamp(11px,1vw,15px);font-weight:950;letter-spacing:.17em}.pairCode{margin:8px 0 0;color:var(--paper);font:950 clamp(64px,10vw,116px)/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.28em;text-shadow:0 8px 36px rgba(255,177,0,.2)}.pairCode.isError{color:#ff8d80}.pairCodePanel button{margin-top:10px}.pairCodePanel .joinHint{margin-top:10px}.join.isConnected .pairCodePanel button{display:none}
 .joinHint{min-height:22px;margin:20px 0 0;color:#bcb6bd;font-size:14px;line-height:1.5}
 .joinConnection{margin:8px 0 0;padding:13px 16px;border:1px solid rgba(24,166,64,.52);border-radius:14px;background:rgba(24,166,64,.12);color:#bdf6c8;font-size:13px;font-weight:900;letter-spacing:.04em}
 .joinConnection:before{content:"●";margin-right:9px;color:#18a640}
-.join.isConnected .codeLabel,.join.isConnected>button{display:none}
 .joinInviteCard{padding:clamp(24px,3vw,42px);background:var(--paper);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .inviteKicker{margin:0 0 8px;color:#236d45;font-size:12px;font-weight:950;letter-spacing:.15em}
 .joinInviteCard h2{max-width:340px;margin:0 0 15px;font:700 clamp(28px,3.2vw,42px)/1 Georgia,serif;letter-spacing:-.035em}
@@ -70,64 +67,57 @@ body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 86% 4%,rgb
 .join .hint{font-size:14px;font-weight:500;opacity:.8}
 .screenBack{min-height:40px;padding:8px 14px;border:1px solid rgba(255,244,216,.24);border-radius:999px;background:rgba(255,244,216,.08);color:#fff4d8;font:850 clamp(11px,.95vw,14px) system-ui,sans-serif;white-space:nowrap;cursor:pointer}.screenBack:hover,.screenBack:focus-visible{border-color:#ffd65b;background:rgba(255,214,91,.13);outline:2px solid rgba(255,214,91,.55);outline-offset:2px}.join.isConnected>#changeWaitingCode{display:inline-flex;align-self:flex-start;margin-top:12px}.leaveConfirm{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:24px;background:rgba(0,0,0,.74);backdrop-filter:blur(8px)}.leaveConfirm.hidden{display:none}.leaveCard{width:min(100%,520px);padding:clamp(24px,4vw,40px);border:2px solid rgba(255,177,0,.7);border-radius:24px;background:#101a15;color:#fff4d8;box-shadow:0 24px 80px #0009}.leaveCard h2{margin:0 0 12px;font:700 clamp(26px,3vw,38px)/1.08 Georgia,serif}.leaveCard p{margin:0;color:#ded7ca;font-size:16px;line-height:1.55}.leaveActions{display:flex;justify-content:flex-end;gap:10px;margin-top:24px;flex-wrap:wrap}.leaveActions button{min-height:48px;padding:10px 18px;border:1px solid rgba(255,244,216,.22);border-radius:12px;background:rgba(255,244,216,.08);color:#fff4d8;font:850 14px system-ui,sans-serif;cursor:pointer}.leaveActions button:last-child{border-color:#ffb100;background:#ffb100;color:#101a15}.leaveActions button:focus-visible{outline:3px solid #ffd65b;outline-offset:3px}.hidden{display:none!important}
 @media(max-width:820px){.message{padding:22px}.join{grid-template-columns:1fr;max-width:620px;gap:16px}.joinCopy{min-height:0;padding:30px}.joinBrand{margin-bottom:36px}.join h1{font-size:clamp(46px,11vw,72px)}.joinLead{margin:17px 0 25px}.joinInviteCard{padding:28px}.qrFrame{width:min(56vw,230px)}.joinInviteCard h2{font-size:32px}}
-@media(max-width:460px){.message{padding:13px}.joinCopy,.joinInviteCard{border-radius:22px}.joinCopy{padding:24px 20px}.joinBrand{margin-bottom:30px}.joinBrandMark{width:42px;height:42px;font-size:30px}.join h1{font-size:44px}.join input{height:72px;font-size:34px;letter-spacing:.32em}.join button{width:100%}.joinInviteCard{padding:22px}.qrFrame{width:min(68vw,215px)}.joinInviteCard h2{font-size:29px}}
+@media(max-width:460px){.message{padding:13px}.joinCopy,.joinInviteCard{border-radius:22px}.joinCopy{padding:24px 20px}.joinBrand{margin-bottom:30px}.joinBrandMark{width:42px;height:42px;font-size:30px}.join h1{font-size:44px}.join button{width:100%}.pairCode{font-size:clamp(58px,17vw,84px);letter-spacing:.18em}.joinInviteCard{padding:22px}.qrFrame{width:min(68vw,215px)}.joinInviteCard h2{font-size:29px}}
 @media(max-height:980px) and (min-width:821px){.message{padding:24px 4vw}.joinCopy{min-height:0;padding:32px 48px}.joinBrand{margin-bottom:24px}.join h1{font-size:clamp(46px,5.2vw,72px)}.joinLead{margin:14px 0 20px}.qrFrame{width:min(100%,205px)}.joinInviteCard{padding:24px}}
 @media(max-aspect-ratio:1/1){.resultsCard{padding:22px 18px}.resultsTitle{font-size:clamp(36px,10vw,64px)}.finalScores{gap:10px}.finalScore{min-width:min(180px,40vw);padding:14px}.resultsNote{margin-top:12px}body{height:auto;min-height:100svh;overflow:auto}.shell{height:auto;min-height:100svh;padding:14px 3vw;gap:10px;overflow:visible}.top{gap:8px}.liveStatus{font-size:9px;padding:6px 8px}.team{font-size:clamp(17px,5vw,28px)}.timer{font-size:clamp(26px,7vw,40px)}.grid{flex:none;grid-template-columns:1fr;grid-template-rows:minmax(230px,1fr) auto;gap:10px}.card,.forbidden{padding:20px;border-radius:20px}.answer{font-size:clamp(42px,12vw,96px)}.words{grid-template-columns:repeat(3,1fr)}.word{font-size:clamp(18px,5vw,34px)}.foot{gap:8px;font-size:11px}.appInvite{gap:6px;font-size:9px}.appInvite img{width:76px;height:76px}}
 </style></head><body>
-<div id="join" class="message"><form id="joinForm" class="join"><section class="joinCopy"><div class="joinBrand"><span class="joinBrandMark">?</span><span class="joinBrandName">WETIN<br>BE DIS</span></div><p class="eyebrow">PLAY TOGETHER · ON ANY SCREEN</p><h1>Bring the gist to the big screen.</h1><p class="joinLead">Enter the four-character code from your iPhone to bring the game onto this TV, projector, or browser.</p><label class="codeLabel" for="code">YOUR GAME CODE<input id="code" name="code" maxlength="4" autocomplete="one-time-code" autocapitalize="characters" inputmode="text" placeholder="ABCD" aria-describedby="joinHint" required></label><button type="submit">Connect this screen <span aria-hidden="true">→</span></button><div id="joinHint" class="joinHint" aria-live="polite">Find the code in Wetin Be Dis on your iPhone.</div><div id="joinConnection" class="joinConnection hidden" aria-live="polite"></div><button id="changeWaitingCode" class="screenBack hidden" type="button">Change code</button></section><aside class="joinInviteCard"><p class="inviteKicker">NEW TO THE GAME?</p><h2>Get your people in on the gist.</h2><p>Scan to open Wetin Be Dis or download the app. Then start a game on your phone.</p><div class="qrFrame"><img src="/app-join-qr.png" alt="QR code to open or download Wetin Be Dis"></div><p class="qrCaption">SCAN TO PLAY OR DOWNLOAD</p></aside></form></div><div id="leaveConfirm" class="leaveConfirm hidden" role="dialog" aria-modal="true" aria-labelledby="leaveTitle" aria-describedby="leaveCopy"><section class="leaveCard"><h2 id="leaveTitle">Change the big-screen code?</h2><p id="leaveCopy">This disconnects the big screen only. The game will keep running on the iPhone.</p><div class="leaveActions"><button id="keepScreen" type="button">Stay connected</button><button id="confirmChangeCode" type="button">Back to code entry</button></div></section></div>
+<div id="join" class="message"><div class="join"><section class="joinCopy"><div class="joinBrand"><span class="joinBrandMark">?</span><span class="joinBrandName">WETIN<br>BE DIS</span></div><p class="eyebrow">PROJECT TO BIG SCREEN</p><h1>Bring the gist to the big screen.</h1><p class="joinLead">Open Wetin Be Dis on your phone, tap the big-screen button, and enter this code. Your cards will appear here.</p><div class="pairCodePanel"><p class="pairCodeLabel">ENTER THIS CODE ON YOUR PHONE</p><div id="pairingCode" class="pairCode">····</div><div id="joinHint" class="joinHint" aria-live="polite">Getting your code ready…</div><div id="joinConnection" class="joinConnection hidden" aria-live="polite"></div><button id="refreshCode" type="button">Get a new code <span aria-hidden="true">↻</span></button></div></section><aside class="joinInviteCard"><p class="inviteKicker">READY TO PLAY?</p><h2>Your phone is the remote.</h2><p>Choose your category and set the rules on your phone. The game will show here when you start.</p><div class="qrFrame"><img src="/app-join-qr.png" alt="QR code to open or download Wetin Be Dis"></div><p class="qrCaption">SCAN TO GET THE APP</p></aside></div></div><div id="leaveConfirm" class="leaveConfirm hidden" role="dialog" aria-modal="true" aria-labelledby="leaveTitle" aria-describedby="leaveCopy"><section class="leaveCard"><h2 id="leaveTitle">Get a new big-screen code?</h2><p id="leaveCopy">Your current phone connection will stop showing on this screen.</p><div class="leaveActions"><button id="keepScreen" type="button">Stay connected</button><button id="confirmChangeCode" type="button">Get a new code</button></div></section></div>
 <main id="screen" class="shell hidden"><header class="top"><div class="brand">WETIN BE DIS</div><div class="liveStatus"><span class="liveDot"></span><span>PHONE CONNECTED</span></div><button id="backToCode" class="screenBack hidden" type="button">Change code</button><div id="team" class="team"></div><div id="timer" class="timer">0</div></header><div class="round" id="round"></div><div class="track"><div id="fill" class="fill"></div></div><section id="pregame" class="pregame hidden" aria-live="polite"><div class="pregameContent"><p id="pregameKicker" class="pregameKicker">GET READY</p><h1 id="pregameTitle" class="pregameTitle">Phone on forehead</h1><p id="pregameCopy" class="pregameCopy">Turn the phone sideways, place it on your forehead, and face the screen toward your people.</p><div id="pregameCount" class="pregameCount hidden">3</div></div></section><section class="grid" id="gameGrid"><article class="card"><div id="cardState" class="cardState">ROUND CARD</div><div id="category" class="category"></div><div id="answer" class="answer"></div><div id="difficulty" class="difficulty"></div></article><aside class="forbidden"><h2><span>DON’T SAY</span><span class="forbiddenCount">3 CLUES</span></h2><p class="forbiddenHint">Clue giver: skip these words. Describe the card without using them.</p><div id="words" class="words"></div></aside></section><section id="results" class="results hidden"><div class="resultsCard"><p class="resultsKicker">FINAL WHISTLE</p><h1 id="winnerHeading" class="resultsTitle">GAME COMPLETE</h1><div id="finalScores" class="finalScores"></div><section class="resultsReview" aria-labelledby="reviewTitle"><div class="reviewHeading"><h2 id="reviewTitle">Cards from the game</h2><p id="reviewSummary">Review every team’s clues</p></div><div id="reviewTabs" class="reviewTabs" role="tablist" aria-label="Choose a team’s cards"></div><div id="reviewCards" class="reviewCards" role="tabpanel" aria-live="polite"></div></section><p class="resultsNote">Big screen score recap · powered by Wetin Be Dis</p></div></section><footer class="foot"><span>ACT IT · SING IT · GIST IT</span><span class="appInvite"><img src="/app-join-qr.png" alt="Scan to open Wetin Be Dis or download it"><span>SCAN TO PLAY<br>OR DOWNLOAD</span></span><span id="points" class="points"></span></footer></main>
 <script>
 (()=>{
-  const input=document.getElementById('code');
-  const form=document.getElementById('joinForm');
   const join=document.getElementById('join');
-  const hint=document.getElementById('joinHint');
   const screen=document.getElementById('screen');
   const gameGrid=document.getElementById('gameGrid');
   const pregame=document.getElementById('pregame');
   const pregameCount=document.getElementById('pregameCount');
   const results=document.getElementById('results');
   const backToCode=document.getElementById('backToCode');
-  const changeWaitingCode=document.getElementById('changeWaitingCode');
   const leaveConfirm=document.getElementById('leaveConfirm');
   const keepScreen=document.getElementById('keepScreen');
   const confirmChangeCode=document.getElementById('confirmChangeCode');
-  let code=new URLSearchParams(location.search).get('code')||'';
-  let duration=60,seconds=0,lastAt=Date.now(),dead=false;
-  let lastResultsKey='',selectedReviewTeam='';
-  let currentPhase='waiting',connectionGeneration=0,pollTimeout=0;
-  input.value=code;
+  let code='', duration=60, seconds=0, lastAt=Date.now(), dead=false;
+  let lastResultsKey='', selectedReviewTeam='', currentPhase='waiting', connectionGeneration=0, pollTimeout=0;
   const set=(id,value)=>document.getElementById(id).textContent=value??'';
-  const normalized=()=>input.value.toUpperCase().replace(/[^23456789ABCDEFGHJKLMNPQRSTUVWXYZ]/g,'');
-  const schedulePoll=()=>{clearTimeout(pollTimeout);pollTimeout=setTimeout(poll,500);};
-  const showCodeEntry=()=>{
-    clearTimeout(pollTimeout);connectionGeneration+=1;dead=true;code='';currentPhase='waiting';input.value='';
+  const schedulePoll=()=>{clearTimeout(pollTimeout);pollTimeout=setTimeout(poll,700);};
+  const createCode=async()=>{
+    clearTimeout(pollTimeout);connectionGeneration+=1;dead=true;code='';currentPhase='waiting';
     history.replaceState(null,'',location.pathname);
-    leaveConfirm.classList.add('hidden');
-    backToCode.classList.add('hidden');
-    changeWaitingCode.classList.add('hidden');
-    screen.classList.add('hidden');join.classList.remove('hidden');form.classList.remove('isConnected');
+    join.classList.remove('hidden');screen.classList.add('hidden');
+    document.getElementById('pairingCode').textContent='····';
+    document.getElementById('pairingCode').classList.remove('isError');
     document.getElementById('joinConnection').classList.add('hidden');
-    hint.textContent='Enter the four-character code shown in the iPhone app.';
-    lastResultsKey='';selectedReviewTeam='';
-    setTimeout(()=>input.focus(),0);
-  };
-  backToCode.addEventListener('click',()=>{
-    if(currentPhase==='game_over'){showCodeEntry();return;}
-    leaveConfirm.classList.remove('hidden');keepScreen.focus();
-  });
-  changeWaitingCode.addEventListener('click',showCodeEntry);
-  keepScreen.addEventListener('click',()=>{leaveConfirm.classList.add('hidden');backToCode.focus();});
-  confirmChangeCode.addEventListener('click',showCodeEntry);
-  leaveConfirm.addEventListener('click',event=>{
-    if(event.target===leaveConfirm){leaveConfirm.classList.add('hidden');backToCode.focus();}
-  });
-  window.addEventListener('keydown',event=>{
-    if(event.key==='Escape'&&!leaveConfirm.classList.contains('hidden')){
-      leaveConfirm.classList.add('hidden');backToCode.focus();
+    set('joinHint','Getting your code ready…');
+    try{
+      const response=await fetch('/api/v1/tv-displays/display',{method:'POST',headers:{'content-type':'application/json'},body:'{}',cache:'no-store'});
+      if(!response.ok)throw new Error('unavailable');
+      const data=await response.json();
+      if(!/^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{4}$/.test(data.pairing_code||''))throw new Error('invalid');
+      code=data.pairing_code;dead=false;connectionGeneration+=1;
+      document.getElementById('pairingCode').textContent=code.split('').join(' ');
+      set('joinHint','On your phone, open Project to Big Screen and enter this code.');
+      poll();
+    }catch{
+      document.getElementById('pairingCode').textContent='— — — —';
+      document.getElementById('pairingCode').classList.add('isError');
+      set('joinHint','Could not get a code. Check the connection and try again.');
     }
-  });
-
+  };
+  document.getElementById('refreshCode').addEventListener('click',()=>createCode());
+  backToCode.addEventListener('click',()=>{leaveConfirm.classList.remove('hidden');keepScreen.focus();});
+  keepScreen.addEventListener('click',()=>leaveConfirm.classList.add('hidden'));
+  confirmChangeCode.addEventListener('click',()=>{leaveConfirm.classList.add('hidden');createCode();});
+  leaveConfirm.addEventListener('click',event=>{if(event.target===leaveConfirm)leaveConfirm.classList.add('hidden');});
+  window.addEventListener('keydown',event=>{if(event.key==='Escape')leaveConfirm.classList.add('hidden');});
   const poll=async()=>{
     if(dead)return;
     const pollGeneration=connectionGeneration;
@@ -135,32 +125,34 @@ body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 86% 4%,rgb
       const response=await fetch('/api/v1/tv-displays/'+encodeURIComponent(code),{cache:'no-store'});
       if(pollGeneration!==connectionGeneration)return;
       if(response.status===429){
-        dead=true;join.classList.remove('hidden');screen.classList.add('hidden');form.classList.remove('isConnected');changeWaitingCode.classList.add('hidden');backToCode.classList.add('hidden');
-        hint.textContent='Too many code attempts. Wait a minute, then try again.';return;
+        dead=true;set('joinHint','Too many connection attempts. Wait a minute, then refresh for another code.');return;
       }
       if(response.status===410){
-        dead=true;join.classList.remove('hidden');screen.classList.add('hidden');form.classList.remove('isConnected');changeWaitingCode.classList.add('hidden');backToCode.classList.add('hidden');
-        hint.textContent='That code has expired. Enter the new code shown in Project to Big Screen.';return;
+        dead=true;set('joinHint','This code expired. Refreshing a new one…');createCode();return;
       }
       if(!response.ok)throw new Error('unavailable');
       const data=await response.json();
       if(pollGeneration!==connectionGeneration)return;
       const state=data.state;
       currentPhase=state.phase;
-      if(state.phase==='waiting'){
+      if(!data.phone_connected){
         screen.classList.add('hidden');join.classList.remove('hidden');
-        form.classList.add('isConnected');
-        changeWaitingCode.classList.remove('hidden');backToCode.classList.add('hidden');
-        document.getElementById('joinConnection').classList.remove('hidden');
-        document.getElementById('joinConnection').textContent='PHONE AND BIG SCREEN CONNECTED · YOUR FIRST CARD WILL APPEAR HERE';
-        hint.textContent='Keep this page open. The phone will guide the crew through setup before the first card.';
+        set('joinHint','On your phone, open Project to Big Screen and enter this code.');
+        document.getElementById('joinConnection').classList.add('hidden');
         schedulePoll();return;
+      }
+      if(state.phase==='waiting'){
+        join.classList.add('hidden');screen.classList.remove('hidden');
+        backToCode.classList.remove('hidden');
+        pregame.classList.remove('hidden');gameGrid.classList.add('hidden');results.classList.add('hidden');
+        set('pregameKicker','PHONE CONNECTED');set('pregameTitle','Choose your gist');
+        set('pregameCopy','Pick a category and set the rules on your phone. The game will start here.');
+        pregameCount.classList.add('hidden');schedulePoll();return;
       }
 
       join.classList.add('hidden');
       screen.classList.remove('hidden');
-      backToCode.classList.remove('hidden');changeWaitingCode.classList.add('hidden');
-      form.classList.remove('isConnected');
+      backToCode.classList.remove('hidden');
       document.getElementById('joinConnection').classList.add('hidden');
       const preparing=state.phase==='placement'||state.phase==='countdown';
       const gameOver=state.phase==='game_over';
@@ -233,52 +225,15 @@ body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 86% 4%,rgb
     }catch{
       if(pollGeneration!==connectionGeneration)return;
       join.classList.remove('hidden');screen.classList.add('hidden');
-      form.classList.remove('isConnected');document.getElementById('joinConnection').classList.add('hidden');changeWaitingCode.classList.add('hidden');backToCode.classList.add('hidden');
-      hint.textContent='Could not join that display. Check the code and try again.';
+      document.getElementById('joinConnection').classList.add('hidden');backToCode.classList.add('hidden');
+      set('joinHint','Connection paused. Check your internet or refresh for a new code.');
     }
     schedulePoll();
   };
-
-  form.addEventListener('submit',event=>{
-    event.preventDefault();
-    const value=normalized();
-    if(value.length!==4){hint.textContent='Enter all 4 characters from the iPhone.';return;}
-    clearTimeout(pollTimeout);code=value;dead=false;connectionGeneration+=1;currentPhase='waiting';
-    history.replaceState(null,'',location.pathname+'?code='+encodeURIComponent(code));
-    join.classList.remove('hidden');hint.textContent='Connecting to the game…';poll();
-  });
-
   setInterval(()=>{
-    if(seconds>0){
-      seconds=Math.max(0,seconds-(Date.now()-lastAt)/1000);lastAt=Date.now();
-      set('timer',Math.ceil(seconds)+'s');
-      document.getElementById('fill').style.width=(100*Math.min(1,seconds/duration))+'%';
-    }
+    if(seconds>0){seconds=Math.max(0,seconds-(Date.now()-lastAt)/1000);lastAt=Date.now();set('timer',Math.ceil(seconds)+'s');document.getElementById('fill').style.width=(100*Math.min(1,seconds/duration))+'%';}
   },250);
-  function renderResultReview(state){
-    const history=Array.isArray(state.cardHistory)?state.cardHistory:[];
-    const tabs=document.getElementById('reviewTabs');
-    [...tabs.children].forEach(tab=>tab.setAttribute('aria-selected',String(tab.dataset.teamName===selectedReviewTeam)));
-    const list=document.getElementById('reviewCards');
-    const cards=history.filter(entry=>entry.team===selectedReviewTeam);
-    document.getElementById('reviewSummary').textContent=(state.cardHistoryTruncated?'Showing the latest 240 cards · ':'')+'Select a team to review its cards';
-    if(!history.length){
-      const empty=document.createElement('p');empty.className='reviewEmpty';empty.textContent='Card recap is unavailable for this game. Update Wetin Be Dis to send card history to the big screen.';list.replaceChildren(empty);return;
-    }
-    if(!cards.length){
-      const empty=document.createElement('p');empty.className='reviewEmpty';empty.textContent='No cards recorded for this team.';list.replaceChildren(empty);return;
-    }
-    list.replaceChildren(...cards.map((entry,index)=>{
-      const row=document.createElement('article');row.className='reviewCard';
-      const number=document.createElement('span');number.className='reviewNumber';number.textContent=String(index+1).padStart(2,'0');
-      const answer=document.createElement('span');answer.className='reviewAnswer';answer.textContent=entry.answer;
-      const forbidden=Array.isArray(entry.forbiddenWords)?entry.forbiddenWords.join(' · '):'';
-      const meta=document.createElement('span');meta.className='reviewMeta';meta.textContent='Round '+entry.round+' · '+entry.category+(forbidden?' · Don’t say: '+forbidden:'');
-      const outcome=document.createElement('span');outcome.className='reviewOutcome';outcome.textContent=entry.result==='correct'?'Guessed':(entry.result==='timed_out'?'Time up':'Skipped');
-      row.append(number,answer,meta,outcome);return row;
-    }));
-  }
-  if(code.length===4){input.value=code;form.requestSubmit();}
+  createCode();
 })();
 </script></body></html>`;
 
