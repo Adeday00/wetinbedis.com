@@ -12,6 +12,7 @@ import FAQ from "@/components/FAQ";
 import LaunchSignup from "@/components/LaunchSignup";
 import TrackedAppStoreLink from "@/components/TrackedAppStoreLink";
 import AndroidBetaDialog from "@/components/AndroidBetaDialog";
+import CardShowcase from "@/components/CardShowcase";
 
 const proofPoints = [
   { Icon: UsersThree, title: "2,500+", detail: "iPhone players" },
@@ -75,6 +76,7 @@ export default function Home() {
           </div>
           <div id="live-demo"><GameDemo /></div>
         </div>
+        <CardShowcase />
       </section>
 
       <section className="reaction-section" id="reactions">

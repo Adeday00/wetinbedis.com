@@ -19,29 +19,29 @@ type Card = { word: string; forbidden: string[]; color: string };
 
 const decks: Record<string, Card[]> = {
   Slang: [
-    { word: "JAPA", forbidden: ["VISA", "AIRPORT", "CANADA"], color: "green" },
-    { word: "SAPA", forbidden: ["ACCOUNT BALANCE", "BILLING", "END OF MONTH"], color: "green" },
-    { word: "WAHALA", forbidden: ["PALAVA", "POLICE", "FAMILY MEETING"], color: "green" },
+    { word: "JAPA", forbidden: ["VISA", "AIRPORT", "CANADA"], color: "slang" },
+    { word: "SAPA", forbidden: ["ACCOUNT BALANCE", "BILLING", "END OF MONTH"], color: "slang" },
+    { word: "WAHALA", forbidden: ["PALAVA", "POLICE", "FAMILY MEETING"], color: "slang" },
   ],
   "Naija Life": [
-    { word: "NEPA", forbidden: ["LIGHT", "OFF", "ELECTRICITY"], color: "gold" },
-    { word: "OWAMBE", forbidden: ["PARTY", "WEDDING", "ASO EBI"], color: "gold" },
-    { word: "DANFO", forbidden: ["BUS", "LAGOS", "YELLOW"], color: "gold" },
+    { word: "NEPA", forbidden: ["LIGHT", "OFF", "ELECTRICITY"], color: "naija-life" },
+    { word: "OWAMBE", forbidden: ["PARTY", "WEDDING", "ASO EBI"], color: "naija-life" },
+    { word: "DANFO", forbidden: ["BUS", "LAGOS", "YELLOW"], color: "naija-life" },
   ],
   Music: [
-    { word: "AFROBEATS", forbidden: ["MUSIC", "NIGERIA", "DANCE"], color: "teal" },
-    { word: "BURNA BOY", forbidden: ["ODỌGWU", "GRAMMY", "OUTSIDE"], color: "teal" },
-    { word: "DAVIDO", forbidden: ["OBO", "30BG", "TIMELESS"], color: "teal" },
+    { word: "AFROBEATS", forbidden: ["MUSIC", "NIGERIA", "DANCE"], color: "music" },
+    { word: "BURNA BOY", forbidden: ["ODỌGWU", "GRAMMY", "OUTSIDE"], color: "music" },
+    { word: "DAVIDO", forbidden: ["OBO", "30BG", "TIMELESS"], color: "music" },
   ],
   Diaspora: [
-    { word: "CARE PACKAGE", forbidden: ["PARCEL", "FOODSTUFF", "NIGERIA"], color: "blue" },
-    { word: "TIME DIFFERENCE", forbidden: ["CLOCK", "HOURS", "CALL"], color: "blue" },
-    { word: "AIRPORT GOODBYE", forbidden: ["DEPARTURES", "HUG", "TEARS"], color: "blue" },
+    { word: "CARE PACKAGE", forbidden: ["PARCEL", "FOODSTUFF", "NIGERIA"], color: "diaspora" },
+    { word: "TIME DIFFERENCE", forbidden: ["CLOCK", "HOURS", "CALL"], color: "diaspora" },
+    { word: "AIRPORT GOODBYE", forbidden: ["DEPARTURES", "HUG", "TEARS"], color: "diaspora" },
   ],
   Food: [
-    { word: "JOLLOF RICE", forbidden: ["PARTY", "TOMATO", "GHANA"], color: "orange" },
-    { word: "SUYA", forbidden: ["MEAT", "PEPPER", "NIGHT"], color: "orange" },
-    { word: "PUFF PUFF", forbidden: ["FRIED", "DOUGH", "ROUND"], color: "orange" },
+    { word: "JOLLOF RICE", forbidden: ["PARTY", "TOMATO", "GHANA"], color: "food" },
+    { word: "SUYA", forbidden: ["MEAT", "PEPPER", "NIGHT"], color: "food" },
+    { word: "PUFF PUFF", forbidden: ["FRIED", "DOUGH", "ROUND"], color: "food" },
   ],
 };
 
@@ -101,7 +101,7 @@ export default function GameDemo() {
 
   return (
     <div className="demo-shell">
-      <div className="demo-topline"><span>LIVE GAME DEMO</span><span className="demo-status" role="status" aria-live="polite" aria-atomic="true"><i aria-hidden="true" /> {playing ? "ROUND IN PLAY" : time === 0 ? "TIME!" : "READY"}</span></div>
+      <div className="demo-topline"><span>YOUR NEW-LOOK CARDS</span><span className="demo-status" role="status" aria-live="polite" aria-atomic="true"><i aria-hidden="true" /> {playing ? "ROUND IN PLAY" : time === 0 ? "TIME!" : "READY"}</span></div>
       <div className="category-pills" role="tablist" aria-label="Choose a sample category">
         {categoryNames.map((name, index) => (
           <button key={name} id={`demo-tab-${name.toLowerCase().replaceAll(" ", "-")}`} ref={(node) => { tabRefs.current[index] = node; }} role="tab" aria-selected={category === name} aria-controls="demo-card-panel" tabIndex={category === name ? 0 : -1} className={category === name ? "active" : ""} onClick={() => pickCategory(name)} onKeyDown={(event) => moveCategoryFocus(event, index)}>
@@ -112,10 +112,13 @@ export default function GameDemo() {
       <div className="demo-stage" id="demo-card-panel" role="tabpanel" aria-labelledby={`demo-tab-${category.toLowerCase().replaceAll(" ", "-")}`}>
         <div className="demo-score"><span>TIME</span><strong role="timer" aria-label={`${time} seconds remaining`} className={time <= 8 ? "urgent" : ""}>{String(time).padStart(2, "0")}</strong></div>
         <div className={`demo-card ${card.color} ${flash ?? ""}`}>
+          <img className="demo-card-art" src={`/category-art/${card.color}.webp`} alt="" aria-hidden="true" />
+          <div className="demo-card-content">
           <div className="card-category"><CategoryIcon size={18} weight="fill" />{category}</div>
           <p>MAKE YOUR PEOPLE GUESS</p>
           <h3>{card.word}</h3>
           <div className="no-mention"><span>NO MENTION:</span>{card.forbidden.map((word) => <b key={word}><X size={11} weight="bold" /> {word}</b>)}</div>
+          </div>
         </div>
         <div className="demo-score right"><span>SCORE</span><strong aria-live="polite" aria-atomic="true">{score}</strong></div>
       </div>
