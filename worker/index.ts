@@ -67,6 +67,10 @@ const worker = {
       }, allowedWidths);
     }
 
+    if (url.pathname === "/" && url.hostname === "admin.wetinbedis.com") {
+      return Response.redirect(new URL("/admin", request.url), 302);
+    }
+
     if (url.pathname === "/" || url.pathname === "/screen" || url.pathname === "/screen/"
       || url.pathname === "/tv" || url.pathname === "/tv/"
       || url.pathname === "/join" || url.pathname === "/join/"

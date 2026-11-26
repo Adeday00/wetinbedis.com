@@ -1,7 +1,5 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
-import { ContentAdminConsole, OwnerCardPreviewAdminPanel, OwnerContentCatalogPanel } from "../content-admin/content-admin-console";
-import { PicsPackAdminPanel } from "../content-admin/pics-pack-admin";
 
 type Tab =
   | "overview"
@@ -929,7 +927,10 @@ function NewCompetitionEditor({ onClose, onSaved, onNotice }: any) {
   </section>;
 }
 function Live({ config, competitions = [], leaderboard, reload, notificationStatus = null, reviews = [], payouts = [], payoutDetails = [], prepareReview, decideReview, createPayout }: any) {
-  const [view, setView] = useState("round");
+  const [view, setView] = useState(() => {
+    if (typeof window === "undefined") return "round";
+    return new URLSearchParams(window.location.search).get("section") === "announcements" ? "announcements" : "round";
+  });
   const [scheduleHide, setScheduleHide] = useState(false);
   const [showRoundTools, setShowRoundTools] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -2363,41 +2364,45 @@ function ContentHub({ releases = [], releasesError = "", reload }: any) {
     } catch (error) { setReleaseMessage(error instanceof Error ? error.message : `Release ${action} failed`); }
     finally { setBusyRelease(null); }
   }
+  const contentTools = [
+    { title: "Edit party cards", detail: "Find a card, change its wording or category, then save the edits.", href: "/card-review", action: "Open card editor" },
+    { title: "Publish weekly content", detail: "Validate and publish the next Party and Solo content release.", href: "/content-admin#weekly-publisher", action: "Open publisher" },
+    { title: "Review Solo candidates", detail: "Approve new Solo questions and prepare them for a release.", href: "/content-admin/solo-candidates", action: "Open candidate bank" },
+    { title: "Manage Four Pics levels", detail: "Edit answers, categories, difficulty, photos, nudges and facts.", href: "/content-admin#four-pics", action: "Open Four Pics editor" },
+    { title: "Manage categories", detail: "Choose which categories appear, their access, and the first category players see.", href: "/content-admin#categories", action: "Open category settings" },
+  ];
+  const playerTools = [
+    { title: "Home pop-up", detail: "Schedule a one-time message shown inside the app. This is separate from push notifications.", href: "/content-admin#home-announcement", action: "Manage Home pop-up" },
+    { title: "Push notifications", detail: "Send a general player announcement and review delivery results.", href: "/admin?tab=notifications", action: "Open notifications" },
+    { title: "League announcements", detail: "Write an in-app League message or change what the League banner shows.", href: "/admin?tab=live&section=announcements", action: "Manage League messages" },
+    { title: "App branding and Home", detail: "Manage the app logo, appearance and Home screen controls.", href: "/content-admin#branding", action: "Open app settings" },
+    { title: "View active game content", detail: "Search the currently published Today’s 5 and Party Deck cards.", href: "/content-admin#published-catalog", action: "Browse active cards" },
+  ];
+  const toolCard = (item: { title: string; detail: string; href: string; action: string }) => (
+    <a key={item.title} href={item.href} style={{ ...card, display: "block", color: "#fff4d7", textDecoration: "none", minHeight: 142 }}>
+      <h3 style={{ margin: "0 0 8px", fontSize: 17 }}>{item.title}</h3>
+      <p style={{ color: "#aaa0ad", margin: "0 0 16px", lineHeight: 1.5 }}>{item.detail}</p>
+      <span style={{ color: "#f6b51b", fontWeight: 800 }}>{item.action}</span>
+    </a>
+  );
+
   return (
-    <section
-      style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14 }}
-    >
-      <div style={card}>
-        <h2 style={{ marginTop: 0 }}>Weekly releases</h2>
-        <p style={{ color: "#aaa0ad" }}>
-          Validate and publish atomic party and Solo content releases.
-        </p>
-        <a href="/content-admin" style={{ color: "#f6b51b", fontWeight: 800 }}>
-          Open publisher →
-        </a>
-      </div>
-      <div style={card}>
-        <h2 style={{ marginTop: 0 }}>Card review</h2>
-        <p style={{ color: "#aaa0ad" }}>
-          Review individual game cards before they enter a release.
-        </p>
-        <a href="/card-review" style={{ color: "#f6b51b", fontWeight: 800 }}>
-          Open card review →
-        </a>
-      </div>
-      <div style={card}>
-        <h2 style={{ marginTop: 0 }}>Solo candidates</h2>
-        <p style={{ color: "#aaa0ad" }}>
-          Review and curate the candidate question bank.
-        </p>
-        <a
-          href="/content-admin/solo-candidates"
-          style={{ color: "#f6b51b", fontWeight: 800 }}
-        >
-          Open candidate bank →
-        </a>
-      </div>
-      <div style={{ ...card, gridColumn: "1 / -1" }}>
+    <div style={{ display: "grid", gap: 18 }}>
+      <section style={card}>
+        <h2 style={{ marginTop: 0 }}>Game content</h2>
+        <p style={{ color: "#aaa0ad" }}>Edit cards here, then publish them through a reviewed content release.</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 14 }}>
+          {contentTools.map(toolCard)}
+        </div>
+      </section>
+      <section style={card}>
+        <h2 style={{ marginTop: 0 }}>Messages and app presentation</h2>
+        <p style={{ color: "#aaa0ad" }}>Choose the right control: an in-app pop-up, a push notification, or a League message.</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 14 }}>
+          {playerTools.map(toolCard)}
+        </div>
+      </section>
+      <section style={card}>
         <h2 style={{ marginTop: 0 }}>Published release history</h2>
         <p style={{ color: "#aaa0ad" }}>
           Every release remains immutable after publication; rollback and revoke
@@ -2429,23 +2434,8 @@ function ContentHub({ releases = [], releasesError = "", reload }: any) {
           ))
         )}
         {releaseMessage && <p style={{ color: "#ffd76b" }}>{releaseMessage}</p>}
-      </div>
-      <div style={{ ...card, gridColumn: "1 / -1" }}>
-        <PicsPackAdminPanel />
-      </div>
-      <div style={{ ...card, gridColumn: "1 / -1" }}>
-        <h2 style={{ marginTop: 0 }}>Release publisher</h2>
-        <p style={{ color: "#aaa0ad" }}>
-          Load, validate, review, and publish a release without leaving the owner operations centre.
-          Publishing remains owner-gated and atomic.
-        </p>
-        <ContentAdminConsole />
-        <OwnerCardPreviewAdminPanel />
-      </div>
-      <div style={{ ...card, gridColumn: "1 / -1" }}>
-        <OwnerContentCatalogPanel />
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 function Support({ requests, cases = [], reload }: any) {
