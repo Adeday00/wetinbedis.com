@@ -89,7 +89,7 @@ export function PicsPackAdminPanel() {
           <div><span>4</span><h2>Remote Four Pics levels</h2></div>
           <label className="admin-file-button">Load pack JSON<input type="file" accept="application/json,.json" onChange={(event) => void chooseFile(event.target.files?.[0])} disabled={authorized !== true || busy} /></label>
         </div>
-        <p className="admin-help">Hide a level to remove it from play, restore it later, or edit its answer, category, difficulty, and four photo records below. Photos can use an existing bundled asset name or an HTTPS <code>image_url</code>.</p>
+        <p className="admin-help">Hide a level to remove it from play, restore it later, or edit its answer, category, difficulty, nudges, quick facts, and photos below. Playable levels need at least four photos; the app shows the first four and preserves up to four extra candidates. Facts must include an HTTPS source. Photos can use an existing bundled asset name or an HTTPS <code>image_url</code>.</p>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, margin: "12px 0" }}>
           <span>{pack ? `${enabledCount} active · ${pack.levels.length} total · revision ${revision}` : "No remote pack published yet. Load the app’s pics_levels.json to start."}</span>
           <button type="button" onClick={() => void load()} disabled={busy}>Reload</button>

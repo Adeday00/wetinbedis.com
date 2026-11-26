@@ -87,6 +87,18 @@ export function ContentAdminConsole() {
       });
   }, []);
 
+  useEffect(() => {
+    const stagedRelease = sessionStorage.getItem("wbd.admin.prepared-content-release");
+    if (!stagedRelease) return;
+    sessionStorage.removeItem("wbd.admin.prepared-content-release");
+    setReleaseJSON(JSON.stringify(JSON.parse(stagedRelease), null, 2));
+    setNotice({
+      tone: "neutral",
+      title: "Reviewed Solo Gist cards loaded",
+      lines: ["The scheduled release is ready for validation. Review its counts and schedule before publishing."],
+    });
+  }, []);
+
   function contentChanged(next: string) {
     setReleaseJSON(next);
     setValidatedJSON(null);

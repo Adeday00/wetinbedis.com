@@ -2342,6 +2342,7 @@ type PublicSoloQuestion = {
     answer_family: string;
   }>;
   correct_option_id: string;
+  explanation: string;
 };
 
 type PublicSoloPack = {
@@ -2359,6 +2360,7 @@ function isPublicSoloQuestion(value: unknown): value is PublicSoloQuestion {
     || typeof question.category !== "string" || !question.category.trim()
     || typeof question.answer_family !== "string" || !question.answer_family.trim()
     || typeof question.correct_option_id !== "string" || !question.correct_option_id.trim()
+    || typeof question.explanation !== "string" || !question.explanation.trim()
     || !Array.isArray(question.clues) || question.clues.length !== 3
     || !question.clues.every((clue) => typeof clue === "string" && clue.trim())
     || !Array.isArray(question.options) || question.options.length !== 7
@@ -2447,6 +2449,14 @@ async function ownerContentCatalog(request: Request, env: ApiEnv): Promise<Respo
     activePublicSoloPack(db),
     getPartyDeckEditorState(request, env),
   ]);
+  const activeRelease = await db.prepare(
+    `SELECT id, (SELECT MAX(revision) FROM content_releases) AS revision,
+            schema_version, minimum_app_version
+     FROM content_releases
+     WHERE status = 'published'
+     ORDER BY revision DESC
+     LIMIT 1`,
+  ).first<{ id: string; revision: number; schema_version: number; minimum_app_version: string }>();
   const partyPayload = await partyResponse.json() as { cards?: PartyDeckEditorCard[]; source?: string; updated_at?: number | null };
   const partyCards = Array.isArray(partyPayload.cards) ? partyPayload.cards : [];
   const today = currentWATDate();
@@ -2475,7 +2485,15 @@ async function ownerContentCatalog(request: Request, env: ApiEnv): Promise<Respo
       effective_week_wat: solo.effective_week_wat,
       daily_pack_date_wat: dailyPack?.date_wat ?? null,
       questions: todaysQuestions,
+      question_bank: solo.questions,
+      daily_packs: solo.daily_packs,
     },
+    release: activeRelease ? {
+      id: activeRelease.id,
+      revision: activeRelease.revision,
+      schema_version: activeRelease.schema_version,
+      minimum_app_version: activeRelease.minimum_app_version,
+    } : null,
     party_deck: {
       source: partyPayload.source ?? "unknown",
       updated_at: partyPayload.updated_at ?? null,
@@ -5796,7 +5814,7 @@ function validateRemotePicsPack(value: unknown): { pack: RemotePicsPack | null; 
     const path = `pack.levels[${index}]`;
     if (!candidate || typeof candidate !== "object" || Array.isArray(candidate)) { issues.push(`${path}:object_required`); return; }
     const level = candidate as Record<string, unknown>;
-    for (const key of Object.keys(level)) if (!["id", "answer", "category", "difficulty", "photos", "enabled"].includes(key)) issues.push(`${path}:unknown_field:${key}`);
+    for (const key of Object.keys(level)) if (!["id", "answer", "category", "difficulty", "photos", "enabled", "nudge", "fun_fact", "fun_fact_source"].includes(key)) issues.push(`${path}:unknown_field:${key}`);
     const id = Number(level.id);
     const answer = typeof level.answer === "string" ? level.answer.trim() : "";
     const category = typeof level.category === "string" ? level.category.trim() : "";
@@ -5808,7 +5826,17 @@ function validateRemotePicsPack(value: unknown): { pack: RemotePicsPack | null; 
     if (!category || category.length > 80) issues.push(`${path}.category:invalid`);
     if (!Number.isInteger(difficulty) || difficulty < 1 || difficulty > 3) issues.push(`${path}.difficulty:must_be_1_to_3`);
     if (level.enabled !== undefined && typeof level.enabled !== "boolean") issues.push(`${path}.enabled:must_be_boolean`);
-    if (!Array.isArray(level.photos) || level.photos.length !== 4) issues.push(`${path}.photos:must_have_four`);
+    const nudge = typeof level.nudge === "string" ? level.nudge.trim() : "";
+    const funFact = typeof level.fun_fact === "string" ? level.fun_fact.trim() : "";
+    const funFactSource = typeof level.fun_fact_source === "string" ? level.fun_fact_source.trim() : "";
+    if (level.nudge !== undefined && (typeof level.nudge !== "string" || nudge.length > 240)) issues.push(`${path}.nudge:must_be_text_under_240_chars`);
+    if (level.fun_fact !== undefined && (typeof level.fun_fact !== "string" || funFact.length > 600)) issues.push(`${path}.fun_fact:must_be_text_under_600_chars`);
+    if (level.fun_fact_source !== undefined && (typeof level.fun_fact_source !== "string" || funFactSource.length > 2048 || (funFactSource.length > 0 && !httpsURL(funFactSource)))) issues.push(`${path}.fun_fact_source:must_be_https`);
+    if (funFact.length > 0 && funFactSource.length === 0) issues.push(`${path}.fun_fact_source:required_when_fact_is_present`);
+    const requiredPhotoCount = level.enabled === false ? 1 : 4;
+    if (!Array.isArray(level.photos) || level.photos.length < requiredPhotoCount || level.photos.length > 8) {
+      issues.push(`${path}.photos:must_have_${requiredPhotoCount}_to_8`);
+    }
     const photos: Array<Record<string, unknown>> = [];
     if (Array.isArray(level.photos)) level.photos.forEach((candidatePhoto, photoIndex) => {
       const photoPath = `${path}.photos[${photoIndex}]`;
@@ -5828,7 +5856,17 @@ function validateRemotePicsPack(value: unknown): { pack: RemotePicsPack | null; 
       if (photo.image_url !== undefined && !httpsURL(photo.image_url)) issues.push(`${photoPath}.image_url:must_be_https`);
       photos.push({ asset, title, author, license, ...(photo.licenseURL ? { licenseURL: photo.licenseURL } : {}), sourceURL: photo.sourceURL, ...(photo.image_url ? { image_url: photo.image_url } : {}) });
     });
-    levels.push({ id, answer, category, difficulty, enabled: level.enabled !== false, photos });
+    levels.push({
+      id,
+      answer,
+      category,
+      difficulty,
+      enabled: level.enabled !== false,
+      photos,
+      ...(level.nudge !== undefined ? { nudge } : {}),
+      ...(level.fun_fact !== undefined ? { fun_fact: funFact } : {}),
+      ...(level.fun_fact_source !== undefined ? { fun_fact_source: funFactSource } : {}),
+    });
   });
   if (!levels.some((level) => level.enabled)) issues.push("pack.levels:at_least_one_enabled_required");
   return issues.length ? { pack: null, issues: [...new Set(issues)].sort() } : { pack: { version: 1, content_version: contentVersion, levels }, issues: [] };
