@@ -29,8 +29,7 @@ export default function SiteHeader() {
     <header className={`site-nav ${open ? "menu-open" : ""}`}>
       <Brand />
       <nav id="main-navigation" aria-label="Main navigation">
-        <Link href="/#play" onClick={() => setOpen(false)}>Try the game</Link>
-        <Link href="/#how-it-works" onClick={() => setOpen(false)}>How e dey work</Link>
+        <Link href="/#play" onClick={() => setOpen(false)}>Play the demo</Link>
         <Link href="/#modes" onClick={() => setOpen(false)}>Ways to play</Link>
         <Link href="/#full-gist" onClick={() => setOpen(false)}>Full Gist</Link>
       </nav>

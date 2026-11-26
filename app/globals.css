@@ -382,3 +382,94 @@ footer { padding: 66px clamp(24px, 6vw, 92px) 28px; display: grid; grid-template
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* Focused home page: one clear action, product proof, and the key ways to play. */
+.site-nav { min-height: 82px; padding-top: 14px; padding-bottom: 14px; gap: 26px; }
+.site-nav nav { gap: clamp(18px, 2.4vw, 34px); font-size: 14px; }
+.nav-cta, .primary-cta, .secondary-cta, .outline-cta, .dark-cta, .launch-cta { min-height: 54px; border-radius: 10px; font-size: 13px; letter-spacing: .35px; }
+.hero { min-height: min(820px, 100svh); grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(40px, 7vw, 104px); padding-top: 132px; padding-bottom: 72px; background: radial-gradient(ellipse at 78% 48%, rgba(10,166,87,.13), transparent 44%), #080a09; }
+.hero-copy { max-width: 580px; }
+.hero h1 { margin-bottom: 24px; font: 400 clamp(70px, 8vw, 118px)/.88 "Archivo Black", sans-serif; letter-spacing: -5px; }
+.hero h2 { max-width: 560px; margin-bottom: 16px; color: var(--cream); font-size: clamp(28px, 3.3vw, 45px); line-height: 1.08; letter-spacing: -1.7px; }
+.hero-copy > p:not(.hero-availability) { max-width: 470px; margin-bottom: 27px; color: #c7cbc7; font-size: 18px; line-height: 1.6; }
+.hero-media { height: min(62vh, 590px); min-height: 430px; border: 1px solid rgba(255,244,220,.18); border-radius: 24px; box-shadow: 0 28px 90px rgba(0,0,0,.38); }
+.hero-media figcaption { padding: 62px 24px 20px; font-size: 13px; letter-spacing: .06em; }
+.hero-actions { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px; }
+.hero-actions .primary-cta, .hero-actions .secondary-cta { min-width: 0; }
+.primary-cta { background: var(--gold); }
+.secondary-cta { border-color: rgba(255,244,220,.28); background: rgba(255,255,255,.04); }
+.hero-availability { margin: 15px 0 0; color: #9ca39d; font-size: 14px; }
+.play-section { padding-top: 100px; padding-bottom: 98px; }
+.play-layout { grid-template-columns: minmax(280px, .62fr) minmax(0, 1fr); gap: clamp(36px, 6vw, 82px); }
+.play-intro { position: static; }
+.play-intro h2::after { background: var(--green); }
+.demo-note { margin-left: 0; color: #c3c8c3; font: 500 16px/1.55 "DM Sans", sans-serif; font-style: normal; }
+.card-showcase { margin-top: 72px; }
+.card-showcase-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.showcase-card { border-radius: 16px; }
+.showcase-card-label { left: 16px; bottom: 17px; }
+.showcase-card-label h3 { font-size: clamp(18px, 1.75vw, 24px); }
+.modes-section { padding-top: 90px; padding-bottom: 96px; }
+.section-heading { margin-bottom: 34px; gap: 40px; }
+.section-heading h2 { letter-spacing: -2.7px; }
+.mode-tabs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.mode-tabs button { min-height: 60px; padding: 0 8px; text-align: center; font-size: 12px; }
+.mode-tabs button span { margin-right: 8px; }
+.mode-panel { min-height: 480px; margin-top: 18px; border-radius: 20px; }
+.mode-copy { padding: clamp(30px, 4vw, 58px); }
+.mode-visual { height: 480px; }
+.full-gist-section { min-height: 520px; grid-template-columns: 1fr 1fr; background: #f1eadc; }
+.full-gist-art { min-height: 520px; }
+.full-gist-art img { object-fit: contain; padding: 42px; }
+.full-gist-copy { padding: 64px clamp(32px, 7vw, 96px); }
+.full-gist-copy h2 { font-size: clamp(48px, 5vw, 70px); letter-spacing: -3px; }
+.full-gist-copy ul { margin: 22px 0 26px; }
+.full-gist-copy li { padding: 11px 0; }
+.faq-section { padding-top: 82px; padding-bottom: 82px; }
+.faq-intro h2 { font-size: clamp(46px, 5vw, 68px); letter-spacing: -2.8px; }
+.faq-item button { min-height: 68px; font-size: 17px; }
+.download-section { padding: 76px 24px 82px; background: radial-gradient(ellipse at center top, rgba(10,166,87,.14), transparent 68%), #0b0d0b; }
+.download-section > img { width: 72px; height: 72px; margin-bottom: 20px; border-radius: 18px; }
+.download-section h2 { margin-bottom: 16px; font-size: clamp(42px, 5.5vw, 70px); letter-spacing: -3px; }
+.download-section > p { margin-bottom: 22px; }
+.download-actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; }
+.download-actions .launch-cta { background: var(--gold); color: var(--ink); }
+.download-actions .beta-cta { padding: 0 8px; }
+footer { padding-top: 54px; }
+
+@media (max-width: 1050px) {
+  .hero { min-height: 720px; gap: 34px; }
+  .hero h1 { font-size: clamp(68px, 8.7vw, 98px); }
+  .hero-media { height: 500px; min-height: 400px; }
+  .play-layout { grid-template-columns: minmax(250px, .5fr) minmax(0, 1fr); gap: 28px; }
+}
+
+@media (max-width: 760px) {
+  .hero { min-height: 0; gap: 27px; padding: 104px 22px 54px; }
+  .hero-media { height: min(48vh, 380px); min-height: 260px; border-radius: 18px; }
+  .hero-copy { padding-bottom: 0; }
+  .hero h1 { margin-bottom: 20px; font-size: clamp(64px, 16vw, 82px); letter-spacing: -3px; }
+  .hero h2 { font-size: clamp(27px, 7vw, 34px); }
+  .hero-copy > p:not(.hero-availability) { font-size: 16px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .primary-cta, .hero-actions .secondary-cta { width: 100%; max-width: 360px; }
+  .hero-availability { font-size: 13px; }
+  .play-section { padding: 68px 20px 74px; }
+  .play-layout { grid-template-columns: 1fr; gap: 28px; }
+  .play-intro h2 { font-size: 45px; }
+  .card-showcase { margin-top: 56px; }
+  .card-showcase-grid { gap: 11px; }
+  .modes-section { padding: 70px 20px; }
+  .mode-tabs { grid-template-columns: repeat(5, max-content); gap: 8px; padding-bottom: 10px; overflow-x: auto; }
+  .mode-tabs button { min-width: max-content; padding: 0 12px; }
+  .mode-panel { margin-top: 16px; }
+  .mode-visual { height: min(120vw, 480px); }
+  .full-gist-section { grid-template-columns: 1fr; }
+  .full-gist-art { min-height: 0; height: min(90vw, 430px); }
+  .full-gist-art img { padding: 24px; }
+  .full-gist-copy { padding: 54px 24px 62px; }
+  .faq-section { padding: 68px 20px; }
+  .download-section { padding: 68px 20px 72px; }
+  .download-actions { flex-direction: column; width: 100%; }
+  .download-actions .launch-cta { width: min(100%, 340px); }
+}

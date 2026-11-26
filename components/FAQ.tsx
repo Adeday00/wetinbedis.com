@@ -12,13 +12,15 @@ const questions = [
   { id: "subscription", question: "How much does Full Gist cost?", answer: "Full Gist is a one-time purchase, not a subscription. It is currently $4.99 in the US and ₦2,500 in Nigeria. The App Store shows your local price before you confirm. Prices may change by storefront." },
   { id: "refund", question: "What does Full Gist unlock?", answer: "It unlocks all current party decks and All Gist shuffle, longer Solo formats such as Marathon, and removes gameplay ads. It does not change Today’s 5 or Weekly League fairness, attempts, or prize eligibility." },
 ];
+const compactQuestions = questions.filter(({ id }) => ["one-phone", "full-gist", "subscription", "reaction-videos"].includes(id));
 
-export default function FAQ() {
+export default function FAQ({ compact = false }: { compact?: boolean }) {
   const [open, setOpen] = useState(0);
+  const visibleQuestions = compact ? compactQuestions : questions;
 
   useEffect(() => {
     function openId(id: string) {
-      const index = questions.findIndex((item) => item.id === id);
+      const index = visibleQuestions.findIndex((item) => item.id === id);
       if (index >= 0) setOpen(index);
     }
     function openFromHash() {
@@ -35,9 +37,9 @@ export default function FAQ() {
       window.removeEventListener("hashchange", openFromHash);
       document.removeEventListener("click", openFromTopicLink);
     };
-  }, []);
+  }, [visibleQuestions]);
 
-  return <div className="faq-list">{questions.map(({ id, question, answer }, index) => {
+  return <div className="faq-list">{visibleQuestions.map(({ id, question, answer }, index) => {
     const expanded = open === index;
     const buttonId = `faq-${id}`;
     const panelId = `faq-panel-${id}`;

@@ -1,29 +1,16 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  CheckCircle,
-  Play,
-  Smiley,
-  UsersThree,
-} from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, CheckCircle, Play } from "@phosphor-icons/react/dist/ssr";
 import GameDemo from "@/components/GameDemo";
 import ModeExplorer from "@/components/ModeExplorer";
 import FAQ from "@/components/FAQ";
-import LaunchSignup from "@/components/LaunchSignup";
 import TrackedAppStoreLink from "@/components/TrackedAppStoreLink";
 import AndroidBetaDialog from "@/components/AndroidBetaDialog";
 import CardShowcase from "@/components/CardShowcase";
 
-const proofPoints = [
-  { Icon: UsersThree, title: "2,500+", detail: "iPhone players" },
-  { Icon: Smiley, title: "120K+", detail: "TikTok + Instagram views" },
-  { Icon: Smiley, title: "Made for", detail: "the group chat & living room" },
-];
-
 export default function Home() {
   return (
     <main>
-      <section className="hero">
+      <section className="hero" aria-labelledby="home-title">
         <figure className="hero-media">
           <video
             className="hero-footage"
@@ -33,146 +20,77 @@ export default function Home() {
             playsInline
             preload="metadata"
             poster="/app-screens/home-current.png"
-            aria-label="Friends playing Wetin Be Dis at home"
+            aria-label="Friends playing Wetin Be Dis together"
           >
             <source src="/reactions/dodo-party-gameplay.mp4" type="video/mp4" />
           </video>
-          <figcaption>Actual people. Actual gist.</figcaption>
+          <figcaption>One phone. Everybody shouting.</figcaption>
         </figure>
+
         <div className="hero-copy">
-          <div className="hero-social-proof" aria-label="120,000 combined TikTok and Instagram views; more than 2,500 iPhone users">
-            <span><strong>120K+</strong> views across TikTok & IG</span>
-            <span className="social-proof-divider" aria-hidden="true" />
-            <span><strong>2,500+</strong> iPhone players</span>
-          </div>
-          <h1><span>WETIN</span><span>BE DIS?</span></h1>
-          <h2>The game your group chat<br />will argue over.</h2>
-          <p>One person holds the phone. Everybody else starts shouting. Give clues, dodge the no-mention words, and see who really knows the gist.</p>
+          <span className="section-kicker">THE NAIJA PARTY GAME</span>
+          <h1 id="home-title"><span>WETIN</span><span>BE DIS?</span></h1>
+          <h2>Your people know the gist.<br />Can they explain it?</h2>
+          <p>Give clues. Dodge the words underneath. Get your people to guess before the timer runs out.</p>
           <div className="hero-actions">
-            <Link className="primary-cta" href="#play">Try a round <Play size={18} weight="fill" /></Link>
-            <TrackedAppStoreLink className="secondary-cta">Download on the App Store <ArrowRight size={18} weight="bold" /></TrackedAppStoreLink>
-            <AndroidBetaDialog />
+            <TrackedAppStoreLink className="primary-cta">Download on the App Store <ArrowRight size={18} weight="bold" /></TrackedAppStoreLink>
+            <Link className="secondary-cta" href="#play">See how it plays <Play size={17} weight="fill" /></Link>
           </div>
+          <p className="hero-availability">Free to download · Android beta now open</p>
         </div>
       </section>
 
-      <section className="proof-strip" id="how-it-works" aria-label="Ways Wetin Be Dis brings people together">
-        {proofPoints.map(({ Icon, title, detail }) => (
-          <div className="proof-point" key={title}>
-            <Icon size={44} weight="regular" aria-hidden="true" />
-            <p><strong>{title}</strong><span>{detail}</span></p>
-          </div>
-        ))}
-      </section>
-
-      <section className="play-section" id="play">
+      <section className="play-section" id="play" aria-labelledby="play-title">
         <div className="play-layout">
           <div className="play-intro">
-            <span className="section-kicker">OKAY, YOUR TURN</span>
-            <h2>Can your people guess?</h2>
-            <p>Get them to the word before time runs out. Just don’t say any of the three things underneath it.</p>
-            <Link className="outline-cta" href="#live-demo">Try a round <Play size={17} weight="fill" /></Link>
-            <div className="demo-note"><span>Pick a deck. Start the timer. The rest is between you and your people.</span></div>
+            <span className="section-kicker">THAT’S THE WHOLE GAME</span>
+            <h2 id="play-title">Explain the word.<br />Don’t say the words.</h2>
+            <p>One player gives clues while their team guesses the card. Skip, score, and swap turns. Try a sample round right here.</p>
+            <div className="demo-note"><span>Pick a deck and see how fast your people catch on.</span></div>
           </div>
           <div id="live-demo"><GameDemo /></div>
         </div>
         <CardShowcase />
       </section>
 
-      <section className="reaction-section" id="reactions">
-        <div className="reaction-layout">
-          <div className="reaction-video-wrap">
-            <video className="reaction-video" autoPlay muted loop playsInline poster="/reactions/pepper-soup-room-poster.jpg" aria-label="Friends playing Wetin Be Dis together">
-              <source src="/reactions/pepper-soup-room.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div className="reaction-copy">
-            <span className="section-kicker">THE CARD SAID PEPPER SOUP</span>
-            <h2>Then the room<br />did this.</h2>
-            <p>That’s an actual round. Actual friends. Actual noise. Turn on reaction recording in the app and keep the clips your group wants to replay.</p>
-            <ul>
-              <li>Record the round on your phone</li>
-              <li>Your clips stay on your device</li>
-              <li>Send the best ones to the group chat</li>
-            </ul>
-            <TrackedAppStoreLink className="outline-cta">Record your first round <ArrowRight size={17} weight="bold" /></TrackedAppStoreLink>
-          </div>
-        </div>
-      </section>
-
-      <section className="modes-section" id="modes">
+      <section className="modes-section" id="modes" aria-labelledby="modes-title">
         <div className="section-heading">
-          <div><span className="section-kicker">HOW YOUR CREW PLAYS</span><h2>Same gist.<br />Different setups.</h2></div>
-          <p>Pass one phone around, host a House Party, use SharePlay on FaceTime, or call each other while the game runs on iPhone and Android.</p>
+          <div><span className="section-kicker">BRING YOUR PEOPLE</span><h2 id="modes-title">Together in the room<br />or miles apart.</h2></div>
+          <p>Pass one phone, host a room, or play while you’re on a call. Pick the setup that fits your people.</p>
         </div>
         <ModeExplorer />
       </section>
 
-      <section className="big-screen-section" aria-labelledby="big-screen-title">
-        <div className="big-screen-art"><img src="/app-screens/game-landscape.png" alt="Wetin Be Dis gameplay in landscape layout for a large display" /></div>
-        <div className="big-screen-copy">
-          <span className="section-kicker">IN DEVELOPMENT</span>
-          <h2 id="big-screen-title">Take the gist<br />to the big screen.</h2>
-          <p>The big-screen mode is not available yet. We’re building a way to show the cards and score on a TV or projector while you keep playing from your phone.</p>
-          <span className="coming-soon-badge">NOT OUT YET</span>
-        </div>
-      </section>
-
-      <section className="reviews-section" id="reviews">
-        <div className="reviews-heading">
-          <span className="section-kicker">Y’ALL SAID IT, NOT US</span>
-          <h2>We saw your comments.</h2>
-          <p>“When is this coming to Android?” We’ve heard you. Closed beta testing has started, with wider release aimed for around December 14.</p>
-        </div>
-        <div className="review-grid">
-          <figure className="review-card">
-            <blockquote>“I need this for game night with my people.”</blockquote>
-            <figcaption>THE KIND OF COMMENT THAT STARTED THIS UPDATE</figcaption>
-          </figure>
-          <figure className="review-card">
-            <blockquote>Android people, we see you. The closed beta has started.</blockquote>
-            <figcaption>EMAIL OR DM YOUR GOOGLE PLAY GMAIL</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section className="founder-section" id="founder">
-        <div className="founder-mark" aria-hidden="true">DB</div>
-        <div>
-          <span className="section-kicker">A NOTE FROM THE PERSON BUILDING IT</span>
-          <h2>Wetin be dis?</h2>
-          <p>I made the game I wanted at the function: something everybody could jump into, even if they just met. Pass the phone and let the arguments begin. — David</p>
-        </div>
-      </section>
-
-      <section className="full-gist-section" id="full-gist">
-        <div className="full-gist-art"><img src="/brand/full-gist-hero.png" alt="A hand holding Wetin Be Dis category cards" /></div>
+      <section className="full-gist-section" id="full-gist" aria-labelledby="full-gist-title">
+        <div className="full-gist-art"><img src="/brand/full-gist-hero.png" alt="Wetin Be Dis category cards spread out for game night" loading="lazy" /></div>
         <div className="full-gist-copy">
-          <span className="section-kicker">WHEN YOU WANT MORE DECKS</span>
-          <h2>Full Gist.</h2>
-          <p>Free to download. When you want more, unlock the rest of the party decks and longer Solo rounds with a one-time in-app purchase.</p>
+          <span className="section-kicker">WHEN YOUR CREW WANTS MORE</span>
+          <h2 id="full-gist-title">More decks.<br />More ways to play.</h2>
+          <p>Start for free. Full Gist is a one-time purchase that opens the party decks, longer Solo rounds, and ad-free gameplay.</p>
           <ul>
-            <li><CheckCircle size={22} weight="fill" />All current party decks</li>
-            <li><CheckCircle size={22} weight="fill" />Marathon and longer Solo games</li>
-            <li><CheckCircle size={22} weight="fill" />One time purchase. No subscription.</li>
+            <li><CheckCircle size={21} weight="fill" />Every current party deck</li>
+            <li><CheckCircle size={21} weight="fill" />Marathon and category rounds</li>
+            <li><CheckCircle size={21} weight="fill" />One payment. No subscription.</li>
           </ul>
           <p className="price-note">Prices vary by country. Your local App Store price is shown before you buy.</p>
           <TrackedAppStoreLink className="dark-cta">See Full Gist in the App Store <ArrowRight size={18} weight="bold" /></TrackedAppStoreLink>
         </div>
       </section>
 
-      <section className="faq-section">
-        <div className="faq-intro"><span className="section-kicker">ASK BEFORE YOU SHOUT</span><h2>Questions?<br />We get gist.</h2><p>Everything your room needs before the first card drops.</p><Link href="/support/" className="text-link">Visit support <ArrowRight size={17} weight="bold" /></Link></div>
-        <FAQ />
+      <section className="faq-section" aria-labelledby="faq-title">
+        <div className="faq-intro"><span className="section-kicker">BEFORE THE FIRST CARD</span><h2 id="faq-title">Quick answers.</h2><p>Need more help? We’ve got you.</p><Link href="/support/" className="text-link">Visit support <ArrowRight size={17} weight="bold" /></Link></div>
+        <FAQ compact />
       </section>
 
-      <section className="download-section" id="download">
-        <img src="/brand/app-icon.png" alt="Wetin Be Dis app icon" />
-        <span className="section-kicker">2,500+ IPHONE PLAYERS · ANDROID BETA TESTING</span>
-        <h2>iPhone is out.<br />Android is in beta.</h2>
-        <p>More than 2,500 people are already playing on iPhone. Android beta testing has started; we’re aiming for a wider release around December 14.</p>
-        <LaunchSignup />
-        <AndroidBetaDialog />
+      <section className="download-section" id="download" aria-labelledby="download-title">
+        <img src="/brand/app-icon.png" alt="" loading="lazy" />
+        <span className="section-kicker">GET YOUR PEOPLE TOGETHER</span>
+        <h2 id="download-title">Your next game night<br />starts here.</h2>
+        <p>Download Wetin Be Dis on iPhone, or join the Android closed beta.</p>
+        <div className="download-actions">
+          <TrackedAppStoreLink className="launch-cta">Download on the App Store <ArrowRight size={18} weight="bold" /></TrackedAppStoreLink>
+          <AndroidBetaDialog />
+        </div>
       </section>
     </main>
   );
